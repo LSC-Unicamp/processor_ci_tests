@@ -1,0 +1,8 @@
+{
+    "test_directories": [
+        {
+            "name": "RV32I",
+            "path": "/eda/processor_ci_tests/tests/RV32I"
+        }
+    ]
+}
