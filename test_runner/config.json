@@ -1,14 +1,8 @@
 {
     "test_directories": [
         {
-            "name": "TEST1",
-            "path": "../testing_tests/TEST1",
-            "extensions": [".S", ".c", ".bin"]
-        },
-        {
-            "name": "compliance-tests",
-            "path": "../testing_tests/TEST2",
-            "extensions": [".S", ".hex"]
+            "name": "RV32I",
+            "path": "../tests/RV32I"
         }
     ]
 }

@@ -7,7 +7,8 @@ import Test
 
 class Directory:
 
-    def __init__(self, path):
+    def __init__(self, path, port):
+        self.port = port
         self.path = path
         self.tests = {
             'basic': [],
@@ -18,13 +19,16 @@ class Directory:
 
     # loads a test from a file
     def _load_test(self, category, test_path, reference_path):
-        name = os.path.basename(test_path).split('.')[0]
-        with open(reference_path, 'r') as reference_file:
-            reference = int(reference_file.read(), 16)
-        with open(test_path, 'r') as hex_test_file:
-            hex_test = [int(line, 16) for line in hex_test_file.read().split('\n') if line]
-        test = Test.Test(name, reference, hex_test)
-        self.tests[category].append(test)
+        try:
+            name = os.path.basename(test_path).split('.')[0]
+            with open(reference_path, 'r') as reference_file:
+                reference = int(reference_file.read(), 16)
+            with open(test_path, 'r') as hex_test_file:
+                hex_test = [int(line, 16) for line in hex_test_file.read().split('\n') if line]
+            test = Test.Test(name, reference, hex_test, self.port)
+            self.tests[category].append(test)
+        except Exception as e:
+            print(f"Error loading test {test_path}: {e}")
     
     # searchs for the tests in the given path
     def load_tests(self):
@@ -56,7 +60,7 @@ class Directory:
             testsuites = ET.Element('testsuites')
 
         for category in self.tests:
-            testsuite = ET.SubElement(testsuites, 'testsuite', name=f"{category}-{os.path.basename(self.path)}")
+            testsuite = ET.SubElement(testsuites, 'testsuite', name=f"{self.port}-{category}-{os.path.basename(self.path)}")
             # Sort the tests by name
             sorted_tests = sorted(self.tests[category], key=lambda test: test.name)
             for test in sorted_tests:
@@ -76,6 +80,11 @@ class Directory:
         # Write the pretty-printed XML to the file
         with open(output_file, 'w') as f:
             f.write(pretty_xml_as_string)
+            
+    def run(self):
+        self.load_tests()
+        self.run_tests()
+        self.create_xml_report()
 
 def main():
     dir_test = Directory(test_path)

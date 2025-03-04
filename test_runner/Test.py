@@ -12,20 +12,21 @@ class Test:
     """
     Construct
     """
-    def __init__(self, name, expected, hex_program):
+    def __init__(self, name, expected, hex_program, port):
         self.name = name
         self.program_hex = hex_program
         self.expected = expected
         self.actual = None
         self.result = False
         self.run_time = 0
+        self.port = port
 
     """
     Run the test and save results to its object
     """
     def run_test(self):
         # Create the communication interface with the processor
-        interface = ProcessorCIInterface("/dev/ttyACM0", 115200, 2) # serial communication timeout
+        interface = ProcessorCIInterface(self.port, 115200, 2) # serial communication timeout
         id = interface.get_module_id()
         interface.set_timeout(1000) # processor timeout
         interface.set_execution_end_address(60)
