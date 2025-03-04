@@ -1,7 +1,9 @@
-test_path = 'processor_ci_tests/testing_tests/TEST1'
+test_path = 'processor_ci_tests/testing_tests/TEST2'
 
-import Test
+import xml.etree.ElementTree as ET
+import xml.dom.minidom
 import os
+import Test
 
 class Directory:
 
@@ -12,6 +14,7 @@ class Directory:
             'advanced': [],
             'invalid': []
         }
+        self.categories = ['basic', 'advanced', 'invalid']
 
     # loads a test from a file
     def _load_test(self, category, test_path, reference_path):
@@ -32,22 +35,53 @@ class Directory:
                         test_path = os.path.join(root, file)
                         reference_path = os.path.join(root.replace('memory', 'reference'), file)
                         if os.path.exists(reference_path):
-                            if 'basic' in root:
-                                self._load_test('basic', test_path, reference_path)
-                            elif 'advanced' in root:
-                                self._load_test('advanced', test_path, reference_path)
-                            elif 'invalid' in root:
-                                self._load_test('invalid', test_path, reference_path)
+                            for category in self.categories:
+                                if category in root:
+                                    self._load_test(category, test_path, reference_path)
+                                    break
         
     def run_tests(self):
-        pass
+        for category in self.tests:
+            for test in self.tests[category]:
+                test.run_test()
+                print(test.result)
+                print(test.actual)
+                print(test.run_time)
 
-    def create_xml_report(self):
-        pass
+    def create_xml_report(self, output_file='test_results.xml'):
+        if os.path.exists(output_file):
+            tree = ET.parse(output_file)
+            testsuites = tree.getroot()
+        else:
+            testsuites = ET.Element('testsuites')
+
+        for category in self.tests:
+            testsuite = ET.SubElement(testsuites, 'testsuite', name=f"{category}-{os.path.basename(self.path)}")
+            # Sort the tests by name
+            sorted_tests = sorted(self.tests[category], key=lambda test: test.name)
+            for test in sorted_tests:
+                testcase = ET.SubElement(testsuite, 'testcase', name=test.name)
+                if not test.result:
+                    failure = ET.SubElement(testcase, 'failure', message='Test failed')
+                    failure.text = f'Expected: {test.expected}, Actual: {test.actual}'
+                ET.SubElement(testcase, 'system-out').text = f'Run time: {test.run_time}'
+        
+        # Convert the ElementTree to a string
+        rough_string = ET.tostring(testsuites, 'utf-8')
+        # Parse the string using minidom
+        reparsed = xml.dom.minidom.parseString(rough_string)
+        # Pretty print the XML
+        pretty_xml_as_string = '\n'.join([line for line in reparsed.toprettyxml(indent="  ").split('\n') if line.strip()])
+
+        # Write the pretty-printed XML to the file
+        with open(output_file, 'w') as f:
+            f.write(pretty_xml_as_string)
 
 def main():
     dir_test = Directory(test_path)
     dir_test.load_tests()
+    dir_test.run_tests()
+    dir_test.create_xml_report()
     print(dir_test.tests)
 
 if __name__ == '__main__':
