@@ -11,4 +11,3 @@ _start:
     nop; # 3 nops to not cause forwarding
 
     sw a1, 60(zero);
-    

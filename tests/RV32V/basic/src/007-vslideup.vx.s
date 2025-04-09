@@ -1,6 +1,16 @@
-# vslideup.vx implementation
 .text
-
 .global _start
 
 _start:
+    li a0, 4
+    vsetvli zero, a0, e32
+
+    li t0, 10
+
+    vmv.v.x v1, t0
+    li t1, 1
+
+    vslideup.vx v2, v1, t1      # v2 = {0,10,10,10}
+
+    li t2, 0x1000          # endereço base
+    vs1r.v v2, (t2)   # Salva v3 na memória a partir do endereço em t1

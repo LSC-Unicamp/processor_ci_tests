@@ -2,7 +2,7 @@
 
 # Caminho base onde estão as extensões
 base_dir="."
-march="rv32imafdb_zicsr"  # Arquitetura padrão, pode ser ajustada conforme necessário
+march="rv32imafdbv_zicsr"  # Arquitetura padrão, pode ser ajustada conforme necessário
 
 # Loop por todas as extensões
 for extension_dir in "$base_dir"/*/; do
