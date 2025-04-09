@@ -166,9 +166,9 @@ class ProcessorCITest:
                         name=f'{memory_file}',
                         classname=f'{name}.{category}',
                     )
-                    test_case.result = Failure(
+                    test_case.result = [Failure(
                         f'Expected: {expected}, Received: {received}'
-                    )
+                    )]
                     suite.add_testcase(test_case)
 
             self.xml.add_testsuite(suite)
