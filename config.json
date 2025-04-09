@@ -1,0 +1,147 @@
+{
+    "test_directories": [
+        {
+            "name": "RV32I",
+            "path": "/eda/processor_ci_tests/tests/RV32I",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32A",
+            "path": "/eda/processor_ci_tests/tests/RV32A",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32B",
+            "path": "/eda/processor_ci_tests/tests/RV32B",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32C",
+            "path": "/eda/processor_ci_tests/tests/RV32C",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32D",
+            "path": "/eda/processor_ci_tests/tests/RV32D",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32F",
+            "path": "/eda/processor_ci_tests/tests/RV32F",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32M",
+            "path": "/eda/processor_ci_tests/tests/RV32M",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32P",
+            "path": "/eda/processor_ci_tests/tests/RV32P",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32V",
+            "path": "/eda/processor_ci_tests/tests/RV32V",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV32Zicsr",
+            "path": "/eda/processor_ci_tests/tests/RV32Zicsr",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV64A",
+            "path": "/eda/processor_ci_tests/tests/RV64A",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV64D",
+            "path": "/eda/processor_ci_tests/tests/RV64D",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV64F",
+            "path": "/eda/processor_ci_tests/tests/RV64F",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV64I",
+            "path": "/eda/processor_ci_tests/tests/RV64I",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "RV64M",
+            "path": "/eda/processor_ci_tests/tests/RV64M",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        }
+    ],
+    "extra_tests": [
+        {
+            "name": "coremark",
+            "path": "/eda/processor_ci_tests/tests/coremark",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "dhrystone",
+            "path": "/eda/processor_ci_tests/tests/dhrystone",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "linpack",
+            "path": "/eda/processor_ci_tests/tests/linpack",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "sieve",
+            "path": "/eda/processor_ci_tests/tests/sieve",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        },
+        {
+            "name": "sine",
+            "path": "/eda/processor_ci_tests/tests/sine",
+            "basic_breakpoint": 60,
+            "advanced_breakpoint": 60,
+            "invalid_breakpoint": 60
+        }
+    ]
+}
+  

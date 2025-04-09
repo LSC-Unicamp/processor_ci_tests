@@ -34,3 +34,5 @@
 build/
 utils/
 testing_tests/
+*.pyc
+env/
