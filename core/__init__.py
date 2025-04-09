@@ -167,7 +167,7 @@ class ProcessorCITest:
                         classname=f'{name}.{category}',
                     )
                     test_case.result = Failure(
-                        message=f'Expected: {expected}, Received: {received}'
+                        f'Expected: {expected}, Received: {received}'
                     )
                     suite.add_testcase(test_case)
 
