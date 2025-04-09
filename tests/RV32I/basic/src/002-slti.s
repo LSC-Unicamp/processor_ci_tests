@@ -4,7 +4,7 @@
 .global _start;
 
 _start:
-    addi a1, zero, 4; # a1 = zero + 5
+    addi a1, zero, 4; # a1 = zero + 4
 
     slti a3, a1, 1; # a3 = a1 < 1
     slti a4, a1, 5; # a4 = a1 < 5

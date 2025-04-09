@@ -16,13 +16,16 @@ for extension_dir in "$base_dir"/*/; do
         src_dir="${level_dir}src"
         # Diretório de destino dos arquivos .hex
         memory_dir="${level_dir}memory"
+        # Diretório para arquivos ELF para Spike
+        spike_dir="${level_dir}spike"
 
         # Verifica se o diretório src existe
         if [ -d "$src_dir" ]; then
             echo "Compilando arquivos em ${src_dir}..."
 
-            # Cria o diretório memory, se não existir
+            # Cria os diretórios de destino, se não existirem
             mkdir -p "$memory_dir"
+            mkdir -p "$spike_dir"
 
             # Loop pelos arquivos .s no diretório src
             for arquivo in "$src_dir"/*.s; do
@@ -36,13 +39,24 @@ for extension_dir in "$base_dir"/*/; do
 
                     echo "Compilando $arquivo..."
 
-                    # Executa o processo de compilação e gera o arquivo .hex
-                    riscv32-unknown-elf-as -march=$march "$arquivo" -o "$build_dir/$nome_sem_extensao.o"
-                    riscv32-unknown-elf-ld "$build_dir/$nome_sem_extensao.o" -o "$build_dir/$nome_sem_extensao.elf"
-                    riscv32-unknown-elf-objcopy -O binary "$build_dir/$nome_sem_extensao.elf" "$build_dir/$nome_sem_extensao.bin"
-                    hexdump -v -e '1/4 "%08x" "\n"' "$build_dir/$nome_sem_extensao.bin" > "$memory_dir/$nome_sem_extensao.hex"
+                    # Arquivos intermediários
+                    obj_file="$build_dir/$nome_sem_extensao.o"
+                    elf_file="$build_dir/$nome_sem_extensao.elf"
+                    bin_file="$build_dir/$nome_sem_extensao.bin"
+                    hex_file="$memory_dir/$nome_sem_extensao.hex"
+                    spike_elf="$spike_dir/$nome_sem_extensao.elf"
 
-                    echo "$arquivo compilado e salvo como $memory_dir/$nome_sem_extensao.hex"
+                    # Compila e gera binário
+                    riscv32-unknown-elf-as -march=$march "$arquivo" -o "$obj_file"
+                    riscv32-unknown-elf-ld "$obj_file" -Ttext=0x80000000 -o "$elf_file"
+                    cp "$elf_file" "$spike_elf"
+
+                    riscv32-unknown-elf-objcopy -O binary "$elf_file" "$bin_file"
+                    hexdump -v -e '1/4 "%08x" "\n"' "$bin_file" > "$hex_file"
+
+                    echo "$arquivo compilado:"
+                    echo "  - .hex salvo em $hex_file"
+                    echo "  - ELF para Spike salvo em $spike_elf"
                 fi
             done
         else
@@ -52,4 +66,3 @@ for extension_dir in "$base_dir"/*/; do
 done
 
 echo "Processo de compilação concluído."
-

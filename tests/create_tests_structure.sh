@@ -17,7 +17,7 @@ EXTENSIONS=(
     ["RV32V"]="vadd.vv vsub.vv vmul.vv vreduce.vv vdot.vv vmin.vv vmax.vv vslideup.vx vslidedown.vx vredsum.vs vpopc.m vfirst.m vcompress.m"
     ["RV32P"]="pmulw paddw psubw pmulh paddh psubh pmulb paddb psubb"
     ["RV32B"]="andn orn xnor clz ctz pcnt sextb sexth zexth min max rol ror rori andc slo sro sbset sbclr sbinv sbext gorc grev pack packh shuffle unshuffle bdep bext clmul clmulh clmulr"
-    ["Zicsr"]="csrrw csrrs csrrc csrrwi csrrsi csrrci"
+    ["RV32Zicsr"]="csrrw csrrs csrrc csrrwi csrrsi csrrci"
 )
 
 # Função para criar estrutura de pastas e arquivos
