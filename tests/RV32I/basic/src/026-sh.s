@@ -5,8 +5,6 @@
 
 _start:
     li a1, 0x6A6ACADE
-
-    slli a1, a1, 6;
     
     sh a1, 48(zero);
 
