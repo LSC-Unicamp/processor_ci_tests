@@ -4,10 +4,10 @@
 .global _start;
 
 _start:
-    addi a1, zero, 4; # a1 = zero + 5
-    addi a2, zero, 1; # a1 = zero + 1
+    li a1, -2
+    li a2, 1
 
-    sra a3, a1, a2; # a3 = a1 >>> a2
+    sra a3, a1, a2; # a3 = a1 >>> a2 // a3 = -2 >> 1 = -1
 
     sw a3, 60(zero);
     

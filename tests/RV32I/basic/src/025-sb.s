@@ -4,7 +4,7 @@
 .global _start
 
 _start:
-    addi a1, zero, 2047;      # Carrega o primeiro número (2047) em a1
+    li a1, 0x6A6ACADE
 
     add a1, a1, a1;
     
