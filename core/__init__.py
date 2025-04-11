@@ -84,6 +84,10 @@ class ProcessorCITest:
             (breakpoint + 4) >> 2, test_content
         )
 
+        if(self.core_use_two_memories):
+            self.processor_ci.write_memory(
+                breakpoint, 0, self.core_use_two_memories)
+
         self.processor_ci.execute_until_stop()
 
         reference_lines = reference_file.readlines()
