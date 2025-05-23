@@ -38,3 +38,5 @@ testing_tests/
 env/
 *.elf
 .vscode/settings.json
+test
+test2

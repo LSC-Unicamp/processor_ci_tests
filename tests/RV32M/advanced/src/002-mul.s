@@ -3,8 +3,8 @@
 
 _start:
 # mul - a3 = a1 * a2
-# Caso 0
-    li a1, -2147483648     # a1=0x80000000, a2=0x00000001
-    li a2, 1
+# Caso 2
+    li a1, -1     # a1=0xFFFFFFFF, a2=0xFFFFFFFF
+    li a2, -1
     mul a3, a1, a2
     sw a3, 60(zero)
