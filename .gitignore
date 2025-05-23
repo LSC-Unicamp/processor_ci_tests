@@ -37,3 +37,4 @@ testing_tests/
 *.pyc
 env/
 *.elf
+.vscode/settings.json
