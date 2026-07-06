@@ -1,8 +1,8 @@
-# Processor CI Tests
+# ProcessorCI Tests
 
 [![Pylint](https://github.com/LSC-Unicamp/processor-ci-tests/actions/workflows/pylint.yml/badge.svg)](https://github.com/LSC-Unicamp/processor-ci-tests/actions/workflows/pylint.yml)
 
-Standalone home for the Processor CI RISC-V verification assets: ISA tests, reference memories, benchmark build support, and the serial test runner used to validate a processor core.
+Standalone home for the ProcessorCI RISC-V verification assets: ISA tests, reference memories, benchmark build support, and the serial test runner used to validate a processor core.
 
 ## What this repo contains
 
@@ -25,7 +25,7 @@ Standalone home for the Processor CI RISC-V verification assets: ISA tests, refe
 pip install -r requirements.txt
 ```
 
-3. Make sure the Processor CI communication package is available next to this repository or on `PYTHONPATH`.
+3. Make sure the ProcessorCI communication package is available next to this repository or on `PYTHONPATH`.
 
 4. Run the test runner:
 
