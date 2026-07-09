@@ -1,11 +1,17 @@
-# Repository Layout
+# ProcessorCI Tests Documentation
 
-This repo is organized around two kinds of assets:
+## Source And Data Boundaries
 
-- source code that runs tests against a core
-- data files used by those tests and benchmarks
+This repository mixes executable Python code with large verification assets.
+Keep those responsibilities separate:
 
-## Python Runner
+- `riscv_test_runner/` owns runner behavior.
+- `main.py` and root `core/` modules are compatibility shims.
+- `tests/` owns ISA test data.
+- `benchmarks/` owns benchmark sources and build helpers.
+- `third_party_repositories/` stores imported or converted upstream material.
+
+## Runner Package
 
 ```text
 riscv_test_runner/
@@ -14,13 +20,18 @@ riscv_test_runner/
     runner.py
     march.py
     utils.py
-main.py
-core/
 ```
 
-`riscv_test_runner/` is the canonical package. `main.py` and root-level `core/` are compatibility wrappers for older scripts.
+The package CLI is the canonical entrypoint:
 
-## ISA Test Corpus
+```bash
+python -m riscv_test_runner.cli
+```
+
+Keep parser changes in `riscv_test_runner.cli` so tests and wrappers can share
+the same behavior.
+
+## ISA Test Layout
 
 ```text
 tests/<architecture>/<level>/src/
@@ -28,23 +39,26 @@ tests/<architecture>/<level>/memory/
 tests/<architecture>/<level>/reference/
 ```
 
-- `src/`: assembly source for the test
-- `memory/`: compiled hex loaded into the processor memory
-- `reference/`: expected values read back by the runner
+If a test is refreshed from upstream material, preserve enough information to
+trace where it came from and how it was converted.
 
-The architecture folder names are used by the `--march` selector and entries in `config.json`.
+## Generated Files
 
-## Benchmarks
+Generated reports and build outputs should not be mixed into source trees.
+Common generated files include:
 
-```text
-benchmarks/coremark/
-benchmarks/common/
-benchmarks/port/
-benchmarks/target/
+- `test_results_<timestamp>.xml`
+- benchmark build directories
+- Python `__pycache__/`
+- temporary serial-run logs
+
+## Validation Checklist
+
+```bash
+pytest
+python -m riscv_test_runner.cli --help
+python main.py --help
 ```
 
-The benchmark area keeps source, platform hooks, linker scripts, and build helpers together. Generated files should stay under benchmark build directories rather than being mixed into the ISA test corpus.
-
-## Third-Party Material
-
-`third_party_repositories/` stores imported sources and converted assembly used to derive tests. Keep local edits documented when refreshing these files from upstream material.
+Hardware execution requires a connected ProcessorCI-compatible board and the
+communication package.

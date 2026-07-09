@@ -2,32 +2,42 @@
 
 [![Pylint](https://github.com/LSC-Unicamp/processor-ci-tests/actions/workflows/pylint.yml/badge.svg)](https://github.com/LSC-Unicamp/processor-ci-tests/actions/workflows/pylint.yml)
 
-Standalone home for the ProcessorCI RISC-V verification assets: ISA tests, reference memories, benchmark build support, and the serial test runner used to validate a processor core.
+ProcessorCI Tests contains the RISC-V software test assets and the serial test
+runner used to validate a processor through ProcessorCI hardware. It includes ISA
+test corpora, benchmark build support, third-party test material, and the Python
+runner that communicates with a board.
 
-## What this repo contains
+## Repository Layout
 
-- `riscv_test_runner/`: Python package for the test runner
-- `riscv_test_runner/core/`: runner, `-march` parsing, and small data helpers
-- `main.py`: stable compatibility wrapper around the package CLI
-- `tests/`: RISC-V ISA test corpus grouped by architecture extension and level
-- `benchmarks/`: bare-metal benchmark sources, ports, linker scripts, and build helpers
-- `third_party_repositories/`: imported or converted upstream test material
-- `config.json`: example test directory configuration consumed by the runner
-- `docs/`: repository layout and maintenance notes
-- `requirements.txt`: Python dependencies for the runner and CI checks
+```text
+riscv_test_runner/       Canonical Python package for the runner
+riscv_test_runner/core/  Runner implementation, -march parsing, and helpers
+main.py                  Compatibility wrapper around the package CLI
+core/                    Legacy import compatibility shims
+tests/                   ISA test corpus grouped by architecture and level
+benchmarks/              Bare-metal benchmark sources and build helpers
+third_party_repositories/ Imported or converted upstream test material
+docs/                    Layout and maintenance notes
+config.json              Example test configuration
+requirements.txt         Python dependencies for runner and CI checks
+```
 
-## Quick start
-
-1. Create a Python virtual environment.
-2. Install dependencies:
+## Installation
 
 ```bash
+git clone https://github.com/LSC-Unicamp/processor-ci-tests.git
+cd processor-ci-tests
+python3 -m venv env
+. env/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Make sure the ProcessorCI communication package is available next to this repository or on `PYTHONPATH`.
+The runner expects the ProcessorCI communication package to be available next to
+this repository or on `PYTHONPATH`.
 
-4. Run the test runner:
+## Quick Start
+
+Run the package CLI:
 
 ```bash
 python -m riscv_test_runner.cli \
@@ -37,7 +47,7 @@ python -m riscv_test_runner.cli \
   --key 0x4e455859
 ```
 
-Or use the compatibility wrapper:
+Use the compatibility wrapper:
 
 ```bash
 python main.py \
@@ -49,15 +59,15 @@ python main.py \
 
 Both entrypoints use the same parser and behavior.
 
-## Common usage
+## Common Usage
 
-- Show CLI help:
+Show CLI help:
 
 ```bash
 python -m riscv_test_runner.cli --help
 ```
 
-- Run only the tests selected by an architecture string:
+Run only tests selected by an architecture string:
 
 ```bash
 python -m riscv_test_runner.cli \
@@ -66,7 +76,7 @@ python -m riscv_test_runner.cli \
   -m rv32im
 ```
 
-- Run with a longer serial timeout and core execution timeout:
+Run with custom serial and core timeouts:
 
 ```bash
 python -m riscv_test_runner.cli \
@@ -77,7 +87,7 @@ python -m riscv_test_runner.cli \
   -t 5000
 ```
 
-- Run against a core with separate instruction and data memories:
+Run against a core with separate instruction and data memories:
 
 ```bash
 python -m riscv_test_runner.cli \
@@ -87,7 +97,7 @@ python -m riscv_test_runner.cli \
   --core-use-two-memories
 ```
 
-- Request extra benchmark-style tests listed in `config.json`:
+Request extra benchmark-style tests listed in `config.json`:
 
 ```bash
 python -m riscv_test_runner.cli \
@@ -97,65 +107,67 @@ python -m riscv_test_runner.cli \
   -e coremark
 ```
 
-## Test Layout
+## Test Corpus
 
-The ISA tests live under `tests/<architecture>/<level>/`.
+ISA tests live under:
 
 ```text
-tests/RV32I/basic/src/        assembly source files
-tests/RV32I/basic/memory/     compiled instruction memory hex files
-tests/RV32I/basic/reference/  expected result hex files
+tests/<architecture>/<level>/src/
+tests/<architecture>/<level>/memory/
+tests/<architecture>/<level>/reference/
 ```
 
-Architectures are named like `RV32I`, `RV32M`, `RV64I`, or `RV32Zicsr`. Test levels are:
+- `src/`: assembly source.
+- `memory/`: compiled instruction memory hex files.
+- `reference/`: expected values read by the runner.
 
-- `basic`: currently executed by the Python runner
-- `advanced`: broader instruction and behavior coverage
-- `invalid`: invalid instruction or exception-oriented cases
+Architectures are named like `RV32I`, `RV32M`, `RV64I`, and `RV32Zicsr`.
+Current levels are `basic`, `advanced`, and `invalid`; the runner currently
+executes the `basic` level.
 
-`config.json` maps each architecture directory to its path and breakpoint addresses. The current sample uses `/eda/processor_ci_tests/...` paths for CI/container use; adjust those paths for local runs if needed.
+`config.json` maps architecture directories to paths and breakpoint addresses.
+The sample file may use CI/container paths; adjust paths for local runs.
 
 ## Benchmarks
 
-`benchmarks/` keeps benchmark source and porting support separate from the precompiled ISA test corpus.
+`benchmarks/` stores benchmark source and porting support separately from the ISA
+corpus:
 
-- `benchmarks/coremark/`: CoreMark source tree
-- `benchmarks/port/`: bare-metal boot and platform hooks
-- `benchmarks/common/`: minimal C library support
-- `benchmarks/target/`: target-specific library and Makefile
-- `benchmarks/compile_coremark.sh`: builds CoreMark hex output with `riscv32-unknown-elf-*`
-- `benchmarks/compile_common.sh`: builds the minimal common library
+- `benchmarks/coremark/`: CoreMark source tree.
+- `benchmarks/port/`: bare-metal boot and platform hooks.
+- `benchmarks/common/`: minimal C library support.
+- `benchmarks/target/`: target-specific library and Makefile.
+- `benchmarks/compile_coremark.sh`: CoreMark build helper.
+- `benchmarks/compile_common.sh`: common library build helper.
 
-Generated benchmark build outputs are written under `benchmarks/build/`.
+Generated benchmark build output should stay under benchmark build directories.
 
-## CLI Reference
+## Outputs
 
-```text
-usage: python -m riscv_test_runner.cli [-h] [-b BAUDRATE] -p PORT
-                                        [-s SERIAL_TIMEOUT] -c CONFIG
-                                        [-m MARCH] [-e EXTRA_TESTS] [-k KEY]
-                                        [-t TIMEOUT] [-ctm]
+The runner communicates with the board, executes the selected tests, and writes a
+JUnit report named `test_results_<timestamp>.xml`.
+
+## Development
+
+`riscv_test_runner/` is the canonical implementation. Keep `main.py` and the
+root-level `core/` package as compatibility shims for older scripts.
+
+Useful checks:
+
+```bash
+pytest
+python -m riscv_test_runner.cli --help
+python main.py --help
 ```
 
-- `-p`, `--port`: serial port used to communicate with the FPGA board. Required.
-- `-c`, `--config`: JSON test configuration. Required.
-- `-b`, `--baudrate`: serial baudrate. Defaults to `115200`.
-- `-s`, `--serial-timeout`: serial timeout in seconds. Defaults to `5`.
-- `-m`, `--march`: RISC-V architecture string used to select test directories. Defaults to `rv32i`.
-- `-e`, `--extra-tests`: comma-separated extra tests from `config.json`.
-- `-k`, `--key`: hex sync key expected from the board.
-- `-t`, `--timeout`: core execution timeout in clock cycles. Defaults to `1000`.
-- `-ctm`, `--core-use-two-memories`: use separate instruction and data memories.
+See [docs/README.md](docs/README.md) for layout notes.
 
-## Developer Notes
+## Contributing
 
-- `riscv_test_runner.cli.build_parser()` exposes the CLI parser for tests.
-- `riscv_test_runner.cli.main(argv=None)` supports argument injection for wrappers and tests.
-- `riscv_test_runner.core.runner.ProcessorCITest` is the hardware-facing runner.
-- Root-level `core.*` imports remain as compatibility shims for older scripts.
-- Test execution writes a JUnit report named `test_results_<timestamp>.xml`.
+Issues and pull requests are welcome. When adding tests, include source,
+compiled memory, expected reference output, and any config changes needed to run
+the new cases.
 
-## Notes
+## License
 
-- The current organization keeps large verification data in place while moving Python implementation into a package, matching the shape used by `processor_ci_discover`.
-- The runner currently executes the `basic` category. `advanced` and `invalid` data are preserved for expansion and maintenance.
+This project is licensed under the [MIT License](LICENSE).
