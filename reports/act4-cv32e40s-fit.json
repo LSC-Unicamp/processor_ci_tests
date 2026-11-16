@@ -1,0 +1,578 @@
+{
+  "core": "RV-Bench CV32E40S",
+  "board": "digilent_nexys4_ddr",
+  "memory_mode": "split",
+  "primary_memory_bytes": 8192,
+  "data_memory_bytes": 4096,
+  "checked": 47,
+  "fit": 0,
+  "minimum_load_file_bytes": 82480,
+  "minimum_load_span_high": 218592,
+  "tests": [
+    {
+      "test_id": "I-add-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-addi-00",
+      "load_file_bytes": 125584,
+      "load_span_high": 267744,
+      "tohost": 131104,
+      "fits": false,
+      "reasons": [
+        "125584 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20020 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-and-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-andi-00",
+      "load_file_bytes": 125584,
+      "load_span_high": 267744,
+      "tohost": 131104,
+      "fits": false,
+      "reasons": [
+        "125584 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20020 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-auipc-00",
+      "load_file_bytes": 87664,
+      "load_span_high": 222688,
+      "tohost": 88448,
+      "fits": false,
+      "reasons": [
+        "87664 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x365e0, beyond 0x2000 primary RAM",
+        "tohost at 0x15980 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-beq-00",
+      "load_file_bytes": 147392,
+      "load_span_high": 292320,
+      "tohost": 158160,
+      "fits": false,
+      "reasons": [
+        "147392 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x475e0, beyond 0x2000 primary RAM",
+        "tohost at 0x269d0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-bge-00",
+      "load_file_bytes": 147392,
+      "load_span_high": 292320,
+      "tohost": 158160,
+      "fits": false,
+      "reasons": [
+        "147392 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x475e0, beyond 0x2000 primary RAM",
+        "tohost at 0x269d0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-bgeu-00",
+      "load_file_bytes": 147648,
+      "load_span_high": 292320,
+      "tohost": 158416,
+      "fits": false,
+      "reasons": [
+        "147648 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x475e0, beyond 0x2000 primary RAM",
+        "tohost at 0x26ad0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-blt-00",
+      "load_file_bytes": 147392,
+      "load_span_high": 292320,
+      "tohost": 158160,
+      "fits": false,
+      "reasons": [
+        "147392 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x475e0, beyond 0x2000 primary RAM",
+        "tohost at 0x269d0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-bltu-00",
+      "load_file_bytes": 147648,
+      "load_span_high": 292320,
+      "tohost": 158416,
+      "fits": false,
+      "reasons": [
+        "147648 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x475e0, beyond 0x2000 primary RAM",
+        "tohost at 0x26ad0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-bne-00",
+      "load_file_bytes": 147392,
+      "load_span_high": 292320,
+      "tohost": 158160,
+      "fits": false,
+      "reasons": [
+        "147392 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x475e0, beyond 0x2000 primary RAM",
+        "tohost at 0x269d0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-fence-00",
+      "load_file_bytes": 82880,
+      "load_span_high": 218592,
+      "tohost": 85328,
+      "fits": false,
+      "reasons": [
+        "82880 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x355e0, beyond 0x2000 primary RAM",
+        "tohost at 0x14d50 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-jal-00",
+      "load_file_bytes": 204480,
+      "load_span_high": 337376,
+      "tohost": 202960,
+      "fits": false,
+      "reasons": [
+        "204480 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x525e0, beyond 0x2000 primary RAM",
+        "tohost at 0x318d0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-jalr-00",
+      "load_file_bytes": 105424,
+      "load_span_high": 243168,
+      "tohost": 109024,
+      "fits": false,
+      "reasons": [
+        "105424 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a9e0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-lb-00",
+      "load_file_bytes": 95088,
+      "load_span_high": 243168,
+      "tohost": 108800,
+      "fits": false,
+      "reasons": [
+        "95088 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a900 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-lbu-00",
+      "load_file_bytes": 95216,
+      "load_span_high": 243168,
+      "tohost": 108928,
+      "fits": false,
+      "reasons": [
+        "95216 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a980 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-lh-00",
+      "load_file_bytes": 94464,
+      "load_span_high": 243168,
+      "tohost": 108560,
+      "fits": false,
+      "reasons": [
+        "94464 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a810 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-lhu-00",
+      "load_file_bytes": 94592,
+      "load_span_high": 243168,
+      "tohost": 108688,
+      "fits": false,
+      "reasons": [
+        "94592 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a890 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-lui-00",
+      "load_file_bytes": 87552,
+      "load_span_high": 222688,
+      "tohost": 88336,
+      "fits": false,
+      "reasons": [
+        "87552 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x365e0, beyond 0x2000 primary RAM",
+        "tohost at 0x15910 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-lw-00",
+      "load_file_bytes": 94096,
+      "load_span_high": 243168,
+      "tohost": 108448,
+      "fits": false,
+      "reasons": [
+        "94096 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a7a0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-nop-00",
+      "load_file_bytes": 82480,
+      "load_span_high": 218592,
+      "tohost": 85056,
+      "fits": false,
+      "reasons": [
+        "82480 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x355e0, beyond 0x2000 primary RAM",
+        "tohost at 0x14c40 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-or-00",
+      "load_file_bytes": 129504,
+      "load_span_high": 263648,
+      "tohost": 130928,
+      "fits": false,
+      "reasons": [
+        "129504 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x405e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1ff70 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-ori-00",
+      "load_file_bytes": 125216,
+      "load_span_high": 263648,
+      "tohost": 130736,
+      "fits": false,
+      "reasons": [
+        "125216 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x405e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1feb0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-sb-00",
+      "load_file_bytes": 94928,
+      "load_span_high": 243168,
+      "tohost": 107872,
+      "fits": false,
+      "reasons": [
+        "94928 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a560 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-sh-00",
+      "load_file_bytes": 94368,
+      "load_span_high": 243168,
+      "tohost": 107568,
+      "fits": false,
+      "reasons": [
+        "94368 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a430 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-sll-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-slli-00",
+      "load_file_bytes": 103840,
+      "load_span_high": 251360,
+      "tohost": 115504,
+      "fits": false,
+      "reasons": [
+        "103840 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3d5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1c330 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-slt-00",
+      "load_file_bytes": 130016,
+      "load_span_high": 267744,
+      "tohost": 131568,
+      "fits": false,
+      "reasons": [
+        "130016 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x201f0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-slti-00",
+      "load_file_bytes": 125584,
+      "load_span_high": 267744,
+      "tohost": 131232,
+      "fits": false,
+      "reasons": [
+        "125584 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x200a0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-sltiu-00",
+      "load_file_bytes": 125952,
+      "load_span_high": 267744,
+      "tohost": 131600,
+      "fits": false,
+      "reasons": [
+        "125952 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20210 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-sltu-00",
+      "load_file_bytes": 130400,
+      "load_span_high": 267744,
+      "tohost": 131952,
+      "fits": false,
+      "reasons": [
+        "130400 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20370 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-sra-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-srai-00",
+      "load_file_bytes": 103840,
+      "load_span_high": 251360,
+      "tohost": 115504,
+      "fits": false,
+      "reasons": [
+        "103840 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3d5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1c330 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-srl-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-srli-00",
+      "load_file_bytes": 103840,
+      "load_span_high": 251360,
+      "tohost": 115504,
+      "fits": false,
+      "reasons": [
+        "103840 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3d5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1c330 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-sub-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-sw-00",
+      "load_file_bytes": 94096,
+      "load_span_high": 243168,
+      "tohost": 107424,
+      "fits": false,
+      "reasons": [
+        "94096 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x3b5e0, beyond 0x2000 primary RAM",
+        "tohost at 0x1a3a0 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-xor-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "I-xori-00",
+      "load_file_bytes": 125584,
+      "load_span_high": 267744,
+      "tohost": 131104,
+      "fits": false,
+      "reasons": [
+        "125584 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20020 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "M-div-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "M-divu-00",
+      "load_file_bytes": 130288,
+      "load_span_high": 267744,
+      "tohost": 131712,
+      "fits": false,
+      "reasons": [
+        "130288 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20280 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "M-mul-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "M-mulh-00",
+      "load_file_bytes": 130288,
+      "load_span_high": 267744,
+      "tohost": 131712,
+      "fits": false,
+      "reasons": [
+        "130288 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20280 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "M-mulhsu-00",
+      "load_file_bytes": 131072,
+      "load_span_high": 267744,
+      "tohost": 132496,
+      "fits": false,
+      "reasons": [
+        "131072 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20590 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "M-mulhu-00",
+      "load_file_bytes": 130688,
+      "load_span_high": 267744,
+      "tohost": 132112,
+      "fits": false,
+      "reasons": [
+        "130688 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20410 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "M-rem-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": false,
+      "reasons": [
+        "129904 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20100 is beyond 0x1000 data RAM"
+      ]
+    },
+    {
+      "test_id": "M-remu-00",
+      "load_file_bytes": 130288,
+      "load_span_high": 267744,
+      "tohost": 131712,
+      "fits": false,
+      "reasons": [
+        "130288 initialized bytes exceed 12288 total controller bytes",
+        "instruction-visible ELF span ends at 0x415e0, beyond 0x2000 primary RAM",
+        "tohost at 0x20280 is beyond 0x1000 data RAM"
+      ]
+    }
+  ],
+  "fpga_execution_ready": false
+}

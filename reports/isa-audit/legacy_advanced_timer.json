@@ -1,0 +1,11 @@
+{
+  "source": "tests/RV32I/advanced/src/040-timer.s",
+  "image": "tests/RV32I/advanced/memory/040-timer.hex",
+  "reference": "tests/RV32I/advanced/reference/040-timer.hex",
+  "source_image_matches": true,
+  "reference_word": "00000001",
+  "controller_timer_address": "0xfffffffc",
+  "timer_rtl_unit_validated": true,
+  "core_execution": "pending",
+  "reason": "no matched core/controller execution of timer program"
+}

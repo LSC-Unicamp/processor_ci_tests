@@ -1,0 +1,1994 @@
+[
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/000-lr.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/001-sc.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/002-amoswap.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/003-amoadd.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/004-amoxor.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/005-amoand.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/006-amoor.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/007-amomin.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/008-amomax.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/009-amominu.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32A",
+    "category": "basic",
+    "source": "tests/RV32A/basic/src/010-amomaxu.w.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/000-caddi.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/001-cli.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/002-clw.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/003-csw.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/004-cj.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/005-cjal.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/006-cjr.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/007-cjalr.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/008-cand.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/009-cor.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/010-candi.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/011-cmv.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/012-csub.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/013-cadd.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/014-cslli.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/015-csrli.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/016-csrai.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/017-clui.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/018-cbeqz.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32C",
+    "category": "basic",
+    "source": "tests/RV32C/basic/src/019-cbnez.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/000-fld.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/001-fsd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/002-faddd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/003-fsubd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/004-fmuld.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/005-fdivd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/006-fsqrtd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/007-fsgnjd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/008-fsgnjnd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/009-fsgnjxd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/010-fmind.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/011-fmaxd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/012-fcvtwd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/013-fcvtwud.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/014-fmvxd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/015-fmvwx.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/016-feqd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/017-fltd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/018-fled.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32D",
+    "category": "basic",
+    "source": "tests/RV32D/basic/src/019-fclassd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/000-flw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/001-fsw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/002-fadds.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/003-fsubs.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/004-fmuls.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/005-fdivs.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/006-fsqrts.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/007-fsgnj.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/008-fsgnjn.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/009-fsgnjx.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/010-fmins.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/011-fmaxs.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/012-fcvtws.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/013-fcvtwus.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/014-fmvxw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/015-fmvwx.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/016-feqs.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/017-flts.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/018-fles.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32F",
+    "category": "basic",
+    "source": "tests/RV32F/basic/src/019-fclasss.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/000-addi.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/001-sw.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/002-slti.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/003-sltiu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/004-xori.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/005-ori.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/006-andi.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/007-slli.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/008-srli.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/009-srai.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/010-lui.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/011-auipc.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/012-jal.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/013-jalr.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/014-beq.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/015-bne.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/016-blt.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/017-bge.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/018-bltu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/019-bgeu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/020-lb.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/021-lh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/022-lw.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/023-lbu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/024-lhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/025-sb.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/026-sh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/027-add.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/028-sub.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/029-sll.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/030-slt.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/031-sltu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/032-xor.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/033-srl.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/034-sra.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/035-or.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/036-and.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/037-fence.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/038-ecall.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/039-ebreak.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/040-timeout.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/041-forwarding.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "basic",
+    "source": "tests/RV32I/basic/src/042-forwarding-lw.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "advanced",
+    "source": "tests/RV32I/advanced/src/012-jal.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "advanced",
+    "source": "tests/RV32I/advanced/src/013-jalr.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32I",
+    "category": "advanced",
+    "source": "tests/RV32I/advanced/src/040-timer.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "basic",
+    "source": "tests/RV32M/basic/src/000-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "basic",
+    "source": "tests/RV32M/basic/src/001-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "basic",
+    "source": "tests/RV32M/basic/src/002-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "basic",
+    "source": "tests/RV32M/basic/src/003-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "basic",
+    "source": "tests/RV32M/basic/src/004-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "basic",
+    "source": "tests/RV32M/basic/src/005-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "basic",
+    "source": "tests/RV32M/basic/src/006-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "basic",
+    "source": "tests/RV32M/basic/src/007-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/000-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/001-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/002-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/003-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/004-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/005-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/006-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/007-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/008-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/009-mul.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/010-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/011-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/012-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/013-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/014-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/015-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/016-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/017-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/018-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/019-mulh.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/020-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/021-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/022-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/023-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/024-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/025-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/026-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/027-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/028-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/029-mulhsu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/030-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/031-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/032-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/033-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/034-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/035-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/036-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/037-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/038-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/039-mulhu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/040-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/041-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/042-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/043-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/044-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/045-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/046-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/047-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/048-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/049-div.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/050-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/051-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/052-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/053-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/054-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/055-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/056-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/057-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/058-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/059-divu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/060-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/061-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/062-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/063-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/064-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/065-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/066-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/067-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/068-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/069-rem.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/070-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/071-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/072-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/073-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/074-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/075-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/076-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/077-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/078-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32M",
+    "category": "advanced",
+    "source": "tests/RV32M/advanced/src/079-remu.s",
+    "has_instruction": true,
+    "memory_nonempty": true,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32Zicsr",
+    "category": "basic",
+    "source": "tests/RV32Zicsr/basic/src/000-csrrw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32Zicsr",
+    "category": "basic",
+    "source": "tests/RV32Zicsr/basic/src/001-csrrs.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32Zicsr",
+    "category": "basic",
+    "source": "tests/RV32Zicsr/basic/src/002-csrrc.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32Zicsr",
+    "category": "basic",
+    "source": "tests/RV32Zicsr/basic/src/003-csrrwi.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32Zicsr",
+    "category": "basic",
+    "source": "tests/RV32Zicsr/basic/src/004-csrrsi.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV32Zicsr",
+    "category": "basic",
+    "source": "tests/RV32Zicsr/basic/src/005-csrrci.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/000-lr.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/001-sc.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/002-amoswap.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/003-amoadd.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/004-amoxor.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/005-amoand.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/006-amoor.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/007-amomin.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/008-amomax.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/009-amominu.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64A",
+    "category": "basic",
+    "source": "tests/RV64A/basic/src/010-amomaxu.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64D",
+    "category": "basic",
+    "source": "tests/RV64D/basic/src/000-fcvt.l.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64D",
+    "category": "basic",
+    "source": "tests/RV64D/basic/src/001-fcvt.lu.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64D",
+    "category": "basic",
+    "source": "tests/RV64D/basic/src/002-fmv.x.d.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64D",
+    "category": "basic",
+    "source": "tests/RV64D/basic/src/003-fcvt.d.l.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64D",
+    "category": "basic",
+    "source": "tests/RV64D/basic/src/004-fcvt.d.lu.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64D",
+    "category": "basic",
+    "source": "tests/RV64D/basic/src/005-fmv.d.x.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64F",
+    "category": "basic",
+    "source": "tests/RV64F/basic/src/000-fcvt.l.s.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64F",
+    "category": "basic",
+    "source": "tests/RV64F/basic/src/001-fcvt.lu.s.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64F",
+    "category": "basic",
+    "source": "tests/RV64F/basic/src/002-fcvt.s.l.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64F",
+    "category": "basic",
+    "source": "tests/RV64F/basic/src/003-fcvt.s.lu.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/000-addiw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/001-slliw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/002-srliw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/003-sraiw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/004-addw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/005-subw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/006-sllw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/007-srlw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/008-sraw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/009-lwu.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/010-ld.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64I",
+    "category": "basic",
+    "source": "tests/RV64I/basic/src/011-sd.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64M",
+    "category": "basic",
+    "source": "tests/RV64M/basic/src/000-mulw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64M",
+    "category": "basic",
+    "source": "tests/RV64M/basic/src/001-divw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64M",
+    "category": "basic",
+    "source": "tests/RV64M/basic/src/002-divuw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64M",
+    "category": "basic",
+    "source": "tests/RV64M/basic/src/003-remw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  },
+  {
+    "group": "RV64M",
+    "category": "basic",
+    "source": "tests/RV64M/basic/src/004-remuw.s",
+    "has_instruction": false,
+    "memory_nonempty": false,
+    "reference_nonempty": true
+  }
+]

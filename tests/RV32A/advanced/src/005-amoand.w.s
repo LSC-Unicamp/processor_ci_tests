@@ -1,1 +1,0 @@
-# amoand.w implementation

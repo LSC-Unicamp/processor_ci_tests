@@ -1,1 +1,0 @@
-# amoor.d implementation

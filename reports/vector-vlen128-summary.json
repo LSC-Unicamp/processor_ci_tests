@@ -1,0 +1,3564 @@
+{
+  "reference_model": "Sail 0.13.1",
+  "vlen_bits": 128,
+  "named_zve_levels": {
+    "Zve32x": {
+      "support_level": "Integer",
+      "elen_bits": 32
+    },
+    "Zve32f": {
+      "support_level": "Float_single",
+      "elen_bits": 32
+    },
+    "Zve64x": {
+      "support_level": "Integer",
+      "elen_bits": 64
+    },
+    "Zve64f": {
+      "support_level": "Float_single",
+      "elen_bits": 64
+    },
+    "Zve64d": {
+      "support_level": "Float_double",
+      "elen_bits": 64
+    }
+  },
+  "optional_vector_extensions_disabled": [
+    "Zvabd",
+    "Zvfbfmin",
+    "Zvfbfwma",
+    "Zvfh",
+    "Zvfhmin",
+    "Zvbb",
+    "Zvbc",
+    "Zvkb",
+    "Zvkg",
+    "Zvkned",
+    "Zvknha",
+    "Zvknhb",
+    "Zvksed",
+    "Zvksh",
+    "Zvkt"
+  ],
+  "base_configs": [
+    "third_party_repositories/riscv-arch-test/config/sail/sail-rv32-max/sail.json",
+    "third_party_repositories/riscv-arch-test/config/sail/sail-rv64-max/sail.json"
+  ],
+  "override": "tools/config/vector-vlen128.json",
+  "basic_cases": 375,
+  "advanced_scenarios": 14,
+  "full_v_validated": 389,
+  "named_zve_validated": 389,
+  "basic_groups": {
+    "RV32Zve32f": 66,
+    "RV32Zve32x": 259,
+    "RV32Zve64d": 29,
+    "RV32Zve64f": 6,
+    "RV32Zve64x": 11,
+    "RV64Zve64x": 4
+  },
+  "hardware_validated": 0,
+  "results": [
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vadd.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsub.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmul.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmul.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vcompress.vm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vcompress.vm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vfirst.m",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vfirst.m.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmin.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmin.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmax.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmax.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vslideup.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vslideup.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vslidedown.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vslidedown.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vredsum.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vredsum.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vcpop.m",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vcpop.m.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vadd.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vadd.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vadd.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vadd.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vand.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vand.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vor.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vor.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vxor.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vxor.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsll.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsll.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsrl.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsrl.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsra.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsra.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vminu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vminu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmaxu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmaxu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vdivu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vdivu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vremu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vremu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmseq.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmseq.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsne.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsne.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmslt.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmslt.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsle.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsle.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmerge.vvm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmerge.vvm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv.v.x",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv.v.x.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv.v.i",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv.v.i.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsetivli",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsetivli.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsetvli",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsetvli.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vle32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vle32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vse32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vse32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vrgather.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vrgather.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vid.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vid.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vslide1up.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vslide1up.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vslide1down.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vslide1down.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vredmax.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vredmax.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vredand.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vredand.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vredor.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vredor.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vredxor.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vredxor.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmacc.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmacc.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmadd.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnmsac.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnmsac.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnmsub.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnmsub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsetvl",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsetvl.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl1re8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl1re8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl1re16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl1re16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl1re32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl1re32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vs1r.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vs1r.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl2re8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl2re8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl2re16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl2re16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl2re32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl2re32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vs2r.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vs2r.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl4re8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl4re8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl4re16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl4re16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl4re32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl4re32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vs4r.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vs4r.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl8re8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl8re8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl8re16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl8re16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vl8re32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vl8re32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vs8r.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vs8r.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vle8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vle8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vle8ff.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vle8ff.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vse8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vse8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vlse8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vlse8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsse8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsse8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vle16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vle16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vle16ff.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vle16ff.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vse16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vse16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vlse16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vlse16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsse16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsse16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vle32ff.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vle32ff.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vlse32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vlse32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsse32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsse32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vluxei8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vluxei8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vloxei8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vloxei8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsuxei8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsuxei8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsoxei8.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsoxei8.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vluxei16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vluxei16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vloxei16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vloxei16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsuxei16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsuxei16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsoxei16.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsoxei16.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vluxei32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vluxei32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vloxei32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vloxei32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsuxei32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsuxei32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsoxei32.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsoxei32.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vlm.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vlm.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsm.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsm.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vand.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vand.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vand.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vand.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vor.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vor.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vor.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vor.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vxor.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vxor.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vxor.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vxor.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmin.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmin.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vminu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vminu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmax.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmax.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmaxu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmaxu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsub.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsub.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vrsub.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vrsub.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vrsub.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vrsub.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmul.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmul.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vdiv.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vdiv.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vdiv.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vdiv.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vdivu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vdivu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vrem.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vrem.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vrem.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vrem.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vremu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vremu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsll.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsll.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsll.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsll.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsrl.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsrl.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsrl.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsrl.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vslidedown.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vslidedown.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsra.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsra.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsra.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsra.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vslideup.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vslideup.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vredmaxu.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vredmaxu.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vredmin.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vredmin.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vredminu.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vredminu.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vrgather.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vrgather.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vrgather.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vrgather.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vrgatherei16.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vrgatherei16.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv.s.x",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv.s.x.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv.v.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv.v.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv.x.s",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv.x.s.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv1r.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv1r.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv2r.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv2r.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv4r.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv4r.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmv8r.v",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmv8r.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmseq.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmseq.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmseq.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmseq.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsne.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsne.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsne.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsne.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmslt.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmslt.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsltu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsltu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsltu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsltu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsle.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsle.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsle.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsle.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsleu.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsleu.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsleu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsleu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsleu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsleu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsgt.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsgt.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsgt.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsgt.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsgtu.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsgtu.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsgtu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsgtu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmadc.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmadc.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmadc.vim",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmadc.vim.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmadc.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmadc.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmadc.vvm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmadc.vvm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmadc.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmadc.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmadc.vxm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmadc.vxm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsbc.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsbc.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsbc.vvm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsbc.vvm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsbc.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsbc.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsbc.vxm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsbc.vxm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vadc.vim",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vadc.vim.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vadc.vvm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vadc.vvm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vadc.vxm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vadc.vxm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsbc.vvm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsbc.vvm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsbc.vxm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsbc.vxm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmand.mm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmand.mm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmandn.mm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmandn.mm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmnand.mm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmnand.mm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmnor.mm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmnor.mm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmor.mm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmor.mm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmorn.mm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmorn.mm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmxor.mm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmxor.mm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmxnor.mm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmxnor.mm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmerge.vim",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmerge.vim.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmerge.vxm",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmerge.vxm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsbf.m",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsbf.m.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsif.m",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsif.m.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmsof.m",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmsof.m.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-viota.m",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-viota.m.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vaadd.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vaadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vaadd.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vaadd.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vaaddu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vaaddu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vaaddu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vaaddu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vasub.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vasub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vasub.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vasub.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vasubu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vasubu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vasubu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vasubu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsadd.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsadd.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsadd.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsadd.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsadd.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsaddu.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsaddu.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsaddu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsaddu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsaddu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsaddu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssub.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssub.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssub.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssubu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssubu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssubu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssubu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmulh.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmulh.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmulh.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmulh.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmulhsu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmulhsu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmulhsu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmulhsu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmulhu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmulhu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmulhu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmulhu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmacc.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmacc.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vmadd.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vmadd.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnmsac.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnmsac.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnmsub.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnmsub.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsext.vf2",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsext.vf2.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsext.vf4",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsext.vf4.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vzext.vf2",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vzext.vf2.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vzext.vf4",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vzext.vf4.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssra.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssra.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssra.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssra.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssra.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssra.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssrl.vi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssrl.vi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssrl.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssrl.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vssrl.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vssrl.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsmul.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsmul.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vsmul.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vsmul.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnclip.wi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnclip.wi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnclip.wv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnclip.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnclip.wx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnclip.wx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnclipu.wi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnclipu.wi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnclipu.wv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnclipu.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnclipu.wx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnclipu.wx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnsra.wi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnsra.wi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnsra.wv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnsra.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnsra.wx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnsra.wx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnsrl.wi",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnsrl.wi.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnsrl.wv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnsrl.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vnsrl.wx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vnsrl.wx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwadd.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwadd.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwadd.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwadd.wv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwadd.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwadd.wx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwadd.wx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwaddu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwaddu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwaddu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwaddu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwaddu.wv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwaddu.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwaddu.wx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwaddu.wx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwsub.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwsub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwsub.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwsub.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwsub.wv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwsub.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwsub.wx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwsub.wx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwsubu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwsubu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwsubu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwsubu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwsubu.wv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwsubu.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwsubu.wx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwsubu.wx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmul.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmul.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmul.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmul.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmulu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmulu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmulu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmulu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmulsu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmulsu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmulsu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmulsu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmacc.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmacc.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmacc.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmacc.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmaccu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmaccu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmaccu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmaccu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmaccsu.vv",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmaccsu.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmaccsu.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmaccsu.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwmaccus.vx",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwmaccus.vx.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwredsum.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwredsum.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32x-vwredsumu.vs",
+      "group": "RV32Zve32x",
+      "extension": "Zve32x",
+      "elf": "build/basic-sail/RV32Zve32x-vwredsumu.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vl1re64.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vl1re64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vl2re64.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vl2re64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vl4re64.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vl4re64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vl8re64.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vl8re64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vle64.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vle64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vle64ff.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vle64ff.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vlse64.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vlse64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vse64.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vse64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vsse64.v",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vsse64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vsext.vf8",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vsext.vf8.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64x-vzext.vf8",
+      "group": "RV32Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV32Zve64x-vzext.vf8.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV64Zve64x-vloxei64.v",
+      "group": "RV64Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV64Zve64x-vloxei64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV64Zve64x-vluxei64.v",
+      "group": "RV64Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV64Zve64x-vluxei64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV64Zve64x-vsoxei64.v",
+      "group": "RV64Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV64Zve64x-vsoxei64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV64Zve64x-vsuxei64.v",
+      "group": "RV64Zve64x",
+      "extension": "Zve64x",
+      "elf": "build/basic-sail/RV64Zve64x-vsuxei64.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfadd.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfadd.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfadd.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsub.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsub.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsub.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmul.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmul.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmul.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmul.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfdiv.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfdiv.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfdiv.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfdiv.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmin.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmin.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmin.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmin.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmax.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmax.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmax.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmax.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsgnj.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsgnj.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsgnj.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsgnj.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsgnjn.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsgnjn.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsgnjn.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsgnjn.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsgnjx.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsgnjx.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsgnjx.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsgnjx.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfrsub.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfrsub.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfrdiv.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfrdiv.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfsqrt.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfsqrt.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfrec7.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfrec7.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfrsqrt7.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfrsqrt7.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmacc.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmacc.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmacc.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmacc.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmadd.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmadd.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmadd.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmsac.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmsac.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmsac.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmsac.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmsub.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmsub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmsub.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmsub.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfnmacc.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfnmacc.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfnmacc.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfnmacc.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfnmadd.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfnmadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfnmadd.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfnmadd.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfnmsac.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfnmsac.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfnmsac.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfnmsac.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfnmsub.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfnmsub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfnmsub.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfnmsub.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfredmax.vs",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfredmax.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfredmin.vs",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfredmin.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfredosum.vs",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfredosum.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfredusum.vs",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfredusum.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfclass.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfclass.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfcvt.f.x.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfcvt.f.x.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfcvt.f.xu.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfcvt.f.xu.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfcvt.x.f.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfcvt.x.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfcvt.xu.f.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfcvt.xu.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfcvt.rtz.x.f.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfcvt.rtz.x.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfcvt.rtz.xu.f.v",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfcvt.rtz.xu.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmv.f.s",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmv.f.s.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmv.s.f",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmv.s.f.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmv.v.f",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmv.v.f.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfmerge.vfm",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfmerge.vfm.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfslide1up.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfslide1up.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vfslide1down.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vfslide1down.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmfeq.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmfeq.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmfeq.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmfeq.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmfne.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmfne.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmfne.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmfne.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmflt.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmflt.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmflt.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmflt.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmfle.vv",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmfle.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmfle.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmfle.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmfge.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmfge.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve32f-vmfgt.vf",
+      "group": "RV32Zve32f",
+      "extension": "Zve32f",
+      "elf": "build/basic-sail/RV32Zve32f-vmfgt.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64f-vfncvt.f.x.w",
+      "group": "RV32Zve64f",
+      "extension": "Zve64f",
+      "elf": "build/basic-sail/RV32Zve64f-vfncvt.f.x.w.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64f-vfncvt.f.xu.w",
+      "group": "RV32Zve64f",
+      "extension": "Zve64f",
+      "elf": "build/basic-sail/RV32Zve64f-vfncvt.f.xu.w.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64f-vfwcvt.x.f.v",
+      "group": "RV32Zve64f",
+      "extension": "Zve64f",
+      "elf": "build/basic-sail/RV32Zve64f-vfwcvt.x.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64f-vfwcvt.xu.f.v",
+      "group": "RV32Zve64f",
+      "extension": "Zve64f",
+      "elf": "build/basic-sail/RV32Zve64f-vfwcvt.xu.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64f-vfwcvt.rtz.x.f.v",
+      "group": "RV32Zve64f",
+      "extension": "Zve64f",
+      "elf": "build/basic-sail/RV32Zve64f-vfwcvt.rtz.x.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64f-vfwcvt.rtz.xu.f.v",
+      "group": "RV32Zve64f",
+      "extension": "Zve64f",
+      "elf": "build/basic-sail/RV32Zve64f-vfwcvt.rtz.xu.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwadd.vv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwadd.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwadd.vf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwadd.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwadd.wv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwadd.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwadd.wf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwadd.wf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwsub.vv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwsub.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwsub.vf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwsub.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwsub.wv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwsub.wv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwsub.wf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwsub.wf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwmul.vv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwmul.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwmul.vf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwmul.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwmacc.vv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwmacc.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwmacc.vf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwmacc.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwmsac.vv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwmsac.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwmsac.vf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwmsac.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwnmacc.vv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwnmacc.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwnmacc.vf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwnmacc.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwnmsac.vv",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwnmsac.vv.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwnmsac.vf",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwnmsac.vf.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwredosum.vs",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwredosum.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwredusum.vs",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwredusum.vs.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwcvt.f.f.v",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwcvt.f.f.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwcvt.f.x.v",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwcvt.f.x.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfwcvt.f.xu.v",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfwcvt.f.xu.v.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfncvt.f.f.w",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfncvt.f.f.w.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfncvt.rod.f.f.w",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfncvt.rod.f.f.w.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfncvt.x.f.w",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfncvt.x.f.w.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfncvt.xu.f.w",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfncvt.xu.f.w.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfncvt.rtz.x.f.w",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfncvt.rtz.x.f.w.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "basic",
+      "id": "RV32Zve64d-vfncvt.rtz.xu.f.w",
+      "group": "RV32Zve64d",
+      "extension": "Zve64d",
+      "elf": "build/basic-sail/RV32Zve64d-vfncvt.rtz.xu.f.w.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_load_add_store",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_load_add_store.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_e64_two_lane_store",
+      "group": null,
+      "extension": "Zve64x",
+      "elf": "build/advanced-sail/vector_e64_two_lane_store.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_mask_undisturbed",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_mask_undisturbed.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_tail_undisturbed",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_tail_undisturbed.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_vstart_csr_reset",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_vstart_csr_reset.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_vstart_load_resume",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_vstart_load_resume.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_vxsat_sticky",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_vxsat_sticky.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_lmul2_cross_register",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_lmul2_cross_register.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_vstart_store_resume",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_vstart_store_resume.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_fractional_lmul_half",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_fractional_lmul_half.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_lmul8_e16_cross_register",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_lmul8_e16_cross_register.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_vxrm_rounding_modes",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_vxrm_rounding_modes.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_masked_store_preserves_memory",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_masked_store_preserves_memory.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    },
+    {
+      "source": "advanced",
+      "id": "vector_vlmax_sew_lmul_clamp",
+      "group": null,
+      "extension": "Zve32x",
+      "elf": "build/advanced-sail/vector_vlmax_sew_lmul_clamp.elf",
+      "full_v_validated": true,
+      "named_zve_validated": true
+    }
+  ]
+}

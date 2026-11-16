@@ -36,6 +36,7 @@ utils/
 testing_tests/
 *.pyc
 env/
+.venv-act4/
 *.elf
 .vscode/settings.json
 test

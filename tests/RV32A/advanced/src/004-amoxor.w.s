@@ -1,1 +1,0 @@
-# amoxor.w implementation

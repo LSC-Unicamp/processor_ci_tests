@@ -1,0 +1,302 @@
+[
+  {
+    "source": "tests/RV32A/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32A/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32A/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32A/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32A/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32C/invalid/src/000-invalid1.s",
+    "status": "replaced_by_package",
+    "package": "build/invalid-sail/illegal16.json"
+  },
+  {
+    "source": "tests/RV32C/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32C/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32C/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32C/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32D/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32D/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32D/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32D/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32D/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32F/invalid/src/000-invalid1.s",
+    "status": "replaced_by_package",
+    "package": "build/invalid-sail/fp_disabled_fadd.json"
+  },
+  {
+    "source": "tests/RV32F/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32F/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32F/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32F/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32I/invalid/src/000-invalid1.s",
+    "status": "replaced_by_package",
+    "package": "build/invalid-sail/illegal32.json"
+  },
+  {
+    "source": "tests/RV32I/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32I/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32I/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32I/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32M/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32M/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32M/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32M/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32M/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32Zicsr/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32Zicsr/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32Zicsr/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32Zicsr/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV32Zicsr/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64A/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64A/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64A/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64A/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64A/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64D/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64D/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64D/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64D/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64D/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64F/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64F/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64F/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64F/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64F/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64I/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64I/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64I/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64I/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64I/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64M/invalid/src/000-invalid1.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64M/invalid/src/001-invalid2.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64M/invalid/src/002-invalid3.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64M/invalid/src/003-invalid4.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  },
+  {
+    "source": "tests/RV64M/invalid/src/004-invalid5.s",
+    "status": "retired_undefined_placeholder",
+    "package": null
+  }
+]

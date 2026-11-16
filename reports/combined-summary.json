@@ -1,0 +1,388 @@
+{
+  "basic_isa": {
+    "inventoried": 602,
+    "ordinary_sail_validated": 599,
+    "expected_trap_sail_validated": 3,
+    "groups": {
+      "RV32A": {
+        "inventoried": 11,
+        "ordinary_sail_validated": 11,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 11
+      },
+      "RV32C": {
+        "inventoried": 35,
+        "ordinary_sail_validated": 34,
+        "expected_trap_sail_validated": 1,
+        "package_generated": 34
+      },
+      "RV32D": {
+        "inventoried": 26,
+        "ordinary_sail_validated": 26,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 26
+      },
+      "RV32F": {
+        "inventoried": 26,
+        "ordinary_sail_validated": 26,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 26
+      },
+      "RV32I": {
+        "inventoried": 40,
+        "ordinary_sail_validated": 38,
+        "expected_trap_sail_validated": 2,
+        "package_generated": 38
+      },
+      "RV32M": {
+        "inventoried": 8,
+        "ordinary_sail_validated": 8,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 8
+      },
+      "RV32Zba": {
+        "inventoried": 3,
+        "ordinary_sail_validated": 3,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 3
+      },
+      "RV32Zbb": {
+        "inventoried": 18,
+        "ordinary_sail_validated": 18,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 18
+      },
+      "RV32Zbc": {
+        "inventoried": 3,
+        "ordinary_sail_validated": 3,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 3
+      },
+      "RV32Zbkb": {
+        "inventoried": 5,
+        "ordinary_sail_validated": 5,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 5
+      },
+      "RV32Zbs": {
+        "inventoried": 8,
+        "ordinary_sail_validated": 8,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 8
+      },
+      "RV32Zicsr": {
+        "inventoried": 6,
+        "ordinary_sail_validated": 6,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 6
+      },
+      "RV32Zve32f": {
+        "inventoried": 66,
+        "ordinary_sail_validated": 66,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 66
+      },
+      "RV32Zve32x": {
+        "inventoried": 259,
+        "ordinary_sail_validated": 259,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 259
+      },
+      "RV32Zve64d": {
+        "inventoried": 29,
+        "ordinary_sail_validated": 29,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 29
+      },
+      "RV32Zve64f": {
+        "inventoried": 6,
+        "ordinary_sail_validated": 6,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 6
+      },
+      "RV32Zve64x": {
+        "inventoried": 11,
+        "ordinary_sail_validated": 11,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 11
+      },
+      "RV64A": {
+        "inventoried": 11,
+        "ordinary_sail_validated": 11,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 11
+      },
+      "RV64D": {
+        "inventoried": 6,
+        "ordinary_sail_validated": 6,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 6
+      },
+      "RV64F": {
+        "inventoried": 4,
+        "ordinary_sail_validated": 4,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 4
+      },
+      "RV64I": {
+        "inventoried": 12,
+        "ordinary_sail_validated": 12,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 12
+      },
+      "RV64M": {
+        "inventoried": 5,
+        "ordinary_sail_validated": 5,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 5
+      },
+      "RV64Zve64x": {
+        "inventoried": 4,
+        "ordinary_sail_validated": 4,
+        "expected_trap_sail_validated": 0,
+        "package_generated": 4
+      }
+    },
+    "vector_opcode_catalog": {
+      "revision": "f24ac23ec9fa947011781a09cd6fd25a7c36dc45",
+      "all_v_opcode_forms": 375,
+      "selected_zve32x_forms": 259,
+      "zve32x_applicable_forms": 259,
+      "zve32x_missing_forms": 0,
+      "selected_rv32_zve64x_forms": 11,
+      "rv32_zve64x_applicable_forms": 11,
+      "selected_rv32_zve32f_forms": 66,
+      "rv32_zve32f_applicable_forms": 66,
+      "selected_rv32_zve64f_forms": 6,
+      "rv32_zve64f_applicable_forms": 6,
+      "selected_rv32_zve64d_forms": 29,
+      "rv32_zve64d_applicable_forms": 29,
+      "selected_rv64_zve64x_forms": 4,
+      "rv64_zve64x_only_forms": 4,
+      "all_catalog_selected_forms": 375,
+      "all_catalog_missing_forms": 0,
+      "rv32_full_v_applicable_forms": 371,
+      "rv32_full_v_selected_forms": 371,
+      "rv32_full_v_missing_forms": 0,
+      "outside_zve32x_forms": 116,
+      "families": {
+        "configuration": {
+          "catalog_forms": 3,
+          "selected_cases": 3,
+          "unselected_forms": 0
+        },
+        "memory": {
+          "catalog_forms": 58,
+          "selected_cases": 58,
+          "unselected_forms": 0
+        },
+        "integer_mask_fixed_point_permutation": {
+          "catalog_forms": 213,
+          "selected_cases": 213,
+          "unselected_forms": 0
+        },
+        "floating_point": {
+          "catalog_forms": 101,
+          "selected_cases": 101,
+          "unselected_forms": 0
+        }
+      },
+      "minimum_profile_counts": {
+        "Zve32x": 259,
+        "Zve32f": 66,
+        "Zve64x": 15,
+        "Zve64f": 6,
+        "Zve64d": 29
+      }
+    },
+    "coverage_qualifications": [
+      "P profile excluded because its specification is a developing draft",
+      "Zve32x has 259/259 applicable opcode forms validated",
+      "RV32Zve64x has 11/11 newly applicable opcode forms validated",
+      "RV32Zve32f has 66/66 FP32 opcode forms validated",
+      "RV32Zve64f has 6/6 FP32/EEW64 opcode forms validated",
+      "RV32Zve64d has 29/29 FP64 opcode forms validated",
+      "0 RV32 full-V opcode forms lack tests; 4/4 RV64-only forms validated separately",
+      "Zbkb counts unique forms apart from overlapping Zbb forms"
+    ]
+  },
+  "invalid": {
+    "sail_validated": 19,
+    "additional_operations": [
+      "amo_misaligned_word",
+      "fp_disabled_fadd",
+      "fp_disabled_fadd_d",
+      "illegal16",
+      "illegal32",
+      "illegal_csr",
+      "misaligned_load",
+      "misaligned_store",
+      "readonly_csr_write",
+      "rv64_amo_misaligned_double",
+      "rv64_fp_disabled_fadd_d",
+      "rv64_fp_disabled_fadd_s",
+      "rv64_illegal32",
+      "u_mode_machine_csr",
+      "u_mode_mret",
+      "vector_disabled_vset"
+    ],
+    "trap_failure_codes": {
+      "3": "EXPECTED_TRAP_MISSING",
+      "5": "UNEXPECTED_TRAP",
+      "7": "ARCHITECTURAL_MISMATCH"
+    }
+  },
+  "advanced": {
+    "scenarios": 59,
+    "qemu_validated": 59,
+    "sail_validated": 59,
+    "host_mock_validated": 59,
+    "categories": {
+      "arithmetic": 8,
+      "atomic": 2,
+      "compressed": 2,
+      "control_flow": 8,
+      "csr": 1,
+      "dependencies": 11,
+      "floating": 6,
+      "memory": 6,
+      "rv64_memory": 1,
+      "vector": 14
+    }
+  },
+  "vector_vlen128": {
+    "basic_cases": 375,
+    "advanced_scenarios": 14,
+    "full_v_validated": 389,
+    "named_zve_validated": 389
+  },
+  "vector_vstart_probe": {
+    "scenario": "vector_vstart_arith_resume_probe",
+    "isa": "rv32im_zicsr_zve32x_zvl128b",
+    "qemu_resumed": true,
+    "sail_default_arithmetic_vstart_zero_required": true,
+    "sail_default_trap_observed": true,
+    "sail_arithmetic_resume_override_validated": true,
+    "sail_zve32x_vlen128_resume_validated": true,
+    "disassembly_verified": true,
+    "hardware_validated": 0,
+    "qualification": "Arithmetic resume requires a capability-specific configuration; the default Sail trap-loop observation is diagnostic, not a passing exception test.",
+    "source": "build/vector-vstart-probe/resume-qemu.S",
+    "sail_source": "build/vector-vstart-probe/resume-sail.S",
+    "config_override": "tools/config/vector-vstart-arith-resume.json"
+  },
+  "act4": {
+    "release": "4.1.0",
+    "generated_elfs": 39,
+    "converted_packages": 39,
+    "sail_validated": 39,
+    "host_mock_validated": 39,
+    "package_artifacts_present": true,
+    "dut_reference_validated": 0
+  },
+  "act4_rv64": {
+    "release": "4.1.0",
+    "isa": "rv64i",
+    "generated_elfs": 51,
+    "converted_packages": 51,
+    "sail_validated": 51,
+    "host_mock_validated": 51,
+    "package_artifacts_present": true,
+    "dut_reference_validated": 0
+  },
+  "act4_rv32imc": {
+    "release": "4.1.0",
+    "isa": "rv32imc",
+    "extension_counts": {
+      "I": 39,
+      "M": 8,
+      "C": 0
+    },
+    "generated_elfs": 47,
+    "converted_packages": 47,
+    "sail_validated": 47,
+    "host_mock_validated": 47,
+    "package_artifacts_present": true,
+    "dut_reference_validated": 0
+  },
+  "act4_cv32e40s_candidate": {
+    "release": "4.1.0",
+    "core": "RV-Bench CV32E40S",
+    "generated_elfs": 47,
+    "sail_validated": 47,
+    "host_oracle_validated": 47,
+    "package_artifacts_present": true,
+    "rtl_pass_cases": [
+      "I-add-00",
+      "I-addi-00",
+      "I-and-00",
+      "I-andi-00",
+      "I-auipc-00",
+      "I-beq-00",
+      "I-bge-00",
+      "I-bgeu-00",
+      "I-blt-00",
+      "I-bltu-00",
+      "I-bne-00",
+      "I-fence-00",
+      "I-jal-00",
+      "I-jalr-00",
+      "I-lb-00",
+      "I-lbu-00",
+      "I-lh-00",
+      "I-lhu-00",
+      "I-lui-00",
+      "I-lw-00",
+      "I-nop-00",
+      "I-or-00",
+      "I-ori-00",
+      "I-sb-00",
+      "I-sh-00",
+      "I-sll-00",
+      "I-slli-00",
+      "I-slt-00",
+      "I-slti-00",
+      "I-sltiu-00",
+      "I-sltu-00",
+      "I-sra-00",
+      "I-srai-00",
+      "I-srl-00",
+      "I-srli-00",
+      "I-sub-00",
+      "I-sw-00",
+      "I-xor-00",
+      "I-xori-00",
+      "M-div-00",
+      "M-divu-00",
+      "M-mul-00",
+      "M-mulh-00",
+      "M-mulhsu-00",
+      "M-mulhu-00",
+      "M-rem-00",
+      "M-remu-00"
+    ],
+    "rtl_induced_self_check_failures": 1,
+    "controller_rtl_passes": 47,
+    "uart_full_load_passes": 47,
+    "shared_512k_fit": 47,
+    "serial_negative_cases": [
+      "self_check_failure",
+      "timeout",
+      "unexpected_trap"
+    ],
+    "board_fit": {
+      "board": "digilent_nexys4_ddr",
+      "fit": 0,
+      "checked": 47
+    },
+    "controller_executed": 47,
+    "fpga_executed": 0
+  },
+  "random_riscv_dv": {
+    "integration": "absent from this checkout"
+  },
+  "fpga": {
+    "validation": "pending",
+    "executed": 0
+  }
+}

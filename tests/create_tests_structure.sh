@@ -14,9 +14,6 @@ EXTENSIONS=(
     ["RV32A"]="lr.w sc.w amoswap.w amoadd.w amoxor.w amoand.w amoor.w amomin.w amomax.w amominu.w amomaxu.w"
     ["RV64A"]="lr.d sc.d amoswap.d amoadd.d amoxor.d amoand.d amoor.d amomin.d amomax.d amominu.d amomaxu.d"
     ["RV32C"]="caddi caddiw clw csw cj cjjal cjr cjalr cand cor candi cmv csub cadd"
-    ["RV32V"]="vadd.vv vsub.vv vmul.vv vreduce.vv vdot.vv vmin.vv vmax.vv vslideup.vx vslidedown.vx vredsum.vs vpopc.m vfirst.m vcompress.m"
-    ["RV32P"]="pmulw paddw psubw pmulh paddh psubh pmulb paddb psubb"
-    ["RV32B"]="andn orn xnor clz ctz pcnt sextb sexth zexth min max rol ror rori andc slo sro sbset sbclr sbinv sbext gorc grev pack packh shuffle unshuffle bdep bext clmul clmulh clmulr"
     ["RV32Zicsr"]="csrrw csrrs csrrc csrrwi csrrsi csrrci"
 )
 
@@ -30,8 +27,9 @@ create_structure() {
         mkdir -p "${extension}/${level}/src" "${extension}/${level}/memory" "${extension}/${level}/reference"
     done
 
-    # Cria arquivos na pasta src e reference para as estruturas básica e avançada
-    for level in basic advanced; do
+    # Only the historical basic scaffold is generated here. Advanced cases
+    # have executable sources under advanced/src/scenarios/.
+    for level in basic; do
         local counter=0
         for instruction in "${instructions[@]}"; do
             printf -v file_number "%03d" $counter
@@ -41,14 +39,6 @@ create_structure() {
         done
     done
 
-    # Cria arquivos placeholders na pasta invalid
-    counter=0
-    for invalid_index in {1..5}; do  # Adiciona 5 placeholders como exemplo
-        printf -v file_number "%03d" $counter
-        echo "# Invalid instruction placeholder ${invalid_index}" > "${extension}/invalid/src/${file_number}-invalid${invalid_index}.s"
-        echo "# Invalid reference placeholder ${invalid_index}" > "${extension}/invalid/reference/${file_number}-invalid${invalid_index}.hex"
-        counter=$((counter + 1))
-    done
 }
 
 # Itera sobre todas as extensões e cria suas estruturas

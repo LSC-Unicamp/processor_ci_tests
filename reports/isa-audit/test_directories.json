@@ -1,0 +1,1459 @@
+{
+  "configured_legacy_groups": 12,
+  "package_only_groups": 11,
+  "extra_tests_included": false,
+  "retired_legacy_advanced_placeholders": 147,
+  "package_totals": {
+    "basic": 599,
+    "advanced": 59,
+    "invalid": 19
+  },
+  "groups": [
+    {
+      "group": "RV32A",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 11,
+          "instruction_bodies": 11,
+          "memory_words": 11,
+          "reference_words": 0,
+          "reference_placeholders": 11,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": [
+            "000-lr.w",
+            "001-sc.w",
+            "002-amoswap.w",
+            "003-amoadd.w",
+            "004-amoxor.w",
+            "005-amoand.w",
+            "006-amoor.w",
+            "007-amomin.w",
+            "008-amomax.w",
+            "009-amominu.w",
+            "010-amomaxu.w"
+          ]
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 11,
+          "validated_packages": 11,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32C",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 20,
+          "instruction_bodies": 20,
+          "memory_words": 20,
+          "reference_words": 20,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 34,
+          "validated_packages": 34,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 2,
+          "validated_packages": 2,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32D",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 20,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 20,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 26,
+          "validated_packages": 26,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32F",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 20,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 20,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 26,
+          "validated_packages": 26,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 3,
+          "validated_packages": 3,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32I",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 43,
+          "instruction_bodies": 40,
+          "memory_words": 40,
+          "reference_words": 43,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 3,
+          "instruction_bodies": 3,
+          "memory_words": 3,
+          "reference_words": 3,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 38,
+          "validated_packages": 38,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 27,
+          "validated_packages": 27,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 9,
+          "validated_packages": 9,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32M",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 8,
+          "instruction_bodies": 8,
+          "memory_words": 8,
+          "reference_words": 8,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 80,
+          "instruction_bodies": 80,
+          "memory_words": 80,
+          "reference_words": 80,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 8,
+          "validated_packages": 8,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 5,
+          "validated_packages": 5,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zba",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 3,
+          "validated_packages": 3,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zbb",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 18,
+          "validated_packages": 18,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zbc",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 3,
+          "validated_packages": 3,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zbkb",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 5,
+          "validated_packages": 5,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zbs",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 8,
+          "validated_packages": 8,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zicsr",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 6,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 6,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 6,
+          "validated_packages": 6,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zve32f",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 66,
+          "validated_packages": 66,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zve32x",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 259,
+          "validated_packages": 259,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 13,
+          "validated_packages": 13,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zve64d",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 29,
+          "validated_packages": 29,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zve64f",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 6,
+          "validated_packages": 6,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV32Zve64x",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 11,
+          "validated_packages": 11,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV64A",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 11,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 11,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 11,
+          "validated_packages": 11,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV64D",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 6,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 6,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 6,
+          "validated_packages": 6,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV64F",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 4,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 4,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 4,
+          "validated_packages": 4,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV64I",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 12,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 12,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 12,
+          "validated_packages": 12,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV64M",
+      "configured_legacy": true,
+      "legacy": {
+        "basic": {
+          "sources": 5,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 5,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 5,
+          "validated_packages": 5,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 1,
+          "validated_packages": 1,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    },
+    {
+      "group": "RV64Zve64x",
+      "configured_legacy": false,
+      "legacy": {
+        "basic": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "advanced": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        },
+        "invalid": {
+          "sources": 0,
+          "instruction_bodies": 0,
+          "memory_words": 0,
+          "reference_words": 0,
+          "reference_placeholders": 0,
+          "missing_memory": [],
+          "missing_reference": [],
+          "orphan_memory": [],
+          "orphan_reference": [],
+          "substantive_without_numeric_reference": []
+        }
+      },
+      "packages": {
+        "basic": {
+          "sources": 4,
+          "validated_packages": 4,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "advanced": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        },
+        "invalid": {
+          "sources": 0,
+          "validated_packages": 0,
+          "sources_without_package": [],
+          "packages_without_source": []
+        }
+      }
+    }
+  ],
+  "extra_tests": [],
+  "issues": [],
+  "notes": [
+    "Z-extension groups use package_src and need no legacy hex/reference triples.",
+    "ACT 4.1 tests are built under build/act4, outside tests/.",
+    "Each configured ISA group has at least one package-based advanced scenario.",
+    "The 82 executable legacy arithmetic/control-flow cases have a separate Sail replay; the timer case has a separate RTL unit probe."
+  ]
+}

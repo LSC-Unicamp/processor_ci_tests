@@ -1,0 +1,3056 @@
+{
+  "source": "https://github.com/riscv/riscv-opcodes/blob/f24ac23ec9fa947011781a09cd6fd25a7c36dc45/extensions/rv_v",
+  "revision": "f24ac23ec9fa947011781a09cd6fd25a7c36dc45",
+  "all_v_opcode_forms": 375,
+  "selected_zve32x_forms": 259,
+  "selected_rv32_zve64x_forms": 11,
+  "rv32_zve64x_applicable_forms": 11,
+  "selected_rv32_zve32f_forms": 66,
+  "rv32_zve32f_applicable_forms": 66,
+  "selected_rv32_zve64f_forms": 6,
+  "rv32_zve64f_applicable_forms": 6,
+  "selected_rv32_zve64d_forms": 29,
+  "rv32_zve64d_applicable_forms": 29,
+  "selected_rv64_zve64x_forms": 4,
+  "rv64_zve64x_only_forms": 4,
+  "all_catalog_selected_forms": 375,
+  "all_catalog_missing_forms": 0,
+  "rv32_full_v_applicable_forms": 371,
+  "rv32_full_v_selected_forms": 371,
+  "rv32_full_v_missing_forms": 0,
+  "zve32x_applicable_forms": 259,
+  "zve32x_missing_forms": 0,
+  "outside_zve32x_forms": 116,
+  "scope": "Full V opcode-form catalog; Zve32x excludes floating-point and EEW64 memory encodings",
+  "families": {
+    "configuration": {
+      "catalog_forms": 3,
+      "selected_cases": 3,
+      "unselected_forms": 0
+    },
+    "memory": {
+      "catalog_forms": 58,
+      "selected_cases": 58,
+      "unselected_forms": 0
+    },
+    "integer_mask_fixed_point_permutation": {
+      "catalog_forms": 213,
+      "selected_cases": 213,
+      "unselected_forms": 0
+    },
+    "floating_point": {
+      "catalog_forms": 101,
+      "selected_cases": 101,
+      "unselected_forms": 0
+    }
+  },
+  "minimum_profile_counts": {
+    "Zve32x": 259,
+    "Zve32f": 66,
+    "Zve64x": 15,
+    "Zve64f": 6,
+    "Zve64d": 29
+  },
+  "rows": [
+    {
+      "mnemonic": "vaadd.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vaadd.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vaaddu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vaaddu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vadc.vim",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vadc.vvm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vadc.vxm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vadd.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vadd.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vadd.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vand.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vand.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vand.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vasub.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vasub.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vasubu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vasubu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vcompress.vm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vcpop.m",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vdiv.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vdiv.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vdivu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vdivu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vfadd.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfadd.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfclass.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfcvt.f.x.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfcvt.f.xu.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfcvt.rtz.x.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfcvt.rtz.xu.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfcvt.x.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfcvt.xu.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfdiv.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfdiv.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfirst.m",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vfmacc.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmacc.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmadd.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmadd.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmax.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmax.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmerge.vfm",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmin.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmin.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmsac.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmsac.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmsub.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmsub.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmul.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmul.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmv.f.s",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmv.s.f",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfmv.v.f",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfncvt.f.f.w",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfncvt.f.x.w",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64f_case"
+    },
+    {
+      "mnemonic": "vfncvt.f.xu.w",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64f_case"
+    },
+    {
+      "mnemonic": "vfncvt.rod.f.f.w",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfncvt.rtz.x.f.w",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfncvt.rtz.xu.f.w",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfncvt.x.f.w",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfncvt.xu.f.w",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfnmacc.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfnmacc.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfnmadd.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfnmadd.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfnmsac.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfnmsac.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfnmsub.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfnmsub.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfrdiv.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfrec7.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfredmax.vs",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfredmin.vs",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfredosum.vs",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfredusum.vs",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfrsqrt7.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfrsub.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsgnj.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsgnj.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsgnjn.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsgnjn.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsgnjx.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsgnjx.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfslide1down.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfslide1up.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsqrt.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsub.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfsub.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vfwadd.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwadd.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwadd.wf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwadd.wv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwcvt.f.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwcvt.f.x.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwcvt.f.xu.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwcvt.rtz.x.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64f_case"
+    },
+    {
+      "mnemonic": "vfwcvt.rtz.xu.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64f_case"
+    },
+    {
+      "mnemonic": "vfwcvt.x.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64f_case"
+    },
+    {
+      "mnemonic": "vfwcvt.xu.f.v",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64f_case"
+    },
+    {
+      "mnemonic": "vfwmacc.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwmacc.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwmsac.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwmsac.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwmul.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwmul.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwnmacc.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwnmacc.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwnmsac.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwnmsac.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwredosum.vs",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwredusum.vs",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwsub.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwsub.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwsub.wf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vfwsub.wv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64d",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64d_case"
+    },
+    {
+      "mnemonic": "vid.v",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "viota.m",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl1re16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl1re32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl1re64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vl1re8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl2re16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl2re32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl2re64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vl2re8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl4re16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl4re32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl4re64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vl4re8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl8re16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl8re32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vl8re64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vl8re8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vle16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vle16ff.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vle32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vle32ff.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vle64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vle64ff.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vle8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vle8ff.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vlm.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vloxei16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vloxei32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vloxei64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 64,
+      "status": "selected_rv64_zve64x_case"
+    },
+    {
+      "mnemonic": "vloxei8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vlse16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vlse32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vlse64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vlse8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vluxei16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vluxei32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vluxei64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 64,
+      "status": "selected_rv64_zve64x_case"
+    },
+    {
+      "mnemonic": "vluxei8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmacc.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmacc.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmadc.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmadc.vim",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmadc.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmadc.vvm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmadc.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmadc.vxm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmadd.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmadd.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmand.mm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmandn.mm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmax.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmax.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmaxu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmaxu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmerge.vim",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmerge.vvm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmerge.vxm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmfeq.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmfeq.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmfge.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmfgt.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmfle.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmfle.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmflt.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmflt.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmfne.vf",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmfne.vv",
+      "family": "floating_point",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve32f",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve32f_case"
+    },
+    {
+      "mnemonic": "vmin.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmin.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vminu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vminu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmnand.mm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmnor.mm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmor.mm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmorn.mm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsbc.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsbc.vvm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsbc.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsbc.vxm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsbf.m",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmseq.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmseq.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmseq.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsgt.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsgt.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsgtu.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsgtu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsif.m",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsle.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsle.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsle.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsleu.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsleu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsleu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmslt.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmslt.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsltu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsltu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsne.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsne.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsne.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmsof.m",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmul.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmul.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmulh.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmulh.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmulhsu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmulhsu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmulhu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmulhu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv.s.x",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv.v.i",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv.v.v",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv.v.x",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv.x.s",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv1r.v",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv2r.v",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv4r.v",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmv8r.v",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmxnor.mm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vmxor.mm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnclip.wi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnclip.wv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnclip.wx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnclipu.wi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnclipu.wv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnclipu.wx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnmsac.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnmsac.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnmsub.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnmsub.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnsra.wi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnsra.wv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnsra.wx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnsrl.wi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnsrl.wv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vnsrl.wx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vor.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vor.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vor.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vredand.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vredmax.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vredmaxu.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vredmin.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vredminu.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vredor.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vredsum.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vredxor.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vrem.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vrem.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vremu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vremu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vrgather.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vrgather.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vrgather.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vrgatherei16.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vrsub.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vrsub.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vs1r.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vs2r.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vs4r.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vs8r.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsadd.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsadd.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsadd.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsaddu.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsaddu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsaddu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsbc.vvm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsbc.vxm",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vse16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vse32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vse64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vse8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsetivli",
+      "family": "configuration",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsetvl",
+      "family": "configuration",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsetvli",
+      "family": "configuration",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsext.vf2",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsext.vf4",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsext.vf8",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vslide1down.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vslide1up.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vslidedown.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vslidedown.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vslideup.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vslideup.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsll.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsll.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsll.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsm.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsmul.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsmul.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsoxei16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsoxei32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsoxei64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 64,
+      "status": "selected_rv64_zve64x_case"
+    },
+    {
+      "mnemonic": "vsoxei8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsra.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsra.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsra.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsrl.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsrl.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsrl.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsse16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsse32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsse64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    },
+    {
+      "mnemonic": "vsse8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssra.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssra.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssra.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssrl.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssrl.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssrl.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssub.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssub.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssubu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vssubu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsub.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsub.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsuxei16.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsuxei32.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vsuxei64.v",
+      "family": "memory",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 64,
+      "status": "selected_rv64_zve64x_case"
+    },
+    {
+      "mnemonic": "vsuxei8.v",
+      "family": "memory",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwadd.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwadd.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwadd.wv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwadd.wx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwaddu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwaddu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwaddu.wv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwaddu.wx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmacc.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmacc.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmaccsu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmaccsu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmaccu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmaccu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmaccus.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmul.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmul.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmulsu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmulsu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmulu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwmulu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwredsum.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwredsumu.vs",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwsub.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwsub.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwsub.wv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwsub.wx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwsubu.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwsubu.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwsubu.wv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vwsubu.wx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vxor.vi",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vxor.vv",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vxor.vx",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vzext.vf2",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vzext.vf4",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": true,
+      "minimum_vector_profile": "Zve32x",
+      "minimum_xlen": 32,
+      "status": "selected_zve32x_case"
+    },
+    {
+      "mnemonic": "vzext.vf8",
+      "family": "integer_mask_fixed_point_permutation",
+      "zve32x_applicable": false,
+      "minimum_vector_profile": "Zve64x",
+      "minimum_xlen": 32,
+      "status": "selected_rv32_zve64x_case"
+    }
+  ]
+}

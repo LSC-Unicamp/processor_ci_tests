@@ -1,1 +1,0 @@
-# candi implementation

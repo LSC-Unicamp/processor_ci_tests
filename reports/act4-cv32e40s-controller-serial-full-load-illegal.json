@@ -1,0 +1,29 @@
+{
+  "core": "RV-Bench CV32E40S",
+  "act_release": "4.1.0",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "UART sparse segment upload",
+  "serial_execution": true,
+  "serial_load_verified": true,
+  "controller_rtl_execution": true,
+  "fpga_execution": false,
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "tests": [
+    {
+      "test_id": "I-addi-00",
+      "status": 3,
+      "outcome": "UNEXPECTED_TRAP",
+      "oracle_outcome": "SELF_CHECK_FAILURE",
+      "cycles": null,
+      "diagnostic_bytes": 809,
+      "diagnostic_text": "\nRVCP-SUMMARY: TEST FAILED - Test File \"I-addi-00.S\"\n\nRVCP: DEBUG INFORMATION FOLLOWS\nRVCP: Test Info: \"Mismatch in trap signature! Trap was being handled in M-Mode.\"\nRVCP: ===== TRAP FAILURE DIAGNOSTICS =====\nRVCP: Failure: \"Mismatch in trap signature! Trap was being handled in M-Mode.\"\nRVCP: Trap handler mode: M-mode\nRVCP: Mismatching field: Vector+Mode+Status word (trap signature word 0)\nRVCP: Expected value: 0xdeadbeef\nRVCP: Actual value:   0x03000353\nRVCP: XEPC:    0x00000088\nRVCP: XCAUSE:  0x00000002\nRVCP: XTVAL:   0x00000000\nRVCP: XSTATUS: 0x00001800\nRVCP: HINT: Vector+Mode word mismatch may indicate: trap handled in wrong\nRVCP:       privilege mode (check medeleg/mideleg), incorrect mstatus fields\nRVCP:       (MPP/SPP/MPV), or wrong vectored interrupt entry.\nRVCP: END OF DEBUG INFORMATION\n\n",
+      "trap_diagnostics": {
+        "cause": 2,
+        "epc": 136
+      },
+      "package_sha256": "0b3d677cebd54bf713769a3483589a54300a36567c73f8ed4dbb43a4c1e2a4ec"
+    }
+  ]
+}

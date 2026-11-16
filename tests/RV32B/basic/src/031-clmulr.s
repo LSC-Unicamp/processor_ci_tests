@@ -1,1 +1,0 @@
-# clmulr implementation

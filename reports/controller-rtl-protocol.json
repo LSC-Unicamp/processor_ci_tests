@@ -1,0 +1,15 @@
+{
+  "interpreter_sha256": "c35fc2d5e8cf4dbf9f08dbf7631ec640ef6740501b9761398d0ab11372729d21",
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "interpreter_protocol": "passed",
+  "burst_write_read": "passed in RV-Bench interpreter testbench",
+  "early_completion": "passed in RV-Bench interpreter testbench",
+  "timeout_reply": "passed in RV-Bench interpreter testbench",
+  "idle_address_triggers_finish": false,
+  "primary_write_qualified_finish": true,
+  "data_write_qualified_finish": true,
+  "shared_512k_memory": "passed: serial write, byte/halfword stores, cross-port read, bounds, diagnostics",
+  "decoded_trap_cause_available": false,
+  "act_diagnostic_window_serial_readable": true,
+  "fpga_validated": false
+}

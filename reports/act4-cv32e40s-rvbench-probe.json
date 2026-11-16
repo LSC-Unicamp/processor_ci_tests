@@ -1,0 +1,17 @@
+{
+  "core": "cv32e40s",
+  "source_revision": "9d9cae78b01a11458953133d1173c61933a2ba86",
+  "wrapper": "overlay/cv32e40s/wrappers/cv32e40s.sv",
+  "wrapper_sha256": "94a9c545600a457515ffde1de363e211899ce08f241d5621146a3a8f39caed84",
+  "program": "mstatus read, mtvec write/read, ecall, mcause/mepc/mret, mul/div, c.addi",
+  "status_address": 60,
+  "pass_value": 5,
+  "fail_value": 3,
+  "result": {
+    "status": "pass",
+    "stage": "runtime",
+    "reason": "Expected signature found",
+    "stdout_tail": "WRITE:0x0000003C,0x00000005,158\n0x0000003C,0x00000005,158\nWRITE:0x0000003C,0x00000005,159\n0x0000003C,0x00000005,159",
+    "stderr_tail": ""
+  }
+}

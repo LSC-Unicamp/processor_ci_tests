@@ -1,0 +1,539 @@
+{
+  "scenarios": 59,
+  "sail_validated": 59,
+  "host_mock_validated": 59,
+  "hardware_validated": 0,
+  "results": [
+    {
+      "id": "alu_raw",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 15,
+      "package": "build/advanced-sail/alu_raw.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "alu_chain",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 31,
+      "package": "build/advanced-sail/alu_chain.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "alu_gap",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 19,
+      "package": "build/advanced-sail/alu_gap.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "same_register_writes",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 23,
+      "package": "build/advanced-sail/same_register_writes.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "two_writers_consumer",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 14,
+      "package": "build/advanced-sail/two_writers_consumer.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "load_use",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 22,
+      "package": "build/advanced-sail/load_use.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "alu_store_data",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 13,
+      "package": "build/advanced-sail/alu_store_data.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "alu_store_address",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 9,
+      "package": "build/advanced-sail/alu_store_address.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "load_branch",
+      "category": "dependencies",
+      "march": "rv32i",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/load_branch.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "mul_consumer",
+      "category": "dependencies",
+      "march": "rv32im",
+      "expected_a0": 43,
+      "package": "build/advanced-sail/mul_consumer.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "div_consumer",
+      "category": "dependencies",
+      "march": "rv32im",
+      "expected_a0": 9,
+      "package": "build/advanced-sail/div_consumer.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "branch_taken",
+      "category": "control_flow",
+      "march": "rv32i",
+      "expected_a0": 7,
+      "package": "build/advanced-sail/branch_taken.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "branch_not_taken",
+      "category": "control_flow",
+      "march": "rv32i",
+      "expected_a0": 8,
+      "package": "build/advanced-sail/branch_not_taken.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "consecutive_branches",
+      "category": "control_flow",
+      "march": "rv32i",
+      "expected_a0": 12,
+      "package": "build/advanced-sail/consecutive_branches.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "backward_branch",
+      "category": "control_flow",
+      "march": "rv32i",
+      "expected_a0": 5,
+      "package": "build/advanced-sail/backward_branch.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "jal_chain",
+      "category": "control_flow",
+      "march": "rv32i",
+      "expected_a0": 17,
+      "package": "build/advanced-sail/jal_chain.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "jalr_chain",
+      "category": "control_flow",
+      "march": "rv32i",
+      "expected_a0": 4,
+      "package": "build/advanced-sail/jalr_chain.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "wrong_path_register",
+      "category": "control_flow",
+      "march": "rv32i",
+      "expected_a0": 6,
+      "package": "build/advanced-sail/wrong_path_register.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "wrong_path_store",
+      "category": "control_flow",
+      "march": "rv32i",
+      "expected_a0": 85,
+      "package": "build/advanced-sail/wrong_path_store.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "store_load",
+      "category": "memory",
+      "march": "rv32i",
+      "expected_a0": 39,
+      "package": "build/advanced-sail/store_load.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "repeated_stores",
+      "category": "memory",
+      "march": "rv32i",
+      "expected_a0": 3,
+      "package": "build/advanced-sail/repeated_stores.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "overlap_bytes",
+      "category": "memory",
+      "march": "rv32i",
+      "expected_a0": 305441656,
+      "package": "build/advanced-sail/overlap_bytes.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "signed_unsigned_load",
+      "category": "memory",
+      "march": "rv32i",
+      "expected_a0": 256,
+      "package": "build/advanced-sail/signed_unsigned_load.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "partial_halfword",
+      "category": "memory",
+      "march": "rv32i",
+      "expected_a0": 860138445,
+      "package": "build/advanced-sail/partial_halfword.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "memory_branch_gap",
+      "category": "memory",
+      "march": "rv32i",
+      "expected_a0": 11,
+      "package": "build/advanced-sail/memory_branch_gap.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "wraparound",
+      "category": "arithmetic",
+      "march": "rv32i",
+      "expected_a0": 0,
+      "package": "build/advanced-sail/wraparound.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "signed_unsigned_compare",
+      "category": "arithmetic",
+      "march": "rv32i",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/signed_unsigned_compare.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "shift_boundary",
+      "category": "arithmetic",
+      "march": "rv32i",
+      "expected_a0": 2147483648,
+      "package": "build/advanced-sail/shift_boundary.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "zero_register",
+      "category": "arithmetic",
+      "march": "rv32i",
+      "expected_a0": 0,
+      "package": "build/advanced-sail/zero_register.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "division_zero",
+      "category": "arithmetic",
+      "march": "rv32im",
+      "expected_a0": 4294967295,
+      "package": "build/advanced-sail/division_zero.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "division_overflow",
+      "category": "arithmetic",
+      "march": "rv32im",
+      "expected_a0": 2147483648,
+      "package": "build/advanced-sail/division_overflow.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "mul_high",
+      "category": "arithmetic",
+      "march": "rv32im",
+      "expected_a0": 4294967295,
+      "package": "build/advanced-sail/mul_high.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "compressed_dependency",
+      "category": "compressed",
+      "march": "rv32imc",
+      "expected_a0": 12,
+      "package": "build/advanced-sail/compressed_dependency.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "compressed_jump",
+      "category": "compressed",
+      "march": "rv32imc",
+      "expected_a0": 8,
+      "package": "build/advanced-sail/compressed_jump.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "atomic_result_load",
+      "category": "atomic",
+      "march": "rv32ia",
+      "expected_a0": 19,
+      "package": "build/advanced-sail/atomic_result_load.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "fp_single_dependency",
+      "category": "floating",
+      "march": "rv32if_zicsr",
+      "expected_a0": 1077936128,
+      "package": "build/advanced-sail/fp_single_dependency.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "fp_double_to_integer",
+      "category": "floating",
+      "march": "rv32ifd_zicsr",
+      "expected_a0": 7,
+      "package": "build/advanced-sail/fp_double_to_integer.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "fp_invalid_sqrt_flag",
+      "category": "floating",
+      "march": "rv32if_zicsr",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/fp_invalid_sqrt_flag.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "fp_dynamic_rounding_flags",
+      "category": "floating",
+      "march": "rv32if_zicsr",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/fp_dynamic_rounding_flags.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "rv64_store_load_dependency",
+      "category": "rv64_memory",
+      "march": "rv64i",
+      "expected_a0": 4294967301,
+      "package": "build/advanced-sail/rv64_store_load_dependency.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "csr_write_read_dependency",
+      "category": "csr",
+      "march": "rv32if_zicsr",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/csr_write_read_dependency.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "rv64_atomic_result_load",
+      "category": "atomic",
+      "march": "rv64ia",
+      "expected_a0": 3,
+      "package": "build/advanced-sail/rv64_atomic_result_load.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "rv64_fp_single_dependency",
+      "category": "floating",
+      "march": "rv64if_zicsr",
+      "expected_a0": 1077936128,
+      "package": "build/advanced-sail/rv64_fp_single_dependency.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "rv64_fp_double_dependency",
+      "category": "floating",
+      "march": "rv64ifd_zicsr",
+      "expected_a0": 7,
+      "package": "build/advanced-sail/rv64_fp_double_dependency.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "rv64_mul_div_chain",
+      "category": "arithmetic",
+      "march": "rv64im",
+      "expected_a0": 4294967297,
+      "package": "build/advanced-sail/rv64_mul_div_chain.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_load_add_store",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 24,
+      "package": "build/advanced-sail/vector_load_add_store.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_e64_two_lane_store",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve64x_zvl128b",
+      "expected_a0": 9,
+      "package": "build/advanced-sail/vector_e64_two_lane_store.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_mask_undisturbed",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_mask_undisturbed.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_tail_undisturbed",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_tail_undisturbed.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_vstart_csr_reset",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_vstart_csr_reset.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_vstart_load_resume",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_vstart_load_resume.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_vxsat_sticky",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_vxsat_sticky.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_lmul2_cross_register",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_lmul2_cross_register.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_vstart_store_resume",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_vstart_store_resume.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_fractional_lmul_half",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_fractional_lmul_half.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_lmul8_e16_cross_register",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_lmul8_e16_cross_register.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_vxrm_rounding_modes",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_vxrm_rounding_modes.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_masked_store_preserves_memory",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_masked_store_preserves_memory.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "id": "vector_vlmax_sew_lmul_clamp",
+      "category": "vector",
+      "march": "rv32im_zicsr_zve32x_zvl128b",
+      "expected_a0": 1,
+      "package": "build/advanced-sail/vector_vlmax_sew_lmul_clamp.json",
+      "sail_validated": true,
+      "host_mock_validated": true
+    }
+  ]
+}

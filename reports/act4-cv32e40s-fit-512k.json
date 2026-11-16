@@ -1,0 +1,392 @@
+{
+  "core": "RV-Bench CV32E40S",
+  "board": "shared RTL memory",
+  "memory_mode": "shared",
+  "physical_memory_bytes": 524288,
+  "reserved_diagnostic_bytes": 4096,
+  "primary_memory_bytes": 520192,
+  "data_memory_bytes": 0,
+  "checked": 47,
+  "fit": 47,
+  "minimum_load_file_bytes": 82480,
+  "minimum_load_span_high": 218592,
+  "tests": [
+    {
+      "test_id": "I-add-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-addi-00",
+      "load_file_bytes": 125584,
+      "load_span_high": 267744,
+      "tohost": 131104,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-and-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-andi-00",
+      "load_file_bytes": 125584,
+      "load_span_high": 267744,
+      "tohost": 131104,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-auipc-00",
+      "load_file_bytes": 87664,
+      "load_span_high": 222688,
+      "tohost": 88448,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-beq-00",
+      "load_file_bytes": 147392,
+      "load_span_high": 292320,
+      "tohost": 158160,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-bge-00",
+      "load_file_bytes": 147392,
+      "load_span_high": 292320,
+      "tohost": 158160,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-bgeu-00",
+      "load_file_bytes": 147648,
+      "load_span_high": 292320,
+      "tohost": 158416,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-blt-00",
+      "load_file_bytes": 147392,
+      "load_span_high": 292320,
+      "tohost": 158160,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-bltu-00",
+      "load_file_bytes": 147648,
+      "load_span_high": 292320,
+      "tohost": 158416,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-bne-00",
+      "load_file_bytes": 147392,
+      "load_span_high": 292320,
+      "tohost": 158160,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-fence-00",
+      "load_file_bytes": 82880,
+      "load_span_high": 218592,
+      "tohost": 85328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-jal-00",
+      "load_file_bytes": 204480,
+      "load_span_high": 337376,
+      "tohost": 202960,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-jalr-00",
+      "load_file_bytes": 105424,
+      "load_span_high": 243168,
+      "tohost": 109024,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-lb-00",
+      "load_file_bytes": 95088,
+      "load_span_high": 243168,
+      "tohost": 108800,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-lbu-00",
+      "load_file_bytes": 95216,
+      "load_span_high": 243168,
+      "tohost": 108928,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-lh-00",
+      "load_file_bytes": 94464,
+      "load_span_high": 243168,
+      "tohost": 108560,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-lhu-00",
+      "load_file_bytes": 94592,
+      "load_span_high": 243168,
+      "tohost": 108688,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-lui-00",
+      "load_file_bytes": 87552,
+      "load_span_high": 222688,
+      "tohost": 88336,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-lw-00",
+      "load_file_bytes": 94096,
+      "load_span_high": 243168,
+      "tohost": 108448,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-nop-00",
+      "load_file_bytes": 82480,
+      "load_span_high": 218592,
+      "tohost": 85056,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-or-00",
+      "load_file_bytes": 129504,
+      "load_span_high": 263648,
+      "tohost": 130928,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-ori-00",
+      "load_file_bytes": 125216,
+      "load_span_high": 263648,
+      "tohost": 130736,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-sb-00",
+      "load_file_bytes": 94928,
+      "load_span_high": 243168,
+      "tohost": 107872,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-sh-00",
+      "load_file_bytes": 94368,
+      "load_span_high": 243168,
+      "tohost": 107568,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-sll-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-slli-00",
+      "load_file_bytes": 103840,
+      "load_span_high": 251360,
+      "tohost": 115504,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-slt-00",
+      "load_file_bytes": 130016,
+      "load_span_high": 267744,
+      "tohost": 131568,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-slti-00",
+      "load_file_bytes": 125584,
+      "load_span_high": 267744,
+      "tohost": 131232,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-sltiu-00",
+      "load_file_bytes": 125952,
+      "load_span_high": 267744,
+      "tohost": 131600,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-sltu-00",
+      "load_file_bytes": 130400,
+      "load_span_high": 267744,
+      "tohost": 131952,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-sra-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-srai-00",
+      "load_file_bytes": 103840,
+      "load_span_high": 251360,
+      "tohost": 115504,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-srl-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-srli-00",
+      "load_file_bytes": 103840,
+      "load_span_high": 251360,
+      "tohost": 115504,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-sub-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-sw-00",
+      "load_file_bytes": 94096,
+      "load_span_high": 243168,
+      "tohost": 107424,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-xor-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "I-xori-00",
+      "load_file_bytes": 125584,
+      "load_span_high": 267744,
+      "tohost": 131104,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "M-div-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "M-divu-00",
+      "load_file_bytes": 130288,
+      "load_span_high": 267744,
+      "tohost": 131712,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "M-mul-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "M-mulh-00",
+      "load_file_bytes": 130288,
+      "load_span_high": 267744,
+      "tohost": 131712,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "M-mulhsu-00",
+      "load_file_bytes": 131072,
+      "load_span_high": 267744,
+      "tohost": 132496,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "M-mulhu-00",
+      "load_file_bytes": 130688,
+      "load_span_high": 267744,
+      "tohost": 132112,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "M-rem-00",
+      "load_file_bytes": 129904,
+      "load_span_high": 267744,
+      "tohost": 131328,
+      "fits": true,
+      "reasons": []
+    },
+    {
+      "test_id": "M-remu-00",
+      "load_file_bytes": 130288,
+      "load_span_high": 267744,
+      "tohost": 131712,
+      "fits": true,
+      "reasons": []
+    }
+  ],
+  "fpga_execution_ready": false
+}

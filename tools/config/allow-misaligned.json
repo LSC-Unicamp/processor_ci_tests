@@ -1,0 +1,9 @@
+{
+  "memory": {
+    "misaligned": {
+      "exceptions": {
+        "load_store": {"None": null}
+      }
+    }
+  }
+}

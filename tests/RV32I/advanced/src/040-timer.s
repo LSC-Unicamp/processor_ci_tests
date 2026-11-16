@@ -1,17 +1,12 @@
-# timer test
-.set TIMER_ADDR, 0XFFFFFFF8;
+# ProcessorCI controller timer: lower 32 bits at 0xfffffffc.
+# A later read must advance. Unsigned subtraction also handles counter wrap.
 .text
-
-.global _start;
-
+.global _start
 _start:
-    addi a1, zero, 5; # a1 = zero + 5
-
-    li a2, TIMER_ADDR;
-    lw a3, 0(a2); # read timer value
-    lw a4, 4(a2); # read timer value
-
-
-    sw a2, 52(zero); # write timer value
-    sw a3, 56(zero); # write timer value
-    sw a4, 60(zero);
+    li t0, -4
+    lw t1, 0(t0)
+    addi zero, zero, 0
+    lw t2, 0(t0)
+    sub t3, t2, t1
+    sltu t4, zero, t3
+    sw t4, 60(zero)

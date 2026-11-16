@@ -1,0 +1,201 @@
+{
+  "cases": 19,
+  "sail_validated": 19,
+  "trap_failure_codes": {
+    "3": "EXPECTED_TRAP_MISSING",
+    "5": "UNEXPECTED_TRAP",
+    "7": "ARCHITECTURAL_MISMATCH"
+  },
+  "results": [
+    {
+      "instruction": "ecall",
+      "mcause": 11,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "ebreak",
+      "mcause": 3,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "c.ebreak",
+      "mcause": 3,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "illegal32",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": "tests/RV32I/invalid/src/000-invalid1.s",
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "illegal16",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": "tests/RV32C/invalid/src/000-invalid1.s",
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "illegal_csr",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "u_mode_mret",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "u_mode_machine_csr",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "misaligned_load",
+      "mcause": 4,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": true,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "misaligned_store",
+      "mcause": 6,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": true,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "fp_disabled_fadd",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": "tests/RV32F/invalid/src/000-invalid1.s",
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "fp_disabled_fadd_d",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "readonly_csr_write",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "amo_misaligned_word",
+      "mcause": 7,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "rv64_illegal32",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "rv64_fp_disabled_fadd_s",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "rv64_fp_disabled_fadd_d",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "rv64_amo_misaligned_double",
+      "mcause": 7,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    },
+    {
+      "instruction": "vector_disabled_vset",
+      "mcause": 2,
+      "mepc_verified": true,
+      "replaces_legacy_placeholder": null,
+      "allow_misaligned_negative_rejected": null,
+      "compiled": true,
+      "sail_validated": true,
+      "host_mock_validated": true
+    }
+  ]
+}

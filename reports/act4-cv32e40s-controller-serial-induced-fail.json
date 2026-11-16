@@ -1,0 +1,23 @@
+{
+  "core": "RV-Bench CV32E40S",
+  "act_release": "4.1.0",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "direct simulation preload",
+  "serial_execution": true,
+  "controller_rtl_execution": true,
+  "fpga_execution": false,
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "controller_sha256": "f6e509e21ed3d4022ddea9dce61486de4c5ac389a11ef78c8157877857ab660f",
+  "tests": [
+    {
+      "test_id": "I-addi-00",
+      "status": 3,
+      "outcome": "SELF_CHECK_FAILURE",
+      "cycles": null,
+      "diagnostic_bytes": 371,
+      "diagnostic_text": "\nRVCP-SUMMARY: TEST FAILED - Test File \"I-addi-00.S\"\n\nRVCP: DEBUG INFORMATION FOLLOWS\nRVCP: Test Info: \"test: 1; cg: I_addi_cg; cp: cp_rs1; bin: b0\"\nRVCP: Instruction: 0x2fd00413\nRVCP: Approximate address (failure may be slightly after this): 0x00000088\nRVCP: Register: x8\nRVCP: Bad Value:      0x000002fd\nRVCP: Expected Value: 0x000002fc\nRVCP: END OF DEBUG INFORMATION\n\n",
+      "package_sha256": "0b3d677cebd54bf713769a3483589a54300a36567c73f8ed4dbb43a4c1e2a4ec"
+    }
+  ]
+}

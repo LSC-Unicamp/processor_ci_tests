@@ -1,1 +1,0 @@
-# amominu.d implementation

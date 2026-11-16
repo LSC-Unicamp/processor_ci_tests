@@ -1,0 +1,26 @@
+{
+  "core": "RV-Bench CV32E40S",
+  "act_release": "4.1.0",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "UART sparse segment upload",
+  "serial_execution": true,
+  "serial_load_verified": true,
+  "controller_rtl_execution": true,
+  "fpga_execution": false,
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "tests": [
+    {
+      "test_id": "I-jal-00",
+      "status": 1,
+      "outcome": "PASS",
+      "oracle_outcome": "PASS",
+      "cycles": null,
+      "diagnostic_bytes": 53,
+      "diagnostic_text": null,
+      "trap_diagnostics": null,
+      "package_sha256": "bcad4f5ca9ee7509bc5b87745dc183dd85daedc6c05c0fec50eee3c5e6a80816"
+    }
+  ]
+}

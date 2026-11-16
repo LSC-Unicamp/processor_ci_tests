@@ -1,1 +1,0 @@
-# amomax.d implementation

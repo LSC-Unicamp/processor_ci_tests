@@ -1,1 +1,0 @@
-# fsqrtd implementation

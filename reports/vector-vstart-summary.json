@@ -1,0 +1,15 @@
+{
+  "scenario": "vector_vstart_arith_resume_probe",
+  "isa": "rv32im_zicsr_zve32x_zvl128b",
+  "qemu_resumed": true,
+  "sail_default_arithmetic_vstart_zero_required": true,
+  "sail_default_trap_observed": true,
+  "sail_arithmetic_resume_override_validated": true,
+  "sail_zve32x_vlen128_resume_validated": true,
+  "disassembly_verified": true,
+  "hardware_validated": 0,
+  "qualification": "Arithmetic resume requires a capability-specific configuration; the default Sail trap-loop observation is diagnostic, not a passing exception test.",
+  "source": "build/vector-vstart-probe/resume-qemu.S",
+  "sail_source": "build/vector-vstart-probe/resume-sail.S",
+  "config_override": "tools/config/vector-vstart-arith-resume.json"
+}

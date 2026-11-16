@@ -1,0 +1,1633 @@
+{
+  "reference_model": "Sail 0.13.1 rv32-max, 64 KiB address-zero RAM",
+  "stop_rule": "first write intersecting byte address 60",
+  "instruction_limit": 100,
+  "counts": {
+    "reference_placeholder": 11,
+    "match": 67,
+    "not_run": 87,
+    "no_completion_write": 1
+  },
+  "results": [
+    {
+      "source": "tests/RV32A/basic/src/000-lr.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "0000007b"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/001-sc.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "00000000"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/002-amoswap.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "0000000a"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/003-amoadd.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "00000014"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/004-amoxor.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "0000000f"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/005-amoand.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "000000ff"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/006-amoor.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "000000a0"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/007-amomin.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "ffffffff"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/008-amomax.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "0000000a"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/009-amominu.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "ffffffff"
+      ]
+    },
+    {
+      "source": "tests/RV32A/basic/src/010-amomaxu.w.s",
+      "group": "RV32A",
+      "reference_status": "placeholder",
+      "model_status": "reference_placeholder",
+      "expected_words": [],
+      "observed_words": [
+        "0000007b"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/000-caddi.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000000f"
+      ],
+      "observed_words": [
+        "0000000f"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/001-cli.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000000a"
+      ],
+      "observed_words": [
+        "0000000a"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/002-clw.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "000004d2"
+      ],
+      "observed_words": [
+        "000004d2"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/003-csw.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000162e"
+      ],
+      "observed_words": [
+        "0000162e"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/004-cj.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000c0de"
+      ],
+      "observed_words": [
+        "0000c0de"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/005-cjal.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000face"
+      ],
+      "observed_words": [
+        "0000face"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/006-cjr.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000beef"
+      ],
+      "observed_words": [
+        "0000beef"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/007-cjalr.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000abcd"
+      ],
+      "observed_words": [
+        "0000abcd"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/008-cand.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000008"
+      ],
+      "observed_words": [
+        "00000008"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/009-cor.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000000c"
+      ],
+      "observed_words": [
+        "0000000c"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/010-candi.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000005"
+      ],
+      "observed_words": [
+        "00000005"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/011-cmv.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000007"
+      ],
+      "observed_words": [
+        "00000007"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/012-csub.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000007"
+      ],
+      "observed_words": [
+        "00000007"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/013-cadd.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000000f"
+      ],
+      "observed_words": [
+        "0000000f"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/014-cslli.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000008"
+      ],
+      "observed_words": [
+        "00000008"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/015-csrli.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000002"
+      ],
+      "observed_words": [
+        "00000002"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/016-csrai.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "fffffffe"
+      ],
+      "observed_words": [
+        "fffffffe"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/017-clui.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00001000"
+      ],
+      "observed_words": [
+        "00001000"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/018-cbeqz.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000be0"
+      ],
+      "observed_words": [
+        "00000be0"
+      ]
+    },
+    {
+      "source": "tests/RV32C/basic/src/019-cbnez.s",
+      "group": "RV32C",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000bee"
+      ],
+      "observed_words": [
+        "00000bee"
+      ]
+    },
+    {
+      "source": "tests/RV32D/basic/src/000-fld.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/001-fsd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/002-faddd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/003-fsubd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/004-fmuld.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/005-fdivd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/006-fsqrtd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/007-fsgnjd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/008-fsgnjnd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/009-fsgnjxd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/010-fmind.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/011-fmaxd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/012-fcvtwd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/013-fcvtwud.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/014-fmvxd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/015-fmvwx.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/016-feqd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/017-fltd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/018-fled.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32D/basic/src/019-fclassd.s",
+      "group": "RV32D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/000-flw.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/001-fsw.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/002-fadds.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/003-fsubs.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/004-fmuls.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/005-fdivs.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/006-fsqrts.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/007-fsgnj.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/008-fsgnjn.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/009-fsgnjx.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/010-fmins.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/011-fmaxs.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/012-fcvtws.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/013-fcvtwus.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/014-fmvxw.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/015-fmvwx.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/016-feqs.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/017-flts.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/018-fles.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32F/basic/src/019-fclasss.s",
+      "group": "RV32F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32I/basic/src/000-addi.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000005"
+      ],
+      "observed_words": [
+        "00000005"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/001-sw.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000000a"
+      ],
+      "observed_words": [
+        "0000000a"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/002-slti.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000000",
+        "00000001"
+      ],
+      "observed_words": [
+        "00000000",
+        "00000001"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/003-sltiu.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000001"
+      ],
+      "observed_words": [
+        "00000001"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/004-xori.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000006"
+      ],
+      "observed_words": [
+        "00000006"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/005-ori.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000007"
+      ],
+      "observed_words": [
+        "00000007"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/006-andi.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000001"
+      ],
+      "observed_words": [
+        "00000001"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/007-slli.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000008"
+      ],
+      "observed_words": [
+        "00000008"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/008-srli.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000002"
+      ],
+      "observed_words": [
+        "00000002"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/009-srai.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "ffffffff"
+      ],
+      "observed_words": [
+        "ffffffff"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/010-lui.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "6a6a6000"
+      ],
+      "observed_words": [
+        "6a6a6000"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/011-auipc.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "d4d4c004"
+      ],
+      "observed_words": [
+        "d4d4c004"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/012-jal.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000000a"
+      ],
+      "observed_words": [
+        "0000000a"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/013-jalr.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000007"
+      ],
+      "observed_words": [
+        "00000007"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/014-beq.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000011"
+      ],
+      "observed_words": [
+        "00000011"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/015-bne.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000011"
+      ],
+      "observed_words": [
+        "00000011"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/016-blt.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000011"
+      ],
+      "observed_words": [
+        "00000011"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/017-bge.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000011"
+      ],
+      "observed_words": [
+        "00000011"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/018-bltu.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000011"
+      ],
+      "observed_words": [
+        "00000011"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/019-bgeu.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000011"
+      ],
+      "observed_words": [
+        "00000011"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/020-lb.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "ffffffff"
+      ],
+      "observed_words": [
+        "ffffffff"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/021-lh.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "ffffffff"
+      ],
+      "observed_words": [
+        "ffffffff"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/022-lw.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000809"
+      ],
+      "observed_words": [
+        "00000809"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/023-lbu.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "000000ff"
+      ],
+      "observed_words": [
+        "000000ff"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/024-lhu.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00006aff"
+      ],
+      "observed_words": [
+        "00006aff"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/025-sb.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "000000de"
+      ],
+      "observed_words": [
+        "000000de"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/026-sh.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000cade"
+      ],
+      "observed_words": [
+        "0000cade"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/027-add.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000000a"
+      ],
+      "observed_words": [
+        "0000000a"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/028-sub.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000000a"
+      ],
+      "observed_words": [
+        "0000000a"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/029-sll.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000008"
+      ],
+      "observed_words": [
+        "00000008"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/030-slt.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000000"
+      ],
+      "observed_words": [
+        "00000000"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/031-sltu.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000000"
+      ],
+      "observed_words": [
+        "00000000"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/032-xor.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000006"
+      ],
+      "observed_words": [
+        "00000006"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/033-srl.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000002"
+      ],
+      "observed_words": [
+        "00000002"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/034-sra.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "ffffffff"
+      ],
+      "observed_words": [
+        "ffffffff"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/035-or.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000007"
+      ],
+      "observed_words": [
+        "00000007"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/036-and.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000001"
+      ],
+      "observed_words": [
+        "00000001"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/037-fence.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32I/basic/src/038-ecall.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32I/basic/src/039-ebreak.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32I/basic/src/040-timeout.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "no_completion_write",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32I/basic/src/041-forwarding.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000002d"
+      ],
+      "observed_words": [
+        "0000002d"
+      ]
+    },
+    {
+      "source": "tests/RV32I/basic/src/042-forwarding-lw.s",
+      "group": "RV32I",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000001f"
+      ],
+      "observed_words": [
+        "0000001f"
+      ]
+    },
+    {
+      "source": "tests/RV32M/basic/src/000-mul.s",
+      "group": "RV32M",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "0000002a"
+      ],
+      "observed_words": [
+        "0000002a"
+      ]
+    },
+    {
+      "source": "tests/RV32M/basic/src/001-mulh.s",
+      "group": "RV32M",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "ffffffff"
+      ],
+      "observed_words": [
+        "ffffffff"
+      ]
+    },
+    {
+      "source": "tests/RV32M/basic/src/002-mulhsu.s",
+      "group": "RV32M",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "ffffffff"
+      ],
+      "observed_words": [
+        "ffffffff"
+      ]
+    },
+    {
+      "source": "tests/RV32M/basic/src/003-mulhu.s",
+      "group": "RV32M",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000001"
+      ],
+      "observed_words": [
+        "00000001"
+      ]
+    },
+    {
+      "source": "tests/RV32M/basic/src/004-div.s",
+      "group": "RV32M",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000006"
+      ],
+      "observed_words": [
+        "00000006"
+      ]
+    },
+    {
+      "source": "tests/RV32M/basic/src/005-divu.s",
+      "group": "RV32M",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000006"
+      ],
+      "observed_words": [
+        "00000006"
+      ]
+    },
+    {
+      "source": "tests/RV32M/basic/src/006-rem.s",
+      "group": "RV32M",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000002"
+      ],
+      "observed_words": [
+        "00000002"
+      ]
+    },
+    {
+      "source": "tests/RV32M/basic/src/007-remu.s",
+      "group": "RV32M",
+      "reference_status": "words",
+      "model_status": "match",
+      "expected_words": [
+        "00000002"
+      ],
+      "observed_words": [
+        "00000002"
+      ]
+    },
+    {
+      "source": "tests/RV32Zicsr/basic/src/000-csrrw.s",
+      "group": "RV32Zicsr",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32Zicsr/basic/src/001-csrrs.s",
+      "group": "RV32Zicsr",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32Zicsr/basic/src/002-csrrc.s",
+      "group": "RV32Zicsr",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32Zicsr/basic/src/003-csrrwi.s",
+      "group": "RV32Zicsr",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32Zicsr/basic/src/004-csrrsi.s",
+      "group": "RV32Zicsr",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV32Zicsr/basic/src/005-csrrci.s",
+      "group": "RV32Zicsr",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/000-lr.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/001-sc.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/002-amoswap.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/003-amoadd.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/004-amoxor.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/005-amoand.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/006-amoor.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/007-amomin.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/008-amomax.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/009-amominu.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64A/basic/src/010-amomaxu.d.s",
+      "group": "RV64A",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64D/basic/src/000-fcvt.l.d.s",
+      "group": "RV64D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64D/basic/src/001-fcvt.lu.d.s",
+      "group": "RV64D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64D/basic/src/002-fmv.x.d.s",
+      "group": "RV64D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64D/basic/src/003-fcvt.d.l.s",
+      "group": "RV64D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64D/basic/src/004-fcvt.d.lu.s",
+      "group": "RV64D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64D/basic/src/005-fmv.d.x.s",
+      "group": "RV64D",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64F/basic/src/000-fcvt.l.s.s",
+      "group": "RV64F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64F/basic/src/001-fcvt.lu.s.s",
+      "group": "RV64F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64F/basic/src/002-fcvt.s.l.s",
+      "group": "RV64F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64F/basic/src/003-fcvt.s.lu.s",
+      "group": "RV64F",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/000-addiw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/001-slliw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/002-srliw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/003-sraiw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/004-addw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/005-subw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/006-sllw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/007-srlw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/008-sraw.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/009-lwu.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/010-ld.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64I/basic/src/011-sd.s",
+      "group": "RV64I",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64M/basic/src/000-mulw.s",
+      "group": "RV64M",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64M/basic/src/001-divw.s",
+      "group": "RV64M",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64M/basic/src/002-divuw.s",
+      "group": "RV64M",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64M/basic/src/003-remw.s",
+      "group": "RV64M",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    },
+    {
+      "source": "tests/RV64M/basic/src/004-remuw.s",
+      "group": "RV64M",
+      "reference_status": "placeholder",
+      "model_status": "not_run",
+      "expected_words": [],
+      "observed_words": []
+    }
+  ]
+}

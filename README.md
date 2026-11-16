@@ -109,6 +109,18 @@ python -m riscv_test_runner.cli \
 
 ## Test Corpus
 
+For the current ISA inventory, offline advanced scenarios, ACT4 integration
+boundary, and reproducible validation commands, see
+[phase-one verification status](docs/phase1-status.md).
+The remaining work and acceptance gates are tracked in the
+[phase-one checklist](docs/phase1-checklist.md).
+Case authoring and rebuild commands are in
+[maintaining the suites](docs/adding-tests.md).
+The reusable ACT inputs in the adjacent ProcessorCI repositories are listed in
+the [DUT infrastructure audit](docs/act4-dut-infrastructure-audit.md).
+The named bitmanip and vector profiles, and the exclusion of draft P, are recorded in
+[named extension profiles](docs/z-extension-profiles.md).
+
 ISA tests live under:
 
 ```text

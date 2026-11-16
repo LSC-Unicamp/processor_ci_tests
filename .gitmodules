@@ -9,4 +9,4 @@
 	url = https://github.com/eembc/coremark.git
 [submodule "third_party_repositories/riscv-arch-test"]
 	path = third_party_repositories/riscv-arch-test
-	url = https://github.com/riscv-non-isa/riscv-arch-test
+	url = https://github.com/riscv/riscv-arch-test

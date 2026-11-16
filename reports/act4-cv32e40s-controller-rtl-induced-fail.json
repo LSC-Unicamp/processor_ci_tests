@@ -1,0 +1,21 @@
+{
+  "core": "RV-Bench CV32E40S",
+  "act_release": "4.1.0",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "direct simulation preload",
+  "serial_execution": false,
+  "controller_rtl_execution": true,
+  "fpga_execution": false,
+  "wrapper_sha256": "f33649f1ab969cb0130cc4afaa3b92077f17e6b4161e7d68d2b7379ca50969b5",
+  "controller_sha256": "eb39d4700ebafd7f433980ed2d09cf9cb16309b11c61a9b8cf13dca48e563833",
+  "tests": [
+    {
+      "test_id": "I-addi-00",
+      "status": 3,
+      "outcome": "SELF_CHECK_FAILURE",
+      "cycles": 4293,
+      "package_sha256": "0b3d677cebd54bf713769a3483589a54300a36567c73f8ed4dbb43a4c1e2a4ec"
+    }
+  ]
+}

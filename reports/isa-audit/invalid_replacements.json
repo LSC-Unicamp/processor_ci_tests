@@ -1,0 +1,17 @@
+[
+  {
+    "legacy_placeholder": "tests/RV32I/invalid/src/000-invalid1.s",
+    "package": "build/invalid-sail/illegal32.json",
+    "expected_mcause": 2
+  },
+  {
+    "legacy_placeholder": "tests/RV32C/invalid/src/000-invalid1.s",
+    "package": "build/invalid-sail/illegal16.json",
+    "expected_mcause": 2
+  },
+  {
+    "legacy_placeholder": "tests/RV32F/invalid/src/000-invalid1.s",
+    "package": "build/invalid-sail/fp_disabled_fadd.json",
+    "expected_mcause": 2
+  }
+]

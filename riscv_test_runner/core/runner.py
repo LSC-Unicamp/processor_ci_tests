@@ -9,10 +9,6 @@ sys.path.append(
 from processor_ci_communication.core.serial import ProcessorCIInterface
 from junitparser import TestCase, TestSuite, JUnitXml, Skipped, Error, Failure
 
-# TEST_CATEGORIES = ['basic', 'advanced', 'invalid']
-TEST_CATEGORIES = ['basic']
-
-
 class ProcessorCITest:
     def __init__(
         self,
@@ -24,6 +20,7 @@ class ProcessorCITest:
         directories: list[dict] = [],
         extra_tests: list[dict] = [],
         core_use_two_memories: bool = False,
+        categories: tuple[str, ...] = ('basic',),
     ):
         self.port = port
         self.baudrate = baudrate
@@ -33,6 +30,7 @@ class ProcessorCITest:
         self.directories = directories
         self.extra_tests = extra_tests
         self.core_use_two_memories = core_use_two_memories
+        self.categories = categories
 
         self.xml = JUnitXml()
 
@@ -124,7 +122,7 @@ class ProcessorCITest:
         if not os.path.exists(path):
             raise FileNotFoundError(f'Test directory {path} does not exist.')
 
-        for category in TEST_CATEGORIES:
+        for category in self.categories:
             suite = TestSuite(f'{name}.{category}')
 
             category_path = os.path.join(path, category)

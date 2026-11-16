@@ -1,0 +1,15 @@
+{
+  "core_candidate": "picorv32",
+  "board_candidate": "digilent_nexys4_ddr",
+  "package": "build/dut-smoke/picorv32-addi.json",
+  "isa": "rv32i",
+  "entry": 0,
+  "tohost": 160,
+  "load_file_bytes": 176,
+  "load_memory_bytes": 176,
+  "memory_limit_bytes": 8192,
+  "sail_validated": true,
+  "host_package_validated": true,
+  "static_board_fit": true,
+  "hardware_validated": false
+}

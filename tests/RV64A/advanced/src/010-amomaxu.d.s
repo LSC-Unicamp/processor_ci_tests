@@ -1,1 +1,0 @@
-# amomaxu.d implementation

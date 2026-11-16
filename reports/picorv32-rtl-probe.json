@@ -1,0 +1,34 @@
+{
+  "core": "picorv32",
+  "source_revision": "87c89acc18994c8cf9a2311e871818e87d304568",
+  "source_sha256": "0836050971b3c6cdd28ac3b1e5719a67fb645161912bef1e472e63995ceb0622",
+  "wrapper": "processor_ci/rtl/picorv32.sv",
+  "wrapper_sha256": "add57ed6f003d8cdd9b7d631e3a6a87b689aefe182c2f44670845cbd32d5f2b5",
+  "memory_model": "8192 bytes at address zero; one-cycle acknowledged bus",
+  "cases": {
+    "rv32i_add_branch": {
+      "march": "rv32i",
+      "rtl_result": "RESULT STATUS value=1 cycle=31"
+    },
+    "rv32m_mul_div": {
+      "march": "rv32im",
+      "rtl_result": "RESULT STATUS value=1 cycle=114"
+    },
+    "rv32c_c_addi": {
+      "march": "rv32ic",
+      "rtl_result": "RESULT STATUS value=1 cycle=34"
+    },
+    "machine_csr_mstatus": {
+      "march": "rv32i_zicsr",
+      "rtl_result": "RESULT TRAP cycle=23"
+    },
+    "machine_csr_mtvec": {
+      "march": "rv32i_zicsr",
+      "rtl_result": "RESULT TRAP cycle=23"
+    },
+    "ecall": {
+      "march": "rv32i",
+      "rtl_result": "RESULT TRAP cycle=6"
+    }
+  }
+}

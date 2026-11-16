@@ -15,13 +15,6 @@
             "invalid_breakpoint": 60
         },
         {
-            "name": "RV32B",
-            "path": "/eda/processor_ci_tests/tests/RV32B",
-            "basic_breakpoint": 60,
-            "advanced_breakpoint": 60,
-            "invalid_breakpoint": 60
-        },
-        {
             "name": "RV32C",
             "path": "/eda/processor_ci_tests/tests/RV32C",
             "basic_breakpoint": 60,
@@ -45,20 +38,6 @@
         {
             "name": "RV32M",
             "path": "/eda/processor_ci_tests/tests/RV32M",
-            "basic_breakpoint": 60,
-            "advanced_breakpoint": 60,
-            "invalid_breakpoint": 60
-        },
-        {
-            "name": "RV32P",
-            "path": "/eda/processor_ci_tests/tests/RV32P",
-            "basic_breakpoint": 60,
-            "advanced_breakpoint": 60,
-            "invalid_breakpoint": 60
-        },
-        {
-            "name": "RV32V",
-            "path": "/eda/processor_ci_tests/tests/RV32V",
             "basic_breakpoint": 60,
             "advanced_breakpoint": 60,
             "invalid_breakpoint": 60
@@ -144,4 +123,3 @@
         }
     ]
 }
-  

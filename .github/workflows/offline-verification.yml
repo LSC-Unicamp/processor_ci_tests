@@ -1,0 +1,67 @@
+name: Offline verification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  directed:
+    runs-on: ubuntu-latest
+    env:
+      RISCV_TOOL_PREFIX: riscv64-unknown-elf-
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install software tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-riscv64-unknown-elf binutils-riscv64-unknown-elf qemu-user
+          python3 -m pip install pytest
+      - name: Install pinned ACT configuration and Sail
+        run: |
+          git submodule update --init third_party_repositories/riscv-arch-test
+          curl -fL https://github.com/riscv/sail-riscv/releases/download/0.13.1/sail-riscv-Linux-x86_64.tar.gz -o /tmp/sail-riscv-0.13.1.tar.gz
+          mkdir -p "$RUNNER_TEMP/sail-riscv"
+          tar -xzf /tmp/sail-riscv-0.13.1.tar.gz -C "$RUNNER_TEMP/sail-riscv" --strip-components=1
+          "$RUNNER_TEMP/sail-riscv/bin/sail_riscv_sim" --version
+          echo "SAIL_RISCV_SIM=$RUNNER_TEMP/sail-riscv/bin/sail_riscv_sim" >> "$GITHUB_ENV"
+          echo BASIC_RISCV_GCC=riscv64-unknown-elf-gcc >> "$GITHUB_ENV"
+      - name: Build and execute basic and expected-trap cases
+        run: |
+          python3 tools/build_basic_sail.py
+          python3 tools/build_invalid_sail.py
+          python3 tools/build_dut_smoke.py
+      - name: Audit legacy assets
+        run: |
+          python3 tools/validate_legacy_basic_sail.py
+          python3 tools/validate_legacy_advanced_sail.py
+          python3 tools/validate_legacy_advanced_timer.py
+          python3 tools/isa_audit.py --compile
+      - name: Build and execute advanced scenarios
+        run: |
+          python3 tools/build_advanced.py
+          python3 tools/validate_advanced_sail.py
+          python3 tools/probe_vector_vstart.py
+      - name: Replay vector cases at minimum VLEN
+        run: python3 tools/validate_vector_vlen.py
+      - name: Generate combined report
+        run: |
+          python3 tools/combined_report.py
+          python3 tools/audit_test_directories.py
+      - name: Check offline integration
+        run: python3 -m pytest -q validation_tests/test_phase1.py
+      - name: Archive audit and package summaries
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: offline-verification
+          path: |
+            reports/isa-audit/
+            reports/*-summary.json
+            reports/combined-summary.md
+            reports/combined-software.junit.xml
+            build/advanced/summary.json

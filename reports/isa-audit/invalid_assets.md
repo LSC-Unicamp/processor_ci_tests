@@ -1,0 +1,193 @@
+# Invalid or unverified legacy assets
+
+Retired 60 generic invalid source/image/reference triples. 3 are linked to individual packages; the others specified no instruction or expected trap.
+
+## Replaced placeholders
+
+These comment-only legacy source/image/reference triples were removed after their executable package cases passed Sail.
+
+| Removed legacy source | Executable package | Expected mcause |
+|---|---|---:|
+| `tests/RV32I/invalid/src/000-invalid1.s` | `build/invalid-sail/illegal32.json` | 2 |
+| `tests/RV32C/invalid/src/000-invalid1.s` | `build/invalid-sail/illegal16.json` | 2 |
+| `tests/RV32F/invalid/src/000-invalid1.s` | `build/invalid-sail/fp_disabled_fadd.json` | 2 |
+
+## Remaining issues
+
+- tests/RV32I/basic/src/037-fence.s: no identifiable target instruction in source
+- tests/RV32I/basic/memory/037-fence.hex: missing or empty
+- tests/RV32I/basic/src/038-ecall.s: no identifiable target instruction in source
+- tests/RV32I/basic/memory/038-ecall.hex: missing or empty
+- tests/RV32I/basic/src/039-ebreak.s: no identifiable target instruction in source
+- tests/RV32I/basic/memory/039-ebreak.hex: missing or empty
+- tests/RV32I/basic/src/040-timeout.s: no identifiable target instruction in source
+- tests/RV32I/basic/src/041-forwarding.s: no identifiable target instruction in source
+- tests/RV32I/basic/src/042-forwarding-lw.s: no identifiable target instruction in source
+- tests/RV32D/basic/src/000-fld.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/000-fld.hex: missing or empty
+- tests/RV32D/basic/src/001-fsd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/001-fsd.hex: missing or empty
+- tests/RV32D/basic/src/002-faddd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/002-faddd.hex: missing or empty
+- tests/RV32D/basic/src/003-fsubd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/003-fsubd.hex: missing or empty
+- tests/RV32D/basic/src/004-fmuld.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/004-fmuld.hex: missing or empty
+- tests/RV32D/basic/src/005-fdivd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/005-fdivd.hex: missing or empty
+- tests/RV32D/basic/src/006-fsqrtd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/006-fsqrtd.hex: missing or empty
+- tests/RV32D/basic/src/007-fsgnjd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/007-fsgnjd.hex: missing or empty
+- tests/RV32D/basic/src/008-fsgnjnd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/008-fsgnjnd.hex: missing or empty
+- tests/RV32D/basic/src/009-fsgnjxd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/009-fsgnjxd.hex: missing or empty
+- tests/RV32D/basic/src/010-fmind.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/010-fmind.hex: missing or empty
+- tests/RV32D/basic/src/011-fmaxd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/011-fmaxd.hex: missing or empty
+- tests/RV32D/basic/src/012-fcvtwd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/012-fcvtwd.hex: missing or empty
+- tests/RV32D/basic/src/013-fcvtwud.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/013-fcvtwud.hex: missing or empty
+- tests/RV32D/basic/src/014-fmvxd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/014-fmvxd.hex: missing or empty
+- tests/RV32D/basic/src/015-fmvwx.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/015-fmvwx.hex: missing or empty
+- tests/RV32D/basic/src/016-feqd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/016-feqd.hex: missing or empty
+- tests/RV32D/basic/src/017-fltd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/017-fltd.hex: missing or empty
+- tests/RV32D/basic/src/018-fled.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/018-fled.hex: missing or empty
+- tests/RV32D/basic/src/019-fclassd.s: no identifiable target instruction in source
+- tests/RV32D/basic/memory/019-fclassd.hex: missing or empty
+- tests/RV32F/basic/src/000-flw.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/000-flw.hex: missing or empty
+- tests/RV32F/basic/src/001-fsw.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/001-fsw.hex: missing or empty
+- tests/RV32F/basic/src/002-fadds.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/002-fadds.hex: missing or empty
+- tests/RV32F/basic/src/003-fsubs.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/003-fsubs.hex: missing or empty
+- tests/RV32F/basic/src/004-fmuls.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/004-fmuls.hex: missing or empty
+- tests/RV32F/basic/src/005-fdivs.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/005-fdivs.hex: missing or empty
+- tests/RV32F/basic/src/006-fsqrts.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/006-fsqrts.hex: missing or empty
+- tests/RV32F/basic/src/007-fsgnj.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/007-fsgnj.hex: missing or empty
+- tests/RV32F/basic/src/008-fsgnjn.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/008-fsgnjn.hex: missing or empty
+- tests/RV32F/basic/src/009-fsgnjx.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/009-fsgnjx.hex: missing or empty
+- tests/RV32F/basic/src/010-fmins.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/010-fmins.hex: missing or empty
+- tests/RV32F/basic/src/011-fmaxs.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/011-fmaxs.hex: missing or empty
+- tests/RV32F/basic/src/012-fcvtws.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/012-fcvtws.hex: missing or empty
+- tests/RV32F/basic/src/013-fcvtwus.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/013-fcvtwus.hex: missing or empty
+- tests/RV32F/basic/src/014-fmvxw.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/014-fmvxw.hex: missing or empty
+- tests/RV32F/basic/src/015-fmvwx.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/015-fmvwx.hex: missing or empty
+- tests/RV32F/basic/src/016-feqs.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/016-feqs.hex: missing or empty
+- tests/RV32F/basic/src/017-flts.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/017-flts.hex: missing or empty
+- tests/RV32F/basic/src/018-fles.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/018-fles.hex: missing or empty
+- tests/RV32F/basic/src/019-fclasss.s: no identifiable target instruction in source
+- tests/RV32F/basic/memory/019-fclasss.hex: missing or empty
+- tests/RV32Zicsr/basic/src/000-csrrw.s: no identifiable target instruction in source
+- tests/RV32Zicsr/basic/memory/000-csrrw.hex: missing or empty
+- tests/RV32Zicsr/basic/src/001-csrrs.s: no identifiable target instruction in source
+- tests/RV32Zicsr/basic/memory/001-csrrs.hex: missing or empty
+- tests/RV32Zicsr/basic/src/002-csrrc.s: no identifiable target instruction in source
+- tests/RV32Zicsr/basic/memory/002-csrrc.hex: missing or empty
+- tests/RV32Zicsr/basic/src/003-csrrwi.s: no identifiable target instruction in source
+- tests/RV32Zicsr/basic/memory/003-csrrwi.hex: missing or empty
+- tests/RV32Zicsr/basic/src/004-csrrsi.s: no identifiable target instruction in source
+- tests/RV32Zicsr/basic/memory/004-csrrsi.hex: missing or empty
+- tests/RV32Zicsr/basic/src/005-csrrci.s: no identifiable target instruction in source
+- tests/RV32Zicsr/basic/memory/005-csrrci.hex: missing or empty
+- tests/RV64A/basic/src/000-lr.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/000-lr.d.hex: missing or empty
+- tests/RV64A/basic/src/001-sc.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/001-sc.d.hex: missing or empty
+- tests/RV64A/basic/src/002-amoswap.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/002-amoswap.d.hex: missing or empty
+- tests/RV64A/basic/src/003-amoadd.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/003-amoadd.d.hex: missing or empty
+- tests/RV64A/basic/src/004-amoxor.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/004-amoxor.d.hex: missing or empty
+- tests/RV64A/basic/src/005-amoand.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/005-amoand.d.hex: missing or empty
+- tests/RV64A/basic/src/006-amoor.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/006-amoor.d.hex: missing or empty
+- tests/RV64A/basic/src/007-amomin.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/007-amomin.d.hex: missing or empty
+- tests/RV64A/basic/src/008-amomax.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/008-amomax.d.hex: missing or empty
+- tests/RV64A/basic/src/009-amominu.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/009-amominu.d.hex: missing or empty
+- tests/RV64A/basic/src/010-amomaxu.d.s: no identifiable target instruction in source
+- tests/RV64A/basic/memory/010-amomaxu.d.hex: missing or empty
+- tests/RV64D/basic/src/000-fcvt.l.d.s: no identifiable target instruction in source
+- tests/RV64D/basic/memory/000-fcvt.l.d.hex: missing or empty
+- tests/RV64D/basic/src/001-fcvt.lu.d.s: no identifiable target instruction in source
+- tests/RV64D/basic/memory/001-fcvt.lu.d.hex: missing or empty
+- tests/RV64D/basic/src/002-fmv.x.d.s: no identifiable target instruction in source
+- tests/RV64D/basic/memory/002-fmv.x.d.hex: missing or empty
+- tests/RV64D/basic/src/003-fcvt.d.l.s: no identifiable target instruction in source
+- tests/RV64D/basic/memory/003-fcvt.d.l.hex: missing or empty
+- tests/RV64D/basic/src/004-fcvt.d.lu.s: no identifiable target instruction in source
+- tests/RV64D/basic/memory/004-fcvt.d.lu.hex: missing or empty
+- tests/RV64D/basic/src/005-fmv.d.x.s: no identifiable target instruction in source
+- tests/RV64D/basic/memory/005-fmv.d.x.hex: missing or empty
+- tests/RV64F/basic/src/000-fcvt.l.s.s: no identifiable target instruction in source
+- tests/RV64F/basic/memory/000-fcvt.l.s.hex: missing or empty
+- tests/RV64F/basic/src/001-fcvt.lu.s.s: no identifiable target instruction in source
+- tests/RV64F/basic/memory/001-fcvt.lu.s.hex: missing or empty
+- tests/RV64F/basic/src/002-fcvt.s.l.s: no identifiable target instruction in source
+- tests/RV64F/basic/memory/002-fcvt.s.l.hex: missing or empty
+- tests/RV64F/basic/src/003-fcvt.s.lu.s: no identifiable target instruction in source
+- tests/RV64F/basic/memory/003-fcvt.s.lu.hex: missing or empty
+- tests/RV64I/basic/src/000-addiw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/000-addiw.hex: missing or empty
+- tests/RV64I/basic/src/001-slliw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/001-slliw.hex: missing or empty
+- tests/RV64I/basic/src/002-srliw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/002-srliw.hex: missing or empty
+- tests/RV64I/basic/src/003-sraiw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/003-sraiw.hex: missing or empty
+- tests/RV64I/basic/src/004-addw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/004-addw.hex: missing or empty
+- tests/RV64I/basic/src/005-subw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/005-subw.hex: missing or empty
+- tests/RV64I/basic/src/006-sllw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/006-sllw.hex: missing or empty
+- tests/RV64I/basic/src/007-srlw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/007-srlw.hex: missing or empty
+- tests/RV64I/basic/src/008-sraw.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/008-sraw.hex: missing or empty
+- tests/RV64I/basic/src/009-lwu.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/009-lwu.hex: missing or empty
+- tests/RV64I/basic/src/010-ld.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/010-ld.hex: missing or empty
+- tests/RV64I/basic/src/011-sd.s: no identifiable target instruction in source
+- tests/RV64I/basic/memory/011-sd.hex: missing or empty
+- tests/RV64M/basic/src/000-mulw.s: no identifiable target instruction in source
+- tests/RV64M/basic/memory/000-mulw.hex: missing or empty
+- tests/RV64M/basic/src/001-divw.s: no identifiable target instruction in source
+- tests/RV64M/basic/memory/001-divw.hex: missing or empty
+- tests/RV64M/basic/src/002-divuw.s: no identifiable target instruction in source
+- tests/RV64M/basic/memory/002-divuw.hex: missing or empty
+- tests/RV64M/basic/src/003-remw.s: no identifiable target instruction in source
+- tests/RV64M/basic/memory/003-remw.hex: missing or empty
+- tests/RV64M/basic/src/004-remuw.s: no identifiable target instruction in source
+- tests/RV64M/basic/memory/004-remuw.hex: missing or empty

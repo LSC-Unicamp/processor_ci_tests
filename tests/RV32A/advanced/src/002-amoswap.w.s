@@ -1,1 +1,0 @@
-# amoswap.w implementation

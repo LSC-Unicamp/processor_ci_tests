@@ -1,0 +1,561 @@
+{
+  "core": "picorv32",
+  "board": "digilent_nexys4_ddr",
+  "advertised_isa": "rv32i",
+  "memory_base": 0,
+  "memory_bytes": 8192,
+  "reset_pc": 0,
+  "checked": 39,
+  "fit": 0,
+  "smallest_load_file_bytes": 77776,
+  "smallest_load_memory_bytes": 77776,
+  "hardware_validated": false,
+  "results": [
+    {
+      "package": "build/act4/packages/I-add-00.json",
+      "load_file_bytes": 125104,
+      "load_memory_bytes": 125104,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125104 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800066a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fe70) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fe60, 0x8001fe68) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-addi-00.json",
+      "load_file_bytes": 120784,
+      "load_memory_bytes": 120784,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 120784 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800056a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fd90) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fd80, 0x8001fd88) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-and-00.json",
+      "load_file_bytes": 125168,
+      "load_memory_bytes": 125168,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125168 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800066e0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fe70) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fe60, 0x8001fe68) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-andi-00.json",
+      "load_file_bytes": 120784,
+      "load_memory_bytes": 120784,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 120784 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800056a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fd90) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fd80, 0x8001fd88) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-auipc-00.json",
+      "load_file_bytes": 82864,
+      "load_memory_bytes": 82864,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 82864 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80002920) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x800156f0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80036000, 0x800363a0) outside [0x0, 0x2000)",
+        "tohost [0x800156e0, 0x800156e8) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-beq-00.json",
+      "load_file_bytes": 146144,
+      "load_memory_bytes": 146144,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 146144 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x8000d000) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80010000, 0x80026740) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80047000, 0x800473a0) outside [0x0, 0x2000)",
+        "tohost [0x80026730, 0x80026738) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-bge-00.json",
+      "load_file_bytes": 146144,
+      "load_memory_bytes": 146144,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 146144 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x8000d000) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80010000, 0x80026740) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80047000, 0x800473a0) outside [0x0, 0x2000)",
+        "tohost [0x80026730, 0x80026738) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-bgeu-00.json",
+      "load_file_bytes": 146400,
+      "load_memory_bytes": 146400,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 146400 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x8000d000) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80010000, 0x80026840) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80047000, 0x800473a0) outside [0x0, 0x2000)",
+        "tohost [0x80026830, 0x80026838) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-blt-00.json",
+      "load_file_bytes": 146144,
+      "load_memory_bytes": 146144,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 146144 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x8000d000) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80010000, 0x80026740) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80047000, 0x800473a0) outside [0x0, 0x2000)",
+        "tohost [0x80026730, 0x80026738) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-bltu-00.json",
+      "load_file_bytes": 146400,
+      "load_memory_bytes": 146400,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 146400 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x8000d000) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80010000, 0x80026840) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80047000, 0x800473a0) outside [0x0, 0x2000)",
+        "tohost [0x80026830, 0x80026838) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-bne-00.json",
+      "load_file_bytes": 146144,
+      "load_memory_bytes": 146144,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 146144 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x8000d000) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80010000, 0x80026740) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80047000, 0x800473a0) outside [0x0, 0x2000)",
+        "tohost [0x80026730, 0x80026738) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-fence-00.json",
+      "load_file_bytes": 78080,
+      "load_memory_bytes": 78080,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 78080 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800022a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x80014ac0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80035000, 0x800353a0) outside [0x0, 0x2000)",
+        "tohost [0x80014ab0, 0x80014ab8) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-jal-00.json",
+      "load_file_bytes": 203232,
+      "load_memory_bytes": 203232,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 203232 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80020000) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80020000, 0x80031640) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80052000, 0x800523a0) outside [0x0, 0x2000)",
+        "tohost [0x80031630, 0x80031638) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-jalr-00.json",
+      "load_file_bytes": 100592,
+      "load_memory_bytes": 100592,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 100592 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80005e00) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001a750) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x8003b000, 0x8003b3a0) outside [0x0, 0x2000)",
+        "tohost [0x8001a740, 0x8001a748) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-lb-00.json",
+      "load_file_bytes": 90288,
+      "load_memory_bytes": 90288,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 90288 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800036a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x80016670) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80037000, 0x800373a0) outside [0x0, 0x2000)",
+        "tohost [0x80016660, 0x80016668) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-lbu-00.json",
+      "load_file_bytes": 90416,
+      "load_memory_bytes": 90416,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 90416 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800036a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x800166f0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80037000, 0x800373a0) outside [0x0, 0x2000)",
+        "tohost [0x800166e0, 0x800166e8) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-lh-00.json",
+      "load_file_bytes": 89664,
+      "load_memory_bytes": 89664,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 89664 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80003520) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x80016580) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80037000, 0x800373a0) outside [0x0, 0x2000)",
+        "tohost [0x80016570, 0x80016578) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-lhu-00.json",
+      "load_file_bytes": 89792,
+      "load_memory_bytes": 89792,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 89792 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80003520) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x80016600) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80037000, 0x800373a0) outside [0x0, 0x2000)",
+        "tohost [0x800165f0, 0x800165f8) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-lui-00.json",
+      "load_file_bytes": 82752,
+      "load_memory_bytes": 82752,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 82752 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80002920) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x80015680) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80036000, 0x800363a0) outside [0x0, 0x2000)",
+        "tohost [0x80015670, 0x80015678) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-lw-00.json",
+      "load_file_bytes": 89360,
+      "load_memory_bytes": 89360,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 89360 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80003460) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x80016510) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80037000, 0x800373a0) outside [0x0, 0x2000)",
+        "tohost [0x80016500, 0x80016508) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-nop-00.json",
+      "load_file_bytes": 77776,
+      "load_memory_bytes": 77776,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 77776 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80002280) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x800149b0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80035000, 0x800353a0) outside [0x0, 0x2000)",
+        "tohost [0x800149a0, 0x800149a8) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-or-00.json",
+      "load_file_bytes": 124704,
+      "load_memory_bytes": 124704,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 124704 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800066a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fce0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fcd0, 0x8001fcd8) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-ori-00.json",
+      "load_file_bytes": 120384,
+      "load_memory_bytes": 120384,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 120384 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80005680) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fc20) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fc10, 0x8001fc18) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-sb-00.json",
+      "load_file_bytes": 90160,
+      "load_memory_bytes": 90160,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 90160 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800039c0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x800162d0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80037000, 0x800373a0) outside [0x0, 0x2000)",
+        "tohost [0x800162c0, 0x800162c8) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-sh-00.json",
+      "load_file_bytes": 89568,
+      "load_memory_bytes": 89568,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 89568 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800038a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x800161a0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80037000, 0x800373a0) outside [0x0, 0x2000)",
+        "tohost [0x80016190, 0x80016198) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-sll-00.json",
+      "load_file_bytes": 125104,
+      "load_memory_bytes": 125104,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125104 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800066a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fe70) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fe60, 0x8001fe68) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-slli-00.json",
+      "load_file_bytes": 99040,
+      "load_memory_bytes": 99040,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 99040 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80003ea0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x800180a0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80039000, 0x800393a0) outside [0x0, 0x2000)",
+        "tohost [0x80018090, 0x80018098) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-slt-00.json",
+      "load_file_bytes": 125184,
+      "load_memory_bytes": 125184,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125184 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80006600) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001ff60) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001ff50, 0x8001ff58) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-slti-00.json",
+      "load_file_bytes": 120816,
+      "load_memory_bytes": 120816,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 120816 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80005640) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fe10) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fe00, 0x8001fe08) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-sltiu-00.json",
+      "load_file_bytes": 121216,
+      "load_memory_bytes": 121216,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 121216 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80005660) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001ff80) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001ff70, 0x8001ff78) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-sltu-00.json",
+      "load_file_bytes": 125568,
+      "load_memory_bytes": 125568,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125568 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80006600) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x800200e0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80041000, 0x800413a0) outside [0x0, 0x2000)",
+        "tohost [0x800200d0, 0x800200d8) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-sra-00.json",
+      "load_file_bytes": 125104,
+      "load_memory_bytes": 125104,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125104 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800066a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fe70) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fe60, 0x8001fe68) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-srai-00.json",
+      "load_file_bytes": 99072,
+      "load_memory_bytes": 99072,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 99072 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80003ec0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x800180a0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80039000, 0x800393a0) outside [0x0, 0x2000)",
+        "tohost [0x80018090, 0x80018098) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-srl-00.json",
+      "load_file_bytes": 125136,
+      "load_memory_bytes": 125136,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125136 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800066c0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fe70) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fe60, 0x8001fe68) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-srli-00.json",
+      "load_file_bytes": 99072,
+      "load_memory_bytes": 99072,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 99072 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80003ec0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x800180a0) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80039000, 0x800393a0) outside [0x0, 0x2000)",
+        "tohost [0x80018090, 0x80018098) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-sub-00.json",
+      "load_file_bytes": 125136,
+      "load_memory_bytes": 125136,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125136 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800066c0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fe70) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fe60, 0x8001fe68) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-sw-00.json",
+      "load_file_bytes": 89264,
+      "load_memory_bytes": 89264,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 89264 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x80003800) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80004000, 0x80016110) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80037000, 0x800373a0) outside [0x0, 0x2000)",
+        "tohost [0x80016100, 0x80016108) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-xor-00.json",
+      "load_file_bytes": 125104,
+      "load_memory_bytes": 125104,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 125104 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800066a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fe70) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fe60, 0x8001fe68) outside [0x0, 0x2000)"
+      ]
+    },
+    {
+      "package": "build/act4/packages/I-xori-00.json",
+      "load_file_bytes": 120784,
+      "load_memory_bytes": 120784,
+      "fits": false,
+      "reasons": [
+        "LOAD memory requirement 120784 bytes exceeds 8192-byte controller memory",
+        "entry 0x80000000 differs from reset PC 0x0",
+        "LOAD segment 0 [0x80000000, 0x800056a0) outside [0x0, 0x2000)",
+        "LOAD segment 1 [0x80008000, 0x8001fd90) outside [0x0, 0x2000)",
+        "LOAD segment 2 [0x80040000, 0x800403a0) outside [0x0, 0x2000)",
+        "tohost [0x8001fd80, 0x8001fd88) outside [0x0, 0x2000)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "test_id": "M-mul-00",
+  "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/act4-cv32e40s/packages/M-mul-00.json",
+  "core": "RV-Bench CV32E40S",
+  "wrapper": "overlay/cv32e40s/wrappers/cv32e40s.sv",
+  "wrapper_sha256": "0b61b4a0cbbdc5798a0ea07aec59d9452181a493806005e2c59b7627e8c86501",
+  "coherent_simulation_memory": false,
+  "simulation_memory_bytes_per_bus": 524288,
+  "load_high_address": 267744,
+  "tohost_address": 131328,
+  "tohost_observed": 1,
+  "tohost_expected": 1,
+  "classified_outcome": "PASS",
+  "injected_addi_fault": false,
+  "rtl_result": "pass",
+  "stage": "runtime",
+  "reason": "Expected signature found",
+  "stdout_tail": "IF:00000000,18\nIF:00000004,20\nIF:00000008,22\nIF:0000000C,24\nIF:00000010,26\nIF:00000014,28\nIF:00000018,30\nIF:0000001C,32\nIF:00000020,34\nIF:00000024,36\nIF:000410BC,38\nIF:000410C0,40\nIF:000410C4,42\nIF:000410C8,44\nIF:000410CC,46\nDATA:W,00008360,00000000,80\nDATA:W,00008348,00000000,94\nDATA:W,00008358,00000000,98\nDATA:R,00008340,00000000,104\nDATA:W,00008350,00004B00,112\nDATA:W,00008108,00000000,220\nDATA:R,00011030,00000000,460\nDATA:R,000083B0,000414F4,512\nDATA:R,000083B4,000414F4,516\nDATA:R,00011034,000414F4,522\nDATA:R,000083B8,000000A8,534\nDATA:R,000083BC,000000A8,538\nDATA:R,00011038,000000A8,544\nDATA:R,000083C0,000000D4,558\nDATA:R,000083C4,000000D4,562\n0x00020100,0x00000001,10576",
+  "stderr_tail": "",
+  "controller_execution": false,
+  "fpga_execution": false
+}

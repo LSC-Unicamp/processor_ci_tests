@@ -1,1 +1,0 @@
-# amomin.w implementation
