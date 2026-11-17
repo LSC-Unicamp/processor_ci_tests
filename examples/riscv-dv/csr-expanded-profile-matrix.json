@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "rv32i-mscratch-mepc",
+      "isa": "rv32i",
+      "profile": "riscv_csr_test",
+      "csr_map": "examples/riscv-dv/csr-mscratch-mepc.yaml",
+      "seed": 10900,
+      "tests": 5
+    },
+    {
+      "name": "rv64i-mscratch-mepc",
+      "isa": "rv64i",
+      "profile": "riscv_csr_test",
+      "csr_map": "examples/riscv-dv/csr-mscratch-mepc.yaml",
+      "seed": 10910,
+      "tests": 5
+    }
+  ]
+}

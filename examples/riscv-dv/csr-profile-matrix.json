@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "name": "rv32i-mscratch",
+      "isa": "rv32i",
+      "profile": "riscv_csr_test",
+      "seed": 10300,
+      "tests": 5,
+      "csr_map": "examples/riscv-dv/csr-mscratch.yaml"
+    },
+    {
+      "name": "rv64i-mscratch-split",
+      "isa": "rv64i",
+      "profile": "riscv_csr_test",
+      "seed": 10305,
+      "tests": 5,
+      "csr_map": "examples/riscv-dv/csr-mscratch.yaml",
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776,
+      "data_base": 2147614720
+    }
+  ]
+}

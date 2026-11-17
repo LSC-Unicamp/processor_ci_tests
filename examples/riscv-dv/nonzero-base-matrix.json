@@ -1,0 +1,54 @@
+{
+  "configurations": [
+    {
+      "name": "rv32i-arithmetic-offset-entry",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 10010,
+      "tests": 1,
+      "instr_count": 80,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776
+    },
+    {
+      "name": "rv32imc-random",
+      "isa": "rv32imc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10011,
+      "tests": 1,
+      "instr_count": 100,
+      "memory_base": 536870912,
+      "reset_pc": 536870912
+    },
+    {
+      "name": "rv64i-jump",
+      "isa": "rv64i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 10012,
+      "tests": 1,
+      "instr_count": 100,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483648
+    },
+    {
+      "name": "rv32i-unaligned",
+      "isa": "rv32i",
+      "profile": "riscv_unaligned_load_store_test",
+      "seed": 10013,
+      "tests": 1,
+      "instr_count": 100,
+      "memory_base": 805306368,
+      "reset_pc": 805306368
+    },
+    {
+      "name": "rv64imfdc-floating",
+      "isa": "rv64imfdc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10014,
+      "tests": 1,
+      "instr_count": 100,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483648
+    }
+  ]
+}

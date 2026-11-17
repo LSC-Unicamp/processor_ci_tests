@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "name": "rv64ima-amo-pair-shared",
+      "isa": "rv64ima",
+      "profile": "riscv_amo_pair_test",
+      "seed": 10600,
+      "tests": 6,
+      "instr_count": 100
+    },
+    {
+      "name": "rv64ima-amo-pair-nonzero",
+      "isa": "rv64ima",
+      "profile": "riscv_amo_pair_test",
+      "seed": 10606,
+      "tests": 6,
+      "instr_count": 200,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776
+    },
+    {
+      "name": "rv64ima-amo-pair-split",
+      "isa": "rv64ima",
+      "profile": "riscv_amo_pair_test",
+      "seed": 10612,
+      "tests": 6,
+      "instr_count": 100,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776,
+      "data_base": 2147614720
+    }
+  ]
+}

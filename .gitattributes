@@ -1,0 +1,2 @@
+# Keep upstream riscv-dv assembly byte-for-byte, including its label spacing.
+examples/riscv-dv/**/*.S -whitespace

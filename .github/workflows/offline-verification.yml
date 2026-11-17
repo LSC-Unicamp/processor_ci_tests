@@ -24,6 +24,7 @@ jobs:
       - name: Install pinned ACT configuration and Sail
         run: |
           git submodule update --init third_party_repositories/riscv-arch-test
+          git submodule update --init third_party_repositories/riscv-dv
           curl -fL https://github.com/riscv/sail-riscv/releases/download/0.13.1/sail-riscv-Linux-x86_64.tar.gz -o /tmp/sail-riscv-0.13.1.tar.gz
           mkdir -p "$RUNNER_TEMP/sail-riscv"
           tar -xzf /tmp/sail-riscv-0.13.1.tar.gz -C "$RUNNER_TEMP/sail-riscv" --strip-components=1
@@ -53,7 +54,7 @@ jobs:
           python3 tools/combined_report.py
           python3 tools/audit_test_directories.py
       - name: Check offline integration
-        run: python3 -m pytest -q validation_tests/test_phase1.py
+        run: python3 -m pytest -q validation_tests/test_phase1.py validation_tests/test_riscv_dv.py
       - name: Archive audit and package summaries
         if: always()
         uses: actions/upload-artifact@v4

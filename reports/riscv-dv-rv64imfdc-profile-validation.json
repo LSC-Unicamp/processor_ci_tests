@@ -1,0 +1,119 @@
+{
+  "tool": "riscv-dv",
+  "isa": "rv64imfdc",
+  "profile": "riscv_rand_instr_test",
+  "seed_start": 9920,
+  "requested": 10,
+  "generated": 10,
+  "compiled": 10,
+  "spike_validated": 10,
+  "package_validated": 10,
+  "host_mock_validated": 10,
+  "hardware_validated": 0,
+  "total_committed_floating_instructions": 501,
+  "target_settings_sha256": "576c3ed3364d55ba960108ab2b61e40769c4e307cb736c0f2e966f08251c37a6",
+  "rows": [
+    {
+      "seed": 9920,
+      "status": "host_mock_validated",
+      "manifest_sha256": "7c63b42fe04f6e5366ea4898269afb9beacf89fd4de3ee6c631960fd5ba698b0",
+      "elf_sha256": "cf02b62f2b56f45eab6740c74f4d7854601e723b20b8f6f09fa44f0d33091ed9",
+      "committed_floating_instructions": 40,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x70",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9921,
+      "status": "host_mock_validated",
+      "manifest_sha256": "a807c882828add09a662fdcf9eb5ecbe2f68bb5fc372a243325cf3d67f086fc9",
+      "elf_sha256": "0e34e8224cc2616239ca7873f2474c4297e5423ebb6fcdca40bd5f10dfdf8062",
+      "committed_floating_instructions": 67,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x33",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9922,
+      "status": "host_mock_validated",
+      "manifest_sha256": "1cc2c95ef272e0480f8e7d01b673b760a624bdf9ec39b56a503bc58cd7bd982f",
+      "elf_sha256": "22836583ad832d7a6fc6e400b91a050a18b9254906d264256dd0914b6ed16305",
+      "committed_floating_instructions": 63,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x70",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9923,
+      "status": "host_mock_validated",
+      "manifest_sha256": "3b76b2f7efe5da9b8808ed694d947b9e06aa4365745234518eec08e1e0c927a9",
+      "elf_sha256": "7b77bc865d04771f1262ca3131294ae6d0b64b1f917a385623c8345ac82cb768",
+      "committed_floating_instructions": 47,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x10",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9924,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b3cbcdc76776092dbcbde2333e75afc433c1ba66e668f196119552f81fc52b83",
+      "elf_sha256": "6a987c77ce3341a92e2ecb4df21e929b5052b1a7b36cd2613884cdda885597bb",
+      "committed_floating_instructions": 38,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x53",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9925,
+      "status": "host_mock_validated",
+      "manifest_sha256": "60abe767d524bde6df51bcd6e3797c28d168fa64511e375db22dabb5589a1704",
+      "elf_sha256": "6f0019a067ffa7e0b40066a230eb69e914a8e1da8cd9c3d4f37555b71047e21e",
+      "committed_floating_instructions": 45,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x71",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9926,
+      "status": "host_mock_validated",
+      "manifest_sha256": "1d769189eb38794653be90f19cba57fbb67ba7f027426a121bf7dfdead50e593",
+      "elf_sha256": "0fd13262cc9487a4dfc229e6bf26c4151ca9100a0be194d5adb82b31b295176f",
+      "committed_floating_instructions": 63,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x53",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9927,
+      "status": "host_mock_validated",
+      "manifest_sha256": "e742110d424264034c967d47c06cdc3fcc73b3cd55b97cc47e1f708d1eb9af7b",
+      "elf_sha256": "e6318700506535ed16063868a324d227093bdfe0a9c9feba1e020facc79a9cc4",
+      "committed_floating_instructions": 50,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x91",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9928,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0360268c21de4dfe1577db0a651c0bed0a5b33ae7ea72ce74806f9c2a444f0fa",
+      "elf_sha256": "03a59a95eda8304c12899a48d2f665d34bca26612935302c2f1cb54491bad313",
+      "committed_floating_instructions": 42,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x53",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    },
+    {
+      "seed": 9929,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c711c15f66e458b3029ed831bca7e28c5655ffafafd88fa1c2a338fd78e973a9",
+      "elf_sha256": "8d70254107c3f85f967dca8b29d3fc1074a4d22a0d25085a09d2ebc77c13d0b2",
+      "committed_floating_instructions": 46,
+      "committed_atomic_instructions": 0,
+      "fcsr": "0x33",
+      "elf_arch": "rv64i2p1_m2p0_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zcd1p0"
+    }
+  ],
+  "note": "Software validation only; no FPU core RTL or physical FPGA execution",
+  "startup_sha256": "1514109ff71aed2237f5d5c2b720ff8fa91726296bb1de912dc6da33ae24adf7"
+}

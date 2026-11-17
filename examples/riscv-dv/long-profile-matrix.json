@@ -1,0 +1,43 @@
+{
+  "configurations": [
+    {
+      "name": "rv32i-random-1000",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9000,
+      "tests": 1,
+      "instr_count": 1000,
+      "generator_timeout": 600
+    },
+    {
+      "name": "rv64imc-jump-1000",
+      "isa": "rv64imc",
+      "profile": "riscv_jump_stress_test",
+      "seed": 9001,
+      "tests": 1,
+      "instr_count": 1000,
+      "generator_timeout": 600
+    },
+    {
+      "name": "rv32i-load-store-1000",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9002,
+      "tests": 1,
+      "instr_count": 1000,
+      "load_store": true,
+      "generator_timeout": 600
+    },
+    {
+      "name": "rv32i-load-store-branchless-1000",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 6005,
+      "tests": 1,
+      "instr_count": 1000,
+      "load_store": true,
+      "upstream_option": ["+no_branch_jump=1"],
+      "generator_timeout": 600
+    }
+  ]
+}

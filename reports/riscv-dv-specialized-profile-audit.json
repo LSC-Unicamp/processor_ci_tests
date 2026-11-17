@@ -1,0 +1,42 @@
+{
+  "tool": "riscv-dv-specialized-profile-audit",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "date": "2026-11-17",
+  "rv32imcb": {
+    "upstream_target": "rv32imcb",
+    "pyflow_generated": true,
+    "seed": 10720,
+    "profile": "riscv_arithmetic_basic_test",
+    "source_sha256": "a43d56b88a9b9489d651f4503c3e26ed12d4e7603dca51323ad07bb6813943e7",
+    "compiler_march": "rv32imcb_zicsr_zifencei",
+    "compiler_accepted_march": true,
+    "compiler_arch_attribute": "rv32i2p1_m2p0_c2p0_b1p0_zicsr2p0_zifencei2p0_zmmul1p0_zca1p0_zba1p0_zbb1p0_zbs1p0",
+    "compiled": false,
+    "assembler_error_count": 21,
+    "unrecognized_mnemonics": {
+      "clmulh": 1,
+      "cmov": 1,
+      "crc32.b": 1,
+      "crc32.w": 3,
+      "crc32c.b": 1,
+      "crc32c.h": 1,
+      "crc32c.w": 1,
+      "fsl": 1,
+      "gorc": 2,
+      "gorci": 1,
+      "grev": 1,
+      "grevi": 2,
+      "sbclr": 1,
+      "sbinv": 1,
+      "sbinvi": 1,
+      "sbseti": 2
+    },
+    "reason": "Pinned RV32B PyFlow model emits draft or extension-specific mnemonics outside the local compiler aggregate B profile; clmulh separately needs Zbc or Zbkc. No exact generated ISA/package is claimed."
+  },
+  "rv32e": {
+    "pyflow_target_available": false,
+    "pyflow_isa_group_available": false,
+    "package_supported": false
+  },
+  "hardware_validated": 0
+}

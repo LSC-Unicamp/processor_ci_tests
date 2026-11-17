@@ -1,0 +1,4 @@
+- test: riscv_illegal_instr_test
+  gen_test: riscv_instr_base_test
+  iterations: 1
+  gen_opts: +instr_cnt=200 +num_of_sub_program=0 +illegal_instr_ratio=100 +no_ebreak=1 +no_wfi=1

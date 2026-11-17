@@ -1,0 +1,4 @@
+- test: riscv_rand_instr_test
+  gen_test: riscv_instr_base_test
+  iterations: 1
+  gen_opts: +instr_cnt=100 +num_of_sub_program=0 +no_fence=1

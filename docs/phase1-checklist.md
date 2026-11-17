@@ -32,7 +32,9 @@ the generated reports; do not infer validation from a filename or mock result.
   host-mock validated. The RV32 max sample generated **47** tests for an I/M/C
   request: I 39, M 8, C 0; all 47 passed Sail and host checks. ACT 4.1 has no
   C test source in its current `tests/` tree. These are software sample targets.
-  ProcessorCI DUT configuration and hardware execution remain pending.
+  The selected RV-Bench CV32E40S DUT profile runs all 47 I/M packages through
+  controller/UART RTL. No C, U-mode, interrupt, or Zkt DUT ACT validation is
+  claimed. FPGA execution remains pending.
 - Advanced: **59** distinct scenarios across RV32 I/M/C/A/F/D/Zicsr/Zve32x/Zve64x and RV64 I/M/A/F/D
   compiled, disassembled, packaged, and passed under both QEMU user mode and
   Sail. **0** have DUT execution evidence.
@@ -48,7 +50,7 @@ the generated reports; do not infer validation from a filename or mock result.
 - Existing random/generated workflow: absent from this local checkout. Do not
   claim coexistence or compatibility until the actual implementation is found
   or integrated.
-- Software checks last run: 45 pytest tests passed; 599/599 basic Sail cases,
+- Software checks last run: 49 pytest tests passed; 599/599 basic Sail cases,
   19/19 invalid trap cases, 59/59 advanced QEMU and Sail cases, 389/389 VLEN128
   full-V and named-Zve Sail replays, and 39/39 RV32
   plus 51/51 RV64 and 47/47 RV32 I/M/C-request ACT Sail executions passed.
@@ -173,8 +175,9 @@ the generated reports; do not infer validation from a filename or mock result.
 - [x] Stage the ACT 4.1 CV32E40S UDB, Sail configuration, macros and reset-zero
   linker in `build/act4-cv32e40s/`; use `tohost=1/3` for ProcessorCI
   classification. Build 39 I and eight M ELFs and packages; all 47 pass direct
-  Sail and host oracle checks. The copied UDB and 32 MiB Sail memory map remain
-  provisional for this exact pinned core and board.
+  Sail and host oracle checks. The linker and Sail program region now match
+  508 KiB; ACT-required CLINT and interrupt-generator devices are explicitly
+  reference-only. Detailed UDB capability claims remain under review.
 - [x] Run a real ACT `I-addi-00` ELF through the RV-Bench CV32E40S wrapper:
   `tohost=1` is PASS, and an injected instruction error produces `tohost=3`
   and SELF_CHECK_FAILURE. Fix the wrapper's missing store response and
@@ -197,7 +200,25 @@ the generated reports; do not infer validation from a filename or mock result.
   and mock serial adapter without changing legacy package results.
 - [ ] Create a truthful ProcessorCI DUT `test_config.yaml`, UDB YAML,
   `rvmodel_macros.h`, linker script, Sail config, and memory map for each
-  selected core. Never copy the broad Sail software profile as a hardware claim.
+  selected core. The selected CV32E40S has an audited 512 KiB map and a
+  conservative I/M test scope. A directed RTL probe now checks `mtvec` WARL,
+  misaligned word access, and U-mode fetch denial with zero PMP regions.
+  The first probe `mstatus` read was zero despite an RTL reset constant of
+  `0x1800`; resolve that discrepancy and the full CSR WARL/reset matrix.
+  Zc/JVT, external interrupt/WFI, and Zkt timing claims still need review.
+  ACT requires reference-only CLINT and
+  interrupt-generator services in Sail; they are not DUT hardware.
+- [x] Source-review the selected CV32E40S **I/M execution profile** against
+  the pinned wrapper and RTL: verify core defaults, PMP/PMA behavior, RAM,
+  reset address, completion, `mtvec` reserved writes, and misaligned word access.
+  Align Sail RAM cacheability and WFI behavior. The directed probe passes;
+  the audit records broader claims separately without counting them as ACT
+  DUT coverage.
+- [x] Reconcile the selected ACT 4.1 DUT coverage with generated test sources
+  and observed execution: I 39, M 8, C 0. The pinned ACT tree has no C
+  source directory; C and other advertised core extensions have no ACT DUT
+  pass count. Record the scope and known profile limitations in the
+  machine-readable profile audit and combined report.
 - [x] Validate real ACT self-check PASS and deliberately induced FAIL through
   the ProcessorCI controller and UART execution interface. A serial-loaded
   ADDI mismatch returns `tohost=3` and 371 bytes of readable diagnostics;
@@ -208,7 +229,7 @@ the generated reports; do not infer validation from a filename or mock result.
   release has no C test sources. CV32E40S is the selected RV-Bench candidate;
   its sampled machine-mode and RV32IMC RTL path passed, and all 47 generated
   I/M ELFs run through its wrapper and controller. Its ACT UDB still needs
-  detailed review, and the current memory map does not fit the board. The earlier picorv32
+  the four reviews above, and the current memory map does not fit the board. The earlier picorv32
   probe used a different, legacy wrapper.
 - [x] Verify controller sparse-segment loading, byte enables, shared address
   visibility, write-qualified completion, UART status readback, and ACT
@@ -303,7 +324,8 @@ the generated reports; do not infer validation from a filename or mock result.
   Full RV32V selects the FP64 Zve packages while RV64-only indexed forms stay
   out of RV32 selection.
 - [ ] Check advertised ISA and manifest filtering against a selected core's
-  actual RTL and privilege capabilities.
+  actual RTL and privilege capabilities. CV32E40S I/M execution is confirmed;
+  C/Zc and U-mode filters must respect the zero-source and zero-PMP limits.
 - [x] Make basic and advanced builds reproducible with explicit toolchain,
   `-march`, ABI, linker/runtime, disassembly, and reference configuration.
 - [x] Add meaningful pytest negative tests for all package/oracle types,
@@ -315,8 +337,9 @@ the generated reports; do not infer validation from a filename or mock result.
   manual target because of their larger Ruby and Python dependency stack.
 - [x] Generate separate basic, advanced, ACT, and combined reports from actual
   scans and executions. Never merge ACT certification counts with basic
-  instruction coverage. The combined report separately records CV32E40S's two
-  core/wrapper RTL PASS cases, induced self-check failure, and 0/47 board fit.
+  instruction coverage. The combined report separately records 47/47 CV32E40S
+  controller RTL and UART upload PASS cases, three negative outcomes, its
+  static profile map audit, and the legacy board profile's 0/47 fit.
 
 ## 6. Documentation and final acceptance — Phase H
 
@@ -327,16 +350,19 @@ the generated reports; do not infer validation from a filename or mock result.
   `docs/adding-tests.md`.
 - [x] Re-run all available software gates; record exact commands, counts,
   failures, and example packages/reports in the final report.
-- [ ] Run on RTL/FPGA when hardware exists; keep hardware validation marked
-  pending until then.
+- [x] Run ACT I/M on the selected core, controller, and UART RTL; all 47 pass.
+- [ ] Run on an FPGA when a 512 KiB memory backend and hardware are available;
+  keep FPGA validation marked pending until then.
 
 ## Immediate next sequence
 
 1. Validate the sampled vector parameter/state cases against selected real
    core profiles; software VLEN128 and named Zve replays are reproducible.
-2. Finish validating the staged CV32E40S UDB's detailed CSR, privilege,
-   exception, alignment, and Zc claims against pinned RTL. The linker and Sail
-   program RAM now match the 508 KiB ACT program region.
+2. Resolve the CV32E40S initial `mstatus` read/reset discrepancy and finish
+   the staged UDB's full CSR WARL/reset and Zc/JVT checks;
+   add external interrupt/WFI support before claiming those tests, and measure
+   Zkt timing before claiming it. The directed probe has resolved sampled
+   `mtvec`, misaligned word, and zero-PMP U-mode behavior.
 3. Synthesize a 512 KiB backend or reduce the ACT payload for a selected board;
    existing board configuration still fits 0/47 packages.
 4. Run the already validated controller/UART path on an FPGA when hardware is

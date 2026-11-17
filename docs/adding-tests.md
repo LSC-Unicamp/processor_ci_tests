@@ -142,7 +142,8 @@ The filters use exact matches and still require ISA compatibility. `--suite`
 selects the source; `--instruction` applies to basic tests, while
 `--scenario` and `--category` apply to advanced tests. `--test-id` works with
 any package source. Instruction and scenario filters are mutually exclusive.
-Filtered serial execution is rejected until package execution is verified.
+Generic filtered serial execution remains limited to the legacy basic runner.
+The selected CV32E40S ACT profile supports `--test-id` over serial.
 
 ## ACT 4.1 and a real DUT
 
@@ -157,6 +158,8 @@ python3 tools/validate_act4_packages.py
 python3 tools/check_dut_package_fit.py
 PATH="$PWD/.venv-act4/bin:$PATH" python3 tools/build_act4_cv32e40s.py --extensions I,M
 python3 tools/validate_act4_cv32e40s.py
+python3 tools/probe_rvbench_cv32e40s.py
+python3 tools/audit_act4_cv32e40s_profile.py
 python3 tools/run_act4_cv32e40s_rtl.py
 python3 tools/run_act4_cv32e40s_rtl.py --inject-addi-failure
 python3 tools/run_act4_cv32e40s_rtl.py --package build/act4-cv32e40s/packages/M-mul-00.json --output reports/act4-cv32e40s-rtl-mul.json
@@ -165,6 +168,7 @@ python3 tools/check_act4_cv32e40s_fit.py --shared-memory-bytes 524288 --output r
 python3 tools/probe_controller_rtl.py
 python3 tools/run_act4_cv32e40s_controller_rtl.py --all
 python3 tools/run_act4_cv32e40s_controller_rtl.py --all --serial-full-load --output reports/act4-cv32e40s-controller-serial-all.json
+python3 -m riscv_test_runner.cli --suite arch --act-profile cv32e40s-512k --march rv32im --list
 python3 tools/combined_report.py
 ```
 
@@ -187,7 +191,10 @@ templates with reviewed per-variant capability overrides; the current RV-Bench
 checkout has 190 core JSON configs, but they do not require 190 handwritten ACT
 config sets. The selected candidate is [RV-Bench CV32E40S](act4-rvbench-core-selection.md).
 Run `python3 tools/probe_rvbench_cv32e40s.py` to reproduce its directed
-machine-mode and RV32IMC probe. The earlier picorv32 probe used the legacy
+machine-mode, misalignment, and U-mode access-denial probe. The ACT DUT count
+is I=39, M=8, C=0; the pinned ACT release has no C source directory. Zero PMP
+regions deny U-mode fetches in this wrapper, and interrupt inputs are tied
+low. The earlier picorv32 probe used the legacy
 ProcessorCI wrapper and is not evidence for RV-Bench's picorv32 variant. The
 current board RAM configuration cannot fit the ACT images. The selected
 RV-Bench wrapper and controller now have a separate 512 KiB RTL map with

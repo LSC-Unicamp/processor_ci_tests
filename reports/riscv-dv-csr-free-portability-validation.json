@@ -1,0 +1,67 @@
+{
+  "tool": "riscv-dv",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "matrix": "examples/riscv-dv/csr-free-portability-matrix.json",
+  "requested": 4,
+  "host_mock_validated": 4,
+  "hardware_validated": 0,
+  "validation": "PyFlow, compiler, Spike, package verification, serial host mock; no physical core replay",
+  "results": [
+    {
+      "configuration": "rv32i-arithmetic-offset",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 10110,
+      "status": "host_mock_validated",
+      "elf_arch": "rv32i2p1",
+      "entry": 2147483776,
+      "memory_base": 2147483648,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "manifest_sha256": "36aa02b432d9c452a83aef756196dba95f47d8fe19eed171fca0830c7d3deaac",
+      "elf_sha256": "366600a493f836ca4615c93e71f4a02cc2db8e607d8fb9f5a2279709fc415d5c"
+    },
+    {
+      "configuration": "rv32imc-random",
+      "isa": "rv32imc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10111,
+      "status": "host_mock_validated",
+      "elf_arch": "rv32i2p1_m2p0_c2p0_zmmul1p0_zca1p0",
+      "entry": 0,
+      "memory_base": 0,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "manifest_sha256": "de1a57b5d94f4af61f84a2eef7fa99f4d49249474ebf731752fa2861a775465c",
+      "elf_sha256": "52936f18f491c5dc7e87011ec361ba038b82d4b82e39438fc5f91867bacbba04"
+    },
+    {
+      "configuration": "rv64i-jump",
+      "isa": "rv64i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 10112,
+      "status": "host_mock_validated",
+      "elf_arch": "rv64i2p1",
+      "entry": 0,
+      "memory_base": 0,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "manifest_sha256": "a5e788fb13572b721e3299f8c9e6f651e03b767de72352cdb79e23b2b1165f4f",
+      "elf_sha256": "6ed23e51ec1ca11d6c0c3614598e5d343bfe0201fdc962a0ace9bef531ea57d4"
+    },
+    {
+      "configuration": "rv32i-load-store",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10113,
+      "status": "host_mock_validated",
+      "elf_arch": "rv32i2p1",
+      "entry": 0,
+      "memory_base": 0,
+      "written_memory_bytes": 18,
+      "checked_memory_bytes": 18,
+      "manifest_sha256": "16479363cf15bef33825dbb0e8f7bdd653604f9fc819d143455288be582a7f63",
+      "elf_sha256": "94e42110270bcf90da0b97ec9ba2efd4d925dca538ec77a2091d7372505dff3e"
+    }
+  ]
+}

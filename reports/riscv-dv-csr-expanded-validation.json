@@ -1,0 +1,147 @@
+{
+  "tool": "riscv-dv-csr-expanded-validation",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "date": "2026-11-17",
+  "matrix": "examples/riscv-dv/csr-expanded-profile-matrix.json",
+  "configurations": 2,
+  "requested": 10,
+  "generated": 10,
+  "compiled": 10,
+  "spike_validated": 10,
+  "package_validated": 10,
+  "host_mock_validated": 10,
+  "hardware_validated": 0,
+  "failed": 0,
+  "results": [
+    {
+      "configuration": "rv32i-mscratch-mepc",
+      "seed": 10900,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b2a3633a013a281ae121700517a09c93f30e6add84e55ad57e0a99c41986ea0e",
+      "elf_sha256": "7cf8dd934acc93c7906abce7030c355c0a542fb60f7af356b7b61e0d321f7d4c",
+      "memory_layout": "shared_flat",
+      "isa": "rv32i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv32i-mscratch-mepc",
+      "seed": 10901,
+      "status": "host_mock_validated",
+      "manifest_sha256": "e12395a33bf032ef910bf7a21f7217276f70ce015b2bff9031353657cb634357",
+      "elf_sha256": "2ee73e0f6af2f16ca32766fcc32f621569c879fad67d7c8f87ec7705ec1ef9a5",
+      "memory_layout": "shared_flat",
+      "isa": "rv32i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv32i-mscratch-mepc",
+      "seed": 10902,
+      "status": "host_mock_validated",
+      "manifest_sha256": "f1670cbd113bc3002bc2023624259a400c2a0d0a6767ffd3c45269f30df52e85",
+      "elf_sha256": "33a0e49935b3e652ba31756b0c71814101a4deb6b41483cb37e5f34c719b56aa",
+      "memory_layout": "shared_flat",
+      "isa": "rv32i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv32i-mscratch-mepc",
+      "seed": 10903,
+      "status": "host_mock_validated",
+      "manifest_sha256": "5faf00e0ac08f45f2b17e6042bdcd4c7f012dff12fc6cefca2a1358d6127958d",
+      "elf_sha256": "e4b87f06ed18a458ebc627c102a79dc2deb4a02434992eed03e3b170221e195a",
+      "memory_layout": "shared_flat",
+      "isa": "rv32i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv32i-mscratch-mepc",
+      "seed": 10904,
+      "status": "host_mock_validated",
+      "manifest_sha256": "d198ae1aaf6bdea93ec86195d40a0b4b3ee6b76a87d6160fcb6bca173077f070",
+      "elf_sha256": "e9459d636953603601ed85bd26480379cba289fc055aa8dda02c927fa1382438",
+      "memory_layout": "shared_flat",
+      "isa": "rv32i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv64i-mscratch-mepc",
+      "seed": 10910,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b4ddd744167e43f333105887a5c41365a91803bd014f773c250f5e236bc190e3",
+      "elf_sha256": "47889fee6bde9062b2c101380ff2836e42db1e0666d7134b644bd24c731f904a",
+      "memory_layout": "shared_flat",
+      "isa": "rv64i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv64i-mscratch-mepc",
+      "seed": 10911,
+      "status": "host_mock_validated",
+      "manifest_sha256": "4e1d32f47ea3e50cfeab3ead8240875ffdbe41571ebdc639a3588af984c0afe9",
+      "elf_sha256": "77805bccc46c8c57ab4ba47269c5ba1bf4fb8f99d5bd5707779f1104813ebd7d",
+      "memory_layout": "shared_flat",
+      "isa": "rv64i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv64i-mscratch-mepc",
+      "seed": 10912,
+      "status": "host_mock_validated",
+      "manifest_sha256": "87f305b61f41cc7712be6b22ef1087125581c26aa652d64a213d3d590a3ac7e9",
+      "elf_sha256": "754169b99d8fcffe24104eb15771069853d3e3f5065c44898f129e1f5270b605",
+      "memory_layout": "shared_flat",
+      "isa": "rv64i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv64i-mscratch-mepc",
+      "seed": 10913,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c6b18f3b1ffbc359cd1fbd0978832a30ae894cd67e1f4139e7ce27b23bac263c",
+      "elf_sha256": "c44708d5d550fdd1f88c66852fcbea6f57e0df10db63a2376bdd3bda5614551e",
+      "memory_layout": "shared_flat",
+      "isa": "rv64i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    },
+    {
+      "configuration": "rv64i-mscratch-mepc",
+      "seed": 10914,
+      "status": "host_mock_validated",
+      "manifest_sha256": "bc2583a6f58626ac33493a350a6d878de7339f9e65d8668a10c962360aea0113",
+      "elf_sha256": "b92b6adf130bb656fa23b1b4f011628cdf645c512b36473258b3623571b42c67",
+      "memory_layout": "shared_flat",
+      "isa": "rv64i_zicsr_zifencei",
+      "csrs": [
+        "mscratch",
+        "mepc"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {"name": "rv32i-unaligned", "isa": "rv32i", "profile": "riscv_unaligned_load_store_test", "seed": 9500, "tests": 1, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv32im-unaligned", "isa": "rv32im", "profile": "riscv_unaligned_load_store_test", "seed": 9501, "tests": 1, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv32imc-unaligned", "isa": "rv32imc", "profile": "riscv_unaligned_load_store_test", "seed": 9502, "tests": 1, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv64im-unaligned", "isa": "rv64im", "profile": "riscv_unaligned_load_store_test", "seed": 9503, "tests": 1, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv64imc-unaligned", "isa": "rv64imc", "profile": "riscv_unaligned_load_store_test", "seed": 9504, "tests": 1, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv32i-unaligned-campaign", "isa": "rv32i", "profile": "riscv_unaligned_load_store_test", "seed": 9510, "tests": 5, "instr_count": 100, "experimental_profile": true}
+  ]
+}

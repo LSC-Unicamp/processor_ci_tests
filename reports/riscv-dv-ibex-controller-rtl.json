@@ -1,0 +1,89 @@
+{
+  "tool": "riscv-dv",
+  "core": "Ibex",
+  "core_revision": "19592a1fc7ba7e85427906cd4d86b8356b91a45d",
+  "wrapper_sha256": "ea5b567ae37fd6c74164b33161fdfcfe47992c5de89c4e2d610151b23ae7e88b",
+  "staged_wrapper_sha256": "be3ad25d130d349e36a938b5ec819075e1706ae108fa9eb295f0cd8134535ae0",
+  "wrapper_adaptations": [
+    "shared 512 KiB RAM",
+    "byte enables",
+    "immediate bus grant with registered response",
+    "explicit core reset edge"
+  ],
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port simulation staging",
+  "reset_pc": 128,
+  "image_load": "direct simulation preload",
+  "controller_rtl_execution": true,
+  "fpga_execution": false,
+  "validated": 5,
+  "failed": 0,
+  "tests": [
+    {
+      "test_id": "riscv_arithmetic_basic_test-rv32i-9700",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/ibex-reset-pc-matrix/rv32i-arithmetic/riscv_arithmetic_basic_test-rv32i-9700/manifest.json",
+      "manifest_sha256": "1416ad3fda95b6943f628d22078819bc1547305e3e19f264771c4452fe22a2c9",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "tohost": 1,
+      "cycles": 200,
+      "returncode": 0,
+      "stdout_head": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 200\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[2100000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 0000037c, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 2us; walltime 0.017 s; speed 121.491 us/s\n- Verilator: cpu 0.017 s on 1 threads; allocated 5 MB",
+      "stdout_tail": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 200\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[2100000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 0000037c, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 2us; walltime 0.017 s; speed 121.491 us/s\n- Verilator: cpu 0.017 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    },
+    {
+      "test_id": "riscv_arithmetic_basic_test-rv32im-9701",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/ibex-reset-pc-matrix/rv32im-arithmetic/riscv_arithmetic_basic_test-rv32im-9701/manifest.json",
+      "manifest_sha256": "3d3d297f405fc23c822847df85c00f2d8c40c41a45e470d948aa632feb3a3235",
+      "isa": "rv32im_zicsr_zifencei",
+      "outcome": "PASS",
+      "tohost": 1,
+      "cycles": 521,
+      "returncode": 0,
+      "stdout_head": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 521\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[5310000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 00000448, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 5us; walltime 0.017 s; speed 305.144 us/s\n- Verilator: cpu 0.017 s on 1 threads; allocated 5 MB",
+      "stdout_tail": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 521\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[5310000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 00000448, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 5us; walltime 0.017 s; speed 305.144 us/s\n- Verilator: cpu 0.017 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    },
+    {
+      "test_id": "riscv_rand_instr_test-rv32imc-9702",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/ibex-reset-pc-matrix/rv32imc-random/riscv_rand_instr_test-rv32imc-9702/manifest.json",
+      "manifest_sha256": "c8fb808de9effc08d510ee2ca7d2a6ba3c5ecbe3d3538f9cc79062088c692c87",
+      "isa": "rv32imc_zicsr_zifencei",
+      "outcome": "PASS",
+      "tohost": 1,
+      "cycles": 278,
+      "returncode": 0,
+      "stdout_head": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 278\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[2880000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 00000348, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 3us; walltime 0.018 s; speed 164.302 us/s\n- Verilator: cpu 0.017 s on 1 threads; allocated 5 MB",
+      "stdout_tail": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 278\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[2880000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 00000348, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 3us; walltime 0.018 s; speed 164.302 us/s\n- Verilator: cpu 0.017 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    },
+    {
+      "test_id": "riscv_jump_stress_test-rv32i-9703",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/ibex-reset-pc-matrix/rv32i-jump/riscv_jump_stress_test-rv32i-9703/manifest.json",
+      "manifest_sha256": "c5fc2c89fe6cbd3d96f22535529d192c2dfa6a3ffef75c84b0abf947798ff7c7",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "tohost": 1,
+      "cycles": 193,
+      "returncode": 0,
+      "stdout_head": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 193\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[2030000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 00000320, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 2us; walltime 0.017 s; speed 120.574 us/s\n- Verilator: cpu 0.017 s on 1 threads; allocated 5 MB",
+      "stdout_tail": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 193\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[2030000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 00000320, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 2us; walltime 0.017 s; speed 120.574 us/s\n- Verilator: cpu 0.017 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    },
+    {
+      "test_id": "riscv_rand_instr_test-rv32i-9704",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/ibex-reset-pc-matrix/rv32i-load-store/riscv_rand_instr_test-rv32i-9704/manifest.json",
+      "manifest_sha256": "e51faa74213e79138b7a16ab5bce8369e1bb7e05b40f0b9a621aea6a8eb157e0",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "tohost": 1,
+      "cycles": 375,
+      "returncode": 0,
+      "stdout_head": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 375\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[3850000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 0000054c, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 4us; walltime 0.016 s; speed 241.907 us/s\n- Verilator: cpu 0.016 s on 1 threads; allocated 5 MB",
+      "stdout_tail": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 375\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[3850000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 0000054c, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 4us; walltime 0.016 s; speed 241.907 us/s\n- Verilator: cpu 0.016 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    }
+  ]
+}

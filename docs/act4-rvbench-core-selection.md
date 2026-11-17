@@ -19,13 +19,15 @@ traps, a usable memory bus, and an ACT 4.1 sample profile.
 
 `python3 tools/probe_rvbench_cv32e40s.py` compiles a small program with
 RV-Bench's own Verilator wrapper simulator and a private instruction image. It
-reads `mstatus`, writes and reads `mtvec`, handles `ecall` by checking `mcause`
-and advancing `mepc`, returns with `mret`, checks `mul`, `div`, and `c.addi`,
-then writes the expected value to the data bus. The probe passed; the recorded
+reads `mstatus`, checks that a reserved `mtvec` mode write retains the prior
+mode, handles an M-mode `ecall` with `mcause`/`mepc`/`mret`, checks `mul`,
+`div`, `c.addi`, and a misaligned word store/load. It also enters U mode and
+checks that the first U-mode fetch faults with cause 1 because zero PMP
+regions deny unmatched U-mode access. The probe passed; the recorded
 source revision, wrapper hash, and result are in
 [`reports/act4-cv32e40s-rvbench-probe.json`](../reports/act4-cv32e40s-rvbench-probe.json).
 This proves the sampled path through the pinned RTL and curated wrapper. It
-is not a full RV32IMC proof, ACT result, controller run, or FPGA result.
+does not establish complete CSR or Zc coverage, an ACT result, or FPGA execution.
 
 ## Remaining profile and execution work
 
@@ -33,18 +35,21 @@ is not a full RV32IMC proof, ACT result, controller run, or FPGA result.
 Sail configuration, changes the linker entry from `0x80` to the wrapper's
 reset address zero, and uses ProcessorCI-compatible `tohost=1/3` halt macros.
 The 39 generated I and eight M ELFs all pass direct Sail execution and host oracle checks
-(`tools/validate_act4_cv32e40s.py`). The staged Sail memory still describes
-32 MiB, and the UDB example remains a starting point for review against the
-exact pinned core revision.
+(`tools/validate_act4_cv32e40s.py`). The staged linker and Sail program region
+now match 508 KiB. ACT requires a reference-only CLINT and interrupt generator
+in Sail, although the controller has no corresponding hardware. The UDB
+example still contains untested CSR, Zc, interrupt, and Zkt claims.
 
 The selected RV-Bench wrapper instantiates `cv32e40s_core` with its default
 parameters and drives `boot_addr_i=0`. The pinned core defaults are `RV32I`,
 `M_EXT=M`, `B_EXT=B_NONE`, zero PMP and PMA regions, and `ZC_EXT=1` internally.
-Those settings support the staged I/M scope and the upstream UDB's broad
-RV32IMC choice. This checks the static parameters only; the UDB's individual
-CSR, exception, alignment, and Zc claims still need RTL tests before they can
-be treated as verified for this wrapper. The Sail 32 MiB memory region is a
-software execution convenience and does not describe the ProcessorCI board.
+Those settings support the staged I/M scope. The U-mode fetch-denial and
+misaligned-access probe checks two previously unresolved behaviors. The
+UDB's full CSR and Zc claims still need further RTL tests. The first
+`mstatus` read in the probe was zero despite an RTL reset constant of
+`0x1800`; that discrepancy remains under investigation. The
+[profile audit](../reports/act4-cv32e40s-profile-audit.json) checks the pinned
+wrapper defaults, program map, and reference-only Sail services.
 
 One real ACT `I-addi-00` ELF now passes through the curated wrapper in RTL:
 [`reports/act4-cv32e40s-rtl-addi.json`](../reports/act4-cv32e40s-rtl-addi.json)

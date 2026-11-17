@@ -1,0 +1,108 @@
+{
+  "tool": "riscv-dv-zbb-validation",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "date": "2026-11-17",
+  "matrix": "examples/riscv-dv/zbb-profile-matrix.json",
+  "configurations": 3,
+  "requested": 10,
+  "generated": 10,
+  "compiled": 10,
+  "spike_validated": 10,
+  "package_validated": 10,
+  "host_mock_validated": 10,
+  "hardware_validated": 0,
+  "failed": 0,
+  "total_executed_zbb_instructions": 202,
+  "results": [
+    {
+      "configuration": "rv32imc-zbb-shared",
+      "seed": 11000,
+      "status": "host_mock_validated",
+      "manifest_sha256": "1602720a7903a2af6e769ffac8e187a891761cbe6ef89a7c528fd910c76b825a",
+      "elf_sha256": "a604d655ccb6e67a05e7fef3273633282b2ad68ae6572d512c93191a6c7442a5",
+      "memory_layout": "shared_flat",
+      "reference_zbb_instructions": 12
+    },
+    {
+      "configuration": "rv32imc-zbb-shared",
+      "seed": 11001,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c2e761157cdd6a04285d9ec2076e7fdce1dbdd2ff71afa840700ecca40caea98",
+      "elf_sha256": "013182395099ed4bd0d5cf30aa0fdb2de55da2ec4ab68281ccae705ff8a57ce6",
+      "memory_layout": "shared_flat",
+      "reference_zbb_instructions": 11
+    },
+    {
+      "configuration": "rv32imc-zbb-shared",
+      "seed": 11002,
+      "status": "host_mock_validated",
+      "manifest_sha256": "13dca6c4cad3bb299bdd32ddc0e64379bc69268759d1bec56b28c5388fd695a3",
+      "elf_sha256": "64feb73e6979fb9fdb987dce1d02c326d66950222455aa5158186093bccd3ed3",
+      "memory_layout": "shared_flat",
+      "reference_zbb_instructions": 22
+    },
+    {
+      "configuration": "rv32imc-zbb-shared",
+      "seed": 11003,
+      "status": "host_mock_validated",
+      "manifest_sha256": "d760d57ba5b71eabb257367b29d74e9cc92c1bdaf4c785efc925f87999830215",
+      "elf_sha256": "1d5d7034be1014fbc0c9ad1d6c666372d1bf9823b741fa0e511a97b9dae39986",
+      "memory_layout": "shared_flat",
+      "reference_zbb_instructions": 7
+    },
+    {
+      "configuration": "rv32imc-zbb-nonzero",
+      "seed": 11004,
+      "status": "host_mock_validated",
+      "manifest_sha256": "dac978fd4f3bba0a45d29a358fd5997df2cb92d86bdaca40d5e60c2a9b86df84",
+      "elf_sha256": "4ffa1ea60574c946d4ec10ec9439f50496cea77e3154c3dfcb4e00f7601c3a0b",
+      "memory_layout": "shared_flat",
+      "reference_zbb_instructions": 25
+    },
+    {
+      "configuration": "rv32imc-zbb-nonzero",
+      "seed": 11005,
+      "status": "host_mock_validated",
+      "manifest_sha256": "fea894be0efbdb292713295b684ba44012ed418b31eca58cc92b843518a9b1cb",
+      "elf_sha256": "9809fb746b791d83994e35f59af8705d68f1571b50708e79a56502d2258a9e8a",
+      "memory_layout": "shared_flat",
+      "reference_zbb_instructions": 13
+    },
+    {
+      "configuration": "rv32imc-zbb-nonzero",
+      "seed": 11006,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c02c9fca941fbfee939d6dcf26c2a228b279a1fabac6cf6cb5ace3a9fab94b8f",
+      "elf_sha256": "7d2d36ac612c0da14adb9c4e83e9859e880c5b3a6077a42b360502073728c766",
+      "memory_layout": "shared_flat",
+      "reference_zbb_instructions": 38
+    },
+    {
+      "configuration": "rv32imc-zbb-split",
+      "seed": 11007,
+      "status": "host_mock_validated",
+      "manifest_sha256": "8f20dcdbd1ce8d85d1153b8507f22f24c9f1173ba7df4bc745b8009026ef9c69",
+      "elf_sha256": "571d47f56badf1fcc3de539ffd6acd45e35b94a95b4e8e609c4a5323dba02094",
+      "memory_layout": "split_disjoint",
+      "reference_zbb_instructions": 29
+    },
+    {
+      "configuration": "rv32imc-zbb-split",
+      "seed": 11008,
+      "status": "host_mock_validated",
+      "manifest_sha256": "eca0cac9bd2fc1ca9fa771e94431ba5f5963172d1d4ece16082b1b0070a6f91b",
+      "elf_sha256": "2067738a50871752edc87e3714797aef85886fc7c5dbf06bb796022bc1df6e90",
+      "memory_layout": "split_disjoint",
+      "reference_zbb_instructions": 36
+    },
+    {
+      "configuration": "rv32imc-zbb-split",
+      "seed": 11009,
+      "status": "host_mock_validated",
+      "manifest_sha256": "a1e6ce485c1dfecb9b5c0f0ec6fe9d3807c563eb66c610c93efe6d0e728f0671",
+      "elf_sha256": "11ca5384320a5fae2e340f5876a704643df971a70b64361b4ffea961cf75053d",
+      "memory_layout": "split_disjoint",
+      "reference_zbb_instructions": 9
+    }
+  ]
+}

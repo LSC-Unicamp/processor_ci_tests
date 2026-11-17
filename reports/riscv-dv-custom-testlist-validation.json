@@ -1,0 +1,112 @@
+{
+  "tool": "riscv-dv-matrix",
+  "kind": "custom_testlist_campaign",
+  "matrix": "examples/riscv-dv/custom-testlist-matrix.json",
+  "testlists": {
+    "examples/riscv-dv/custom-testlist.yaml": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e",
+    "examples/riscv-dv/custom-floating-testlist.yaml": "24593efbf8f3768eec549d274d2a743c7645d079de461cfd4c7168406338ceb2"
+  },
+  "configurations": 5,
+  "requested": 9,
+  "generated": 9,
+  "compiled": 9,
+  "spike_validated": 9,
+  "package_validated": 9,
+  "host_mock_validated": 9,
+  "hardware_validated": 0,
+  "rows": [
+    {
+      "configuration": "rv32i-custom-arithmetic",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9950,
+      "status": "host_mock_validated",
+      "manifest_sha256": "10ee452f87988ceaf0c85c4ecc17de406563a8f234925777e8ba31c4f3f114f9",
+      "elf_sha256": "97a69c4038319f7662485682dc68d00ddcce283290987fe042c3cf1b4190e1d5",
+      "input_testlist_sha256": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e"
+    },
+    {
+      "configuration": "rv32i-custom-arithmetic",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9951,
+      "status": "host_mock_validated",
+      "manifest_sha256": "757fc6bae563dc9366bc7fcf240a599cde0861c823915c636318d995584ba1b0",
+      "elf_sha256": "f192d65ecbb001dc7b19d8f1aae9fdd6fd4b77c4d52cbd9f89dcb7e14d38441a",
+      "input_testlist_sha256": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e"
+    },
+    {
+      "configuration": "rv32imc-custom-random",
+      "isa": "rv32imc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9960,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c96224da5e96065cc4bce39c54cb70e564d5375f7931045d0c3242ddeba21a35",
+      "elf_sha256": "d2cb5bba9c72922a3b3a52d8d28f59bc20844599bd2db88c0cd26a2f6a34aabf",
+      "input_testlist_sha256": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e"
+    },
+    {
+      "configuration": "rv32imc-custom-random",
+      "isa": "rv32imc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9961,
+      "status": "host_mock_validated",
+      "manifest_sha256": "2d256d7efa00d134b7617f5593f6a3c65f8bb541d8540797a6d53522c0c95b26",
+      "elf_sha256": "e3bcc1d9945b9796903d9bc5ce3cba496547294b7cd0aba32a98d699d3bbd4d6",
+      "input_testlist_sha256": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e"
+    },
+    {
+      "configuration": "rv64i-custom-jump",
+      "isa": "rv64i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 9970,
+      "status": "host_mock_validated",
+      "manifest_sha256": "2ac6a28d9477a60c3b4c48c4bcb81bae48d42b9d09342a3573a0337386ff3fc4",
+      "elf_sha256": "1f8a774dd0c5023c66976fa41fd8b47f726fecc62c828121dd3b2d6baac88598",
+      "input_testlist_sha256": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e"
+    },
+    {
+      "configuration": "rv64i-custom-jump",
+      "isa": "rv64i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 9971,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b0e7040a19eb8ab578f12ea4895403ea57cca0513e72a107c46e094fbbfaec68",
+      "elf_sha256": "612d85a6166d5ee348f5b6aba4333ba33bee06f6ca7fe3b81245c3cda49778d0",
+      "input_testlist_sha256": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e"
+    },
+    {
+      "configuration": "rv64im-custom-unaligned",
+      "isa": "rv64im",
+      "profile": "riscv_unaligned_load_store_test",
+      "seed": 9980,
+      "status": "host_mock_validated",
+      "manifest_sha256": "e508021e17e0969431c793546464af0e1d5796fa87c5d029ea2423a2cfbf2b71",
+      "elf_sha256": "8d8548d09d89afb6736e8e729d2a3083164706b926401d84f8b6e428df3e6d77",
+      "input_testlist_sha256": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e",
+      "misaligned_wide": 16
+    },
+    {
+      "configuration": "rv64im-custom-unaligned",
+      "isa": "rv64im",
+      "profile": "riscv_unaligned_load_store_test",
+      "seed": 9981,
+      "status": "host_mock_validated",
+      "manifest_sha256": "f7f88327cd3edf56a6e6756ed08ba407dde452692b49bf817ac15ac16ca4f9f9",
+      "elf_sha256": "9201f4cdf775e2ff281d35799eb294212b1906d9a3930951c42a3624cc1abf86",
+      "input_testlist_sha256": "8d7476ab812c09d22b7cc50e2c59ee67b34fe9152ea43b714bc420e1945bff3e",
+      "misaligned_wide": 9
+    },
+    {
+      "configuration": "rv64imfdc-custom-floating",
+      "isa": "rv64imfdc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9990,
+      "status": "host_mock_validated",
+      "manifest_sha256": "93302b801665dc8585a367e085f3d464130e85fdc1b969aca9c285a841c5c00d",
+      "elf_sha256": "b21621f60b1f66ae28071a4bb21086bcf6a15ae23779d673b41c133d8b2290b5",
+      "input_testlist_sha256": "24593efbf8f3768eec549d274d2a743c7645d079de461cfd4c7168406338ceb2",
+      "committed_floating_instructions": 57
+    }
+  ]
+}

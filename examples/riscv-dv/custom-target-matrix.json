@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "name": "rv32i-arithmetic",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 10200,
+      "tests": 2,
+      "instr_count": 100,
+      "target_settings": "examples/riscv-dv/rv32i-core-target.py",
+      "single_hart_no_csr": true
+    },
+    {
+      "name": "rv32i-random",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10202,
+      "tests": 2,
+      "instr_count": 100,
+      "target_settings": "examples/riscv-dv/rv32i-core-target.py"
+    }
+  ]
+}

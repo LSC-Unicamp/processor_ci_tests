@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "rv64imfdc-arithmetic",
+      "isa": "rv64imfdc",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 10100,
+      "tests": 5,
+      "instr_count": 100
+    }
+  ]
+}

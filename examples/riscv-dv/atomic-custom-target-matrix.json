@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "name": "rv64ima-lrsc-custom-target",
+      "isa": "rv64ima",
+      "profile": "riscv_lr_sc_test",
+      "target_settings": "examples/riscv-dv/rv64ima-core-target.py",
+      "seed": 10630,
+      "tests": 2
+    },
+    {
+      "name": "rv64ima-amo-custom-target-nonzero",
+      "isa": "rv64ima",
+      "profile": "riscv_amo_test",
+      "target_settings": "examples/riscv-dv/rv64ima-core-target.py",
+      "seed": 10632,
+      "tests": 2,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776
+    },
+    {
+      "name": "rv64ima-amo-pair-custom-target-split",
+      "isa": "rv64ima",
+      "profile": "riscv_amo_pair_test",
+      "target_settings": "examples/riscv-dv/rv64ima-core-target.py",
+      "seed": 10634,
+      "tests": 2,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776,
+      "data_base": 2147614720
+    }
+  ]
+}

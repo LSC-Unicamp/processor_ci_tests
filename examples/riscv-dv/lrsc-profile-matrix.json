@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "name": "rv64ima-lrsc-shared",
+      "isa": "rv64ima",
+      "profile": "riscv_lr_sc_test",
+      "seed": 10400,
+      "tests": 5,
+      "instr_count": 100
+    },
+    {
+      "name": "rv64ima-lrsc-nonzero",
+      "isa": "rv64ima",
+      "profile": "riscv_lr_sc_test",
+      "seed": 10405,
+      "tests": 3,
+      "instr_count": 200,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776
+    },
+    {
+      "name": "rv64ima-lrsc-split",
+      "isa": "rv64ima",
+      "profile": "riscv_lr_sc_test",
+      "seed": 10408,
+      "tests": 3,
+      "instr_count": 100,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776,
+      "data_base": 2147614720
+    }
+  ]
+}

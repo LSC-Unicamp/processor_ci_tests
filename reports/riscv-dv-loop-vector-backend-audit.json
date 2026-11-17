@@ -1,0 +1,28 @@
+{
+  "tool": "riscv-dv-loop-vector-backend-audit",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "date": "2026-11-17",
+  "loop": {
+    "pyflow_source": "pygen/pygen_src/riscv_loop_instr.py",
+    "timed_probe_seconds": 30,
+    "timed_probe_completed": false,
+    "source_blockers": [
+      "loop initialization uses unconstrained random instructions",
+      "loop update uses an unconstrained random instruction",
+      "build_loop_instr_stream appends self.loop_instr[i] instead of an inner-loop block"
+    ],
+    "package_supported": false
+  },
+  "vector": {
+    "pyflow_vector_instruction_model": false,
+    "pyflow_vector_target": false,
+    "sv_target": "target/rv64gcv/riscv_core_setting.sv",
+    "sv_vector_instruction_model": "src/isa/rv32v_instr.sv",
+    "local_verilator_version": "5.054",
+    "simulator_yaml_requires_uvm_home": true,
+    "local_uvm_home_configured": false,
+    "local_uvm_source_found": false,
+    "package_supported": false
+  },
+  "hardware_validated": 0
+}

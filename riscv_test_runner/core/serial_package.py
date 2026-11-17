@@ -44,18 +44,15 @@ def run_package(device, package: dict, *, supported_isa: set[str],
                 host_timeout: float = 30.0, diagnostic_base: int | None = None) -> dict:
     """Run a package on one flat memory; return the observed host result.
 
-    The controller's end-address logic does not prove a write or report a trap
-    cause. PASS therefore requires its completion response and a readback of
-    the self-checking status word. This function does not establish RTL or
-    hardware correctness by itself.
+    The selected controller qualifies completion with an acknowledged write.
+    PASS also requires the completion response and readback of the self-checking
+    status word. ACT trap details are recovered from the diagnostic window.
     """
     memory = initial_memory(package, supported_isa=supported_isa)
     reasons = flat_memory_fit(package, base=memory_base, size=memory_size,
                               reset_pc=reset_pc, supported_isa=supported_isa)
     if reasons:
         raise InvalidPackage("DUT package does not fit: " + "; ".join(reasons))
-    if memory_base != 0:
-        raise InvalidPackage("serial adapter currently requires zero-based controller memory")
     status = package["oracle"]["address"]
     if memory_base % 4 or memory_size % 4 or status % 4 or memory_base + memory_size > 1 << 32:
         raise InvalidPackage("controller requires aligned 32-bit memory and status addresses")

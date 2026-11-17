@@ -1,0 +1,36 @@
+{
+  "tool": "riscv-dv",
+  "core": "Ibex",
+  "core_revision": "19592a1fc7ba7e85427906cd4d86b8356b91a45d",
+  "wrapper_sha256": "ea5b567ae37fd6c74164b33161fdfcfe47992c5de89c4e2d610151b23ae7e88b",
+  "wrapper_adaptations": [
+    "shared 512 KiB RAM",
+    "byte enables",
+    "immediate bus grant with registered response",
+    "explicit core reset edge"
+  ],
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port simulation staging",
+  "reset_pc": 128,
+  "image_load": "direct simulation preload",
+  "controller_rtl_execution": true,
+  "fpga_execution": false,
+  "validated": 1,
+  "failed": 0,
+  "tests": [
+    {
+      "test_id": "riscv_rand_instr_test-rv32i-9704",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/ibex-load-store-9704/riscv_rand_instr_test-rv32i-9704/manifest.json",
+      "manifest_sha256": "73326b7017a1e4944d8ed2cef125a5da552230051b8118868a9f262fca6518bb",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "tohost": 1,
+      "cycles": 375,
+      "returncode": 0,
+      "stdout_head": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 375\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[3850000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 0000054c, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 4us; walltime 0.016 s; speed 233.835 us/s\n- Verilator: cpu 0.016 s on 1 threads; allocated 5 MB",
+      "stdout_tail": "IBEX_CONTROLLER_STATUS 00000001 CYCLE 375\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/riscv_dv_ibex_controller_tb.sv:36: Verilog $finish\n[3850000] %Fatal: riscv_dv_ibex_controller_tb.sv:39: Assertion failed in riscv_dv_ibex_controller_tb: Ibex Controller timeout at PC 0000054c, status 00000001\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 4us; walltime 0.016 s; speed 233.835 us/s\n- Verilator: cpu 0.016 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    }
+  ]
+}

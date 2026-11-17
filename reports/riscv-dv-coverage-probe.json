@@ -1,0 +1,18 @@
+{
+  "kind": "Spike reference-execution coverage probe",
+  "tool": "riscv-dv cov.py PyFlow",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "isa": "rv32i",
+  "profile": "riscv_arithmetic_basic_test",
+  "seed": 7100,
+  "source_trace": "build/riscv-dv/config-matrix-validation/rv32i-arithmetic/riscv_arithmetic_basic_test-rv32i-7100/reference.trace",
+  "source_trace_sha256": "c2c6785dc2a10f8493dd254e7bf4e1de1055392fa4d75aed4a7b42657a436dcb",
+  "raw_converter_instructions": 0,
+  "normalized_converter_instructions": 145,
+  "coverage_model_processed_instructions": 114,
+  "coverage_groups_reported": 147,
+  "coverage_report_sha256": "8d9da2e95ba10262ec13271b512fdeaf109c37b2fc2cb7d3bc44f971323f3b10",
+  "normalization": "Drop Spike reset ROM; insert upstream 0x1010 trampoline marker before PC 0; stop before test_done. The marker is skipped by the upstream converter.",
+  "dut_coverage": false,
+  "integrated_into_campaign_reports_at_probe_time": false
+}

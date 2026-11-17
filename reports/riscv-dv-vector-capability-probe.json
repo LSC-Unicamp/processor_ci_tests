@@ -1,0 +1,22 @@
+{
+  "tool": "riscv-dv-vector-capability-probe",
+  "date": "2026-11-17",
+  "source": "examples/riscv-dv/vector-spike-smoke.S",
+  "source_sha256": "3f1d203180f5b9f352c0f081d6b99a8002fdcbf3c0a90b54cc25c2bf62a98e25",
+  "elf_sha256": "7272b263feb305af833bb25941252006d99e776e049f3474bced083c43e43853",
+  "compiler_march": "rv64gcv_zicsr_zifencei",
+  "spike_isa": "rv64gcv_zicsr_zifencei",
+  "spike_executed_vector_instructions": [
+    "vsetivli",
+    "vmv.v.i",
+    "vadd.vv",
+    "vse32.v"
+  ],
+  "vector_store_address": "0x80002000",
+  "committed_vector_store_bytes": 16,
+  "observed_vector_output": "03000000030000000300000003000000",
+  "spike_tohost_passed": true,
+  "pyflow_generator_available": false,
+  "package_profile_available": false,
+  "hardware_validated": 0
+}

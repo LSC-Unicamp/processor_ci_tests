@@ -1,0 +1,114 @@
+{
+  "tool": "riscv-dv-matrix",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "matrix": "examples/riscv-dv/long-profile-matrix.json",
+  "matrix_sha256": "861e40210d4ddebb9d2bfc9d365f1a37dcaaa3e5ad6945fa5be61a4af4584663",
+  "configurations": 4,
+  "requested": 4,
+  "generated": 4,
+  "compiled": 4,
+  "spike_validated": 4,
+  "package_validated": 4,
+  "host_mock_validated": 4,
+  "hardware_validated": 0,
+  "failed": 0,
+  "results": [
+    {
+      "name": "rv32i-random-1000",
+      "configuration": {
+        "name": "rv32i-random-1000",
+        "isa": "rv32i",
+        "profile": "riscv_rand_instr_test",
+        "seed": 9000,
+        "tests": 1,
+        "instr_count": 1000,
+        "generator_timeout": 600
+      },
+      "status": "passed",
+      "seed": 9000,
+      "report_sha256": "c22dc4d56a422307c213f8cbc081a746a5dc499c76513be4cc684b81e6561c02",
+      "manifest_sha256": "8213603300dec5ead7b2841a629b5a5ab7d07a1f1fd2698d549d1b1cb2d73d3b",
+      "elf_sha256": "19260c1fa0c208ab28a085f6662f5da00587fbb25fe37314c80d367cb39f6dff",
+      "linker_layout": {
+        "mode": "upstream_aligned",
+        "tohost_base": "0x1000"
+      },
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0
+    },
+    {
+      "name": "rv64imc-jump-1000",
+      "configuration": {
+        "name": "rv64imc-jump-1000",
+        "isa": "rv64imc",
+        "profile": "riscv_jump_stress_test",
+        "seed": 9001,
+        "tests": 1,
+        "instr_count": 1000,
+        "generator_timeout": 600
+      },
+      "status": "passed",
+      "seed": 9001,
+      "report_sha256": "88bf672bea48c94cba296f69ec3475154b53166fdee93c3c7868109dee758b67",
+      "manifest_sha256": "27fb1be31f9cdf9e7184bb59e6c48b0caf61e551efd2613dd593991b0da9c8bc",
+      "elf_sha256": "3aea50651eb6afe6e6c51cedbee101e7de7d6e04099c70e04cefee7b12a11d99",
+      "linker_layout": {
+        "mode": "upstream_aligned",
+        "tohost_base": "0x2000"
+      },
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0
+    },
+    {
+      "name": "rv32i-load-store-1000",
+      "configuration": {
+        "name": "rv32i-load-store-1000",
+        "isa": "rv32i",
+        "profile": "riscv_rand_instr_test",
+        "seed": 9002,
+        "tests": 1,
+        "instr_count": 1000,
+        "load_store": true,
+        "generator_timeout": 600
+      },
+      "status": "passed",
+      "seed": 9002,
+      "report_sha256": "6cbbd2343cede433730589a7247d58a7963da4349395bbc3ed1bb4ea52dfaa5e",
+      "manifest_sha256": "03edf5d7aace67a92dca8a11c6044e9638d6a4350619d59e2ddcf84862f67482",
+      "elf_sha256": "172191d926fda4b12918a1c5cf7c8016faf25f2288426cc09b878dd41b6bd4c6",
+      "linker_layout": {
+        "mode": "upstream_aligned",
+        "tohost_base": "0x2000"
+      },
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0
+    },
+    {
+      "name": "rv32i-load-store-branchless-1000",
+      "configuration": {
+        "name": "rv32i-load-store-branchless-1000",
+        "isa": "rv32i",
+        "profile": "riscv_rand_instr_test",
+        "seed": 6005,
+        "tests": 1,
+        "instr_count": 1000,
+        "load_store": true,
+        "upstream_option": [
+          "+no_branch_jump=1"
+        ],
+        "generator_timeout": 600
+      },
+      "status": "passed",
+      "seed": 6005,
+      "report_sha256": "90ee9cf0cd705df03eecaeb05d545253bf45e9d2a8bfbd566c9986b0307254ae",
+      "manifest_sha256": "43e7c5b12f37831790dd2650f5a120a252f764b6c6e211cc16b23b195f1b38c0",
+      "elf_sha256": "9140c3aadafe1c9988a9b7b80d74a01e737dcc4bdfc3865af2699b7d1fe9b263",
+      "linker_layout": {
+        "mode": "fixed_tohost",
+        "tohost_base": "0x3000"
+      },
+      "written_memory_bytes": 26,
+      "checked_memory_bytes": 26
+    }
+  ]
+}

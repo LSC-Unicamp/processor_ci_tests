@@ -1,0 +1,79 @@
+{
+  "tool": "riscv-dv-atomic-custom-target-validation",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "matrix": "examples/riscv-dv/atomic-custom-target-matrix.json",
+  "target_settings": "examples/riscv-dv/rv64ima-core-target.py",
+  "target_sha256": "0e7b19fe06ca76abc4502a480460b357542a88cfa4d4d9160032fab4fc1d54f9",
+  "date": "2026-11-17",
+  "configurations": 3,
+  "requested": 6,
+  "generated": 6,
+  "compiled": 6,
+  "spike_validated": 6,
+  "package_validated": 6,
+  "host_mock_validated": 6,
+  "hardware_validated": 0,
+  "failed": 0,
+  "results": [
+    {
+      "configuration": "rv64ima-lrsc-custom-target",
+      "profile": "riscv_lr_sc_test",
+      "seed": 10630,
+      "status": "host_mock_validated",
+      "manifest_sha256": "8c72745d937c0353f980ec83cbe852d47e7568cb3abd55622eef8bdbe1197803",
+      "elf_sha256": "fa17edfdd4fc9ba8e9b0677c52328427000ce6ad885fd03b6bcefd5d40599c95",
+      "target_sha256": "0e7b19fe06ca76abc4502a480460b357542a88cfa4d4d9160032fab4fc1d54f9",
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-lrsc-custom-target",
+      "profile": "riscv_lr_sc_test",
+      "seed": 10631,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b193c77525a754677bef1cb255c7a5853db19f5a25c861bb0a461ac99959ceed",
+      "elf_sha256": "06d37d8c6dbe726c4397cd91f16d70299ffa8eb2fa3bc8bb8b6ad14317bda960",
+      "target_sha256": "0e7b19fe06ca76abc4502a480460b357542a88cfa4d4d9160032fab4fc1d54f9",
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-custom-target-nonzero",
+      "profile": "riscv_amo_test",
+      "seed": 10632,
+      "status": "host_mock_validated",
+      "manifest_sha256": "1833c66663d30f9f61f9a82834d57a50d35eddb32071de8706cd765a7c818907",
+      "elf_sha256": "19d18cafcba2cf55b049c1af5f7780e0815bba032abb00f28ff55c904f3e4163",
+      "target_sha256": "0e7b19fe06ca76abc4502a480460b357542a88cfa4d4d9160032fab4fc1d54f9",
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-custom-target-nonzero",
+      "profile": "riscv_amo_test",
+      "seed": 10633,
+      "status": "host_mock_validated",
+      "manifest_sha256": "6537c8bcbe1d85d0ad0bf7ece21a7a1891b744db30eb42565533e3b3f1e83e32",
+      "elf_sha256": "d2f5271a9c9de87bb9366814f0c291181600aec8c2afc48fd9687c27e2da0818",
+      "target_sha256": "0e7b19fe06ca76abc4502a480460b357542a88cfa4d4d9160032fab4fc1d54f9",
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-custom-target-split",
+      "profile": "riscv_amo_pair_test",
+      "seed": 10634,
+      "status": "host_mock_validated",
+      "manifest_sha256": "e5c46a2632f69bfbcd7e961dfb6fb34cecc04e20ec2e1eed0b59709dfab1ffe9",
+      "elf_sha256": "cb6fe46573fab203772092215909b9a9365f53fec5fec0c68b0b7252ae4de202",
+      "target_sha256": "0e7b19fe06ca76abc4502a480460b357542a88cfa4d4d9160032fab4fc1d54f9",
+      "memory_layout": "split_disjoint"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-custom-target-split",
+      "profile": "riscv_amo_pair_test",
+      "seed": 10635,
+      "status": "host_mock_validated",
+      "manifest_sha256": "d69c758964e38bf6e9c5aa107df767c9c21dde479537f9f5ed2a03991ebccb4f",
+      "elf_sha256": "87ed2bd833c1adc87fd042e36257d5e94b97734664711221133ae2be69b0704c",
+      "target_sha256": "0e7b19fe06ca76abc4502a480460b357542a88cfa4d4d9160032fab4fc1d54f9",
+      "memory_layout": "split_disjoint"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "tool": "riscv-dv-matrix",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "matrix": "examples/riscv-dv/config-matrix.json",
+  "matrix_sha256": "0ba78905859b4f14d19970473652efc58b70bac759f52656004cefa24cc2c601",
+  "configurations": 4,
+  "requested": 8,
+  "generated": 8,
+  "compiled": 8,
+  "spike_validated": 8,
+  "package_validated": 8,
+  "host_mock_validated": 8,
+  "hardware_validated": 0,
+  "failed": 0,
+  "results": [
+    {
+      "name": "rv32i-arithmetic",
+      "configuration": {
+        "name": "rv32i-arithmetic",
+        "isa": "rv32i",
+        "profile": "riscv_arithmetic_basic_test",
+        "seed": 7100,
+        "tests": 2,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "generated": 2,
+      "compiled": 2,
+      "spike_validated": 2,
+      "package_validated": 2,
+      "host_mock_validated": 2,
+      "failed": 0,
+      "report_sha256": "440adb39aeb5a32e5d1f8cb4c134e62cdf1897ccbebfad98e10ed0a9a21a8359",
+      "seeds": [
+        {
+          "seed": 7100,
+          "status": "host_mock_validated",
+          "elf_sha256": "ace72f4b8175016fccde8b17aef7694317ba3a76bde4a9632da7742ee826b642",
+          "manifest_sha256": "9298e9faae4ce161f5e8a891d42f30237ad7d5d05f920666615daaf850620749",
+          "checked_memory_bytes": 0
+        },
+        {
+          "seed": 7101,
+          "status": "host_mock_validated",
+          "elf_sha256": "df1605741ae13fc418b320c39e91a9d2965751a68b76cb92d1dee17c2350e422",
+          "manifest_sha256": "511ef25f0228b6a9c62e25967dd72910ad2032a28a5c4a6392cd51dc4dd16b1a",
+          "checked_memory_bytes": 0
+        }
+      ]
+    },
+    {
+      "name": "rv32imc-random",
+      "configuration": {
+        "name": "rv32imc-random",
+        "isa": "rv32imc",
+        "profile": "riscv_rand_instr_test",
+        "seed": 7200,
+        "tests": 2,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "generated": 2,
+      "compiled": 2,
+      "spike_validated": 2,
+      "package_validated": 2,
+      "host_mock_validated": 2,
+      "failed": 0,
+      "report_sha256": "bc8156e77b6835882f5a53da08717e606667b64c09e8fecabed4b0948cfd6ccb",
+      "seeds": [
+        {
+          "seed": 7200,
+          "status": "host_mock_validated",
+          "elf_sha256": "d0a921531bcd57bb6d6eb91e9f8d252ad81f5a5b1b3be2a8733dde36f7163885",
+          "manifest_sha256": "20d80d5a9b15fd6d19d87b879c81048ce30abe3af50b8facab6067774d5b104b",
+          "checked_memory_bytes": 0
+        },
+        {
+          "seed": 7201,
+          "status": "host_mock_validated",
+          "elf_sha256": "1529992bdb95b4991aeda579016a6259f1a9108952e9d251e95980194a8fdcdc",
+          "manifest_sha256": "bac034a762a5a0340f1b97b015b7b1d5c0aee7b8af9b54b4c4a5a523765500f0",
+          "checked_memory_bytes": 0
+        }
+      ]
+    },
+    {
+      "name": "rv64imc-jump",
+      "configuration": {
+        "name": "rv64imc-jump",
+        "isa": "rv64imc",
+        "profile": "riscv_jump_stress_test",
+        "seed": 7300,
+        "tests": 2,
+        "instr_count": 200
+      },
+      "status": "passed",
+      "generated": 2,
+      "compiled": 2,
+      "spike_validated": 2,
+      "package_validated": 2,
+      "host_mock_validated": 2,
+      "failed": 0,
+      "report_sha256": "7a0fefd1d0cc6d76f6270a0ac22c255e362c81efe6cc5c5e7534e6504e1cec93",
+      "seeds": [
+        {
+          "seed": 7300,
+          "status": "host_mock_validated",
+          "elf_sha256": "833028b2f4131f15fdda9076eb2c0946635fe952e80297206956ac2c40a987f3",
+          "manifest_sha256": "678ca559b0616c4873a4f531fa25af66845fd24fc186a9ae0e02193d760aed8a",
+          "checked_memory_bytes": 0
+        },
+        {
+          "seed": 7301,
+          "status": "host_mock_validated",
+          "elf_sha256": "33c6d388c1a1f6c22c398e075b61ddcf1c2f42bafad196deedc6c045b1575692",
+          "manifest_sha256": "c09a3c094ade256495e6092660e2d50d2c743ffd8968fef8f6fc648ebad524ca",
+          "checked_memory_bytes": 0
+        }
+      ]
+    },
+    {
+      "name": "rv32i-load-store",
+      "configuration": {
+        "name": "rv32i-load-store",
+        "isa": "rv32i",
+        "profile": "riscv_rand_instr_test",
+        "seed": 7400,
+        "tests": 2,
+        "instr_count": 100,
+        "load_store": true
+      },
+      "status": "passed",
+      "generated": 2,
+      "compiled": 2,
+      "spike_validated": 2,
+      "package_validated": 2,
+      "host_mock_validated": 2,
+      "failed": 0,
+      "report_sha256": "4dea5ed1d89d9459d5ccb2701cc330da76507bf57260e9d471d1c0300fcc43a8",
+      "seeds": [
+        {
+          "seed": 7400,
+          "status": "host_mock_validated",
+          "elf_sha256": "c222e73eddfa13b7befa9f340b478b9d2b47e8d3870d2f24df6369f48af77543",
+          "manifest_sha256": "cd48853446b811798387e996ac4d5d18c3c4b571f5722f4120f83742ac22bf45",
+          "checked_memory_bytes": 0
+        },
+        {
+          "seed": 7401,
+          "status": "host_mock_validated",
+          "elf_sha256": "75e1d5b37f1d2170000f6c4cff3d428275d6074c9d20d1ffdb702d0e65fe65ec",
+          "manifest_sha256": "c19803a7843a2e36835ab4358d40a00d063c2a8b7ed788ac0d199dd96df16a7d",
+          "checked_memory_bytes": 0
+        }
+      ]
+    }
+  ]
+}

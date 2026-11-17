@@ -1,0 +1,922 @@
+{
+  "tool": "riscv-dv",
+  "profile": "riscv_unaligned_load_store_test",
+  "matrix": "examples/riscv-dv/unaligned-compat-campaign-matrix.json",
+  "compatibility": "isolated pinned PyFlow load/store fixes; compressed generation disabled for this profile",
+  "requested": 50,
+  "generated": 50,
+  "compiled": 50,
+  "spike_validated": 50,
+  "package_validated": 50,
+  "host_mock_validated": 50,
+  "hardware_validated": 0,
+  "failed_seeds": 0,
+  "seeds_with_committed_misaligned_wide_accesses": 49,
+  "committed_misaligned_wide_accesses": 589,
+  "results": [
+    {
+      "isa": "rv32i",
+      "seed": 9600,
+      "status": "host_mock_validated",
+      "manifest_sha256": "4ad715337052ff00551a3e9bc94abc7d93271079df735e25b983dfd818c096df",
+      "reference_memory_accesses": {
+        "loads": 31,
+        "stores": 12,
+        "misaligned_wide": 11,
+        "misaligned_by_instruction": {
+          "sw": 3,
+          "sh": 1,
+          "lhu": 4,
+          "lw": 2,
+          "lh": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9601,
+      "status": "host_mock_validated",
+      "manifest_sha256": "90fa5ba4f8eaf214541b88923608c020bc136d026fc13b7c6ca23d5784f189ed",
+      "reference_memory_accesses": {
+        "loads": 18,
+        "stores": 5,
+        "misaligned_wide": 4,
+        "misaligned_by_instruction": {
+          "sh": 1,
+          "lh": 2,
+          "lw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9602,
+      "status": "host_mock_validated",
+      "manifest_sha256": "9a7f9545b5891956fb728406be0e21edde52cf0f5e4da1791cd1f1b3d5680674",
+      "reference_memory_accesses": {
+        "loads": 50,
+        "stores": 32,
+        "misaligned_wide": 26,
+        "misaligned_by_instruction": {
+          "sw": 5,
+          "lw": 8,
+          "lhu": 4,
+          "sh": 3,
+          "lh": 6
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9603,
+      "status": "host_mock_validated",
+      "manifest_sha256": "65129964480fd1b3a087d14a7bbf9b8cd79d73a1adc4358c8baa8ca47c71ab13",
+      "reference_memory_accesses": {
+        "loads": 13,
+        "stores": 4,
+        "misaligned_wide": 6,
+        "misaligned_by_instruction": {
+          "lw": 2,
+          "sw": 2,
+          "sh": 1,
+          "lh": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9604,
+      "status": "host_mock_validated",
+      "manifest_sha256": "6fe6bd9c0f1f8e93362d43b49655ed3ecd6163efae09eb66c35b7fb435321116",
+      "reference_memory_accesses": {
+        "loads": 6,
+        "stores": 7,
+        "misaligned_wide": 6,
+        "misaligned_by_instruction": {
+          "sh": 2,
+          "lh": 1,
+          "sw": 2,
+          "lw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9605,
+      "status": "host_mock_validated",
+      "manifest_sha256": "260c1127bcbee5daab3b48f17f0896f4342440966ccbe1b70400ec081d5a12ac",
+      "reference_memory_accesses": {
+        "loads": 12,
+        "stores": 10,
+        "misaligned_wide": 11,
+        "misaligned_by_instruction": {
+          "lhu": 4,
+          "sw": 1,
+          "lw": 4,
+          "lh": 2
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9606,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c5467c8c80f5636ac2653643b1616e1ebb6c11c52e259a01d4164bc6aa42a39d",
+      "reference_memory_accesses": {
+        "loads": 14,
+        "stores": 10,
+        "misaligned_wide": 7,
+        "misaligned_by_instruction": {
+          "lhu": 1,
+          "lw": 3,
+          "sw": 3
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9607,
+      "status": "host_mock_validated",
+      "manifest_sha256": "2a22776ec8d6e4d2956474fc4f601ffc70a0fb1929accd9226ef3b0d9354fdba",
+      "reference_memory_accesses": {
+        "loads": 33,
+        "stores": 12,
+        "misaligned_wide": 17,
+        "misaligned_by_instruction": {
+          "lh": 6,
+          "lw": 3,
+          "sh": 2,
+          "lhu": 3,
+          "sw": 3
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9608,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0bcff825fadaf62cd0689885133feb2e3cec214c69f57b3a987beb3cf8961ff9",
+      "reference_memory_accesses": {
+        "loads": 26,
+        "stores": 12,
+        "misaligned_wide": 14,
+        "misaligned_by_instruction": {
+          "sh": 5,
+          "lhu": 3,
+          "lw": 2,
+          "lh": 3,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9609,
+      "status": "host_mock_validated",
+      "manifest_sha256": "a245c3bd4f1f08305f72ad91b46f234b6bae9f2753539865ae788f1c40b10a62",
+      "reference_memory_accesses": {
+        "loads": 13,
+        "stores": 12,
+        "misaligned_wide": 8,
+        "misaligned_by_instruction": {
+          "lw": 1,
+          "sw": 2,
+          "lhu": 3,
+          "sh": 2
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9610,
+      "status": "host_mock_validated",
+      "manifest_sha256": "708578ea5a3d5e95121dcde9f5a9659b38eb7b7128f4e22808f4025ba2fd3bdf",
+      "reference_memory_accesses": {
+        "loads": 26,
+        "stores": 5,
+        "misaligned_wide": 10,
+        "misaligned_by_instruction": {
+          "lh": 4,
+          "lhu": 2,
+          "lw": 3,
+          "sh": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9611,
+      "status": "host_mock_validated",
+      "manifest_sha256": "800496f56d22a6fa13c879304b4cf848c21d3b3891664c199ecb4c92a352c5ff",
+      "reference_memory_accesses": {
+        "loads": 19,
+        "stores": 14,
+        "misaligned_wide": 4,
+        "misaligned_by_instruction": {
+          "lw": 1,
+          "lhu": 1,
+          "sh": 1,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9612,
+      "status": "host_mock_validated",
+      "manifest_sha256": "43bb2329c62740b1f7b5f97e64948c245ef27602f5ded8df7539613ddb9edb93",
+      "reference_memory_accesses": {
+        "loads": 7,
+        "stores": 3,
+        "misaligned_wide": 3,
+        "misaligned_by_instruction": {
+          "lh": 2,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9613,
+      "status": "host_mock_validated",
+      "manifest_sha256": "d4274ef9fb403739d883d4c7ee80ed182c188cc8658357dc71d4be1c97950c4e",
+      "reference_memory_accesses": {
+        "loads": 23,
+        "stores": 12,
+        "misaligned_wide": 15,
+        "misaligned_by_instruction": {
+          "lw": 6,
+          "lhu": 3,
+          "sw": 2,
+          "sh": 4
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9614,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0adfac53592c6cf43b91964bdb827e418f63e50512805c1e950e3375ace03e1b",
+      "reference_memory_accesses": {
+        "loads": 30,
+        "stores": 18,
+        "misaligned_wide": 18,
+        "misaligned_by_instruction": {
+          "lw": 5,
+          "sw": 4,
+          "sh": 2,
+          "lhu": 4,
+          "lh": 3
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9615,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0e5d3d07a85d5635d618608c1556be38cf04ef42bf32d58f67ee3f777d80110f",
+      "reference_memory_accesses": {
+        "loads": 19,
+        "stores": 14,
+        "misaligned_wide": 15,
+        "misaligned_by_instruction": {
+          "lh": 6,
+          "sh": 2,
+          "lw": 4,
+          "lhu": 2,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9616,
+      "status": "host_mock_validated",
+      "manifest_sha256": "caf83796699a5b6e027f32cce1ab13bc8b605c84597ce9eb396329bf19394dd1",
+      "reference_memory_accesses": {
+        "loads": 20,
+        "stores": 7,
+        "misaligned_wide": 5,
+        "misaligned_by_instruction": {
+          "sh": 1,
+          "lw": 2,
+          "lhu": 1,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9617,
+      "status": "host_mock_validated",
+      "manifest_sha256": "e1888166704d921e09985faef20753ccdfe3bde0d3a462203ebd5e13b6879a72",
+      "reference_memory_accesses": {
+        "loads": 16,
+        "stores": 10,
+        "misaligned_wide": 7,
+        "misaligned_by_instruction": {
+          "sh": 3,
+          "lhu": 1,
+          "lh": 2,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9618,
+      "status": "host_mock_validated",
+      "manifest_sha256": "e810eb0a7efb1ba248f0cec76b55f025ab22a979569abfd087ab5d63ffa0d162",
+      "reference_memory_accesses": {
+        "loads": 7,
+        "stores": 9,
+        "misaligned_wide": 9,
+        "misaligned_by_instruction": {
+          "sh": 2,
+          "lh": 1,
+          "lw": 2,
+          "sw": 4
+        }
+      }
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9619,
+      "status": "host_mock_validated",
+      "manifest_sha256": "7e9419774d95a949b9ac216cebf6f43a85736cb64bbc737d087a99ed84ff9e06",
+      "reference_memory_accesses": {
+        "loads": 20,
+        "stores": 8,
+        "misaligned_wide": 9,
+        "misaligned_by_instruction": {
+          "lw": 3,
+          "lh": 3,
+          "sw": 2,
+          "lhu": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9620,
+      "status": "host_mock_validated",
+      "manifest_sha256": "a57100f202df7838b7f848aa46173b5c0bd344e6a0b9a73609bf424d2f55b4e5",
+      "reference_memory_accesses": {
+        "loads": 23,
+        "stores": 15,
+        "misaligned_wide": 8,
+        "misaligned_by_instruction": {
+          "lw": 3,
+          "sh": 2,
+          "lh": 2,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9621,
+      "status": "host_mock_validated",
+      "manifest_sha256": "97abf5f5973b799ce79b3ae63f10592b4150059e218d352d87eefaf890214dcb",
+      "reference_memory_accesses": {
+        "loads": 31,
+        "stores": 12,
+        "misaligned_wide": 24,
+        "misaligned_by_instruction": {
+          "lw": 9,
+          "sw": 2,
+          "lhu": 5,
+          "lh": 7,
+          "sh": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9622,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0b5b09e700ac340ac8011d60eaf36ab1721e5b61206811d11187753722cff107",
+      "reference_memory_accesses": {
+        "loads": 10,
+        "stores": 5,
+        "misaligned_wide": 4,
+        "misaligned_by_instruction": {
+          "sw": 2,
+          "lw": 1,
+          "lhu": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9623,
+      "status": "host_mock_validated",
+      "manifest_sha256": "26563ef0a641d1a6bcd6ad7274c8ba18a0fbce8d512be4c5b0897212d24ef21d",
+      "reference_memory_accesses": {
+        "loads": 29,
+        "stores": 9,
+        "misaligned_wide": 12,
+        "misaligned_by_instruction": {
+          "lw": 6,
+          "sw": 2,
+          "lh": 2,
+          "lhu": 2
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9624,
+      "status": "host_mock_validated",
+      "manifest_sha256": "3876e056800a207437ad3cffa0ec2dab20af8532a0f6ea41c382e719ef559140",
+      "reference_memory_accesses": {
+        "loads": 8,
+        "stores": 5,
+        "misaligned_wide": 3,
+        "misaligned_by_instruction": {
+          "lw": 1,
+          "lhu": 2
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9625,
+      "status": "host_mock_validated",
+      "manifest_sha256": "f6784641dc65850d2468a8ff8402926fb37b0d0b03731bbf77479df9e214dd9c",
+      "reference_memory_accesses": {
+        "loads": 6,
+        "stores": 4,
+        "misaligned_wide": 4,
+        "misaligned_by_instruction": {
+          "lh": 2,
+          "sh": 1,
+          "lw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9626,
+      "status": "host_mock_validated",
+      "manifest_sha256": "27d2e5404c36b30c28fca16682e75e980139c80a377c07f83bd6fb0c1a223ab8",
+      "reference_memory_accesses": {
+        "loads": 16,
+        "stores": 6,
+        "misaligned_wide": 15,
+        "misaligned_by_instruction": {
+          "lw": 5,
+          "sh": 3,
+          "lh": 6,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9627,
+      "status": "host_mock_validated",
+      "manifest_sha256": "57851767679bc2489edaaebc9e477e53205e0832a90ffdeffba0363787355704",
+      "reference_memory_accesses": {
+        "loads": 15,
+        "stores": 3,
+        "misaligned_wide": 10,
+        "misaligned_by_instruction": {
+          "lhu": 2,
+          "lw": 6,
+          "lh": 2
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9628,
+      "status": "host_mock_validated",
+      "manifest_sha256": "295ecd170684dbc0454dd55507a79f505beef45546e6bb811d0b730ee10cb248",
+      "reference_memory_accesses": {
+        "loads": 17,
+        "stores": 15,
+        "misaligned_wide": 10,
+        "misaligned_by_instruction": {
+          "lhu": 1,
+          "sw": 3,
+          "lw": 1,
+          "lh": 2,
+          "sh": 3
+        }
+      }
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9629,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b43cbacca90a373fc95bb43acfd701d84b304bcf88a42bd0317d838f4f3075ac",
+      "reference_memory_accesses": {
+        "loads": 21,
+        "stores": 12,
+        "misaligned_wide": 13,
+        "misaligned_by_instruction": {
+          "lw": 2,
+          "sw": 5,
+          "lh": 2,
+          "lhu": 2,
+          "sh": 2
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9630,
+      "status": "host_mock_validated",
+      "manifest_sha256": "d1a3bc5e9234cc19db7581ed1e9e8e6535fe246433b72b7783860b3f2ce33cef",
+      "reference_memory_accesses": {
+        "loads": 21,
+        "stores": 24,
+        "misaligned_wide": 24,
+        "misaligned_by_instruction": {
+          "lwu": 4,
+          "sh": 2,
+          "sw": 6,
+          "lw": 3,
+          "sd": 4,
+          "ld": 2,
+          "lhu": 1,
+          "lh": 2
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9631,
+      "status": "host_mock_validated",
+      "manifest_sha256": "4243735cde0a8d1db6737e8c82bf21949cb715a2a9ae3baa909d0b45a5325a18",
+      "reference_memory_accesses": {
+        "loads": 15,
+        "stores": 9,
+        "misaligned_wide": 14,
+        "misaligned_by_instruction": {
+          "sw": 3,
+          "sd": 1,
+          "lh": 1,
+          "lhu": 3,
+          "lw": 2,
+          "lwu": 1,
+          "ld": 2,
+          "sh": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9632,
+      "status": "host_mock_validated",
+      "manifest_sha256": "9ee6de30d31a9b5b9565d3d5a9af411bba400e79874e8205fc113267214a12f3",
+      "reference_memory_accesses": {
+        "loads": 15,
+        "stores": 8,
+        "misaligned_wide": 15,
+        "misaligned_by_instruction": {
+          "lwu": 4,
+          "ld": 3,
+          "sd": 1,
+          "lw": 3,
+          "sw": 1,
+          "sh": 2,
+          "lhu": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9633,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b216d3cc7bb9450bb1d9ec765716b447cdc24dc072b2d96fcb8b9febf84f6527",
+      "reference_memory_accesses": {
+        "loads": 31,
+        "stores": 8,
+        "misaligned_wide": 20,
+        "misaligned_by_instruction": {
+          "lw": 4,
+          "lh": 4,
+          "lwu": 3,
+          "sd": 2,
+          "sw": 1,
+          "ld": 6
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9634,
+      "status": "host_mock_validated",
+      "manifest_sha256": "1da75dc715a9765b74d2125fb9e7cc6ceadf44ec1db16f8524c57625dd22ad4a",
+      "reference_memory_accesses": {
+        "loads": 8,
+        "stores": 3,
+        "misaligned_wide": 3,
+        "misaligned_by_instruction": {
+          "ld": 2,
+          "sd": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9635,
+      "status": "host_mock_validated",
+      "manifest_sha256": "4e79dd1a417c2df7af6acea68b214c995ca44d231440c4174e6d84cb28beb198",
+      "reference_memory_accesses": {
+        "loads": 26,
+        "stores": 11,
+        "misaligned_wide": 23,
+        "misaligned_by_instruction": {
+          "ld": 8,
+          "sd": 4,
+          "lw": 5,
+          "lwu": 1,
+          "sw": 3,
+          "lh": 2
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9636,
+      "status": "host_mock_validated",
+      "manifest_sha256": "7bff0df0a7c9e07d5a778275c3810f226d7b3d5bd1a07dd7ef1446641a2ab413",
+      "reference_memory_accesses": {
+        "loads": 16,
+        "stores": 6,
+        "misaligned_wide": 12,
+        "misaligned_by_instruction": {
+          "lh": 3,
+          "sh": 3,
+          "sw": 1,
+          "lwu": 2,
+          "ld": 1,
+          "sd": 1,
+          "lhu": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9637,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c38762d0e61ef389d1322751eba4e5ccf2dd4b0d94bec4b075e760076fc5fc76",
+      "reference_memory_accesses": {
+        "loads": 26,
+        "stores": 16,
+        "misaligned_wide": 18,
+        "misaligned_by_instruction": {
+          "sd": 4,
+          "lhu": 1,
+          "lwu": 2,
+          "sh": 1,
+          "sw": 4,
+          "ld": 2,
+          "lw": 2,
+          "lh": 2
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9638,
+      "status": "host_mock_validated",
+      "manifest_sha256": "a58a68de3ed0511af566edaf8782f6b190ea0c1fb10ea5e68cec64204ec3af0f",
+      "reference_memory_accesses": {
+        "loads": 22,
+        "stores": 18,
+        "misaligned_wide": 17,
+        "misaligned_by_instruction": {
+          "lhu": 3,
+          "lw": 2,
+          "sd": 2,
+          "lh": 4,
+          "ld": 1,
+          "sh": 3,
+          "lwu": 1,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9639,
+      "status": "host_mock_validated",
+      "manifest_sha256": "a994b410b3eb7a914d619acab4afaf1505bf59cde5a0bc2020c7e8e475de832e",
+      "reference_memory_accesses": {
+        "loads": 20,
+        "stores": 10,
+        "misaligned_wide": 14,
+        "misaligned_by_instruction": {
+          "lh": 1,
+          "lwu": 2,
+          "ld": 3,
+          "sh": 2,
+          "lhu": 1,
+          "sw": 1,
+          "lw": 2,
+          "sd": 2
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9640,
+      "status": "host_mock_validated",
+      "manifest_sha256": "bb8e573fef5779f4cbeb0397f2c9e900c32efaef1b49d64782e760396f09a501",
+      "reference_memory_accesses": {
+        "loads": 18,
+        "stores": 12,
+        "misaligned_wide": 5,
+        "misaligned_by_instruction": {
+          "ld": 1,
+          "sw": 2,
+          "lwu": 1,
+          "sd": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9641,
+      "status": "host_mock_validated",
+      "manifest_sha256": "df050a5f8e2f540ea2ad0540fb7f5a31a7e1186e156b391b191ae3106efc17eb",
+      "reference_memory_accesses": {
+        "loads": 16,
+        "stores": 8,
+        "misaligned_wide": 14,
+        "misaligned_by_instruction": {
+          "lhu": 3,
+          "lwu": 2,
+          "lh": 1,
+          "sd": 5,
+          "lw": 1,
+          "ld": 2
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9642,
+      "status": "host_mock_validated",
+      "manifest_sha256": "523bd272a49bf300e3b9962b42077669343a99b55b7d7e034e7e96c323ba93ba",
+      "reference_memory_accesses": {
+        "loads": 11,
+        "stores": 6,
+        "misaligned_wide": 15,
+        "misaligned_by_instruction": {
+          "sw": 3,
+          "lwu": 3,
+          "ld": 2,
+          "lh": 1,
+          "sd": 2,
+          "lhu": 2,
+          "lw": 2
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9643,
+      "status": "host_mock_validated",
+      "manifest_sha256": "5a6d4a411cb85362aa8579ba314420efb0f95957c0654caa0ec55de68041b2ea",
+      "reference_memory_accesses": {
+        "loads": 21,
+        "stores": 14,
+        "misaligned_wide": 20,
+        "misaligned_by_instruction": {
+          "ld": 5,
+          "sd": 4,
+          "lw": 1,
+          "lwu": 2,
+          "sw": 3,
+          "lh": 3,
+          "lhu": 1,
+          "sh": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9644,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0f6b2d190b74d9669b472f4e83bf93bbdbfe5db42f160c5eac48070eb04023e8",
+      "reference_memory_accesses": {
+        "loads": 26,
+        "stores": 5,
+        "misaligned_wide": 25,
+        "misaligned_by_instruction": {
+          "lwu": 4,
+          "lw": 7,
+          "sw": 3,
+          "ld": 5,
+          "lhu": 2,
+          "lh": 3,
+          "sd": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9645,
+      "status": "host_mock_validated",
+      "manifest_sha256": "4006a33e5ff2a6cda1b6687433b4f534952e4c8380476120b415006d27c3c5fc",
+      "reference_memory_accesses": {
+        "loads": 11,
+        "stores": 6,
+        "misaligned_wide": 0,
+        "misaligned_by_instruction": {}
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9646,
+      "status": "host_mock_validated",
+      "manifest_sha256": "8badf7a7831d3338cbe3677e21c68cb1e685c7e99aa6ea7f2a72f06e1b2bfbc0",
+      "reference_memory_accesses": {
+        "loads": 12,
+        "stores": 8,
+        "misaligned_wide": 12,
+        "misaligned_by_instruction": {
+          "sh": 1,
+          "lh": 2,
+          "sd": 1,
+          "ld": 3,
+          "sw": 2,
+          "lwu": 1,
+          "lhu": 1,
+          "lw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9647,
+      "status": "host_mock_validated",
+      "manifest_sha256": "cae7aaf44f5cb2f856fe363c68d5b846b1119853a60ce9ef76e53ab7dcc883b0",
+      "reference_memory_accesses": {
+        "loads": 10,
+        "stores": 2,
+        "misaligned_wide": 6,
+        "misaligned_by_instruction": {
+          "lw": 2,
+          "lwu": 2,
+          "sd": 1,
+          "sw": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9648,
+      "status": "host_mock_validated",
+      "manifest_sha256": "025110b01e14fcfee5737c01e68b20887b679f405e14715f57a3f3f9026fdd29",
+      "reference_memory_accesses": {
+        "loads": 23,
+        "stores": 8,
+        "misaligned_wide": 14,
+        "misaligned_by_instruction": {
+          "ld": 4,
+          "lwu": 5,
+          "sw": 3,
+          "lw": 1,
+          "sd": 1
+        }
+      }
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9649,
+      "status": "host_mock_validated",
+      "manifest_sha256": "7a1d3a7f300ca92f580bfd3c25e63946c7be60afc624c56668d2470222ff6c0f",
+      "reference_memory_accesses": {
+        "loads": 16,
+        "stores": 16,
+        "misaligned_wide": 10,
+        "misaligned_by_instruction": {
+          "sw": 1,
+          "sh": 2,
+          "sd": 2,
+          "lw": 3,
+          "lhu": 1,
+          "lwu": 1
+        }
+      }
+    }
+  ],
+  "pyflow_compatibility": {
+    "kind": "isolated_pyflow_load_store_fix",
+    "module_sha256": {
+      "riscv_load_store_instr_lib.py": "f27c9ab6d6f603e8673dbe8a5d791120a20669dc71bec2ea0ca907f6f5e4012e",
+      "isa/riscv_instr.py": "6197bf18148bc948e7712819cfb274d817d8795647f81ba2ded974475049b2d1"
+    },
+    "changes": [
+      "exclude x0 as load/store base",
+      "deep-copy load/store instruction templates",
+      "enable non-byte loads and stores in unaligned mode"
+    ]
+  }
+}

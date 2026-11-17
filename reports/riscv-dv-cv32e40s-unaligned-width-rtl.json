@@ -1,0 +1,47 @@
+{
+  "tool": "riscv-dv",
+  "core": "CV32E40S",
+  "core_revision": "9d9cae78b01a11458953133d1173c61933a2ba86",
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "direct simulation preload",
+  "controller_rtl_execution": true,
+  "serial_execution": false,
+  "fpga_execution": false,
+  "validated": 2,
+  "failed": 0,
+  "tests": [
+    {
+      "test_id": "riscv_unaligned_load_store_test-rv32i-9500",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/unaligned-width-candidate-10/rv32i-unaligned/riscv_unaligned_load_store_test-rv32i-9500/manifest.json",
+      "manifest_sha256": "7eb07740f5615b2335f12e4d4b09285a7d7c7f5ff6081b4b75c9c92a5dc85b8f",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "expected_outcome": "PASS",
+      "mutation_pc": null,
+      "tohost": 1,
+      "cycles": 376,
+      "diagnostic_bytes": null,
+      "returncode": 0,
+      "stdout_tail": "DATA 65 0 00002866 000c0000 ACK 1\nDATA 66 0 0000286d 00000c00 ACK 1\nDATA 67 0 000035d9 00000c00 ACK 1\nDATA 68 0 000034b5 00000c00 ACK 1\nDATA 69 0 00002fac 0000000c ACK 1\nDATA 70 0 00003371 00000c00 ACK 1\nDATA 71 1 0000302a ff84ffff ACK 1\nDATA 72 1 0000302c ff84ffff ACK 1\nDATA 73 0 00003482 ff84ffff ACK 1\nDATA 75 0 00002884 ffffff84 ACK 1\nDATA 76 0 00002cee ff84ffff ACK 1\nDATA 78 1 000028cd 00000000 ACK 1\nDATA 79 1 00002bfc e9e9aac1 ACK 1\nDATA 82 0 00003387 c1e9e9aa ACK 1\nDATA 83 0 00003388 c1e9e9aa ACK 1\nDATA 86 0 000030e0 e9e9aac1 ACK 1\nDATA 89 1 00002755 00000b00 ACK 1\nDATA 90 1 0000272e 00008000 ACK 1\nDATA 375 1 00001000 00000001 ACK 1\nACT_CONTROLLER_STATUS 00000001 CYCLE 376\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/act4_cv32e40s_controller_tb.sv:46: Verilog $finish\n[3860000] %Fatal: act4_cv32e40s_controller_tb.sv:49: Assertion failed in act4_cv32e40s_controller_tb: ACT controller timeout at PC 000005b4, status 00000001, end 00001000, data count 65\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 4us; walltime 0.021 s; speed 183.822 us/s\n- Verilator: cpu 0.021 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    },
+    {
+      "test_id": "riscv_unaligned_load_store_test-rv32i-9511",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/unaligned-width-candidate-10/rv32i-unaligned-campaign/riscv_unaligned_load_store_test-rv32i-9511/manifest.json",
+      "manifest_sha256": "37ce559dc2949d1f7e170c806dba9fcbbae0a49ddbe47055086d2b2f1e861d0a",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "expected_outcome": "PASS",
+      "mutation_pc": null,
+      "tohost": 1,
+      "cycles": 182,
+      "diagnostic_bytes": null,
+      "returncode": 0,
+      "stdout_tail": "DATA 63 0 00002fba 000c0000 ACK 1\nDATA 64 0 00002fbc 000c0000 ACK 1\nDATA 65 0 00002fba 000c0000 ACK 1\nDATA 66 0 00002fba 000c0000 ACK 1\nDATA 67 0 00002fba 000c0000 ACK 1\nDATA 68 1 00002fba 00000000 ACK 1\nDATA 69 0 00002fba 00000000 ACK 1\nDATA 70 1 00002fba 000f0000 ACK 1\nDATA 71 0 00002fba 000f0000 ACK 1\nDATA 72 0 00002fba 000f0000 ACK 1\nDATA 73 1 00002fba 00000000 ACK 1\nDATA 75 0 00002fba 00000000 ACK 1\nDATA 76 0 00002fbc 00000000 ACK 1\nDATA 169 0 00002fba 03380000 ACK 1\nDATA 174 0 00002fbb 38000003 ACK 1\nDATA 181 1 00001000 00000001 ACK 1\nACT_CONTROLLER_STATUS 00000001 CYCLE 182\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/act4_cv32e40s_controller_tb.sv:46: Verilog $finish\n[1920000] %Fatal: act4_cv32e40s_controller_tb.sv:49: Assertion failed in act4_cv32e40s_controller_tb: ACT controller timeout at PC 0000032c, status 00000001, end 00001000, data count 16\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 2us; walltime 0.020 s; speed 96.789 us/s\n- Verilator: cpu 0.019 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    }
+  ]
+}

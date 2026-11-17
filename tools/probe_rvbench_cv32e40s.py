@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -23,11 +24,31 @@ PROGRAM = r"""
     .option norvc
 _start:
     li s0, 0
-    csrr t0, mstatus
+    csrr s1, mstatus
+    csrr t0, misa
+    li t1, 0x40901104
+    bne t0, t1, fail
+    csrr t0, mvendorid
+    li t1, 0x602
+    bne t0, t1, fail
+    csrr t0, marchid
+    li t1, 0x15
+    bne t0, t1, fail
+    csrr t0, mimpid
+    bnez t0, fail
+    csrr t0, mhartid
+    bnez t0, fail
     la t0, trap_handler
     csrw mtvec, t0
     csrr t1, mtvec
     bne t0, t1, fail
+    ori t1, t0, 3
+    csrw mtvec, t1
+    csrr t2, mtvec
+    bne t2, t0, fail
+    csrw mtvec, t0
+    li t6, 1
+    sw t6, 64(zero)
     ecall
     li t0, 1
     bne s0, t0, fail
@@ -44,7 +65,29 @@ _start:
     .option norvc
     li t1, 3
     bne t0, t1, fail
+    li t0, 0x12345678
+    li t1, 129
+    sw t0, 0(t1)
+    lw t2, 0(t1)
+    bne t0, t2, fail
+    li t6, 2
+    sw t6, 64(zero)
+    li s0, 2
+    la t0, user_code
+    csrw mepc, t0
+    li t0, 0x1800
+    csrc mstatus, t0
+    mret
+user_code:
+    # With zero PMP regions, U-mode instruction fetch must be denied.
+    j fail
+machine_resume:
+    li t6, 3
+    sw t6, 64(zero)
+    li t0, 3
+    bne s0, t0, fail
 pass:
+    sw s1, 72(zero)
     li t1, 5
     sw t1, 60(zero)
 1:  j 1b
@@ -52,15 +95,34 @@ fail:
     li t1, 3
     sw t1, 60(zero)
 2:  j 2b
-    .org 0x100
+    .balign 128
 trap_handler:
     csrr t1, mcause
+    sw t1, 68(zero)
     li t2, 11
-    bne t1, t2, fail
+    beq t1, t2, trap_m_ecall
+    li t2, 1
+    beq t1, t2, trap_u_fetch_denied
+    j fail
+trap_m_ecall:
+    csrr t1, mtval
+    bnez t1, fail
     csrr t1, mepc
     addi t1, t1, 4
     csrw mepc, t1
     li s0, 1
+    mret
+trap_u_fetch_denied:
+    li t2, 2
+    bne s0, t2, fail
+    csrr t1, mepc
+    la t2, user_code
+    bne t1, t2, fail
+    la t1, machine_resume
+    csrw mepc, t1
+    li t1, 0x1800
+    csrs mstatus, t1
+    li s0, 3
     mret
 """
 
@@ -109,11 +171,19 @@ def run() -> dict:
             "cv32e40s", files, include, wrapper_path=WRAPPER, config_path=CONFIG,
             second_memory=True, build_dir=work / "build", simulation_cycles=1200,
             trace_all_writes=True, timeout=240)
+        mstatus_write = re.search(r"WRITE:0x00000048,0x([0-9A-Fa-f]{8})", result["stdout_tail"])
+        if result["status"] == "pass" and mstatus_write is None:
+            raise RuntimeError("probe did not record the initial mstatus value")
         report = {
             "core": "cv32e40s", "source_revision": revision,
             "wrapper": str(WRAPPER.relative_to(BENCH)),
             "wrapper_sha256": hashlib.sha256(WRAPPER.read_bytes()).hexdigest(),
-            "program": "mstatus read, mtvec write/read, ecall, mcause/mepc/mret, mul/div, c.addi",
+            "probe_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            "program": "machine ISA/IDs and mtvec WARL, MRET to U-mode fetch denial, mul/div, c.addi, misaligned SW/LW",
+            "checks": ["machine_isa_and_ids", "mtvec_reserved_mode_preserves_previous", "machine_ecall_trap_return",
+                       "rv32m_mul_div", "compressed_c_addi", "misaligned_word_store_load",
+                       "u_mode_fetch_fault_with_zero_pmp"],
+            "initial_mstatus_observed": (int(mstatus_write.group(1), 16) if mstatus_write else None),
             "status_address": 60, "pass_value": 5, "fail_value": 3,
             "result": {key: result[key] for key in ("status", "stage", "reason", "stdout_tail", "stderr_tail")},
         }

@@ -1,0 +1,23 @@
+{
+  "kind": "Spike reference-execution coverage",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "isa": "rv32i",
+  "profile": "riscv_arithmetic_basic_test",
+  "seed": 7100,
+  "package_validated": 1,
+  "host_mock_validated": 1,
+  "reference_coverage_validated": 1,
+  "hardware_validated": 0,
+  "manifest_sha256": "cea25e9bedae7db71d6cedd769f87fa22422dce93e593bc3427188862fe827c1",
+  "elf_sha256": "1f5292cf883a8b4b98db88f883156c9abba60ec4ae7ccc50133c83621c012da1",
+  "coverage": {
+    "kind": "spike_reference_execution",
+    "converted_instructions": 145,
+    "model_processed_instructions": 114,
+    "coverage_groups_reported": 147,
+    "report": "coverage/upstream/CoverageReport.txt",
+    "report_sha256": "8d9da2e95ba10262ec13271b512fdeaf109c37b2fc2cb7d3bc44f971323f3b10",
+    "source_trace_sha256": "c2c6785dc2a10f8493dd254e7bf4e1de1055392fa4d75aed4a7b42657a436dcb",
+    "dut_coverage": false
+  }
+}

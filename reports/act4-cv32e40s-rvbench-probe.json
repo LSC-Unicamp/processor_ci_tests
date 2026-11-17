@@ -2,8 +2,19 @@
   "core": "cv32e40s",
   "source_revision": "9d9cae78b01a11458953133d1173c61933a2ba86",
   "wrapper": "overlay/cv32e40s/wrappers/cv32e40s.sv",
-  "wrapper_sha256": "94a9c545600a457515ffde1de363e211899ce08f241d5621146a3a8f39caed84",
-  "program": "mstatus read, mtvec write/read, ecall, mcause/mepc/mret, mul/div, c.addi",
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "probe_sha256": "73b8cf49793a540f5a53fcc296889bdfc6e9eb3367ebaee6c5fa83ff4d70a447",
+  "program": "machine ISA/IDs and mtvec WARL, MRET to U-mode fetch denial, mul/div, c.addi, misaligned SW/LW",
+  "checks": [
+    "machine_isa_and_ids",
+    "mtvec_reserved_mode_preserves_previous",
+    "machine_ecall_trap_return",
+    "rv32m_mul_div",
+    "compressed_c_addi",
+    "misaligned_word_store_load",
+    "u_mode_fetch_fault_with_zero_pmp"
+  ],
+  "initial_mstatus_observed": 0,
   "status_address": 60,
   "pass_value": 5,
   "fail_value": 3,
@@ -11,7 +22,7 @@
     "status": "pass",
     "stage": "runtime",
     "reason": "Expected signature found",
-    "stdout_tail": "WRITE:0x0000003C,0x00000005,158\n0x0000003C,0x00000005,158\nWRITE:0x0000003C,0x00000005,159\n0x0000003C,0x00000005,159",
+    "stdout_tail": "WRITE:0x00000040,0x00000001,82\nWRITE:0x00000040,0x00000001,83\nWRITE:0x00000044,0x0000000B,94\nWRITE:0x00000044,0x0000000B,95\nWRITE:0x00000081,0x34567812,216\nWRITE:0x00000081,0x34567812,217\nWRITE:0x00000084,0x34567812,218\nWRITE:0x00000084,0x34567812,219\nWRITE:0x00000040,0x00000002,230\nWRITE:0x00000040,0x00000002,231\nWRITE:0x00000044,0x00000001,268\nWRITE:0x00000044,0x00000001,269\nWRITE:0x00000040,0x00000003,318\nWRITE:0x00000040,0x00000003,319\nWRITE:0x00000048,0x00000000,324\nWRITE:0x00000048,0x00000000,325\nWRITE:0x0000003C,0x00000005,328\n0x0000003C,0x00000005,328\nWRITE:0x0000003C,0x00000005,329\n0x0000003C,0x00000005,329",
     "stderr_tail": ""
   }
 }

@@ -1,0 +1,185 @@
+{
+  "tool": "riscv-dv-amo-triple-validation",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "date": "2026-11-17",
+  "matrix": "examples/riscv-dv/amo-triple-profile-matrix.json",
+  "configurations": 3,
+  "requested": 12,
+  "generated": 12,
+  "compiled": 12,
+  "spike_validated": 12,
+  "package_validated": 12,
+  "host_mock_validated": 12,
+  "hardware_validated": 0,
+  "failed": 0,
+  "results": [
+    {
+      "configuration": "rv64ima-amo-triple-shared",
+      "seed": 10800,
+      "status": "host_mock_validated",
+      "manifest_sha256": "127b1365c9558c95353ed254bc8ce6f09252c48c9d2f590f3e56c33351144beb",
+      "elf_sha256": "e40e8da8001ec28d35ccfdf521e68e0053dac5f7fb8c623531ae040551c8a962",
+      "memory_layout": "shared_flat",
+      "operations": [
+        "amoswap.d",
+        "amomin.d",
+        "amomaxu.w"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-shared",
+      "seed": 10801,
+      "status": "host_mock_validated",
+      "manifest_sha256": "18181b2cecdcd1f9b19d89c4815e3fdd3873a69bdae93b9b8124219943b3173c",
+      "elf_sha256": "43a657e385831735da8c9874ed348d4524d8e3d802224ac29189651d55159b67",
+      "memory_layout": "shared_flat",
+      "operations": [
+        "amoand.w",
+        "amoxor.w",
+        "amomin.w"
+      ],
+      "written_bytes": 4
+    },
+    {
+      "configuration": "rv64ima-amo-triple-shared",
+      "seed": 10802,
+      "status": "host_mock_validated",
+      "manifest_sha256": "88a457f96c36118dc2acb05632c3406463c2514b8d7bdf6bb564de62271f589b",
+      "elf_sha256": "2542e8f443fbf6671aa39e2acfe2c29e5fd4fad58a712391f8650704d59f47f9",
+      "memory_layout": "shared_flat",
+      "operations": [
+        "amoand.w",
+        "amoswap.d",
+        "amoor.d"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-shared",
+      "seed": 10803,
+      "status": "host_mock_validated",
+      "manifest_sha256": "61f280a237d5ffdc78e048c70c7618e62105df1945c583b5eda3db5496cfa7cd",
+      "elf_sha256": "170c4d5fc18cc5a73f244782a00f2460c300958dcd05aa9d4f7d9e31d35d67c0",
+      "memory_layout": "shared_flat",
+      "operations": [
+        "amoand.w",
+        "amoswap.w",
+        "amomin.w"
+      ],
+      "written_bytes": 4
+    },
+    {
+      "configuration": "rv64ima-amo-triple-nonzero",
+      "seed": 10804,
+      "status": "host_mock_validated",
+      "manifest_sha256": "54e2fd2a3214ae8bf08f5f7e46899802891772725d2f265db960bcb0d7cac49e",
+      "elf_sha256": "1f70a35fc59305a6f87fa9cd9d39a55b9b835c168900a336e9eec4d272fbbd9d",
+      "memory_layout": "shared_flat",
+      "operations": [
+        "amoswap.w",
+        "amoxor.d",
+        "amoswap.d"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-nonzero",
+      "seed": 10805,
+      "status": "host_mock_validated",
+      "manifest_sha256": "484570c80887d0cc7077d866cec414c3aa1efa3f8f29d374f59183d2db5f76fe",
+      "elf_sha256": "aab000ec32dd892dea76ee6deb84d698476a30ac627d51fb09a249cf24453964",
+      "memory_layout": "shared_flat",
+      "operations": [
+        "amoxor.d",
+        "amoand.d",
+        "amoswap.d"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-nonzero",
+      "seed": 10806,
+      "status": "host_mock_validated",
+      "manifest_sha256": "d218d5a7f5aa7b93c8d01a63c2071c9e30afd983456ea62b64bef5bdd341d4a1",
+      "elf_sha256": "d5192ec18b35920b5ea19878244db90b0c466bba27f828ba59d7ce5c1eecefaa",
+      "memory_layout": "shared_flat",
+      "operations": [
+        "amomax.d",
+        "amomax.w",
+        "amoswap.d"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-nonzero",
+      "seed": 10807,
+      "status": "host_mock_validated",
+      "manifest_sha256": "255801b2efa064ff9c23d642477a4f8e2cee891b808cf00c09aaac4df7a13892",
+      "elf_sha256": "80e9d8f6f807f79c63a791e20d7103411d949181fcf59e8498ba5d23ea2f6cd4",
+      "memory_layout": "shared_flat",
+      "operations": [
+        "amomin.d",
+        "amomax.w",
+        "amoor.d"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-split",
+      "seed": 10808,
+      "status": "host_mock_validated",
+      "manifest_sha256": "4751ebb91437a396634d771d19a310fb351fa31e3dae1e7cf1e28ee3f2e41689",
+      "elf_sha256": "6ab1632c6c4646bfad127cab6c45a5bf606b0ffd3e1afe60444da6bf24347e1f",
+      "memory_layout": "split_disjoint",
+      "operations": [
+        "amomin.w",
+        "amoxor.d",
+        "amomaxu.d"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-split",
+      "seed": 10809,
+      "status": "host_mock_validated",
+      "manifest_sha256": "57aa2565b5aa35b1d4a71e84b6b5b12cad4c9906d45cb6a71c1307630476cd9c",
+      "elf_sha256": "175c60c710de7a9b08f76cd1e1693e6cd8189381f2ebbf3ddc5aa6ca01dd6ab8",
+      "memory_layout": "split_disjoint",
+      "operations": [
+        "amoor.w",
+        "amoxor.w",
+        "amomax.d"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-split",
+      "seed": 10810,
+      "status": "host_mock_validated",
+      "manifest_sha256": "ab55292f208c4a966917157a746e6b7e3e09f60e3e8594eeb749fb588ee3e027",
+      "elf_sha256": "e8baa2d1006167e359d2279098c51b2fb1c8159df82f189e856d5ad2d5a27cd1",
+      "memory_layout": "split_disjoint",
+      "operations": [
+        "amoand.w",
+        "amoand.d",
+        "amomaxu.w"
+      ],
+      "written_bytes": 8
+    },
+    {
+      "configuration": "rv64ima-amo-triple-split",
+      "seed": 10811,
+      "status": "host_mock_validated",
+      "manifest_sha256": "82a74d966c25bc0e66a890c6f268c270779a3c026376f11386f34bf699f6607e",
+      "elf_sha256": "c6e66f2ef810d4831057a5f2523cf6d64fb3969c8767b72433eed6571f21f02a",
+      "memory_layout": "split_disjoint",
+      "operations": [
+        "amoand.w",
+        "amominu.w",
+        "amoor.d"
+      ],
+      "written_bytes": 8
+    }
+  ]
+}

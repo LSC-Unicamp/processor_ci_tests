@@ -1,0 +1,116 @@
+{
+  "tool": "riscv-dv",
+  "isa": "rv64i_zicsr_zifencei",
+  "matrix": "examples/riscv-dv/rv64i-profile-matrix.json",
+  "target": "derived RV64I PyFlow target from pinned RV64IMC settings with M/C removed",
+  "requested": 15,
+  "generated": 15,
+  "compiled": 15,
+  "spike_validated": 15,
+  "package_validated": 15,
+  "host_mock_validated": 15,
+  "hardware_validated": 0,
+  "failed_seeds": 0,
+  "elf_arch": "rv64i2p1_zicsr2p0_zifencei2p0",
+  "results": [
+    {
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9800,
+      "status": "host_mock_validated",
+      "manifest_sha256": "237c1c03c50064f57d7491be23f9bdbaed6b0d95546321caab86ba6665ee805e"
+    },
+    {
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9801,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0a50aea6dd23a86af8e1be71b46af9660e94c7fff3a516d95e73f4f2d76ed814"
+    },
+    {
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9802,
+      "status": "host_mock_validated",
+      "manifest_sha256": "94e3a031f16d4b8f4975aebe2c3c036faaa5ad63aac3b19061a0e89c2450338d"
+    },
+    {
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9803,
+      "status": "host_mock_validated",
+      "manifest_sha256": "f88651bc1fdfe66d208d8b07e22dba317f0ea134e4c85fc7f982c39e62444818"
+    },
+    {
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9804,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c4b7dd0e893e61165a72b77dd86538b33f7a69b3ea085390d091446cd8b95e3f"
+    },
+    {
+      "profile": "riscv_rand_instr_test",
+      "seed": 9810,
+      "status": "host_mock_validated",
+      "manifest_sha256": "190bca94884541771b2e862eea49a79f3dd59ee43d79bbc3d45496eaa99e5642"
+    },
+    {
+      "profile": "riscv_rand_instr_test",
+      "seed": 9811,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c42603eaddc94770a263085bfbbced4059e7b85148fe28a3e7b67e53264eba8d"
+    },
+    {
+      "profile": "riscv_rand_instr_test",
+      "seed": 9812,
+      "status": "host_mock_validated",
+      "manifest_sha256": "3bdd4bf720ea94fb9a7f2e5e5a9fd3014f53d5e05950ce5f4cd4e183b01aae4c"
+    },
+    {
+      "profile": "riscv_rand_instr_test",
+      "seed": 9813,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0ffc9064cf0480250dd8f65aaf6e8a3825d434957cb321d6f1b13ab8124fa946"
+    },
+    {
+      "profile": "riscv_rand_instr_test",
+      "seed": 9814,
+      "status": "host_mock_validated",
+      "manifest_sha256": "71ab44dc3821427d317e0047a4f91576e0ade434433f48da83069466454d6c22"
+    },
+    {
+      "profile": "riscv_jump_stress_test",
+      "seed": 9820,
+      "status": "host_mock_validated",
+      "manifest_sha256": "ad5078c0e9addff66a98ded30fa28acb33e191d6cc941632d931faac1c0872af"
+    },
+    {
+      "profile": "riscv_jump_stress_test",
+      "seed": 9821,
+      "status": "host_mock_validated",
+      "manifest_sha256": "075a90d7dca1d91dc568cafb380076d2e16e2ec3f91155ed18c448df093b3dab"
+    },
+    {
+      "profile": "riscv_jump_stress_test",
+      "seed": 9822,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c103d4006c1269dd75dcc726028b6baedeffc1ba942e4c3926b6cfcba7284f85"
+    },
+    {
+      "profile": "riscv_jump_stress_test",
+      "seed": 9823,
+      "status": "host_mock_validated",
+      "manifest_sha256": "73ff612087654c7b4c684ce639e1e474ea2471526ef081ca42cf4c4bc9c28f37"
+    },
+    {
+      "profile": "riscv_jump_stress_test",
+      "seed": 9824,
+      "status": "host_mock_validated",
+      "manifest_sha256": "004e3433e1c077eb5ee35cd6f02d0f178811e07844098dadc188ebefb7a6d525"
+    }
+  ],
+  "pyflow_target": {
+    "kind": "derived_rv64i_target",
+    "settings_sha256": "81ac9619ec2ce1dceb207c5b781ed86f7c3e97482ec22c0df5b701f6d2d96d16",
+    "base_target": "rv64imc",
+    "supported_isa": [
+      "RV32I",
+      "RV64I"
+    ]
+  }
+}

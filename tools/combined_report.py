@@ -32,6 +32,8 @@ def generate(root: Path = ROOT) -> dict:
     imc_act = _read(imc_act_path) if imc_act_path.is_file() else None
     dut_path = reports / "act4-cv32e40s-software.json"
     dut = _read(dut_path) if dut_path.is_file() else None
+    profile_path = reports / "act4-cv32e40s-profile-audit.json"
+    profile_audit = _read(profile_path) if profile_path.is_file() else None
     dut_fit_path = reports / "act4-cv32e40s-fit.json"
     dut_fit = _read(dut_fit_path) if dut_fit_path.is_file() else None
     dut_rtl_paths = [reports / f"act4-cv32e40s-rtl-{name}.json"
@@ -123,6 +125,45 @@ def generate(root: Path = ROOT) -> dict:
         source_hashes = ((hashlib.sha256(wrapper.read_bytes()).hexdigest(),
                           hashlib.sha256(controller_source.read_bytes()).hexdigest())
                          if wrapper.is_file() and controller_source.is_file() else None)
+        if profile_audit:
+            sail_source = root / "build/act4-cv32e40s/dut_config/sail.json"
+            udb_source = root / "build/act4-cv32e40s/dut_config/cv32e40s-rv32imc.yaml"
+            memory_source = root.parent / "RV-Bench/tools/controller/rtl/memory.sv"
+            profile_current = bool(source_hashes and sail_source.is_file() and
+                                   udb_source.is_file() and memory_source.is_file() and
+                                   profile_audit.get("source_sha256", {}).get("wrapper") == source_hashes[0] and
+                                   profile_audit["source_sha256"].get("controller") == source_hashes[1] and
+                                   profile_audit["source_sha256"].get("sail") ==
+                                   hashlib.sha256(sail_source.read_bytes()).hexdigest() and
+                                   profile_audit["source_sha256"].get("udb") ==
+                                   hashlib.sha256(udb_source.read_bytes()).hexdigest() and
+                                   profile_audit["source_sha256"].get("memory") ==
+                                   hashlib.sha256(memory_source.read_bytes()).hexdigest())
+            rtl_dir = root.parent / "RV-Bench/cores/cv32e40s/rtl"
+            capability_sources = {
+                "core": rtl_dir / "cv32e40s_core.sv",
+                "package": rtl_dir / "include/cv32e40s_pkg.sv",
+                "csr": rtl_dir / "cv32e40s_cs_registers.sv",
+                "pmp": rtl_dir / "cv32e40s_pmp.sv",
+                "pma": rtl_dir / "cv32e40s_pma.sv",
+                "lsu": rtl_dir / "cv32e40s_load_store_unit.sv",
+                "decoder": rtl_dir / "cv32e40s_compressed_decoder.sv",
+                "sequencer": rtl_dir / "cv32e40s_sequencer.sv",
+                "fsm": rtl_dir / "cv32e40s_controller_fsm.sv",
+                "serial_runner": root / "tools/run_act4_cv32e40s_serial.py",
+                "probe": root / "tools/probe_rvbench_cv32e40s.py",
+            }
+            profile_current = profile_current and all(
+                path.is_file() and profile_audit["source_sha256"].get(name) ==
+                hashlib.sha256(path.read_bytes()).hexdigest()
+                for name, path in capability_sources.items())
+        else:
+            profile_current = False
+        if profile_current and (profile_audit.get("act_coverage", {}).get("generated_by_extension") !=
+                                {"I": 39, "M": 8, "C": 0} or
+                                profile_audit["act_coverage"].get("dut_validated_extensions") != ["I", "M"] or
+                                profile_audit["act_coverage"].get("c_upstream_sources") != 0):
+            raise ValueError("CV32E40S ACT profile coverage is inconsistent")
         if (dut.get("core") != "RV-Bench CV32E40S" or dut.get("act_release") != "4.1.0" or
                 len(dut_ids) != dut["generated_elfs"] or
                 dut["direct_sail_passes"] != len(dut_ids) or
@@ -305,6 +346,13 @@ def generate(root: Path = ROOT) -> dict:
                                      "controller_rtl_passes": len(controller_run["tests"]) if controller_run else 0,
                                      "uart_full_load_passes": len(serial_run["tests"]) if serial_run else 0,
                                      "shared_512k_fit": (shared_fit["fit"] if shared_fit else None),
+                                     "profile_static_audit_current": profile_current,
+                                     "act_coverage": (profile_audit["act_coverage"] if profile_current else None),
+                                     "profile_findings": (profile_audit["profile_findings"] if profile_current else None),
+                                     "known_profile_limitations": (profile_audit["known_profile_limitations"]
+                                                                   if profile_current else []),
+                                     "remaining_profile_review": (profile_audit["remaining_profile_review"]
+                                                                  if profile_current else []),
                                      "serial_negative_cases": sorted(negative_runs),
                                      "board_fit": ({"board": dut_fit["board"], "fit": dut_fit["fit"],
                                                     "checked": dut_fit["checked"]} if dut_fit else None),
@@ -326,12 +374,13 @@ def generate(root: Path = ROOT) -> dict:
              f"- Advanced: {len(sail_ids)} scenarios passed QEMU and Sail.",
              f"- ACT {act['act_release']}: {act['generated_elfs']} ELFs, {act['converted_packages']} packages, {act['sail_validated']} Sail executions, {act['host_mock_validated']} host checks in the recorded build; DUT runs pending.",
              *( [f"- ACT {rv64_act['act_release']} RV64 I: {rv64_act['generated_elfs']} ELFs, {rv64_act['converted_packages']} packages, {rv64_act['sail_validated']} Sail executions, {rv64_act['host_mock_validated']} host checks; DUT runs pending."] if rv64_act else []),
-             *([f"- ACT {imc_act['act_release']} RV32 I/M/C software sample: {imc_act['generated_elfs']} ELFs, {imc_act['sail_validated']} Sail executions, {imc_act['host_mock_validated']} host checks; extension counts {imc_act['extension_counts']}; DUT runs pending."] if imc_act else []),
+             *([f"- ACT {imc_act['act_release']} RV32 I/M/C software request: {imc_act['generated_elfs']} ELFs, {imc_act['sail_validated']} Sail executions, {imc_act['host_mock_validated']} host checks; I={imc_act['extension_counts'].get('I', 0)}, M={imc_act['extension_counts'].get('M', 0)}, C={imc_act['extension_counts'].get('C', 0)}. This is a software sample, not the selected DUT run."] if imc_act else []),
              *([f"- RV-Bench CV32E40S ACT candidate: {dut['generated_elfs']} I/M ELFs passed Sail and host checks; "
                 f"{result['act4_cv32e40s_candidate']['controller_rtl_passes']} passed core/controller RTL, "
                 f"{result['act4_cv32e40s_candidate']['uart_full_load_passes']} passed full UART segment loading and execution; "
                 f"serial negatives {', '.join(sorted(negative_runs)) if negative_runs else 'pending'}; "
                 f"shared 512 KiB fit {shared_fit['fit'] if shared_fit else 0}/{len(dut['test_ids'])}; "
+                f"source/profile audit {'current' if profile_current else 'pending'}; ACT DUT scope I/M only, C=0 upstream test sources; "
                 f"legacy board profile fit {dut_fit['fit']}/{dut_fit['checked']}; FPGA synthesis and execution pending."]
                if dut and dut_fit else []),
              f"- ACT package artifacts available in this checkout: {'yes' if act_packages_present else 'no; counts are from the archived local report'}.",

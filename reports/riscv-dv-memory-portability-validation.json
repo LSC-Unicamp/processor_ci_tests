@@ -1,0 +1,181 @@
+{
+  "tool": "riscv-dv",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "validation": "PyFlow, compiler, Spike, package verification, serial host mock",
+  "matrices": [
+    "examples/riscv-dv/nonzero-base-matrix.json",
+    "examples/riscv-dv/split-disjoint-matrix.json"
+  ],
+  "requested": 8,
+  "host_mock_validated": 8,
+  "hardware_validated": 0,
+  "results": [
+    {
+      "configuration": "rv32i-arithmetic-offset-entry",
+      "kind": "nonzero_base",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 10010,
+      "status": "host_mock_validated",
+      "memory_layout": {
+        "mode": "shared_flat",
+        "base": 2147483648,
+        "size": 524288
+      },
+      "entry": 2147483776,
+      "tohost": 2147487744,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "floating_registers_checked": 0,
+      "manifest_sha256": "0a2613ce76d513882892d71205f9875da4345b58fcabe5a9a9af113e718e3087",
+      "elf_sha256": "a1fce41f88c1e6947aa88042290c2d40e86afc80f3ccf152bae4a5c83c868b45"
+    },
+    {
+      "configuration": "rv32imc-random",
+      "kind": "nonzero_base",
+      "isa": "rv32imc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10011,
+      "status": "host_mock_validated",
+      "memory_layout": {
+        "mode": "shared_flat",
+        "base": 536870912,
+        "size": 524288
+      },
+      "entry": 536870912,
+      "tohost": 536875008,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "floating_registers_checked": 0,
+      "manifest_sha256": "7b8a7891d6d7eadb13c77f8a04d4d8e5dcb099814a12f2e4261df940952d797a",
+      "elf_sha256": "42fc70af5b9d06018c26e52ca739e0d4304c4acc5c902613e2c26eacccf25541"
+    },
+    {
+      "configuration": "rv64i-jump",
+      "kind": "nonzero_base",
+      "isa": "rv64i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 10012,
+      "status": "host_mock_validated",
+      "memory_layout": {
+        "mode": "shared_flat",
+        "base": 2147483648,
+        "size": 524288
+      },
+      "entry": 2147483648,
+      "tohost": 2147487744,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "floating_registers_checked": 0,
+      "manifest_sha256": "b62b353b509525b30ee7e852393f71a62e3aea1938e78fac8853543af8b5fd1b",
+      "elf_sha256": "9fc4655d13d18f33afa2064af7e06ef9f87ffdc6ac7cd62a8aa32a9a00af7337"
+    },
+    {
+      "configuration": "rv32i-unaligned",
+      "kind": "nonzero_base",
+      "isa": "rv32i",
+      "profile": "riscv_unaligned_load_store_test",
+      "seed": 10013,
+      "status": "host_mock_validated",
+      "memory_layout": {
+        "mode": "shared_flat",
+        "base": 805306368,
+        "size": 524288
+      },
+      "entry": 805306368,
+      "tohost": 805310464,
+      "written_memory_bytes": 16,
+      "checked_memory_bytes": 16,
+      "floating_registers_checked": 0,
+      "manifest_sha256": "b49a197be60da73a42d3e709580a1d966551ae53ad3520d5eac50635740af08b",
+      "elf_sha256": "1fc3dc50a6d5b3813116b2be065f8a4d0c9f6c176ae692a6d28dc5d55c39ec0c"
+    },
+    {
+      "configuration": "rv64imfdc-floating",
+      "kind": "nonzero_base",
+      "isa": "rv64imfdc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10014,
+      "status": "host_mock_validated",
+      "memory_layout": {
+        "mode": "shared_flat",
+        "base": 2147483648,
+        "size": 524288
+      },
+      "entry": 2147483648,
+      "tohost": 2147487744,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "floating_registers_checked": 32,
+      "manifest_sha256": "9437afd5aba3de9e064f14d5b6285f2c70314c5bc2c0fdae5ab9f5428af2d4d2",
+      "elf_sha256": "5eedd2dbe858abd3768a9125b892ee0f270bfecbb4dfd84aefb83ecfdadcab3a"
+    },
+    {
+      "configuration": "rv32i-load-store",
+      "kind": "split_disjoint",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 42,
+      "status": "host_mock_validated",
+      "memory_layout": {
+        "mode": "split_disjoint",
+        "instruction_base": 2147483648,
+        "instruction_size": 131072,
+        "data_base": 2147614720,
+        "data_size": 393216
+      },
+      "entry": 2147483648,
+      "tohost": 2147614720,
+      "written_memory_bytes": 11,
+      "checked_memory_bytes": 11,
+      "floating_registers_checked": 0,
+      "manifest_sha256": "8d2f4a314895394560758df7b3d0638297bbe2745d4ec7cd1cd56767b6b6823d",
+      "elf_sha256": "8ba662074ceddca6d86d056e53088a85fc257dfc8673908280e4e7e78a0a87f2"
+    },
+    {
+      "configuration": "rv64i-jump",
+      "kind": "split_disjoint",
+      "isa": "rv64i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 10012,
+      "status": "host_mock_validated",
+      "memory_layout": {
+        "mode": "split_disjoint",
+        "instruction_base": 2147483648,
+        "instruction_size": 131072,
+        "data_base": 2147614720,
+        "data_size": 393216
+      },
+      "entry": 2147483776,
+      "tohost": 2147614720,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "floating_registers_checked": 0,
+      "manifest_sha256": "966f2c02cee97f397609d39900701cfc0aed68f1e68ffa0361f748bb2bd724fa",
+      "elf_sha256": "fc0bb2bada8ed2154f2379e0ee78f72427d71c1ecf575d814adffaf4519442f9"
+    },
+    {
+      "configuration": "rv64imfdc-floating",
+      "kind": "split_disjoint",
+      "isa": "rv64imfdc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10014,
+      "status": "host_mock_validated",
+      "memory_layout": {
+        "mode": "split_disjoint",
+        "instruction_base": 2147483648,
+        "instruction_size": 131072,
+        "data_base": 2147614720,
+        "data_size": 393216
+      },
+      "entry": 2147483648,
+      "tohost": 2147614720,
+      "written_memory_bytes": 0,
+      "checked_memory_bytes": 0,
+      "floating_registers_checked": 32,
+      "manifest_sha256": "db0aed81549389c025d25f84c927b62975ad46a2dbe450ffa267ae7b6b97dd13",
+      "elf_sha256": "6058092519cd01a163a49ab08928dfd063fe391e2e5508b302a7e23c8c35025f"
+    }
+  ],
+  "limitation": "Split disjoint segments used a flat Spike and host-mock address space; separate physical instruction/data ports were not exercised."
+}

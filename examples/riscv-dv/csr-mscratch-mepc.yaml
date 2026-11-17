@@ -1,0 +1,31 @@
+# Machine-mode CSR profile with writable mscratch and aligned mepc bits.
+- csr: mscratch
+  address: 0x340
+  privilege_mode: M
+  rv32:
+    - field_name: value
+      type: WARL
+      reset_val: 0
+      msb: 31
+      lsb: 0
+  rv64:
+    - field_name: value
+      type: WARL
+      reset_val: 0
+      msb: 63
+      lsb: 0
+- csr: mepc
+  address: 0x341
+  privilege_mode: M
+  rv32:
+    - field_name: value
+      type: WARL
+      reset_val: 0
+      msb: 31
+      lsb: 2
+  rv64:
+    - field_name: value
+      type: WARL
+      reset_val: 0
+      msb: 63
+      lsb: 2

@@ -1,0 +1,9 @@
+{
+  "configurations": [
+    {"name": "rv32i-hazard-10", "isa": "rv32i", "profile": "riscv_unaligned_load_store_test", "seed": 9600, "tests": 10, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv32im-hazard-10", "isa": "rv32im", "profile": "riscv_unaligned_load_store_test", "seed": 9610, "tests": 10, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv32imc-hazard-10", "isa": "rv32imc", "profile": "riscv_unaligned_load_store_test", "seed": 9620, "tests": 10, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv64im-hazard-10", "isa": "rv64im", "profile": "riscv_unaligned_load_store_test", "seed": 9630, "tests": 10, "instr_count": 100, "experimental_profile": true},
+    {"name": "rv64imc-hazard-10", "isa": "rv64imc", "profile": "riscv_unaligned_load_store_test", "seed": 9640, "tests": 10, "instr_count": 100, "experimental_profile": true}
+  ]
+}

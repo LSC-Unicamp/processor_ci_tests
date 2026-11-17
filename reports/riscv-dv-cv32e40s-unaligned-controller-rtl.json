@@ -1,0 +1,32 @@
+{
+  "tool": "riscv-dv",
+  "core": "CV32E40S",
+  "core_revision": "9d9cae78b01a11458953133d1173c61933a2ba86",
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "direct simulation preload",
+  "controller_rtl_execution": true,
+  "serial_execution": false,
+  "fpga_execution": false,
+  "validated": 1,
+  "failed": 0,
+  "tests": [
+    {
+      "test_id": "riscv_unaligned_load_store_test-rv32i-9500",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/probe-unaligned-9500/riscv_unaligned_load_store_test-rv32i-9500/manifest.json",
+      "manifest_sha256": "17f40cf62b447303b6a4c97d8e11e43073f1f7005fb64759aed097eadcf58af9",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "expected_outcome": "PASS",
+      "mutation_pc": null,
+      "tohost": 1,
+      "cycles": 202,
+      "diagnostic_bytes": null,
+      "returncode": 0,
+      "stdout_tail": "DATA 65 0 00002f7c 0000000c ACK 1\nDATA 66 0 00002f7f 0c000000 ACK 1\nDATA 69 0 00002f8a 000c0000 ACK 1\nDATA 70 1 00002f82 000a0000 ACK 1\nDATA 71 0 00002f6c 0000000a ACK 1\nDATA 72 0 00002f7e 000a0000 ACK 1\nDATA 73 0 00002f71 00000a00 ACK 1\nDATA 74 0 00002f73 0a000000 ACK 1\nDATA 75 0 00002f6f 0a000000 ACK 1\nDATA 76 0 00002f7c 0000000a ACK 1\nDATA 77 0 00002f71 00000a00 ACK 1\nDATA 78 1 00002f7b 0a000000 ACK 1\nDATA 79 0 00002f7b 0a000000 ACK 1\nDATA 80 0 00002f78 0000000a ACK 1\nDATA 81 0 00002f73 0a000000 ACK 1\nDATA 82 0 00002f88 0000000a ACK 1\nDATA 83 0 00002f8a 000a0000 ACK 1\nDATA 84 0 00002f8a 000a0000 ACK 1\nDATA 201 1 00001000 00000001 ACK 1\nACT_CONTROLLER_STATUS 00000001 CYCLE 202\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/act4_cv32e40s_controller_tb.sv:46: Verilog $finish\n[2120000] %Fatal: act4_cv32e40s_controller_tb.sv:49: Assertion failed in act4_cv32e40s_controller_tb: ACT controller timeout at PC 000003e4, status 00000001, end 00001000, data count 23\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 2us; walltime 0.019 s; speed 109.583 us/s\n- Verilator: cpu 0.019 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    }
+  ]
+}

@@ -10,3 +10,6 @@
 [submodule "third_party_repositories/riscv-arch-test"]
 	path = third_party_repositories/riscv-arch-test
 	url = https://github.com/riscv/riscv-arch-test
+[submodule "third_party_repositories/riscv-dv"]
+	path = third_party_repositories/riscv-dv
+	url = https://github.com/chipsalliance/riscv-dv.git

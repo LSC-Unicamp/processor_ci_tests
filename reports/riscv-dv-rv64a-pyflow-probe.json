@@ -1,0 +1,28 @@
+{
+  "tool": "riscv-dv-pyflow-probe",
+  "target": "rv64imafdc",
+  "profile": "riscv_rand_instr_test",
+  "directed_stream": "riscv_amo_instr_stream",
+  "seed": 9920,
+  "instruction_count": 100,
+  "gen_options": "+instr_cnt=100 +num_of_sub_program=0 +bare_program_mode=1 +no_csr_instr=1 +no_ebreak=1 +no_wfi=1 +directed_instr_0=riscv_amo_instr_stream,1",
+  "generated": 0,
+  "compiled": 0,
+  "spike_validated": 0,
+  "package_validated": 0,
+  "hardware_validated": 0,
+  "failure_stage": "PyFlow directed-stream construction",
+  "exception": "AttributeError: 'NoneType' object has no attribute 'size'",
+  "location": "pygen/pygen_src/riscv_amo_instr_lib.py:41, while creating avail_regs with vsc.randsz_list_t",
+  "scratch_compatibility_probe": {
+    "source_modified": false,
+    "changes": [
+      "remove unused avail_regs randomized list",
+      "allow the sole AMO region in data_page_id selection",
+      "remove rd constrained to the rs1 base-register list"
+    ],
+    "result": "still fails with vsc.model.solve_failure.SolveFailure during gen_amo_instr randomize_with; no assembly emitted"
+  },
+  "reproduction": "Use a one-entry test list with test=riscv_rand_instr_test, gen_test=riscv_instr_base_test, gen_options above; run pinned run.py with --target rv64imafdc --simulator pyflow --steps gen --iterations 1 --seed 9920",
+  "note": "Pinned upstream PyFlow failure; A is not in ProcessorCI's supported ISA matrix"
+}

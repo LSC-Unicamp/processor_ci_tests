@@ -76,6 +76,13 @@ def build_parser() -> argparse.ArgumentParser:
         default=False,
     )
     parser.add_argument('--suite', default='basic', help='Comma-separated suites: basic,advanced,arch,invalid')
+    parser.add_argument('--act-profile', choices=('cv32e40s-512k',),
+                        help='Select a verified ACT DUT memory and serial profile')
+    parser.add_argument('--act-report', type=Path,
+                        default=Path(__file__).resolve().parents[1] / 'reports/act4-cv32e40s-device.json',
+                        help='JSON and JUnit output for a selected ACT DUT run')
+    parser.add_argument('--host-timeout', type=float, default=120.0,
+                        help='Host wait for each ACT execution response, in seconds')
     parser.add_argument('--list', action='store_true', help='List selected tests without serial hardware')
     selector = parser.add_mutually_exclusive_group()
     selector.add_argument('--instruction', help='List one basic instruction mnemonic, such as addi or c.addi')
@@ -98,6 +105,21 @@ def _matches_filters(metadata: dict, args: argparse.Namespace) -> bool:
 
 
 def main(argv: list[str] | None = None) -> None:
+    import sys
+    selected = list(sys.argv[1:] if argv is None else argv)
+    if '--tool' in selected:
+        index = selected.index('--tool')
+        if index + 1 >= len(selected):
+            raise SystemExit('--tool requires directed or riscv-dv')
+        tool = selected[index + 1]
+        del selected[index:index + 2]
+        if tool == 'riscv-dv':
+            from riscv_test_runner.riscv_dv import main as generate_riscv_dv
+            generate_riscv_dv(selected)
+            return
+        if tool != 'directed':
+            raise SystemExit(f'unsupported test tool: {tool}')
+        argv = selected
     args = build_parser().parse_args(argv)
 
     extra_tests_parse = args.extra_tests.split(',') if args.extra_tests else []
@@ -108,6 +130,10 @@ def main(argv: list[str] | None = None) -> None:
     suites = tuple(s.strip() for s in args.suite.split(',') if s.strip())
     if not suites or any(s not in ('basic', 'advanced', 'arch', 'invalid') for s in suites):
         raise SystemExit('Supported suites: basic, advanced, arch, invalid')
+    if args.act_profile and suites != ('arch',):
+        raise SystemExit('--act-profile requires --suite arch alone')
+    if args.act_profile and (args.instruction or args.scenario or args.category):
+        raise SystemExit('ACT DUT selection supports --test-id and --march filters')
     directories = select_directories(config_data, args.march)
     root = Path(__file__).resolve().parents[1]
     directories = [{**d, 'path': str(root / 'tests' / d['name'])} for d in directories]
@@ -118,7 +144,8 @@ def main(argv: list[str] | None = None) -> None:
                 if isa_compatible(metadata['isa'], args.march) and _matches_filters(metadata, args):
                     print(f'package basic {package.stem}')
         if 'arch' in suites:
-            for package in sorted((root / 'build' / 'act4' / 'packages').glob('*.json')):
+            arch_dir = ('act4-cv32e40s' if args.act_profile else 'act4')
+            for package in sorted((root / 'build' / arch_dir / 'packages').glob('*.json')):
                 metadata = json.loads(package.read_text())
                 if isa_compatible(metadata['isa'], args.march) and _matches_filters(metadata, args):
                     print(f'ACT4 arch {package.stem}')
@@ -155,6 +182,29 @@ def main(argv: list[str] | None = None) -> None:
                               'target_instruction': mnemonic}
                     if _matches_filters(legacy, args):
                         print(f"{directory['name']} {suite} {path.stem}")
+        return
+    if args.act_profile:
+        if not args.port:
+            raise SystemExit('--port is required for ACT DUT serial execution')
+        if args.host_timeout <= 0:
+            raise SystemExit('--host-timeout must be positive')
+        import sys
+        sys.path.insert(0, str(root / 'tools'))
+        from run_act4_cv32e40s_serial import execute, select, write_report
+        paths = []
+        for path in sorted((root / 'build/act4-cv32e40s/packages').glob('*.json')):
+            metadata = json.loads(path.read_text())
+            if isa_compatible(metadata['isa'], args.march) and _matches_filters(metadata, args):
+                paths.append(path)
+        if not paths:
+            raise SystemExit('No compatible ACT packages found for the selected DUT profile')
+        results = execute(select(paths), port=args.port, baudrate=args.baudrate,
+                          expected_id=hex_string_to_bytes(args.key) if args.key else None,
+                          host_timeout=args.host_timeout)
+        write_report(args.act_report, results)
+        print(f'ACT DUT run: {len(results)} packages; report: {args.act_report}')
+        if any(row['outcome'] != 'PASS' for row in results):
+            raise SystemExit(1)
         return
     if args.instruction or args.scenario or args.category or args.test_id:
         raise SystemExit('Test filters require --list until serial package selection is verified')

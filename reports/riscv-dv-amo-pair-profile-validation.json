@@ -1,0 +1,310 @@
+{
+  "tool": "riscv-dv-amo-pair-profile-validation",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "matrix": "examples/riscv-dv/amo-pair-profile-matrix.json",
+  "date": "2026-11-17",
+  "configurations": 3,
+  "requested": 18,
+  "generated": 18,
+  "compiled": 18,
+  "spike_validated": 18,
+  "package_validated": 18,
+  "host_mock_validated": 18,
+  "hardware_validated": 0,
+  "failed": 0,
+  "unique_operations": 17,
+  "operation_counts": {
+    "amoadd.d": 4,
+    "amoadd.w": 1,
+    "amoand.d": 5,
+    "amoand.w": 2,
+    "amomax.d": 2,
+    "amomax.w": 1,
+    "amomaxu.d": 1,
+    "amomin.d": 1,
+    "amomin.w": 2,
+    "amominu.d": 3,
+    "amominu.w": 2,
+    "amoor.d": 3,
+    "amoor.w": 2,
+    "amoswap.d": 3,
+    "amoswap.w": 1,
+    "amoxor.d": 1,
+    "amoxor.w": 2
+  },
+  "combined_unique_operations_with_single_amo_campaign": 18,
+  "total_committed_atomic_stores": 36,
+  "total_checked_memory_bytes": 140,
+  "results": [
+    {
+      "configuration": "rv64ima-amo-pair-shared",
+      "seed": 10600,
+      "status": "host_mock_validated",
+      "manifest_sha256": "f8ee65da263e0675c2797630036fc58fe18ac28568cbbbc644e01b3c0ffab4af",
+      "elf_sha256": "d0edaf11dea36b4ba8ba0bd7a3563fd39e06bcabd8d6a8bcbcd808904af48ba0",
+      "operations": [
+        "amoand.d",
+        "amomin.w"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-shared",
+      "seed": 10601,
+      "status": "host_mock_validated",
+      "manifest_sha256": "61a2fc8bfb9e0577046ea97ee67a4c51e570d4ad94c865acbb1feb8d78f3b114",
+      "elf_sha256": "8ba2baa6266b87cdee250cb7b35ce3cc36b8573f0bd3508da6a537e5eb9e71be",
+      "operations": [
+        "amoand.d",
+        "amoswap.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-shared",
+      "seed": 10602,
+      "status": "host_mock_validated",
+      "manifest_sha256": "d9292807a7bab1269331446adf701a8b85b984020b54f384b10723465c0ba598",
+      "elf_sha256": "eabebf9e6122c0c0ce0e512e040265a9e9204cb527a5d145aef65ba5e6d9c53d",
+      "operations": [
+        "amominu.d",
+        "amoadd.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-shared",
+      "seed": 10603,
+      "status": "host_mock_validated",
+      "manifest_sha256": "de2c82f3499001bc582528e1eb3b7b904f088d0f10a5b34237d993082d49b45d",
+      "elf_sha256": "7274b596d356409a405c8331dd82c316dda9cab37713bf235d76a63fb702e377",
+      "operations": [
+        "amoxor.w",
+        "amoand.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-shared",
+      "seed": 10604,
+      "status": "host_mock_validated",
+      "manifest_sha256": "ce95ab438650629ac9859f37c04d753a110996cc77a0c528adbf4477b8cc4ef2",
+      "elf_sha256": "2a57bf24aa9d350cf0536bca23a8681c09dfc635eee18b5c61e41ad3f3cb73b5",
+      "operations": [
+        "amomax.w",
+        "amoand.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-shared",
+      "seed": 10605,
+      "status": "host_mock_validated",
+      "manifest_sha256": "0a41745d07a390c1ff87de0283a2befb44e37084907b27d4ca330abde68ac04f",
+      "elf_sha256": "975fa1432ef5248cf9837ffb4b77cee8cbbca13d7046df0cd0ca59510b382a89",
+      "operations": [
+        "amominu.w",
+        "amomax.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-nonzero",
+      "seed": 10606,
+      "status": "host_mock_validated",
+      "manifest_sha256": "e1ac9fe293d4a63f97ebed0a6d75780876a9513adf9577a17ef1201c83db39b0",
+      "elf_sha256": "2052752d81b546d5fe1a7453a5930a64c6d3bddaef0f221379a2eda88df96158",
+      "operations": [
+        "amoswap.w",
+        "amoadd.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-nonzero",
+      "seed": 10607,
+      "status": "host_mock_validated",
+      "manifest_sha256": "64edc8fdc4b33b0ef1aa476c3b15b68e235aa25673f4a948f00748da1dd38669",
+      "elf_sha256": "c53353dd45409044761a3bd9ef0bb99d1d722a58923de75e02c027b9b57b4c85",
+      "operations": [
+        "amoswap.d",
+        "amoand.w"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-nonzero",
+      "seed": 10608,
+      "status": "host_mock_validated",
+      "manifest_sha256": "affcf35f17e1c895a81daaa94419886d48b1fa058c9458392553cba374d849c5",
+      "elf_sha256": "000f7f48a5c116cb9fac24df38adc53ae0760300c0f167a3e1d559fe4be404dd",
+      "operations": [
+        "amoxor.w",
+        "amoxor.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-nonzero",
+      "seed": 10609,
+      "status": "host_mock_validated",
+      "manifest_sha256": "acc90bc16035343cf8f630ca4f8044486e1cb7a07120968c36fa0088da4ea355",
+      "elf_sha256": "57f7fca658f684a75dacdfec06139d1175d7e5d96fc0dd4f037f951e9f174720",
+      "operations": [
+        "amoor.w",
+        "amomax.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-nonzero",
+      "seed": 10610,
+      "status": "host_mock_validated",
+      "manifest_sha256": "ec1f029dacf72510537e8463c4dcc225aee3169c6a115f50bd240734a2aba09a",
+      "elf_sha256": "f9ae127fca9fb0b358ccfd623f59544a8b03fff92e586a1321fecf0da96208e0",
+      "operations": [
+        "amoand.d",
+        "amomin.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-nonzero",
+      "seed": 10611,
+      "status": "host_mock_validated",
+      "manifest_sha256": "465949517aa7939809f5860da3e5ecca23742b4effde6e223382fd8ec804a529",
+      "elf_sha256": "08910f1f1eed94e4d3bf2cf8ded4f7ef9457bbefd90248c2408a53af2d5e2749",
+      "operations": [
+        "amoadd.w",
+        "amoor.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "shared_flat"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-split",
+      "seed": 10612,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b8b3fbfcbb7260a875d1d6559075caf93e943115523cefceec6f1f34099fab33",
+      "elf_sha256": "c77673135f426ecfa991ce26f03bc54897528e4ffa2bf075305bce55dfe73299",
+      "operations": [
+        "amoor.d",
+        "amoor.w"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "split_disjoint"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-split",
+      "seed": 10613,
+      "status": "host_mock_validated",
+      "manifest_sha256": "761c5e44215578fa0af9b6be8c893eb528d40ece39442b3b684a50529793b2c5",
+      "elf_sha256": "53ccd312dc6c3c2fb6472b255e709f14d0ba3dfd608bc84639110663d7cd29b5",
+      "operations": [
+        "amominu.d",
+        "amoadd.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "split_disjoint"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-split",
+      "seed": 10614,
+      "status": "host_mock_validated",
+      "manifest_sha256": "3f77bdad560ddb85de81dacdd9e13869f977d8a7ab90f674c1bfb652d09a683b",
+      "elf_sha256": "cbc2d5a864ef052b72f22fd6a60ac7fcab5868e77787c6879c9507f31f7e6e28",
+      "operations": [
+        "amomin.w",
+        "amominu.w"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 4,
+      "memory_layout": "split_disjoint"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-split",
+      "seed": 10615,
+      "status": "host_mock_validated",
+      "manifest_sha256": "ce2b62132463d58d8395a5e260fc61afc9ac8c9b364e955e68bc685465da1fe2",
+      "elf_sha256": "845a01285413e2346316836175ee6f6cb07d36ceb2918c396b2172ca6a1da9b0",
+      "operations": [
+        "amoor.d",
+        "amomaxu.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "split_disjoint"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-split",
+      "seed": 10616,
+      "status": "host_mock_validated",
+      "manifest_sha256": "3f17562705c87183c9a3581164c0405c2b44d87c3432ac5930c511ac8f04ecf6",
+      "elf_sha256": "8719bda7001705013db310b149aa7dfc308d933a2b862623d44856e1b0890b29",
+      "operations": [
+        "amominu.d",
+        "amoswap.d"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "split_disjoint"
+    },
+    {
+      "configuration": "rv64ima-amo-pair-split",
+      "seed": 10617,
+      "status": "host_mock_validated",
+      "manifest_sha256": "6dec413d915d08766997a8b60bd0645e7efd92d614b0d89e9dcf9bc67f6ec0ff",
+      "elf_sha256": "eb59df242e3b72368612d4491b68ca822a5da977962d33db6f378570a41c2657",
+      "operations": [
+        "amoadd.d",
+        "amoand.w"
+      ],
+      "committed_atomic_stores": 2,
+      "checked_registers": 30,
+      "checked_memory_bytes": 8,
+      "memory_layout": "split_disjoint"
+    }
+  ]
+}

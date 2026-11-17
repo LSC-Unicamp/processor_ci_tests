@@ -1,0 +1,85 @@
+{
+  "tool": "riscv-dv",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "backend": "pyflow",
+  "isa": "rv32i",
+  "profile": "riscv_rand_instr_test",
+  "seed_start": 6005,
+  "instruction_count": 1000,
+  "load_store": true,
+  "upstream_option": [
+    "+no_branch_jump=1"
+  ],
+  "requested": 5,
+  "generated": 5,
+  "compiled": 5,
+  "spike_validated": 5,
+  "package_validated": 5,
+  "host_mock_validated": 5,
+  "hardware_validated": 0,
+  "failed": 0,
+  "report": "build/riscv-dv/campaign-loadstore-1000-5/report.json",
+  "report_sha256": "1a50b171c06e9d8f3c365d6dc1f6d72995f39224766edbc18af6df9b6fcd2a49",
+  "results": [
+    {
+      "seed": 6005,
+      "status": "host_mock_validated",
+      "elf_sha256": "71012611c512c021fd7b4e7af6b17c27580f07755c2139eb5864a2285c3fc9dd",
+      "manifest_sha256": "119302d2276e8b367f9bea2f32cb83ebd8fb6441d08dee1987d1a2f8b8d81582",
+      "linker_layout": {
+        "mode": "fixed_tohost",
+        "tohost_base": "0x3000"
+      },
+      "written_memory_bytes": 26,
+      "checked_memory_bytes": 26
+    },
+    {
+      "seed": 6006,
+      "status": "host_mock_validated",
+      "elf_sha256": "4903a23ac528d5ad91d42489051892ad963781c3be564474dd7089d55f51f746",
+      "manifest_sha256": "da56fbde0ada358fc65ea7b7d34b19fa803444dfe31e4198c9e5b8a763737f73",
+      "linker_layout": {
+        "mode": "upstream_aligned",
+        "tohost_base": "0x1000"
+      },
+      "written_memory_bytes": 6,
+      "checked_memory_bytes": 6
+    },
+    {
+      "seed": 6007,
+      "status": "host_mock_validated",
+      "elf_sha256": "f662eb89f5f7e26aa3d57e1b3cbf522f61d232812f7a215a36e3927bde18af8f",
+      "manifest_sha256": "3b91ab8ccc76f63c5754428b5e5973a96c8aabb6a3f7111a38b8e9a9a84f48ea",
+      "linker_layout": {
+        "mode": "upstream_aligned",
+        "tohost_base": "0x1000"
+      },
+      "written_memory_bytes": 17,
+      "checked_memory_bytes": 17
+    },
+    {
+      "seed": 6008,
+      "status": "host_mock_validated",
+      "elf_sha256": "0c1c09d1a50cdee3fdd7536d1ff9503038359f9e4c810872a660ca2812d433d0",
+      "manifest_sha256": "77537e04bbc968b5b64f4ebe418fec6ee73c5fd72c32721647c2c7d94f4f7af6",
+      "linker_layout": {
+        "mode": "upstream_aligned",
+        "tohost_base": "0x1000"
+      },
+      "written_memory_bytes": 6,
+      "checked_memory_bytes": 6
+    },
+    {
+      "seed": 6009,
+      "status": "host_mock_validated",
+      "elf_sha256": "215259414cee62e21434370415857fbb840b9bfbee975ab260077139229a65f9",
+      "manifest_sha256": "82fd0bec810f02c584956dd24c8b0698784abf72fef81e3fbf94f5f0ecdbdf4a",
+      "linker_layout": {
+        "mode": "upstream_aligned",
+        "tohost_base": "0x1000"
+      },
+      "written_memory_bytes": 21,
+      "checked_memory_bytes": 21
+    }
+  ]
+}

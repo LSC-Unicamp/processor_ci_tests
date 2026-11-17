@@ -1,0 +1,32 @@
+{
+  "tool": "riscv-dv",
+  "core": "CV32E40S",
+  "core_revision": "9d9cae78b01a11458953133d1173c61933a2ba86",
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "UART sparse segment upload",
+  "controller_rtl_execution": true,
+  "serial_execution": true,
+  "fpga_execution": false,
+  "validated": 1,
+  "failed": 0,
+  "tests": [
+    {
+      "test_id": "riscv_rand_instr_test-rv32imc-7200",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/config-matrix-validation/rv32imc-random/riscv_rand_instr_test-rv32imc-7200/manifest.json",
+      "manifest_sha256": "20d80d5a9b15fd6d19d87b879c81048ce30abe3af50b8facab6067774d5b104b",
+      "isa": "rv32imc_zicsr_zifencei",
+      "outcome": "PASS",
+      "expected_outcome": "PASS",
+      "mutation_pc": null,
+      "tohost": 1,
+      "cycles": null,
+      "diagnostic_bytes": 0,
+      "returncode": 0,
+      "stdout_tail": "ACT_SERIAL_STATUS 00000001 DIAGNOSTIC_BYTES 0\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/act4_cv32e40s_serial_tb.sv:136: Verilog $finish\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 33ms; walltime 2.174 s; speed 14.979 ms/s\n- Verilator: cpu 2.167 s on 1 threads; allocated 6 MB",
+      "stderr_tail": ""
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Minimal machine-mode CSR profile for a core with writable mscratch.
+- csr: mscratch
+  address: 0x340
+  privilege_mode: M
+  rv32:
+    - field_name: value
+      type: WARL
+      reset_val: 0
+      msb: 31
+      lsb: 0
+  rv64:
+    - field_name: value
+      type: WARL
+      reset_val: 0
+      msb: 63
+      lsb: 0

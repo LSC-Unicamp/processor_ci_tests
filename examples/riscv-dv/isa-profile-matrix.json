@@ -1,0 +1,124 @@
+{
+  "configurations": [
+    {
+      "name": "rv32i-arithmetic_basic",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "tests": 1,
+      "seed": 8000,
+      "instr_count": 100
+    },
+    {
+      "name": "rv32im-arithmetic_basic",
+      "isa": "rv32im",
+      "profile": "riscv_arithmetic_basic_test",
+      "tests": 1,
+      "seed": 8001,
+      "instr_count": 100
+    },
+    {
+      "name": "rv32imc-arithmetic_basic",
+      "isa": "rv32imc",
+      "profile": "riscv_arithmetic_basic_test",
+      "tests": 1,
+      "seed": 8002,
+      "instr_count": 100
+    },
+    {
+      "name": "rv64im-arithmetic_basic",
+      "isa": "rv64im",
+      "profile": "riscv_arithmetic_basic_test",
+      "tests": 1,
+      "seed": 8003,
+      "instr_count": 100
+    },
+    {
+      "name": "rv64imc-arithmetic_basic",
+      "isa": "rv64imc",
+      "profile": "riscv_arithmetic_basic_test",
+      "tests": 1,
+      "seed": 8004,
+      "instr_count": 100
+    },
+    {
+      "name": "rv32i-rand_instr",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "tests": 1,
+      "seed": 8100,
+      "instr_count": 100
+    },
+    {
+      "name": "rv32im-rand_instr",
+      "isa": "rv32im",
+      "profile": "riscv_rand_instr_test",
+      "tests": 1,
+      "seed": 8101,
+      "instr_count": 100
+    },
+    {
+      "name": "rv32imc-rand_instr",
+      "isa": "rv32imc",
+      "profile": "riscv_rand_instr_test",
+      "tests": 1,
+      "seed": 8102,
+      "instr_count": 100
+    },
+    {
+      "name": "rv64im-rand_instr",
+      "isa": "rv64im",
+      "profile": "riscv_rand_instr_test",
+      "tests": 1,
+      "seed": 8103,
+      "instr_count": 100
+    },
+    {
+      "name": "rv64imc-rand_instr",
+      "isa": "rv64imc",
+      "profile": "riscv_rand_instr_test",
+      "tests": 1,
+      "seed": 8104,
+      "instr_count": 100
+    },
+    {
+      "name": "rv32i-jump_stress",
+      "isa": "rv32i",
+      "profile": "riscv_jump_stress_test",
+      "tests": 1,
+      "seed": 8200,
+      "instr_count": 200
+    },
+    {
+      "name": "rv32im-jump_stress",
+      "isa": "rv32im",
+      "profile": "riscv_jump_stress_test",
+      "tests": 1,
+      "seed": 8201,
+      "instr_count": 200
+    },
+    {
+      "name": "rv32imc-jump_stress",
+      "isa": "rv32imc",
+      "profile": "riscv_jump_stress_test",
+      "tests": 1,
+      "seed": 8202,
+      "instr_count": 200
+    },
+    {
+      "name": "rv64im-jump_stress",
+      "isa": "rv64im",
+      "profile": "riscv_jump_stress_test",
+      "tests": 1,
+      "seed": 8203,
+      "instr_count": 200
+    },
+    {
+      "name": "rv64imc-jump_stress",
+      "isa": "rv64imc",
+      "profile": "riscv_jump_stress_test",
+      "tests": 1,
+      "seed": 8204,
+      "instr_count": 200
+    }
+  ]
+}

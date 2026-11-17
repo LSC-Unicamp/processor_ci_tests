@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "name": "rv64imfdc-jump-shared",
+      "isa": "rv64imfdc",
+      "profile": "riscv_jump_stress_test",
+      "seed": 10700,
+      "tests": 4,
+      "instr_count": 200
+    },
+    {
+      "name": "rv64imfdc-jump-nonzero",
+      "isa": "rv64imfdc",
+      "profile": "riscv_jump_stress_test",
+      "seed": 10704,
+      "tests": 3,
+      "instr_count": 200,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776
+    },
+    {
+      "name": "rv64imfdc-jump-split",
+      "isa": "rv64imfdc",
+      "profile": "riscv_jump_stress_test",
+      "seed": 10707,
+      "tests": 3,
+      "instr_count": 200,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776,
+      "data_base": 2147614720
+    }
+  ]
+}

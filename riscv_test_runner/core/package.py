@@ -15,7 +15,7 @@ TRAP_FAILURE_CODES = {"3": "EXPECTED_TRAP_MISSING", "5": "UNEXPECTED_TRAP",
 def initial_memory(package: dict, *, supported_isa: set[str] | None = None) -> dict[int, int]:
     if not isinstance(package, dict):
         raise InvalidPackage("package must be an object")
-    if package.get("schema_version") != 1 or package.get("test_source") not in ("ACT4", "basic", "invalid", "advanced"):
+    if package.get("schema_version") != 1 or package.get("test_source") not in ("ACT4", "basic", "invalid", "advanced", "riscv-dv"):
         raise InvalidPackage("unsupported package schema or source")
     isa = package.get("isa")
     if not isinstance(isa, str) or not isa.startswith(("rv32", "rv64")):

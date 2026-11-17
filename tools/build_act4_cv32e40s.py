@@ -54,6 +54,18 @@ def stage(output: Path) -> Path:
     config_dir.mkdir(parents=True, exist_ok=True)
     for name in ("cv32e40s-rv32imc.yaml", "sail.json", "link.ld", "rvmodel_macros.h"):
         shutil.copyfile(SOURCE / name, config_dir / name)
+    udb_path = config_dir / "cv32e40s-rv32imc.yaml"
+    udb = udb_path.read_text()
+    udb = ("# ACT I/M execution profile for the pinned RV-Bench wrapper.\n"
+           "# Upstream comments describe the core manual; they are not DUT test results.\n" +
+           udb.replace("VERIFIED", "DOCUMENTED UPSTREAM"))
+    # With CLIC=0, mtvec MODE writes of 2 or 3 retain the previous mode.
+    # The upstream comment incorrectly says those writes always take effect.
+    old_mtvec_note = "MODE bit[1] hardwired 0, bit[0] writable; writes always valid"
+    if udb.count(old_mtvec_note) != 1:
+        raise RuntimeError("upstream mtvec WARL comment changed; review pinned RTL behavior")
+    udb = udb.replace(old_mtvec_note, "MODE 2/3 writes retain previous 0/1 mode in pinned RTL")
+    udb_path.write_text(udb)
 
     linker = (config_dir / "link.ld").read_text()
     if linker.count("TEST_BASE = 0x00000080;") != 1:
@@ -69,6 +81,55 @@ def stage(output: Path) -> Path:
     if sail_config.count(main_region) != 1:
         raise RuntimeError("upstream Sail main-memory region changed; review hardware map")
     sail_config = sail_config.replace(main_region, main_region.replace("0x2000000", f"{ACT_PROGRAM_BYTES:#x}"))
+    # ACT's Sail signature builder requires a reference-only CLINT and
+    # interrupt generator even though the wrapper does not implement them.
+    # Retain that finite IO region and replace only the upstream broad region
+    # that otherwise describes nearly 1.5 GiB of nonexistent DUT memory.
+    printer_start = sail_config.find("      // covers rvmodel virtual peripheral addresses")
+    printer_end = sail_config.find("\n    ]", printer_start)
+    if printer_start < 0 or printer_end < 0 or sail_config.count("// covers rvmodel virtual peripheral addresses") != 1:
+        raise RuntimeError("upstream Sail virtual-peripheral region changed")
+    printer_region = '''{
+        "base": { "len": 64, "value": "0x10000000" },
+        "size": { "len": 64, "value": "0x1000" },
+        "attributes": {
+          "mem_type": "IOMemory", "cacheable": false, "coherent": false,
+          "executable": false, "readable": false, "writable": true,
+          "read_idempotent": false, "write_idempotent": false,
+          "misaligned_exceptions": {
+            "load_store": { "Some": "AlignmentException" },
+            "vector": { "Some": "AlignmentException" },
+            "amo": "AccessFault"
+          },
+          "atomic_support": "AMONone",
+          "misaligned_atomicity_granule_size_exp": 0,
+          "vector_misaligned_atomicity_granule_size_exp": 0,
+          "reservability": "RsrvNone", "supports_cbo_zero": false,
+          "supports_pte_read": false, "supports_pte_write": false
+        },
+        "include_in_device_tree": false
+      }'''
+    sail_config = (sail_config[:printer_start] +
+                   "      // ProcessorCI ACT diagnostic printer (DUT and reference)\n      " +
+                   printer_region + sail_config[printer_end:])
+    for extension in ("Zicntr", "Zihpm"):
+        marker = f'"{extension}": {{ "supported": true }}'
+        if sail_config.count(marker) != 1:
+            raise RuntimeError(f"upstream Sail {extension} claim changed")
+        sail_config = sail_config.replace(marker, marker.replace("true", "false"), 1)
+    sail_config = sail_config.replace('"clock_frequency": 1000000000,',
+                                      '"clock_frequency": 100000000,')
+    # The wrapper leaves PMA_NUM_REGIONS at zero. The core's default
+    # attribution is main, non-cacheable memory, and WFI enters sleep when
+    # no locally enabled interrupt is pending. Its interrupt inputs are
+    # currently tied low by this wrapper.
+    for old, new in (
+        ('"cacheable": true,', '"cacheable": false,'),
+        ('"wfi_is_nop": true,', '"wfi_is_nop": false,'),
+    ):
+        if sail_config.count(old) != 1:
+            raise RuntimeError(f"upstream Sail profile changed: {old}")
+        sail_config = sail_config.replace(old, new, 1)
     (config_dir / "sail.json").write_text(sail_config)
 
     macros = (config_dir / "rvmodel_macros.h").read_text()

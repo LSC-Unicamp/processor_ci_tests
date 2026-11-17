@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "name": "rv32imc-zbb-shared",
+      "isa": "rv32imc_zbb",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 11000,
+      "tests": 4,
+      "instr_count": 200
+    },
+    {
+      "name": "rv32imc-zbb-nonzero",
+      "isa": "rv32imc_zbb",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 11004,
+      "tests": 3,
+      "instr_count": 200,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776
+    },
+    {
+      "name": "rv32imc-zbb-split",
+      "isa": "rv32imc_zbb",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 11007,
+      "tests": 3,
+      "instr_count": 200,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776,
+      "data_base": 2147614720
+    }
+  ]
+}

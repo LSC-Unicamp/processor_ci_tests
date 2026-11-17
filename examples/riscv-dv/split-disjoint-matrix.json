@@ -1,0 +1,38 @@
+{
+  "configurations": [
+    {
+      "name": "rv32i-load-store",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 42,
+      "tests": 1,
+      "instr_count": 100,
+      "load_store": true,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483648,
+      "data_base": 2147614720
+    },
+    {
+      "name": "rv64i-jump",
+      "isa": "rv64i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 10012,
+      "tests": 1,
+      "instr_count": 100,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483776,
+      "data_base": 2147614720
+    },
+    {
+      "name": "rv64imfdc-floating",
+      "isa": "rv64imfdc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10014,
+      "tests": 1,
+      "instr_count": 100,
+      "memory_base": 2147483648,
+      "reset_pc": 2147483648,
+      "data_base": 2147614720
+    }
+  ]
+}

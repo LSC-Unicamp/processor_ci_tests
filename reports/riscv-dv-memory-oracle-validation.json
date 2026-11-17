@@ -1,0 +1,36 @@
+{
+  "tool": "riscv-dv",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "validation": "PyFlow, compiler, Spike self-check, package verification, serial host mock",
+  "matrix": "examples/riscv-dv/memory-oracle-matrix.json",
+  "testlist": "examples/riscv-dv/memory-oracle-testlist.yaml",
+  "requested": 2,
+  "host_mock_validated": 2,
+  "hardware_validated": 0,
+  "results": [
+    {
+      "configuration": "selected-64",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10050,
+      "status": "host_mock_validated",
+      "memory_signature_limit": 64,
+      "written_memory_bytes": 187,
+      "checked_memory_bytes": 64,
+      "manifest_sha256": "33de3d0d76a037a56be9ee718d28f8d1087d1dc0f374750c903b2c460f69ee08",
+      "elf_sha256": "d5bc199d9f4dcbd8e7824314472243f4c8763ec67341708ff3007133b9411efa"
+    },
+    {
+      "configuration": "full-256",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10050,
+      "status": "host_mock_validated",
+      "memory_signature_limit": 256,
+      "written_memory_bytes": 187,
+      "checked_memory_bytes": 187,
+      "manifest_sha256": "db96f196468a8c0ba0fac1eae179617fa140325995b189a1daee6d9dd62d971c",
+      "elf_sha256": "ba36cf0146918a7638f5952387a6e6d917714d1228cef807479fdcb2ada41559"
+    }
+  ]
+}

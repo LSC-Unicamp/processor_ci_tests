@@ -1,0 +1,96 @@
+{
+  "tool": "riscv-dv",
+  "profile": "riscv_unaligned_load_store_test",
+  "status": "experimental",
+  "matrix": "examples/riscv-dv/unaligned-profile-matrix.json",
+  "requested": 10,
+  "generated": 9,
+  "compiled": 7,
+  "spike_validated": 4,
+  "package_validated": 4,
+  "host_mock_validated": 4,
+  "hardware_validated": 0,
+  "failed_seeds": 6,
+  "results": [
+    {
+      "isa": "rv32i",
+      "seed": 9500,
+      "result": "passed",
+      "last_completed_stage": "host_mock_validated",
+      "failure": null,
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv32i-unaligned/report.json"
+    },
+    {
+      "isa": "rv32im",
+      "seed": 9501,
+      "result": "passed",
+      "last_completed_stage": "host_mock_validated",
+      "failure": null,
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv32im-unaligned/report.json"
+    },
+    {
+      "isa": "rv32imc",
+      "seed": 9502,
+      "result": "failed",
+      "last_completed_stage": "none",
+      "failure": "PyFlow constraint solver failure in directed load/store stream",
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv32imc-unaligned/report.json"
+    },
+    {
+      "isa": "rv64im",
+      "seed": 9503,
+      "result": "passed",
+      "last_completed_stage": "host_mock_validated",
+      "failure": null,
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv64im-unaligned/report.json"
+    },
+    {
+      "isa": "rv64imc",
+      "seed": 9504,
+      "result": "failed",
+      "last_completed_stage": "compiled",
+      "failure": "Spike load access fault before completion",
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv64imc-unaligned/report.json"
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9510,
+      "result": "failed",
+      "last_completed_stage": "compiled",
+      "failure": "Spike did not reach test_done within 3000 instructions",
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv32i-unaligned-campaign/report.json"
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9511,
+      "result": "failed",
+      "last_completed_stage": "generated",
+      "failure": "Generated la zero,region_1+4065 rejected by assembler",
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv32i-unaligned-campaign/report.json"
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9512,
+      "result": "passed",
+      "last_completed_stage": "host_mock_validated",
+      "failure": null,
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv32i-unaligned-campaign/report.json"
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9513,
+      "result": "failed",
+      "last_completed_stage": "generated",
+      "failure": "Generated la zero,region_1+3812 rejected by assembler",
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv32i-unaligned-campaign/report.json"
+    },
+    {
+      "isa": "rv32i",
+      "seed": 9514,
+      "result": "failed",
+      "last_completed_stage": "compiled",
+      "failure": "Spike did not reach test_done within 3000 instructions",
+      "source_report": "build/riscv-dv/unaligned-experimental-final/rv32i-unaligned-campaign/report.json"
+    }
+  ]
+}

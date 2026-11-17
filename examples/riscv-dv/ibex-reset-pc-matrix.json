@@ -1,0 +1,9 @@
+{
+  "configurations": [
+    {"name": "rv32i-arithmetic", "isa": "rv32i", "profile": "riscv_arithmetic_basic_test", "seed": 9700, "tests": 1, "instr_count": 60, "reset_pc": 128},
+    {"name": "rv32im-arithmetic", "isa": "rv32im", "profile": "riscv_arithmetic_basic_test", "seed": 9701, "tests": 1, "instr_count": 100, "reset_pc": 128},
+    {"name": "rv32imc-random", "isa": "rv32imc", "profile": "riscv_rand_instr_test", "seed": 9702, "tests": 1, "instr_count": 100, "reset_pc": 128},
+    {"name": "rv32i-jump", "isa": "rv32i", "profile": "riscv_jump_stress_test", "seed": 9703, "tests": 1, "instr_count": 100, "reset_pc": 128},
+    {"name": "rv32i-load-store", "isa": "rv32i", "profile": "riscv_rand_instr_test", "seed": 9704, "tests": 1, "instr_count": 100, "reset_pc": 128, "load_store": true, "upstream_option": ["+no_branch_jump=1"]}
+  ]
+}

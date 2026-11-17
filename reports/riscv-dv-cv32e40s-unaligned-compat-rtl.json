@@ -1,0 +1,62 @@
+{
+  "tool": "riscv-dv",
+  "core": "CV32E40S",
+  "core_revision": "9d9cae78b01a11458953133d1173c61933a2ba86",
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "direct simulation preload",
+  "controller_rtl_execution": true,
+  "serial_execution": false,
+  "fpga_execution": false,
+  "validated": 3,
+  "failed": 0,
+  "tests": [
+    {
+      "test_id": "riscv_unaligned_load_store_test-rv32i-9500",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/unaligned-compat-final/rv32i-unaligned/riscv_unaligned_load_store_test-rv32i-9500/manifest.json",
+      "manifest_sha256": "e64c2e40db725c0a5fb054135f0e047ad0389a5be487dbc07530f82ee1bd03ea",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "expected_outcome": "PASS",
+      "mutation_pc": null,
+      "tohost": 1,
+      "cycles": 275,
+      "diagnostic_bytes": null,
+      "returncode": 0,
+      "stdout_tail": "DATA 65 0 00003090 0000000c ACK 1\nDATA 66 0 00003028 0000000c ACK 1\nDATA 67 0 00002f15 00000c00 ACK 1\nDATA 69 1 0000302f 195953fe ACK 1\nDATA 70 0 00002f27 195953fe ACK 1\nDATA 71 0 00002ff3 195953fe ACK 1\nDATA 73 0 0000303b 195953fe ACK 1\nDATA 74 0 0000308e fe195953 ACK 1\nDATA 76 1 00002f5e fe195953 ACK 1\nDATA 77 1 00002f42 eff15971 ACK 1\nDATA 81 1 0000301e 000f0000 ACK 1\nDATA 84 0 00002755 00000f00 ACK 1\nDATA 85 1 0000272e 00008000 ACK 1\nDATA 86 1 00002771 00273500 ACK 1\nDATA 88 0 000026fb 35000027 ACK 1\nDATA 90 0 0000273b 35000027 ACK 1\nDATA 91 0 000026f8 00002735 ACK 1\nDATA 100 0 00002707 35000027 ACK 1\nDATA 274 1 00001000 00000001 ACK 1\nACT_CONTROLLER_STATUS 00000001 CYCLE 275\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/act4_cv32e40s_controller_tb.sv:46: Verilog $finish\n[2850000] %Fatal: act4_cv32e40s_controller_tb.sv:49: Assertion failed in act4_cv32e40s_controller_tb: ACT controller timeout at PC 00000458, status 00000001, end 00001000, data count 40\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 3us; walltime 0.024 s; speed 120.916 us/s\n- Verilator: cpu 0.024 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    },
+    {
+      "test_id": "riscv_unaligned_load_store_test-rv32i-9511",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/unaligned-compat-final/rv32i-unaligned-campaign/riscv_unaligned_load_store_test-rv32i-9511/manifest.json",
+      "manifest_sha256": "3e0b21567d57af189c53b2f05ccae25f1b6fcd48e2161994eeb6047bbca331e2",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "expected_outcome": "PASS",
+      "mutation_pc": null,
+      "tohost": 1,
+      "cycles": 241,
+      "diagnostic_bytes": null,
+      "returncode": 0,
+      "stdout_tail": "DATA 64 0 00002fba 000c0000 ACK 1\nDATA 66 0 00002fba 000c0000 ACK 1\nDATA 67 1 00002fba 2beaff84 ACK 1\nDATA 68 1 00002fba 2fb90000 ACK 1\nDATA 69 0 00002fba 2fb90000 ACK 1\nDATA 70 0 00002fba 2fb90000 ACK 1\nDATA 71 0 00002fba 2fb90000 ACK 1\nDATA 72 1 00002fba 00000000 ACK 1\nDATA 73 0 00002fba 00000000 ACK 1\nDATA 74 0 00002fba 00000000 ACK 1\nDATA 93 0 00002def ac000001 ACK 1\nDATA 95 0 00002df7 ac000001 ACK 1\nDATA 96 0 00002ded 0001ac00 ACK 1\nDATA 99 0 00002dff ac000001 ACK 1\nDATA 100 1 00002deb 00000000 ACK 1\nDATA 101 0 00002e02 00000000 ACK 1\nDATA 103 1 00002df0 00000000 ACK 1\nDATA 104 0 00002de9 00000000 ACK 1\nDATA 240 1 00001000 00000001 ACK 1\nACT_CONTROLLER_STATUS 00000001 CYCLE 241\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/act4_cv32e40s_controller_tb.sv:46: Verilog $finish\n[2510000] %Fatal: act4_cv32e40s_controller_tb.sv:49: Assertion failed in act4_cv32e40s_controller_tb: ACT controller timeout at PC 0000038c, status 00000001, end 00001000, data count 33\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 3us; walltime 0.035 s; speed 71.410 us/s\n- Verilator: cpu 0.035 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    },
+    {
+      "test_id": "riscv_unaligned_load_store_test-rv32i-9513",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/unaligned-compat-final/rv32i-unaligned-campaign/riscv_unaligned_load_store_test-rv32i-9513/manifest.json",
+      "manifest_sha256": "0ac75d650e0d7e882336ecb96db44bb38c7a6802d60f6efcf3c8b9c7e4dcbcbd",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "PASS",
+      "expected_outcome": "PASS",
+      "mutation_pc": null,
+      "tohost": 1,
+      "cycles": 306,
+      "diagnostic_bytes": null,
+      "returncode": 0,
+      "stdout_tail": "DATA 66 0 00002533 0c000000 ACK 1\nDATA 68 1 00002426 00000000 ACK 1\nDATA 69 1 000023ef 705ecf57 ACK 1\nDATA 70 0 00002446 57705ecf ACK 1\nDATA 71 0 000025d1 cf57705e ACK 1\nDATA 72 0 00002541 cf57705e ACK 1\nDATA 73 0 000024b6 57705ecf ACK 1\nDATA 74 0 00002537 705ecf57 ACK 1\nDATA 75 1 00002560 23759694 ACK 1\nDATA 76 1 00002508 206143d2 ACK 1\nDATA 77 0 000024fd 6143d220 ACK 1\nDATA 78 0 00002503 d2206143 ACK 1\nDATA 80 0 0000254d 6143d220 ACK 1\nDATA 81 0 000025c2 43d22061 ACK 1\nDATA 82 0 00002488 206143d2 ACK 1\nDATA 83 0 000024f9 6143d220 ACK 1\nDATA 96 0 00002c63 40000001 ACK 1\nDATA 97 0 00002c03 40000001 ACK 1\nDATA 305 1 00001000 00000001 ACK 1\nACT_CONTROLLER_STATUS 00000001 CYCLE 306\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/act4_cv32e40s_controller_tb.sv:46: Verilog $finish\n[3160000] %Fatal: act4_cv32e40s_controller_tb.sv:49: Assertion failed in act4_cv32e40s_controller_tb: ACT controller timeout at PC 000004dc, status 00000001, end 00001000, data count 48\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 3us; walltime 0.035 s; speed 90.161 us/s\n- Verilator: cpu 0.035 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    }
+  ]
+}

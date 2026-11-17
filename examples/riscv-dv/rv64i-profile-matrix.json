@@ -1,0 +1,7 @@
+{
+  "configurations": [
+    {"name": "rv64i-arithmetic", "isa": "rv64i", "profile": "riscv_arithmetic_basic_test", "seed": 9800, "tests": 5, "instr_count": 100},
+    {"name": "rv64i-random", "isa": "rv64i", "profile": "riscv_rand_instr_test", "seed": 9810, "tests": 5, "instr_count": 100},
+    {"name": "rv64i-jump", "isa": "rv64i", "profile": "riscv_jump_stress_test", "seed": 9820, "tests": 5, "instr_count": 100}
+  ]
+}

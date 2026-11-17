@@ -116,6 +116,11 @@ The remaining work and acceptance gates are tracked in the
 [phase-one checklist](docs/phase1-checklist.md).
 Case authoring and rebuild commands are in
 [maintaining the suites](docs/adding-tests.md).
+Random riscv-dv generation, Spike validation, and reusable sparse packages are
+described in [the riscv-dv guide](docs/riscv-dv.md). Its
+[integration checklist](docs/riscv-dv-checklist.md) tracks completed and
+remaining work. The [core roadmap](docs/riscv-dv-core-roadmap.md) records the
+CV32E40S and Ibex Controller RTL results and candidates for broader ISA validation.
 The reusable ACT inputs in the adjacent ProcessorCI repositories are listed in
 the [DUT infrastructure audit](docs/act4-dut-infrastructure-audit.md).
 The named bitmanip and vector profiles, and the exclusion of draft P, are recorded in

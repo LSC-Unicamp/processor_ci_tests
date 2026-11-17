@@ -24,16 +24,30 @@ Controller serial accesses to that window read diagnostic registers; core
 accesses do not alias program RAM. The wrapper uses a 24-bit execution pulse
 counter, covering ACT's 100,000-cycle timeout.
 
+Sail also needs a CLINT and interrupt generator to derive ACT signatures.
+They remain reference-only at `0x02000000`–`0x021fffff`; the DUT does not
+acknowledge those addresses. Sail requires a page-sized mapping for the ACT
+printer, while the controller acknowledges only its write address. The
+[profile audit](../reports/act4-cv32e40s-profile-audit.json) checks this
+distinction against the current RTL and staged configuration.
+The core's zero-region PMA default treats RAM as non-cacheable, and its WFI
+instruction can sleep. The staged Sail configuration now reflects both facts.
+The wrapper ties interrupt and WFE wakeup inputs low, so WFI tests cannot
+complete on this DUT configuration.
+
 Rebuild and validate from `processor_ci_tests`:
 
 ```sh
 PATH="$PWD/.venv-act4/bin:$PATH" python3 tools/build_act4_cv32e40s.py --extensions I,M
 python3 tools/validate_act4_cv32e40s.py
+python3 tools/probe_rvbench_cv32e40s.py
+python3 tools/audit_act4_cv32e40s_profile.py
 python3 tools/check_act4_cv32e40s_fit.py --shared-memory-bytes 524288 --output reports/act4-cv32e40s-fit-512k.json
 python3 tools/probe_controller_rtl.py
 python3 tools/run_act4_cv32e40s_controller_rtl.py --all
 python3 tools/run_act4_cv32e40s_controller_rtl.py --all --serial-full-load --output reports/act4-cv32e40s-controller-serial-all.json
 python3 tools/run_act4_cv32e40s_serial.py --all --dry-run
+python3 -m riscv_test_runner.cli --suite arch --act-profile cv32e40s-512k --march rv32im --list
 ```
 
 `--all` executes each ACT ELF through the core and controller using a direct
@@ -69,11 +83,31 @@ package oracle, clears and loads the 508 KiB program RAM, checks the controller
 ID when `--expected-id` is provided, reads `tohost` and diagnostics, and writes
 JSON and JUnit results. `--dry-run` checks package fit without a device; it
 currently selects all 47 packages.
+The shared CLI can run the same profile with
+`python3 -m riscv_test_runner.cli --suite arch --act-profile cv32e40s-512k --march rv32im --port <port>`.
+Use `--test-id I-addi-00` for one ACT case. These commands are prepared for a
+future device; no FPGA result is recorded.
+Serial transport failures are reported as `COMMUNICATION_ERROR` in JSON and
+JUnit, stop the batch because the protocol state is unknown, and return a
+failing command exit code. Self-check failure, unexpected trap, and timeout
+also return a failing exit code after their reports are written.
 
-These are RTL simulation results. The older Nexys4 DDR board profile specified
+These are RTL simulation results. The selected ACT DUT scope is **RV32 I/M**:
+39 I and eight M tests were generated, reference-executed, and run through
+controller/UART RTL. The pinned ACT 4.1 source tree contains no C test sources;
+the C count is zero, even though compressed decoding is enabled in the core.
+The [capability probe](../reports/act4-cv32e40s-rvbench-probe.json) samples
+`c.addi`, `mtvec` reserved-mode WARL behavior, misaligned word store/load,
+and a return to U mode. With zero PMP regions, the first U-mode fetch faults,
+so U-mode ACT execution is outside this wrapper profile. The core advertises
+Zc and Zkt, but these I/M results do not validate their instructions or timing.
+
+The older Nexys4 DDR board profile specified
 8 KiB primary and 4 KiB data RAM, so none of the 47 ACT packages fit that
 legacy profile. The CV32E40S wrapper now requests 512 KiB, but that memory
-implementation has not been synthesized or executed on an FPGA. The upstream UDB's detailed
-CSR, privilege, alignment, and Zc claims remain provisional for the pinned
-core; the 47 generated ACT tests cover I and M, while ACT 4.1 provides no C
-sources in this selection.
+implementation has not been synthesized or executed on an FPGA. The
+[profile audit](../reports/act4-cv32e40s-profile-audit.json) records the
+remaining CSR, Zc/JVT, interrupt/WFI, and Zkt reviews, including the upstream
+UDB's JVT mask limitation. The first `mstatus` read in the directed probe was
+zero, while the pinned RTL reset constant specifies `MPP=M` (`0x1800`); that
+discrepancy needs investigation. These claims have no ACT DUT pass count.

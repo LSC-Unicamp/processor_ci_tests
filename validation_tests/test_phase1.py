@@ -20,6 +20,7 @@ from validate_advanced_sail import sail_source
 from build_advanced import PREFIX, build, elf_segments
 from combined_report import generate as generate_combined
 from act4_package import classify_tohost, convert
+from audit_act4_cv32e40s_profile import audit as audit_act4_cv32e40s_profile
 from check_dut_package_fit import board_memory_bytes, check as check_dut_fit
 from probe_controller_rtl import CONTROLLER as CONTROLLER_RTL, probe as probe_controller_rtl
 from probe_vector_vstart import probe as probe_vector_vstart
@@ -520,9 +521,17 @@ def test_serial_sparse_adapter_loads_and_checks_status():
     shifted = {**package, "entry": 4, "segments": [{"address": 4, "file_size": 16,
                 "memory_size": 16, "hex": "00" * 16}],
                "oracle": {**package["oracle"], "address": 12}}
-    with pytest.raises(InvalidPackage, match="zero-based"):
-        run_package(MockSerial(), shifted, supported_isa={"rv32i"},
-                    memory_base=4, memory_size=64, reset_pc=4)
+    class ShiftedMock(MockSerial):
+        def read_memory(self, address):
+            self.calls.append(("read", address))
+            return (self.value if address == 12 else 0).to_bytes(4, "big")
+
+    shifted_device = ShiftedMock()
+    assert run_package(shifted_device, shifted, supported_isa={"rv32i"},
+                       memory_base=4, memory_size=64, reset_pc=4)["outcome"] == "PASS"
+    assert ("lsb", 4) in shifted_device.calls
+    assert ("end", 3) in shifted_device.calls
+    assert ("read", 12) in shifted_device.calls
 
     class BadResponse(MockSerial):
         def execute_until_stop(self, host_timeout): return b"invalid!"
@@ -556,6 +565,98 @@ def test_serial_sparse_adapter_loads_and_checks_status():
     assert diagnostic_result["diagnostics"]["trap_cause"] == 2
     assert diagnostic_result["diagnostics"]["trap_epc"] == 0x88
     assert ("clear_diagnostics", 64, 0) in diagnostic_device.calls
+
+
+def test_act4_cv32e40s_profile_rejects_a_mismatched_memory_map(tmp_path):
+    source = ROOT / "build/act4-cv32e40s/dut_config"
+    if not source.is_dir():
+        pytest.skip("CV32E40S ACT build is not present")
+    profile = tmp_path / "profile"
+    shutil.copytree(source, profile)
+    report = audit_act4_cv32e40s_profile(profile, tmp_path / "audit.json")
+    assert report["memory"]["executable_program_bytes"] == 520192
+    assert report["sail_reference_only"]["io_region"] == [0x02000000, 0x02200000]
+    assert report["act_coverage"]["generated_by_extension"] == {"I": 39, "M": 8, "C": 0}
+    assert report["directed_probe"]["status"] == "pass"
+    assert report["directed_probe"]["initial_mstatus_observed"] == 0
+    assert "zero PMP regions deny U-mode instruction fetch" in report["profile_findings"]["u_mode"]
+    sail = profile / "sail.json"
+    original = sail.read_text()
+    sail.write_text(original.replace('"value": "0x7f000"', '"value": "0x7e000"', 1))
+    with pytest.raises(RuntimeError, match="Sail regions disagree"):
+        audit_act4_cv32e40s_profile(profile, tmp_path / "audit.json")
+    sail.write_text(original.replace('"wfi_is_nop": false', '"wfi_is_nop": true', 1))
+    with pytest.raises(RuntimeError, match="WFI-as-NOP"):
+        audit_act4_cv32e40s_profile(profile, tmp_path / "audit.json")
+    sail.write_text(original.replace('"cacheable": false', '"cacheable": true', 1))
+    with pytest.raises(RuntimeError, match="RAM is cacheable"):
+        audit_act4_cv32e40s_profile(profile, tmp_path / "audit.json")
+
+
+def test_act4_cv32e40s_serial_profile_rejects_unvalidated_c_isa(tmp_path):
+    from run_act4_cv32e40s_serial import select
+
+    source = ROOT / "build/act4-cv32e40s/packages/I-addi-00.json"
+    if not source.is_file():
+        pytest.skip("CV32E40S ACT package is not present")
+    package = json.loads(source.read_text())
+    package["isa"] = "rv32imc"
+    candidate = tmp_path / "unvalidated-c.json"
+    candidate.write_text(json.dumps(package))
+    with pytest.raises(ValueError, match="unsupported ISA: rv32imc"):
+        select([candidate])
+
+
+def test_cli_selects_cv32e40s_act_profile_without_hardware(monkeypatch, capsys, tmp_path):
+    import run_act4_cv32e40s_serial as act_serial
+
+    cli_main(["--suite", "arch", "--act-profile", "cv32e40s-512k",
+              "--march", "rv32im", "--test-id", "M-mul-00", "--list"])
+    assert capsys.readouterr().out.splitlines() == ["ACT4 arch M-mul-00"]
+
+    observed = {}
+    def fake_execute(selected, *, port, baudrate, expected_id, host_timeout):
+        observed.update(ids=[package["test_id"] for _, package in selected],
+                        port=port, expected_id=expected_id, timeout=host_timeout)
+        return [{"test_id": "M-mul-00", "outcome": "PASS"}]
+    def fake_report(path, results):
+        observed.update(report=path, results=results)
+    monkeypatch.setattr(act_serial, "execute", fake_execute)
+    monkeypatch.setattr(act_serial, "write_report", fake_report)
+    cli_main(["--suite", "arch", "--act-profile", "cv32e40s-512k",
+              "--march", "rv32im", "--test-id", "M-mul-00", "--port", "mock",
+              "--key", "01020304", "--act-report", str(tmp_path / "act.json")])
+    assert observed["ids"] == ["M-mul-00"]
+    assert observed["port"] == "mock"
+    assert observed["expected_id"] == bytes.fromhex("01020304")
+    assert observed["report"] == tmp_path / "act.json"
+
+
+def test_cv32e40s_serial_transport_error_is_reported(monkeypatch, tmp_path):
+    import run_act4_cv32e40s_serial as act_serial
+    import types
+
+    class MockDevice:
+        def __init__(self, *args): self.closed = False
+        def get_module_id(self): return b"TEST"
+        def close(self): self.closed = True
+
+    device = MockDevice()
+    serial_module = types.ModuleType("processor_ci_communication.core.serial")
+    serial_module.ProcessorCIInterface = lambda *args: device
+    monkeypatch.setitem(sys.modules, "processor_ci_communication.core.serial", serial_module)
+    monkeypatch.setattr(act_serial, "run_package", lambda *args, **kwargs:
+                        (_ for _ in ()).throw(RuntimeError("invalid completion response")))
+    selected = act_serial.select([ROOT / "build/act4-cv32e40s/packages/I-addi-00.json"])
+    results = act_serial.execute(selected, port="mock", baudrate=115200,
+                                 expected_id=b"TEST", host_timeout=1)
+    assert results[0]["outcome"] == "COMMUNICATION_ERROR"
+    assert device.closed
+    output = tmp_path / "act.json"
+    act_serial.write_report(output, results)
+    assert "invalid completion response" in output.read_text()
+    failure = ET.parse(output.with_suffix(".junit.xml")).getroot().find("testcase/failure")
+    assert failure is not None and failure.get("message") == "COMMUNICATION_ERROR"
 
 
 @pytest.mark.skipif(not CONTROLLER_RTL.is_dir() or not shutil.which("iverilog") or

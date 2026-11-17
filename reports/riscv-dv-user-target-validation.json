@@ -1,0 +1,51 @@
+{
+  "tool": "riscv-dv",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "matrix": "examples/riscv-dv/custom-target-matrix.json",
+  "target_settings": "examples/riscv-dv/rv32i-core-target.py",
+  "requested": 4,
+  "host_mock_validated": 4,
+  "hardware_validated": 0,
+  "results": [
+    {
+      "configuration": "rv32i-arithmetic",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 10200,
+      "status": "host_mock_validated",
+      "target_settings_sha256": "f594375cca8e55fc8a5cd65ba7a479584090fb9b56a061cc99c86a56456a7c77",
+      "manifest_sha256": "8fe5736a4f4b72adfd9c8494027939df4d39e04bc5b341c8e4a10c756a8cfeb2",
+      "elf_sha256": "0331fd2489ed4ec0cc9280370154c9d136c37fbda2100f1218a39757ceeb9098"
+    },
+    {
+      "configuration": "rv32i-arithmetic",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 10201,
+      "status": "host_mock_validated",
+      "target_settings_sha256": "f594375cca8e55fc8a5cd65ba7a479584090fb9b56a061cc99c86a56456a7c77",
+      "manifest_sha256": "6cca0c99ee64b4aff6a12d632cf22a3d34fa88713cc354f80ffbaea3a95630d7",
+      "elf_sha256": "d183bdd66691bb5d062cfe54f4e86835ef1a333c1c4acf0cba86c337b7feb221"
+    },
+    {
+      "configuration": "rv32i-random",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10202,
+      "status": "host_mock_validated",
+      "target_settings_sha256": "f594375cca8e55fc8a5cd65ba7a479584090fb9b56a061cc99c86a56456a7c77",
+      "manifest_sha256": "6c5ea680b08240a3a49997a46bbef5351748178c02ee430897af4827b844b28b",
+      "elf_sha256": "b5f01517a7c5507cea159f43ae72f698b3a195a5313259f3b8a490d280d2ecdf"
+    },
+    {
+      "configuration": "rv32i-random",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10203,
+      "status": "host_mock_validated",
+      "target_settings_sha256": "f594375cca8e55fc8a5cd65ba7a479584090fb9b56a061cc99c86a56456a7c77",
+      "manifest_sha256": "32a008987f6956e531b3655412fab1be16b62fc0b1f02d8e6d60e64126d584a5",
+      "elf_sha256": "4d01c9eccd5f12ae628bafd1e874cf081fc279aa3c99c48316455d62402a47ab"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "tool": "riscv-dv",
+  "core": "CV32E40S",
+  "core_revision": "9d9cae78b01a11458953133d1173c61933a2ba86",
+  "wrapper_sha256": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+  "controller_sha256": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+  "memory_bytes": 524288,
+  "memory_mode": "shared two-port",
+  "image_load": "direct simulation preload",
+  "controller_rtl_execution": true,
+  "serial_execution": false,
+  "fpga_execution": false,
+  "validated": 1,
+  "failed": 0,
+  "tests": [
+    {
+      "test_id": "riscv_arithmetic_basic_test-rv32i-7100",
+      "package": "/home/gabcro/Code/Processor_CI/processor_ci_tests/build/riscv-dv/config-matrix-validation/rv32i-arithmetic/riscv_arithmetic_basic_test-rv32i-7100/manifest.json",
+      "manifest_sha256": "9298e9faae4ce161f5e8a891d42f30237ad7d5d05f920666615daaf850620749",
+      "isa": "rv32i_zicsr_zifencei",
+      "outcome": "SELF_CHECK_FAILURE",
+      "expected_outcome": "SELF_CHECK_FAILURE",
+      "mutation_pc": 580,
+      "tohost": 3,
+      "cycles": 168,
+      "returncode": 0,
+      "stdout_tail": "DATA 167 1 00001000 00000003 ACK 1\nACT_CONTROLLER_STATUS 00000003 CYCLE 168\n- /home/gabcro/Code/Processor_CI/processor_ci_tests/validation_tests/rtl/act4_cv32e40s_controller_tb.sv:46: Verilog $finish\n[1780000] %Fatal: act4_cv32e40s_controller_tb.sv:49: Assertion failed in act4_cv32e40s_controller_tb: ACT controller timeout at PC 00000378, status 00000003, end 00001000, data count 1\n- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01\n- Verilator: $finish at 2us; walltime 0.021 s; speed 86.738 us/s\n- Verilator: cpu 0.020 s on 1 threads; allocated 5 MB",
+      "stderr_tail": ""
+    }
+  ]
+}

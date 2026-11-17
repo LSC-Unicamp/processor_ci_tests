@@ -365,6 +365,44 @@
     "controller_rtl_passes": 47,
     "uart_full_load_passes": 47,
     "shared_512k_fit": 47,
+    "profile_static_audit_current": true,
+    "act_coverage": {
+      "generated_by_extension": {
+        "I": 39,
+        "M": 8,
+        "C": 0
+      },
+      "dut_validated_extensions": [
+        "I",
+        "M"
+      ],
+      "host_accepted_isa": [
+        "rv32i",
+        "rv32im"
+      ],
+      "c_upstream_sources": 0,
+      "c_status": "unavailable in pinned ACT 4.1 source tree"
+    },
+    "profile_findings": {
+      "csr": "mtvec reserved-mode retention, MISA/IDs, M-mode traps and MRET sampled in RTL; initial mstatus read was 0 although RTL reset constant has MPP=M (0x1800); cause unresolved; full CSR WARL matrix untested",
+      "u_mode": "implemented in core, but zero PMP regions deny U-mode instruction fetch in this wrapper; excluded from ACT execution scope",
+      "misalignment": "split word store/load passed the pinned wrapper probe; source and Sail permit misaligned main RAM",
+      "compressed": "C decode is enabled and c.addi passed; Zcb instructions depend on B_EXT, while broader Zc behavior and JVT remain untested",
+      "interrupt_wfi": "CLIC=0 and wrapper interrupt/wakeup inputs are tied low; Sail CLINT is reference-only; WFI sleep cannot complete through this wrapper",
+      "zkt": "upstream core manual advertises Zkt; data-independent timing has not been measured"
+    },
+    "known_profile_limitations": [
+      "Sail reference-only CLINT and interrupt generator have no DUT counterpart",
+      "PMA_NUM_REGIONS=0 marks the whole core address space as main; the controller only decodes the exact ACT printer write port",
+      "upstream UDB JVT_BASE_MASK=0x7fffffc0 omits RTL bit 31 because of a UDB schema constraint",
+      "initial mstatus read in the RV-Bench wrapper probe was 0; pinned RTL MSTATUS_RESET_VAL specifies MPP=M (0x1800)"
+    ],
+    "remaining_profile_review": [
+      "resolve mstatus reset/read discrepancy and full CSR WARL matrix",
+      "Zc subextension and JVT behavior",
+      "external interrupt/WFI execution after wrapper support",
+      "Zkt data-independent timing"
+    ],
     "serial_negative_cases": [
       "self_check_failure",
       "timeout",

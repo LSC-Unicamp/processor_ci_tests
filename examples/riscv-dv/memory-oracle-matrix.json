@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "name": "selected-64",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10050,
+      "tests": 1,
+      "instr_count": 200,
+      "load_store": true,
+      "testlist": "examples/riscv-dv/memory-oracle-testlist.yaml",
+      "memory_signature_limit": 64,
+      "generator_timeout": 600
+    },
+    {
+      "name": "full-256",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 10050,
+      "tests": 1,
+      "instr_count": 200,
+      "load_store": true,
+      "testlist": "examples/riscv-dv/memory-oracle-testlist.yaml",
+      "memory_signature_limit": 256,
+      "generator_timeout": 600
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "tool": "riscv-dv-matrix",
+  "configurations": 5,
+  "requested": 5,
+  "generated": 5,
+  "compiled": 5,
+  "spike_validated": 5,
+  "package_validated": 5,
+  "host_mock_validated": 5,
+  "hardware_validated": 0,
+  "failed": 0,
+  "matrix": "examples/riscv-dv/ibex-reset-pc-matrix.json",
+  "reset_pc": 128,
+  "results": [
+    {
+      "configuration": "rv32i-arithmetic",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9700,
+      "status": "host_mock_validated",
+      "manifest_sha256": "1416ad3fda95b6943f628d22078819bc1547305e3e19f264771c4452fe22a2c9",
+      "elf_sha256": "e62f444350200e16e52f16ef511b51adae5185f68c3ead3b21cd049ef6cb7b90"
+    },
+    {
+      "configuration": "rv32im-arithmetic",
+      "isa": "rv32im",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9701,
+      "status": "host_mock_validated",
+      "manifest_sha256": "3d3d297f405fc23c822847df85c00f2d8c40c41a45e470d948aa632feb3a3235",
+      "elf_sha256": "209c33181575fef5dfbdcfa5c5937a979f83c296d8ee4f33b8002cff369bf925"
+    },
+    {
+      "configuration": "rv32imc-random",
+      "isa": "rv32imc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9702,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c8fb808de9effc08d510ee2ca7d2a6ba3c5ecbe3d3538f9cc79062088c692c87",
+      "elf_sha256": "edc02e13cbcb23932634dd456000640483f65ffd989c150a770cb8462fd04e86"
+    },
+    {
+      "configuration": "rv32i-jump",
+      "isa": "rv32i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 9703,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c5fc2c89fe6cbd3d96f22535529d192c2dfa6a3ffef75c84b0abf947798ff7c7",
+      "elf_sha256": "99c253c8c4b82c1095a85e71fa4ac1b254c41d721165f146f37cbe187496389b"
+    },
+    {
+      "configuration": "rv32i-load-store",
+      "isa": "rv32i",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9704,
+      "status": "host_mock_validated",
+      "manifest_sha256": "e51faa74213e79138b7a16ab5bce8369e1bb7e05b40f0b9a621aea6a8eb157e0",
+      "elf_sha256": "dfc7ac6ab002a052b2a8de09f6734b08b7138f9044d5e6ebdb2a4cf681ff483d"
+    }
+  ]
+}

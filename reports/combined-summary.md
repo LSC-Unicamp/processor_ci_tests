@@ -11,8 +11,8 @@ Counts come from the basic inventory and execution reports. ACT host checks are 
 - Advanced: 59 scenarios passed QEMU and Sail.
 - ACT 4.1.0: 39 ELFs, 39 packages, 39 Sail executions, 39 host checks in the recorded build; DUT runs pending.
 - ACT 4.1.0 RV64 I: 51 ELFs, 51 packages, 51 Sail executions, 51 host checks; DUT runs pending.
-- ACT 4.1.0 RV32 I/M/C software sample: 47 ELFs, 47 Sail executions, 47 host checks; extension counts {'I': 39, 'M': 8, 'C': 0}; DUT runs pending.
-- RV-Bench CV32E40S ACT candidate: 47 I/M ELFs passed Sail and host checks; 47 passed core/controller RTL, 47 passed full UART segment loading and execution; serial negatives self_check_failure, timeout, unexpected_trap; shared 512 KiB fit 47/47; current board fit 0/47; FPGA execution pending.
+- ACT 4.1.0 RV32 I/M/C software request: 47 ELFs, 47 Sail executions, 47 host checks; I=39, M=8, C=0. This is a software sample, not the selected DUT run.
+- RV-Bench CV32E40S ACT candidate: 47 I/M ELFs passed Sail and host checks; 47 passed core/controller RTL, 47 passed full UART segment loading and execution; serial negatives self_check_failure, timeout, unexpected_trap; shared 512 KiB fit 47/47; source/profile audit current; ACT DUT scope I/M only, C=0 upstream test sources; legacy board profile fit 0/47; FPGA synthesis and execution pending.
 - ACT package artifacts available in this checkout: yes.
 - riscv-dv: integration absent from this checkout.
 - FPGA: execution pending.

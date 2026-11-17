@@ -1,0 +1,257 @@
+{
+  "tool": "riscv-dv-matrix",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "matrix": "examples/riscv-dv/isa-profile-matrix.json",
+  "matrix_sha256": "64dc57af14990af3261ae83a0c341ce9643f132fa7411971a10ea8a4c85220bf",
+  "configurations": 15,
+  "requested": 15,
+  "generated": 15,
+  "compiled": 15,
+  "spike_validated": 15,
+  "package_validated": 15,
+  "host_mock_validated": 15,
+  "hardware_validated": 0,
+  "failed": 0,
+  "results": [
+    {
+      "name": "rv32i-arithmetic_basic",
+      "configuration": {
+        "name": "rv32i-arithmetic_basic",
+        "isa": "rv32i",
+        "profile": "riscv_arithmetic_basic_test",
+        "tests": 1,
+        "seed": 8000,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "84c46ee1d1b81c27ead3667c84677b57af5acdb0c9ccd8846eaddad1bc4a5ce5",
+      "seed": 8000,
+      "elf_sha256": "6eff0a0fe0e8eb46e91b27fe5692950a4822c03b837e8800a1b09b9a0e71ff24",
+      "manifest_sha256": "cc322069525cdaf86dfb665daea0ac4f4826ddc0c8afa75df6237cb390db9412"
+    },
+    {
+      "name": "rv32im-arithmetic_basic",
+      "configuration": {
+        "name": "rv32im-arithmetic_basic",
+        "isa": "rv32im",
+        "profile": "riscv_arithmetic_basic_test",
+        "tests": 1,
+        "seed": 8001,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "40c9aa2b0693100264abc5d03e73d1dc642c063aac1372f50c7616bb51ebf728",
+      "seed": 8001,
+      "elf_sha256": "1cc07a0cb3b535283f005f9ed069c086c2837a5759bac33688a86b8d7bc7bc4c",
+      "manifest_sha256": "17b9b87a58b045a1b0b5548a7446fbd91d388f7c7a1c455faab1eb8ca20f8974"
+    },
+    {
+      "name": "rv32imc-arithmetic_basic",
+      "configuration": {
+        "name": "rv32imc-arithmetic_basic",
+        "isa": "rv32imc",
+        "profile": "riscv_arithmetic_basic_test",
+        "tests": 1,
+        "seed": 8002,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "2bc0b8e36758e4300190096c7472a7885b1e37ebe99e912dd74f2dc3bbd23745",
+      "seed": 8002,
+      "elf_sha256": "304a567f56213abc6465bf7612debbc3f7ee065aefa1a5a6ef8545b878ad04ae",
+      "manifest_sha256": "27cf8e98f1840a4e54c5ea78fe2ac5f29d4184a3ca7224b7d59374b71d721874"
+    },
+    {
+      "name": "rv64im-arithmetic_basic",
+      "configuration": {
+        "name": "rv64im-arithmetic_basic",
+        "isa": "rv64im",
+        "profile": "riscv_arithmetic_basic_test",
+        "tests": 1,
+        "seed": 8003,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "07f9cfd3809c92d5b80f9ab197ca73d5099cf2976156cf5778d3a6b586983705",
+      "seed": 8003,
+      "elf_sha256": "6ab6c03098c17edd3809d66998d1b7b637a5c67ccb5cd0e4051c1b9e2a7051e2",
+      "manifest_sha256": "3994df5350a037304e31ec135659c8031630913ab8cfaa9226cbcce11f7c1ef2"
+    },
+    {
+      "name": "rv64imc-arithmetic_basic",
+      "configuration": {
+        "name": "rv64imc-arithmetic_basic",
+        "isa": "rv64imc",
+        "profile": "riscv_arithmetic_basic_test",
+        "tests": 1,
+        "seed": 8004,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "dfea51a8907be9449d28c72604d48a263e406a114921b70609a2be8d955fb850",
+      "seed": 8004,
+      "elf_sha256": "a921cb076d916099cd94ac518476fdc652788af57836881c8bbf14e216cee163",
+      "manifest_sha256": "e5c913048dfe09176e69841b599d1e44f0ca6f07dd6793b7a723ab90f1029877"
+    },
+    {
+      "name": "rv32i-rand_instr",
+      "configuration": {
+        "name": "rv32i-rand_instr",
+        "isa": "rv32i",
+        "profile": "riscv_rand_instr_test",
+        "tests": 1,
+        "seed": 8100,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "591c913403327db4092c94c974216acd9f0d2eebe2ae47557753cf4af4d3a5a7",
+      "seed": 8100,
+      "elf_sha256": "eb832bf07b13706f1ceaff3001a699ac63a78a9555b7985aefcffebf033ae973",
+      "manifest_sha256": "5b3cbdf1251da0879a2d23ebfaba2870e44fee40690676663ade03ba38644c74"
+    },
+    {
+      "name": "rv32im-rand_instr",
+      "configuration": {
+        "name": "rv32im-rand_instr",
+        "isa": "rv32im",
+        "profile": "riscv_rand_instr_test",
+        "tests": 1,
+        "seed": 8101,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "3dceaefc97ffcf0c8239999216567d1c4842af582cc0228dfb28cc5dcc1e06ce",
+      "seed": 8101,
+      "elf_sha256": "df41108e2e1089e33212ed94141be99cd260e01b531bc0552694c114aaac8768",
+      "manifest_sha256": "7a2fea5e9be55c5dac5762299d77b296ba21f696d837599b28fa89f3ac531ada"
+    },
+    {
+      "name": "rv32imc-rand_instr",
+      "configuration": {
+        "name": "rv32imc-rand_instr",
+        "isa": "rv32imc",
+        "profile": "riscv_rand_instr_test",
+        "tests": 1,
+        "seed": 8102,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "7052a7e6133ab6db782cab15f9025069ecb59df41a549bfe921113a3b8bd2721",
+      "seed": 8102,
+      "elf_sha256": "7817c73ce807ddba45e522b9cb51de9d7c7ccf8be903859b0762432cdf4b7178",
+      "manifest_sha256": "9742a8843d438cf79d2ab884c27b0c8e4f7369d000869b353cceea37a0902290"
+    },
+    {
+      "name": "rv64im-rand_instr",
+      "configuration": {
+        "name": "rv64im-rand_instr",
+        "isa": "rv64im",
+        "profile": "riscv_rand_instr_test",
+        "tests": 1,
+        "seed": 8103,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "c2af6b183ec8ab9a9fc18f2e85e71c0ce0191c6936db872ceb3bcf85fc3f9061",
+      "seed": 8103,
+      "elf_sha256": "ad8d764ece3d30881d7f13f434c8662225a936d0a8bea4f7b92d0b5778044093",
+      "manifest_sha256": "e239a341a90eb0d24bd33c60a090d3c015a888c0ee52f359b5b89ae273fe9637"
+    },
+    {
+      "name": "rv64imc-rand_instr",
+      "configuration": {
+        "name": "rv64imc-rand_instr",
+        "isa": "rv64imc",
+        "profile": "riscv_rand_instr_test",
+        "tests": 1,
+        "seed": 8104,
+        "instr_count": 100
+      },
+      "status": "passed",
+      "report_sha256": "cd2c11ba9956a74f88c611b02acf12da22118acc43ad08c6bbba9af5a5615b1d",
+      "seed": 8104,
+      "elf_sha256": "9d4abbbf7cdc2e073843ab847b9be4247de6396d8b940bb0cd4a34deee063b72",
+      "manifest_sha256": "41a01281886c4d9569c454dcb66907cf59db8bc4542fe061c5d257158b1545a6"
+    },
+    {
+      "name": "rv32i-jump_stress",
+      "configuration": {
+        "name": "rv32i-jump_stress",
+        "isa": "rv32i",
+        "profile": "riscv_jump_stress_test",
+        "tests": 1,
+        "seed": 8200,
+        "instr_count": 200
+      },
+      "status": "passed",
+      "report_sha256": "897208f6ba65e830c22e5e2dc4942ba412109b08c0e372ccfc587e98c305aa6a",
+      "seed": 8200,
+      "elf_sha256": "814f561ac92130903ed84deb0f669864f4757395d24eafd475fc6139674aeb52",
+      "manifest_sha256": "d451d8fc525ae48cbfcd34f6c84399da8b76d93b614be59920d630c549dceda5"
+    },
+    {
+      "name": "rv32im-jump_stress",
+      "configuration": {
+        "name": "rv32im-jump_stress",
+        "isa": "rv32im",
+        "profile": "riscv_jump_stress_test",
+        "tests": 1,
+        "seed": 8201,
+        "instr_count": 200
+      },
+      "status": "passed",
+      "report_sha256": "f295ba81088be73522d69abc179427b2eba4ae5328a509c05d80122cde0bbb09",
+      "seed": 8201,
+      "elf_sha256": "992c36a0d7763c0e0cf3f9909da98184705bb2f47dfa249789157c3345550764",
+      "manifest_sha256": "97c85a8e8dfd337edcbdd8a484e91d178824ecabdbea87761e479b2488bb2198"
+    },
+    {
+      "name": "rv32imc-jump_stress",
+      "configuration": {
+        "name": "rv32imc-jump_stress",
+        "isa": "rv32imc",
+        "profile": "riscv_jump_stress_test",
+        "tests": 1,
+        "seed": 8202,
+        "instr_count": 200
+      },
+      "status": "passed",
+      "report_sha256": "2b04bcde21b1d9ddda88e62f6cfadf11a3e388377be433f63705723449b72500",
+      "seed": 8202,
+      "elf_sha256": "18bab35511b9904e802c7421fbf34e812b1de04b6551611c855c3e2cdad198fd",
+      "manifest_sha256": "963f17fb7622a7ff9ff18a6311453b9fc3fb01cf31fcea95ec78f6c4639fc503"
+    },
+    {
+      "name": "rv64im-jump_stress",
+      "configuration": {
+        "name": "rv64im-jump_stress",
+        "isa": "rv64im",
+        "profile": "riscv_jump_stress_test",
+        "tests": 1,
+        "seed": 8203,
+        "instr_count": 200
+      },
+      "status": "passed",
+      "report_sha256": "aa7e25ce600a6933fdc658e6993f3a6f4babe77559eb8ce7c0cd06d6c0002bde",
+      "seed": 8203,
+      "elf_sha256": "01631e46398707bc4a0d75ba1278860b165a785b1d0c18ea01f28d080f9e1b7b",
+      "manifest_sha256": "cff706fb5cb3226f65a5c70ec2954ca59235e6743648430e802752cd5f1123ee"
+    },
+    {
+      "name": "rv64imc-jump_stress",
+      "configuration": {
+        "name": "rv64imc-jump_stress",
+        "isa": "rv64imc",
+        "profile": "riscv_jump_stress_test",
+        "tests": 1,
+        "seed": 8204,
+        "instr_count": 200
+      },
+      "status": "passed",
+      "report_sha256": "b1d048f65f933147a7ccdbd77c89db36febf35ad63df4ad57460d2898e6946d7",
+      "seed": 8204,
+      "elf_sha256": "246caad53542f7a70d594ed6fa9640af3ef1a625e84fc28ba14f06744b9b5dd7",
+      "manifest_sha256": "7ddcba9bb244dffab24c0893bf5c13197fd74653acf39e430c35acf475a0b95f"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "act_revision": "6e8a45123f14cebfb3df151a0e7b849b4389b33b",
+  "core_revision": "9d9cae78b01a11458953133d1173c61933a2ba86",
+  "core": "RV-Bench CV32E40S",
+  "test_scope": [
+    "I",
+    "M"
+  ],
+  "memory": {
+    "controller_bytes": 524288,
+    "executable_program_bytes": 520192,
+    "diagnostic_base": 520192,
+    "diagnostic_window_bytes": 4096,
+    "virtual_printer_address": 268435456
+  },
+  "sail_reference_only": {
+    "clint": [
+      33554432,
+      34340864
+    ],
+    "simple_interrupt_generator": 34340864,
+    "io_region": [
+      33554432,
+      35651584
+    ],
+    "printer_page_granularity_bytes": 4096
+  },
+  "source_sha256": {
+    "core": "1c920b8e77656e8e1803ff08f8127e225fe561ba82ccbed9ab943d259bb94660",
+    "package": "9c27b0a2f951304db1ddc6601b7055a58bfcb3cf9e94def626d1ee3278e78262",
+    "csr": "c6986ce0b9830646df51a8a23f6e151f8d73cb85c037e935236448fba8494175",
+    "pmp": "d3c882fcc69819f45a968871648a3875e27640bdeedbdaacd03406d7784553f8",
+    "pma": "98f452f9479a9b20883523435ab634b4fd2d6ed8b641ed280cb64033ad79701c",
+    "lsu": "b9d9868cf3c6ad2dc009a43595bbd4dc315675414eb9cc273f44d84d6a83ff81",
+    "decoder": "2fb93235c12c57c1e330be5bc0df1ca36d992afd5c0253b62acfdeac6471234f",
+    "sequencer": "f80df2a5d2afdb23bea32b2185c34fcbc021502e85ad23589c757a189966fd25",
+    "fsm": "746bd2b0978d565fa4f12188b8c462d4a1ce17bdb01508e67a7d0bf10bf68c80",
+    "serial_runner": "d938a89675340c5ccd0159e748dde8ffdbc50c19bd1dd9fe36bda7899815f479",
+    "probe": "73b8cf49793a540f5a53fcc296889bdfc6e9eb3367ebaee6c5fa83ff4d70a447",
+    "wrapper": "158751c744a11d09b8df9465cb16efc2d2f340f73fafac838a575cb995b8fcbc",
+    "controller": "fd59b6baafba58413384047e312ea6ec9d1af72a79ca5f89a62efbb563a8d2cc",
+    "memory": "e285710c4cb5bd6ae05c37aa07f82a43b7c8dcde05c8c1a6099db108bd3da7a9",
+    "sail": "d71237d9e72e2d56b2bf15c3e7a636d2a7b83a1b73260176b638b687e86a61d0",
+    "udb": "0382dbcac13ba9891474257aef268cdf6df8be3dcecf586633d34c73c298418d"
+  },
+  "act_coverage": {
+    "generated_by_extension": {
+      "I": 39,
+      "M": 8,
+      "C": 0
+    },
+    "dut_validated_extensions": [
+      "I",
+      "M"
+    ],
+    "host_accepted_isa": [
+      "rv32i",
+      "rv32im"
+    ],
+    "c_upstream_sources": 0,
+    "c_status": "unavailable in pinned ACT 4.1 source tree"
+  },
+  "directed_probe": {
+    "status": "pass",
+    "checks": [
+      "compressed_c_addi",
+      "machine_ecall_trap_return",
+      "machine_isa_and_ids",
+      "misaligned_word_store_load",
+      "mtvec_reserved_mode_preserves_previous",
+      "rv32m_mul_div",
+      "u_mode_fetch_fault_with_zero_pmp"
+    ],
+    "initial_mstatus_observed": 0,
+    "source_sha256": "73b8cf49793a540f5a53fcc296889bdfc6e9eb3367ebaee6c5fa83ff4d70a447"
+  },
+  "profile_findings": {
+    "csr": "mtvec reserved-mode retention, MISA/IDs, M-mode traps and MRET sampled in RTL; initial mstatus read was 0 although RTL reset constant has MPP=M (0x1800); cause unresolved; full CSR WARL matrix untested",
+    "u_mode": "implemented in core, but zero PMP regions deny U-mode instruction fetch in this wrapper; excluded from ACT execution scope",
+    "misalignment": "split word store/load passed the pinned wrapper probe; source and Sail permit misaligned main RAM",
+    "compressed": "C decode is enabled and c.addi passed; Zcb instructions depend on B_EXT, while broader Zc behavior and JVT remain untested",
+    "interrupt_wfi": "CLIC=0 and wrapper interrupt/wakeup inputs are tied low; Sail CLINT is reference-only; WFI sleep cannot complete through this wrapper",
+    "zkt": "upstream core manual advertises Zkt; data-independent timing has not been measured"
+  },
+  "known_profile_limitations": [
+    "Sail reference-only CLINT and interrupt generator have no DUT counterpart",
+    "PMA_NUM_REGIONS=0 marks the whole core address space as main; the controller only decodes the exact ACT printer write port",
+    "upstream UDB JVT_BASE_MASK=0x7fffffc0 omits RTL bit 31 because of a UDB schema constraint",
+    "initial mstatus read in the RV-Bench wrapper probe was 0; pinned RTL MSTATUS_RESET_VAL specifies MPP=M (0x1800)"
+  ],
+  "remaining_profile_review": [
+    "resolve mstatus reset/read discrepancy and full CSR WARL matrix",
+    "Zc subextension and JVT behavior",
+    "external interrupt/WFI execution after wrapper support",
+    "Zkt data-independent timing"
+  ],
+  "fpga_execution": false
+}

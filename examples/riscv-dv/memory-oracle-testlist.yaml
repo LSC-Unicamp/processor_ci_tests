@@ -1,0 +1,3 @@
+- test: riscv_rand_instr_test
+  gen_test: riscv_instr_base_test
+  gen_opts: +instr_cnt=200 +num_of_sub_program=0 +directed_instr_0=riscv_load_store_rand_instr_stream,100 +no_branch_jump=1

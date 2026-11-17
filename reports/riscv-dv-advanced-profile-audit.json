@@ -1,0 +1,75 @@
+{
+  "tool": "riscv-dv-advanced-profile-audit",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "supported_new_profiles": [
+    "riscv_lr_sc_test (RV64IMA bounded single-hart LR/SC)",
+    "riscv_amo_test (RV64IMA single-hart AMO)",
+    "riscv_amo_pair_test (RV64IMA two-AMO stream)",
+    "riscv_csr_test (RV32I/RV64I machine-mode mscratch)"
+  ],
+  "atomic": {
+    "status": "bounded_lrsc_and_amo_package_profiles_validated",
+    "manual_smoke_source": "examples/riscv-dv/atomic-toolchain-smoke.S",
+    "manual_smoke_source_sha256": "9f667b6262e71145ca2a1adc4f8c8e2abc75d948b2c1d75235bc135be1060b45",
+    "compiler_spike_passed": true,
+    "committed_amo_writes_checked_bytes": 4,
+    "observed_final_word": 6,
+    "directed_pyflow_probe": "reports/riscv-dv-rv64a-pyflow-probe.json",
+    "remaining": "Longer and multi-hart atomic streams, memory ordering outcomes, and atomic DUT evidence remain open.",
+    "reproduction": "Compile examples/riscv-dv/atomic-toolchain-smoke.S with riscv32-unknown-elf-gcc -march=rv32ima_zicsr_zifencei -mabi=ilp32 and the upstream scripts/link.ld relocated to base 0; run Spike --isa=rv32ima --log-commits and parse the trace with trace_reference.",
+    "package_profile": "riscv_lr_sc_test",
+    "matrix_report": "reports/riscv-dv-lrsc-profile-validation.json",
+    "matrix_packages_validated": 11,
+    "permitted_outcomes": "SC success writes back the LR value; SC failure writes nothing; both leave RAM unchanged. SC destination is excluded from fixed GPR signature.",
+    "package_profiles": [
+      "riscv_lr_sc_test",
+      "riscv_amo_test",
+      "riscv_amo_pair_test"
+    ],
+    "single_amo_matrix_report": "reports/riscv-dv-amo-profile-validation.json",
+    "single_amo_packages_validated": 24,
+    "pair_amo_matrix_report": "reports/riscv-dv-amo-pair-profile-validation.json",
+    "pair_amo_packages_validated": 18,
+    "combined_amo_operations_exercised": 18
+  },
+  "privileged": {
+    "status": "bounded_mscratch_csr_package_validated",
+    "probe_testlist": "examples/riscv-dv/privileged-illegal-probe.yaml",
+    "upstream_riscv_csr_test": "Pinned directed Python generator (separate from PyFlow) adapted in isolation for bitstring 5",
+    "upstream_illegal_profile": "riscv_rand_instr_test fails in PyFlow subprogram list with num_of_sub_program=0",
+    "base_generator_zero_illegal_probe": {
+      "generated": true,
+      "compiled": true,
+      "spike_tohost_passed": true,
+      "expected_machine_ecall_trap_seen": true,
+      "illegal_traps_seen": 0,
+      "elf_sha256": "6f5400fa7a7d331a5ec2a3ad1f933357416cf08a3717e6addc3efe693452c76c"
+    },
+    "active_illegal_probe": {
+      "seed": 10220,
+      "instr_count": 200,
+      "illegal_instr_ratio": 100,
+      "generated": false,
+      "error": "vsc.model.solve_failure.SolveFailure in riscv_instr_sequence.insert_illegal_hint_instr"
+    },
+    "remaining": "Illegal-instruction generation, trap/return checks, more CSR maps and privilege levels, MMU, and DUT evidence remain open.",
+    "reproduction": "Run pinned run.py --target rv32i --testlist examples/riscv-dv/privileged-illegal-probe.yaml --test riscv_illegal_instr_test --simulator pyflow --steps gen --iterations 1 --seed 10220 in the isolated PyFlow environment.",
+    "package_profile": "riscv_csr_test",
+    "matrix_report": "reports/riscv-dv-csr-profile-validation.json",
+    "matrix_packages_validated": 10
+  },
+  "vector": {
+    "status": "compiler_and_spike_vector_memory_probe",
+    "source": "examples/riscv-dv/vector-toolchain-smoke.S",
+    "source_sha256": "53fd53077497343005ccb2b8535f4ca8dd43e907e756716da106294b5ab4529f",
+    "compiler_object_sha256": "8f6c3bd53abcaf946a160d3383ab313cfbe890e9433dc614c75af5e2bd69cba0",
+    "compiler_march": "rv64gcv",
+    "pyflow_evidence": "RV32V/RV64V enum values exist, but no PyFlow vector instruction model or V-enabled PyFlow target was found; target/rv64gcv is SystemVerilog-only",
+    "spike_execution_validated": true,
+    "remaining": "Pinned PyFlow lacks a vector instruction model and V target; validate an upstream SV/UVM generator backend, vector architectural-state signature, and vector DUT before enabling a V package profile.",
+    "reproduction": "riscv64-elf-gcc -march=rv64gcv -mabi=lp64d -c examples/riscv-dv/vector-toolchain-smoke.S -o vector-smoke.o",
+    "spike_probe": "reports/riscv-dv-vector-capability-probe.json",
+    "committed_vector_store_bytes": 16
+  },
+  "hardware_validated": 0
+}

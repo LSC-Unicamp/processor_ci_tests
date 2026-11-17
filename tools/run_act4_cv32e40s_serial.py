@@ -45,12 +45,18 @@ def execute(selected: list[tuple[Path, dict]], *, port: str, baudrate: int,
             raise RuntimeError(f"controller ID {observed_id.hex()} differs from {expected_id.hex()}")
         results = []
         for path, package in selected:
-            result = run_package(device, package, supported_isa=ISA,
-                                 memory_base=0, memory_size=ACT_PROGRAM_BYTES,
-                                 reset_pc=0, host_timeout=host_timeout,
-                                 diagnostic_base=DIAGNOSTIC_BASE)
+            try:
+                result = run_package(device, package, supported_isa=ISA,
+                                     memory_base=0, memory_size=ACT_PROGRAM_BYTES,
+                                     reset_pc=0, host_timeout=host_timeout,
+                                     diagnostic_base=DIAGNOSTIC_BASE)
+            except (OSError, TimeoutError, RuntimeError) as error:
+                result = {"outcome": "COMMUNICATION_ERROR", "error": str(error),
+                          "hardware_validated": False}
             results.append({"test_id": package["test_id"], "package": str(path), **result})
             print(f"{package['test_id']}: {result['outcome']}", flush=True)
+            if result["outcome"] == "COMMUNICATION_ERROR":
+                break  # Protocol state is unknown; later packages cannot run safely.
         return results
     finally:
         device.close()
@@ -69,7 +75,8 @@ def write_report(path: Path, results: list[dict]) -> None:
         case = ET.SubElement(suite, "testcase", name=row["test_id"])
         if row["outcome"] != "PASS":
             failure = ET.SubElement(case, "failure", message=row["outcome"])
-            failure.text = (row.get("diagnostics") or {}).get("text") or row["outcome"]
+            failure.text = ((row.get("diagnostics") or {}).get("text") or
+                            row.get("error") or row["outcome"])
     ET.indent(suite)
     ET.ElementTree(suite).write(path.with_suffix(".junit.xml"), encoding="utf-8", xml_declaration=True)
 
@@ -97,6 +104,9 @@ if __name__ == "__main__":
         parser.error("--port is required unless --dry-run is selected")
     if args.expected_id and (len(args.expected_id) != 8 or any(ch not in "0123456789abcdefABCDEF" for ch in args.expected_id)):
         parser.error("--expected-id must be eight hex digits")
-    write_report(args.output.resolve(), execute(selected, port=args.port, baudrate=args.baudrate,
-                                                 expected_id=bytes.fromhex(args.expected_id) if args.expected_id else None,
-                                                 host_timeout=args.host_timeout))
+    results = execute(selected, port=args.port, baudrate=args.baudrate,
+                      expected_id=bytes.fromhex(args.expected_id) if args.expected_id else None,
+                      host_timeout=args.host_timeout)
+    write_report(args.output.resolve(), results)
+    if any(row["outcome"] != "PASS" for row in results):
+        raise SystemExit(1)

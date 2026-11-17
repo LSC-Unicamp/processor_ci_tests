@@ -1,0 +1,49 @@
+{
+  "configurations": [
+    {
+      "name": "rv32i-custom-arithmetic",
+      "isa": "rv32i",
+      "profile": "riscv_arithmetic_basic_test",
+      "seed": 9950,
+      "tests": 2,
+      "instr_count": 80,
+      "testlist": "examples/riscv-dv/custom-testlist.yaml"
+    },
+    {
+      "name": "rv32imc-custom-random",
+      "isa": "rv32imc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9960,
+      "tests": 2,
+      "instr_count": 80,
+      "testlist": "examples/riscv-dv/custom-testlist.yaml"
+    },
+    {
+      "name": "rv64i-custom-jump",
+      "isa": "rv64i",
+      "profile": "riscv_jump_stress_test",
+      "seed": 9970,
+      "tests": 2,
+      "instr_count": 100,
+      "testlist": "examples/riscv-dv/custom-testlist.yaml"
+    },
+    {
+      "name": "rv64im-custom-unaligned",
+      "isa": "rv64im",
+      "profile": "riscv_unaligned_load_store_test",
+      "seed": 9980,
+      "tests": 2,
+      "instr_count": 80,
+      "testlist": "examples/riscv-dv/custom-testlist.yaml"
+    },
+    {
+      "name": "rv64imfdc-custom-floating",
+      "isa": "rv64imfdc",
+      "profile": "riscv_rand_instr_test",
+      "seed": 9990,
+      "tests": 1,
+      "instr_count": 100,
+      "testlist": "examples/riscv-dv/custom-floating-testlist.yaml"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "tool": "riscv-dv",
+  "revision": "f557b89ed6881a20515481a2585e9d004cd9642b",
+  "matrix": "examples/riscv-dv/rv64imfdc-arithmetic-matrix.json",
+  "isa": "rv64imfdc",
+  "profile": "riscv_arithmetic_basic_test",
+  "requested": 5,
+  "host_mock_validated": 5,
+  "hardware_validated": 0,
+  "total_committed_floating_instructions": 283,
+  "results": [
+    {
+      "seed": 10100,
+      "status": "host_mock_validated",
+      "committed_floating_instructions": 68,
+      "floating_registers_checked": 32,
+      "fcsr_checked": true,
+      "manifest_sha256": "42d501061aa52f9d24255562e9a4b031368e3e5928ff1e64a2a8391e96e2cc5f",
+      "elf_sha256": "4d22d7f2d28061605aa8a170f21cfc3c3cf7a46e1b2018722159a10c96de83d7"
+    },
+    {
+      "seed": 10101,
+      "status": "host_mock_validated",
+      "committed_floating_instructions": 41,
+      "floating_registers_checked": 32,
+      "fcsr_checked": true,
+      "manifest_sha256": "c06b4a2a32b459a4a67e564b360e53b52d31c9a038d7340c300f178c9defe218",
+      "elf_sha256": "7f7a8c44b44592ced6f015103e90f33e824178468fd968973dc860b265c044c7"
+    },
+    {
+      "seed": 10102,
+      "status": "host_mock_validated",
+      "committed_floating_instructions": 63,
+      "floating_registers_checked": 32,
+      "fcsr_checked": true,
+      "manifest_sha256": "75647e0b1e8cd56d9e7a44fc789c4e7107afffaa4d94fdacb5445af8399aa1ba",
+      "elf_sha256": "85fa5d10cddedf7af074458a7ec3303dd3eaa555f24484f7777322a1ac0bd00e"
+    },
+    {
+      "seed": 10103,
+      "status": "host_mock_validated",
+      "committed_floating_instructions": 73,
+      "floating_registers_checked": 32,
+      "fcsr_checked": true,
+      "manifest_sha256": "a6ddbf85283b87e38d1b5dda355b55aeffde72abd148a56742b91687e8143085",
+      "elf_sha256": "fe0ddadbd64cbdc17daf5e8b3afc42c1d247effc050446ea9fcf89e9211fdf09"
+    },
+    {
+      "seed": 10104,
+      "status": "host_mock_validated",
+      "committed_floating_instructions": 38,
+      "floating_registers_checked": 32,
+      "fcsr_checked": true,
+      "manifest_sha256": "01722d39e90cbf3e98bc36f74ec1211d59ee1aa87f1ad78120fad856896d2085",
+      "elf_sha256": "c333ba06c9112181a380f032ea0d6afdd2822247d449fc840d50581b20b20b84"
+    }
+  ]
+}

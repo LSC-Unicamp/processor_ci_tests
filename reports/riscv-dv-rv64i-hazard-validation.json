@@ -1,0 +1,106 @@
+{
+  "tool": "riscv-dv",
+  "isa": "rv64i_zicsr_zifencei",
+  "profile": "riscv_unaligned_load_store_test",
+  "requested": 5,
+  "generated": 5,
+  "compiled": 5,
+  "spike_validated": 5,
+  "package_validated": 5,
+  "host_mock_validated": 5,
+  "hardware_validated": 0,
+  "failed_seeds": 0,
+  "results": [
+    {
+      "seed": 9830,
+      "status": "host_mock_validated",
+      "manifest_sha256": "7fa127905790641c329cea9ed6fa6d4b7ddba3bcc7aff8a8ee1120a273ffbbaf",
+      "reference_memory_accesses": {
+        "loads": 5,
+        "stores": 10,
+        "misaligned_wide": 6,
+        "misaligned_by_instruction": {
+          "lw": 2,
+          "sw": 1,
+          "sd": 1,
+          "ld": 1,
+          "lwu": 1
+        }
+      }
+    },
+    {
+      "seed": 9831,
+      "status": "host_mock_validated",
+      "manifest_sha256": "94fe702f9d05d3549a4f9acb2a9bdcaa46319325709ab4d89a68726e74a6e4f1",
+      "reference_memory_accesses": {
+        "loads": 29,
+        "stores": 13,
+        "misaligned_wide": 27,
+        "misaligned_by_instruction": {
+          "sw": 2,
+          "sd": 3,
+          "lhu": 3,
+          "ld": 6,
+          "lw": 4,
+          "lh": 5,
+          "sh": 2,
+          "lwu": 2
+        }
+      }
+    },
+    {
+      "seed": 9832,
+      "status": "host_mock_validated",
+      "manifest_sha256": "c3c74a0c532ba40798fcc1ae986f579033637d5e071007fb33d9ec58f490494f",
+      "reference_memory_accesses": {
+        "loads": 19,
+        "stores": 12,
+        "misaligned_wide": 14,
+        "misaligned_by_instruction": {
+          "sw": 3,
+          "lh": 1,
+          "sd": 2,
+          "lhu": 2,
+          "ld": 2,
+          "lw": 2,
+          "lwu": 2
+        }
+      }
+    },
+    {
+      "seed": 9833,
+      "status": "host_mock_validated",
+      "manifest_sha256": "259e1e318a4c5d5eb6b9aafe490d4d2093f56c29b73ed55e5caf33baae6e4af5",
+      "reference_memory_accesses": {
+        "loads": 10,
+        "stores": 1,
+        "misaligned_wide": 6,
+        "misaligned_by_instruction": {
+          "lwu": 2,
+          "lh": 1,
+          "ld": 2,
+          "sh": 1
+        }
+      }
+    },
+    {
+      "seed": 9834,
+      "status": "host_mock_validated",
+      "manifest_sha256": "b4843c87ab9c4a7637c3342984af2616fc737ab56d3af1a0d7119a1482ec8708",
+      "reference_memory_accesses": {
+        "loads": 21,
+        "stores": 17,
+        "misaligned_wide": 16,
+        "misaligned_by_instruction": {
+          "sh": 5,
+          "sd": 1,
+          "lhu": 2,
+          "lw": 1,
+          "lh": 1,
+          "ld": 3,
+          "sw": 3
+        }
+      }
+    }
+  ]
+}
